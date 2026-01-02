@@ -1,0 +1,45 @@
+﻿<style>
+    .myspan {
+        color:red;
+    }
+    .myp {
+        padding-left: 20px;
+        margin-bottom: -20px;
+    }
+</style>
+<div class="modal-header">
+    <h3 class="modal-title"></h3>
+</div>
+    <div class="modal-body form-horizontal detail-container"  wait-for-interpolation="true">
+        <ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+            <div overflow style="height:800px;overflow-y:scroll;">
+                <h4 style="background-color: #39cccc">Output File</h4>
+                <div id="filedata" ng-bind-html="divdata" overflow style="height:500px;overflow-y:scroll;">
+                </div>
+                <div>
+                    <div class="form-group" >
+                        <label class="col-sm-2 control-label">ITN NO</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="itnno" name="itnno" maxlength="15" ng-model="itanno" />
+                        </div>
+                        <label class="col-sm-2 control-label"></label>
+                        <div class="col-sm-4">
+
+                            <button type="button" class="btn btn-success btn-sm createLineBtn" style="background-color:green" action="Update" ng-click="UpdateStatus('A',dcommonid,aesid)">Approved</button>
+                            <button type="button" class="btn btn-success btn-sm createLineBtn" style="background-color:red" action="Update" ng-click="UpdateStatus('R',dcommonid,aesid)">Rejected</button>
+                        </div>
+                    </div>
+
+
+                </div>
+                <h4 style="background-color: #39cccc">Input File</h4>
+                <div id="filedata1" ng-bind-html="divdata1" overflow style="height:500px;overflow-y:scroll;">
+                </div>
+            </div>
+        </ng-form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-sm btn-primary" ng-click="FileHelp()" action="cancel">Help</button>
+        <button class="btn btn-sm btn-default" ng-click="closemodalfile('close')" action="cancel">Close</button>
+  </div> 
+

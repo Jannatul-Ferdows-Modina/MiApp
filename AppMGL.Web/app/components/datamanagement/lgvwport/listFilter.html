@@ -1,0 +1,23 @@
+﻿<div class="box-container form-horizontal detail-container">
+    <div class="form-group">
+        <label class="col-sm-3 control-label text-left">Port Name</label>
+       
+        <label class="col-sm-3 control-label text-left">Country</label>
+
+        <div class="col-sm-3">&nbsp;</div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="NameF" ng-model="NameF" uib-typeahead="o.name for o in callTypeahead($viewValue, 'lgvwport', 'name', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="lgvwport" lookup-field="name" entity-key-field="portId" custom-clear="true" />
+        </div>
+        
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="CountryNameF" ng-model="CountryNameF" uib-typeahead="o.countryName for o in callTypeaheadp($viewValue, 'lgvwport','countryName', 'CountrySearch')" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="lgvwport" lookup-field="countryName" entity-key-field="portId" custom-clear="true" />
+        </div>
+        <div class="pull-right">
+            <button class="btn btn-sm btn-primary" ng-click="performAction($event)" action="search">Search</button>
+        </div>
+    </div>
+        </div>
+   
+

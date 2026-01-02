@@ -1,0 +1,1269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F7AD4D81-1D1B-4593-99FB-88EA2E9C8D01}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AppMGL.DAL</RootNamespace>
+    <AssemblyName>AppMGL.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Vikas\Downloads\bin\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Cors">
+      <HintPath>C:\Users\Vikas\Downloads\bin\Microsoft.Owin.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Vikas\Downloads\bin\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Vikas\Downloads\bin\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Vikas\Downloads\bin\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Vikas\Downloads\bin\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Vikas\Downloads\bin\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Linq.Dynamic, Version=1.0.6132.35681, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Dynamic.1.0.7\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Cors">
+      <HintPath>C:\Users\Vikas\Downloads\bin\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppMGL.cs" />
+    <Compile Include="Contract\IQueryableUnitOfWork.cs" />
+    <Compile Include="Contract\ISql.cs" />
+    <Compile Include="Helper\BaseEntity.cs" />
+    <Compile Include="Helper\ClientException.cs" />
+    <Compile Include="Helper\EmailService.cs" />
+    <Compile Include="Helper\Filter.cs" />
+    <Compile Include="Helper\ListParams.cs" />
+    <Compile Include="Helper\Logging\AsyncHelper.cs" />
+    <Compile Include="Helper\Logging\FileSourceLog.cs" />
+    <Compile Include="Helper\Logging\FileSourceLogFactory.cs" />
+    <Compile Include="Helper\Logging\ILogger.cs" />
+    <Compile Include="Helper\Logging\ILoggerFactory.cs" />
+    <Compile Include="Helper\Logging\Logger.cs" />
+    <Compile Include="Helper\Logging\LoggerFactory.cs" />
+    <Compile Include="Helper\LogModel.cs" />
+    <Compile Include="Helper\ParameterCache.cs" />
+    <Compile Include="Helper\Utility.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="IUnitOfWork.cs" />
+    <Compile Include="Models\AirCargoSubDetail.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AppMGL.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppMGL.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AppMGL.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AppMGL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppMGL.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AppUserManager.cs" />
+    <Compile Include="Models\AspNetClient.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetRefreshToken.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetRole.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUser.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserClaim.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserLogin.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\city.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\country.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DashboardData_Job.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Department.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentPermission.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ExistDocPermission.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ExternalLoginModels.cs" />
+    <Compile Include="Models\GenrateAllMenuItem.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LGV_CONTACT_INFO.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_ACCOUNTREF.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_ACCT_CATEGORY.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_ACTION.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_ACTION_AUD.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_CONTACT.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_CONTACT_ACCT_CAT_MAP.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_CONTACT_AUD.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_CONTACT_SITE_MAP.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_CONTACT_SITE_MAP_AUD.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_CONTACT_WORK_TYPE.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_CONTACT_WORK_TYPE_AUD.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_Container_Category.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_CONTRACT_RATE.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_CONTRACT_RATE_CHARGES.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_COUNTRY.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_COUNTRY_AUD.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_DASHBOARD_DATA.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_DEPARTMENT.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_DEPARTMENT_AUD.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_DOCUMENTATION.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_DOCUMENTATION_STATUS.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_EMAIL.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_LOCATION.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_LOCATION_AUD.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_LOGIN_HISTORY.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_MAM_ROL_MAP.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_MAM_ROL_MAP_AUD.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_Mode_Of_Service.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_MODULE.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_MODULE_AUD.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_MODULE_TYPE.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_MODULE_TYPE_AUD.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_QB_ENV_CONFIG.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_QUICKBOOK_ACCESSDETAILS.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_QUICKBOOK_INVOICE_RECEIPT_MAPPING.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_QuickBook_MAPP.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_QUICKBOOK_MAPPING.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_QUICKBOOK_MappMessage.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_REFRESH_TOCKENS.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_ROLE.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_ROLE_AUD.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_SHIPMENT_DOCS.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_SITE.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_SITE_AUD.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_SITE_CONTACT_ROLE.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_SITE_CONTACT_ROLE_AUD.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_SP_FEE_CATEGORY.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_SYSTEM_CONFIG.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_TAXCODE.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_TIMEZONE.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_TIMEZONE_AUD.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_TITLE.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_TITLE_AUD.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_TRUCKING_CHARGES.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_USER.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_USER_AUD.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_USSTATE.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_USSTATE_AUD.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_View_WarehouseLocation.cs" />
+    <Compile Include="Models\LG_VW_Alias.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_VW_Commodity.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_VW_CONTACTCATEGORY.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_VW_Contract.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_VW_DisplayRate.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_VW_ENQUIRY_ALL.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_VW_Port.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_VW_ROUTING.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_VW_SIPLCity.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_VW_SIPLState.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_VW_SIPL_CONTACT.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_VW_SITE_CONTACT.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_VW_SurchargeGroup.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LG_VW_TradeMaster.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Role.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RolewisePermission.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sheet1_.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_AirCargo.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ArivalNotice.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ArivalOD.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ArrivalNoticeFreight.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ArrivalNoticeFreightOD.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_AWB.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_AWBOtherDetail.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_BasicRateDueDate.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_BillofLading.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_BillofLadingOD.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_BookingStatus.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_BookingStatusOld.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_BookingStatus_bkp.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_CategoryTable.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_CertificationOfOrigin.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_CertificationOfOriginOD.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_CertificationOfOriginODTemp.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_Charges.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ChargesCategory.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ChargesCategoryMapping.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_City.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sipl_city_bkp.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_Class.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_Commodity.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_CommodityGroup.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_CommodityReference.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_CommodityType.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_Company.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_CompanyGradation.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_Contact.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ContactBranch.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ContactCategory.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ContactCategorySubCategory.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ContactCommodities.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ContactDetail.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ContactOriginCountries.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ContactPerson.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ContactPersonCategoty.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ContactSubCategory.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ContactSubCategoryTransaction.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ContainerSize.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ContainerType.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_Continent.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sipl_continent_bkp.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_Contract.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ContractApplicableCharges.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sipl_ContractBooking.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sipl_ContractBookingOld.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ContractCarrier.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ContractCommodity.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ContractCommodityGroup.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ContractContainer.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ContractNonApplicable.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ContractOriginDestination.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ContractPort.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ContractPortGroup.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ContractRate.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ContractSheet.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ContractShipline.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ContractSpecification.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ContractSurcharge.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ContractTradeService.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_Country.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sipl_country_bkp.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_Currency.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_CurrencySymbol.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_CurrencyTable.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_DataAccessPermission.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_DeliveryOrder.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_Department.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_DispatchTable.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_Document.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_DocumentCategory.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_DocumentCommon.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_DocumentCommonOD.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_DocumentFile.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPl_Document_CategoryDocument.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_Enquiry.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_EnquiryCommodity.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_EnquiryContainerType.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_EnquiryIncompleteDraft.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_EnquiryServiceRequired.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_EnquiryServiceRequiredFCL.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_EnquiryServiceRequiredRORO.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_EnquiryType.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ExpenseDetail.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ExpenseHead.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_FollowUpDateEntry.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sipl_FormMenuGeneration.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sipl_FormMenuGenerationold.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_FormOperationPermission.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_FormPermission.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_FreightCharges.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_GenerateEmail.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_HeadingNote.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPl_HeadingNoteDetail.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_HoBLSubDetail.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_HouseBLDetail.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_InvoiceStatus.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_InvoiceStatusOld.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_LoadType.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sipl_MailMode.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_MarketingContact.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_MarketingMail.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_MarketingMailMatter.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_Mode.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ModeOfTransport.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_NextActionDue.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_OceanCargo.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_OceanOD.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_PayableCharges.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_Pickup.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_PickupLoading.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPl_PickupType.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPl_PickupTypeOld.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPl_PickupTypeTest.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPl_PickupType_old_.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_Port.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_PortGroup.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPl_PortGroupPort.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sipl_port_bkp.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_PrevContractRate.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_PrevContractSurcharges.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_Quotation.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_QuotationCarrier.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_QuotationCharges.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_QuotationCommodity.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_QuotationContainerRate.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_QuotationPayableCharges.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_QuotationPayableRemarks.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_QuotationRate.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_QuotationRemarks.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_QuotationSurcharesRate.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_RailRamp.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sipl_RateCapture.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ReferencesLink.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_Role.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_RoleAssignment.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_Routing.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sipl_SellingRate.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ServiceRefAll.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ServiceRefernce.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ServiceRefFCL.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ShipLineTSSurCharges.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ShippingLine.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ShippingLineRate.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_ShippingLineText.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_SLChargesConfigurator.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_SLCommodityConfigurator.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_SLNoteConfigurator.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_SLTSConfigurator.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_StandardChargesRate.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_State.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sipl_state_bkp.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_SurchargeGroup.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sipl_SurchargesDueDate.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_SurchargesGroupSurcharges.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_TableField.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_TableName.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_TariffApplicability.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sipl_Terminal.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_TradeCountry.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_TradeService.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_TradMaster.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_TransferType.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_TSChargesConfigurator.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_TypeOfOperation.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_UnitOfMeasurement.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_User.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_UserLogin.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SIPL_Via.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sipl_warehouselocation.cs" />
+    <Compile Include="Models\state.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblAlia.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_scheduler_TempContractRateDetail.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Scheduler_udfGetGalStatus.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TempSIPL_NextActionDue.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\test_cus_vendor.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Models\UserwiseRolePermission.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\USP_GETCONTACTINFO_Result.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\USP_GET_CUSTOMERCONTACT_DATA_Result.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\USP_GET_CUSTOMERCONTACT_DETAIL_Result.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\USP_GET_CUSTOMERCONTACT_LIST_Result.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Address.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Vw_Alias.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_ContactMapping.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VW_Container.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VW_SIPL_Contact.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VW_SIPL_ServiceReference.cs">
+      <DependentUpon>AppMGL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository.cs" />
+    <Compile Include="Repository\DataManagement\IWarehouseLocationRepository.cs" />
+    <Compile Include="Repository\DataManagement\LGSPFEECategoryRepository.cs" />
+    <Compile Include="Repository\DataManagement\CommodityRepository.cs" />
+    <Compile Include="Repository\DataManagement\CommodityTypeRepository.cs" />
+    <Compile Include="Repository\DataManagement\CompanyGradation.cs" />
+    <Compile Include="Repository\DataManagement\ContactCategoryRepository.cs" />
+    <Compile Include="Repository\DataManagement\ContainerTypeRepository.cs" />
+    <Compile Include="Repository\DataManagement\ContinentRepository.cs" />
+    <Compile Include="Repository\DataManagement\LGACCTCategoryRepository.cs" />
+    <Compile Include="Repository\DataManagement\LGVWAliasRepository.cs" />
+    <Compile Include="Repository\DataManagement\LGVWSIPLContactRepository.cs" />
+    <Compile Include="Repository\DataManagement\LGVWPortRepository.cs" />
+    <Compile Include="Repository\DataManagement\LG_VW_Alias.cs" />
+    <Compile Include="Repository\DataManagement\LG_VW_SIPL_CONTACT.cs" />
+    <Compile Include="Repository\DataManagement\LG_VW_SurchargeGroup.cs" />
+    <Compile Include="Repository\DataManagement\LoadTypeRepository.cs" />
+    <Compile Include="Repository\DataManagement\PortGroupRepository.cs" />
+    <Compile Include="Repository\DataManagement\RailRampRepository.cs" />
+    <Compile Include="Repository\DataManagement\LGVWCityRepository.cs" />
+    <Compile Include="Repository\DataManagement\SIPLBookingStatusRepository.cs" />
+    <Compile Include="Repository\DataManagement\SIPLCityRepository.cs" />
+    <Compile Include="Repository\DataManagement\SIPLCountryRepository.cs" />
+    <Compile Include="Repository\DataManagement\SIPLPortRepository.cs" />
+    <Compile Include="Repository\DataManagement\LGVWStateRepository.cs" />
+    <Compile Include="Repository\DataManagement\SIPLUserRepository.cs" />
+    <Compile Include="Repository\DataManagement\SIPLStateRepository.cs" />
+    <Compile Include="Repository\DataManagement\SurchargeGroupRepository.cs" />
+    <Compile Include="Repository\DataManagement\TerminalRepository.cs" />
+    <Compile Include="Repository\DataManagement\TradeService.cs" />
+    <Compile Include="Repository\DataManagement\WarehouseLocationRepository.cs" />
+    <Compile Include="Repository\DataManagement\_ILGSPFEECategoryRepository.cs" />
+    <Compile Include="Repository\DataManagement\_ICommodityRepository.cs" />
+    <Compile Include="Repository\DataManagement\_ICommodityTypeRepository.cs" />
+    <Compile Include="Repository\DataManagement\_ICompanyGradationRepository.cs" />
+    <Compile Include="Repository\DataManagement\_IContactCategoryRepository.cs" />
+    <Compile Include="Repository\DataManagement\_IContainerTypeRepository.cs" />
+    <Compile Include="Repository\DataManagement\_IContinentRepository.cs" />
+    <Compile Include="Repository\DataManagement\_ILGACCTCategoryRepository.cs" />
+    <Compile Include="Repository\DataManagement\_ILGVWAliasRepository.cs" />
+    <Compile Include="Repository\DataManagement\_ILGVWPortRepository.cs" />
+    <Compile Include="Repository\DataManagement\_ILG_VW_SIPL_CONTACT.cs" />
+    <Compile Include="Repository\DataManagement\_ILoadTypeRepository.cs" />
+    <Compile Include="Repository\DataManagement\_IPortGroupRepository.cs" />
+    <Compile Include="Repository\DataManagement\_IRailRampRepository.cs" />
+    <Compile Include="Repository\DataManagement\_ILGVWCityRepository.cs" />
+    <Compile Include="Repository\DataManagement\_ISIPLBookingStatusRepository.cs" />
+    <Compile Include="Repository\DataManagement\_ISIPLCityRepository.cs" />
+    <Compile Include="Repository\DataManagement\_ISIPLContactReposiotry.cs" />
+    <Compile Include="Repository\DataManagement\_ISIPLCountryReposiotry.cs" />
+    <Compile Include="Repository\DataManagement\_ISIPLPortRepository.cs" />
+    <Compile Include="Repository\DataManagement\_ILGVWStateRepository.cs" />
+    <Compile Include="Repository\DataManagement\_ISIPLStateRepository.cs" />
+    <Compile Include="Repository\DataManagement\_ISurchargeGroupRepository.cs" />
+    <Compile Include="Repository\DataManagement\_ITerminalRepository.cs" />
+    <Compile Include="Repository\DataManagement\_ITradeService.cs" />
+    <Compile Include="Repository\Document\ILGShipmentDockReceiptRepository.cs" />
+    <Compile Include="Repository\Document\LGShipmentDockReceiptRepository.cs" />
+    <Compile Include="Repository\Operation\DocumentationListRepository.cs" />
+    <Compile Include="Repository\Operation\ContractRateModalRepository.cs" />
+    <Compile Include="Repository\Operation\ContractRateRepository.cs" />
+    <Compile Include="Repository\Operation\ContractRateVWRepository.cs" />
+    <Compile Include="Repository\Operation\CustomerContactRepository.cs" />
+    <Compile Include="Repository\Operation\DisplayRateRepository.cs" />
+    <Compile Include="Repository\Operation\EnquiryDetailRepository.cs" />
+    <Compile Include="Repository\Operation\BookingListRepository.cs" />
+    <Compile Include="Repository\Operation\QuickBookingListRepository.cs" />
+    <Compile Include="Repository\Operation\QuotationListRepository.cs" />
+    <Compile Include="Repository\Operation\EnquiryListRepository.cs" />
+    <Compile Include="Repository\Operation\USP_GET_CUSTOMERCONTACT_DETAIL_Result.cs" />
+    <Compile Include="Repository\Operation\USP_GET_CUSTOMERCONTACT_LIST_Result.cs" />
+    <Compile Include="Repository\Operation\USP_GET_ENQUIRY_DETAIL_Result.cs" />
+    <Compile Include="Repository\Operation\USP_GET_ENQUIRY_LIST_Result.cs" />
+    <Compile Include="Repository\Operation\_IDocumentationListRepository.cs" />
+    <Compile Include="Repository\Operation\_IContractRateModalRepository.cs" />
+    <Compile Include="Repository\Operation\_IContractRateRepository.cs" />
+    <Compile Include="Repository\Operation\_IContractRateVWRepository.cs" />
+    <Compile Include="Repository\Operation\_ICustomerContactRepository.cs" />
+    <Compile Include="Repository\Operation\_IDisplayRateRepository.cs" />
+    <Compile Include="Repository\Operation\_IEnquiryDetailRepository.cs" />
+    <Compile Include="Repository\Operation\_IBookingListRepository.cs" />
+    <Compile Include="Repository\Operation\_IQuickBookingListRepository.cs" />
+    <Compile Include="Repository\Report\MCSReportRepository.cs" />
+    <Compile Include="Repository\Report\BookingReportRepository.cs" />
+    <Compile Include="Repository\Report\BookingStatusReportRepository.cs" />
+    <Compile Include="Repository\Document\DocumentCommonRepository.cs" />
+    <Compile Include="Repository\Report\QuotationReportRepository.cs" />
+    <Compile Include="Repository\Report\EnquiryReportRepository.cs" />
+    <Compile Include="Repository\Report\RPT_GET_BOOKING_Result.cs" />
+    <Compile Include="Repository\Report\RPT_GET_BOOKING_STATUS_Result.cs" />
+    <Compile Include="Repository\Report\RPT_GET_ENQUIRY_Result.cs" />
+    <Compile Include="Repository\Report\RPT_GET_QUOTATION_Result.cs" />
+    <Compile Include="Repository\Report\_IMCSReportRepository.cs" />
+    <Compile Include="Repository\Report\_IBookingReportRepository.cs" />
+    <Compile Include="Repository\Report\_IBookingStatusReportRepository.cs" />
+    <Compile Include="Repository\Document\_IDocumentCommonRepository.cs" />
+    <Compile Include="Repository\Report\_IQuotationReportRepository.cs" />
+    <Compile Include="Repository\Report\_IEnquiryReportRepository.cs" />
+    <Compile Include="Repository\Operation\_IQuotationListRepository.cs" />
+    <Compile Include="Repository\Operation\_IEnquiryListRepository.cs" />
+    <Compile Include="Repository\Security\ActionRepository.cs" />
+    <Compile Include="Repository\Security\_ISiteRepository.cs" />
+    <Compile Include="Repository\Security\_IRoleRepository.cs" />
+    <Compile Include="Repository\Security\_ISiteRoleRepository.cs" />
+    <Compile Include="Repository\Security\_IUserRepository.cs" />
+    <Compile Include="Repository\Security\_IRoleMapRepository.cs" />
+    <Compile Include="Repository\Security\_IModuleTypeRepository.cs" />
+    <Compile Include="Repository\Security\_IActionRepository.cs" />
+    <Compile Include="Repository\Security\_IModuleRepository.cs" />
+    <Compile Include="Repository\Security\RoleMapRepository.cs" />
+    <Compile Include="Repository\Security\ModuleRepository.cs" />
+    <Compile Include="Repository\Security\ModuleTypeRepository.cs" />
+    <Compile Include="Repository\Security\AuthRepository.cs" />
+    <Compile Include="Repository\Security\RoleRepository.cs" />
+    <Compile Include="Repository\Security\SiteRoleRepository.cs" />
+    <Compile Include="Repository\Security\SiteRepository.cs" />
+    <Compile Include="Repository\Security\UserRepository.cs" />
+    <Compile Include="Repository\DataManagement\SIPLContactRepository.cs" />
+    <Compile Include="Repository\Setup\CityRepository.cs" />
+    <Compile Include="Repository\Security\ContactWorkTypeRepository.cs" />
+    <Compile Include="Repository\Setup\CountryRepository.cs" />
+    <Compile Include="Repository\Home\DashboardRepository.cs" />
+    <Compile Include="Repository\Setup\DepartmentRepository.cs" />
+    <Compile Include="Repository\DataManagement\SIPLDepartmentRepository.cs" />
+    <Compile Include="Repository\Setup\_ICityRepository.cs" />
+    <Compile Include="Repository\Security\_IContactWorkTypeRepository.cs" />
+    <Compile Include="Repository\Setup\_ICountryRepository.cs" />
+    <Compile Include="Repository\Home\_IDashboardRepository.cs" />
+    <Compile Include="Repository\Setup\_ILocationRepository.cs" />
+    <Compile Include="Repository\DataManagement\_ISIPLDepartmentRepository.cs" />
+    <Compile Include="Repository\Setup\_IDepartmentRepository.cs" />
+    <Compile Include="Repository\DataManagement\_ISIPLUserRepository.cs" />
+    <Compile Include="Repository\Setup\_IContactRepository.cs" />
+    <Compile Include="Repository\Setup\_IStateRepository.cs" />
+    <Compile Include="Repository\Setup\_ITimezoneRepository.cs" />
+    <Compile Include="Repository\Setup\_ITitleRepository.cs" />
+    <Compile Include="Repository\Setup\LocatioinRepository.cs" />
+    <Compile Include="Repository\Setup\TimezoneRepository.cs" />
+    <Compile Include="Repository\Setup\TitleRepository.cs" />
+    <Compile Include="Repository\Setup\StateRepository.cs" />
+    <Compile Include="Repository\Setup\ContactRepository.cs" />
+    <Compile Include="UDT\ActionQuery.cs" />
+    <Compile Include="UDT\AspNetUsersQuery.cs" />
+    <Compile Include="UDT\BaseQuery.cs" />
+    <Compile Include="UDT\BookingListQuery.cs" />
+    <Compile Include="UDT\BookingReportQuery.cs" />
+    <Compile Include="UDT\BookingStatusReportQuery.cs" />
+    <Compile Include="UDT\CityQuery.cs" />
+    <Compile Include="UDT\CommodityQuery.cs" />
+    <Compile Include="UDT\CommodityTypeQuery.cs" />
+    <Compile Include="UDT\CompanyGradationQuery.cs" />
+    <Compile Include="UDT\ContactCategoryQuery.cs" />
+    <Compile Include="UDT\ContactQuery.cs" />
+    <Compile Include="UDT\ContactWorkTypeQuery.cs" />
+    <Compile Include="UDT\ContainerTypeQuery.cs" />
+    <Compile Include="UDT\ContinentQuery.cs" />
+    <Compile Include="UDT\ContractRateModalQuery.cs" />
+    <Compile Include="UDT\ContractRateQuery.cs" />
+    <Compile Include="UDT\CountryQuery.cs" />
+    <Compile Include="UDT\CustomerContactQuery.cs" />
+    <Compile Include="UDT\DashboardQuery.cs" />
+    <Compile Include="UDT\DepartmentQuery.cs" />
+    <Compile Include="UDT\DisplayRateQuery.cs" />
+    <Compile Include="UDT\DocumentationListQuery.cs" />
+    <Compile Include="UDT\DocumentCommonQuery.cs" />
+    <Compile Include="UDT\EnquiryDetailQuery.cs" />
+    <Compile Include="UDT\EnquiryListQuery.cs" />
+    <Compile Include="UDT\EnquiryReportQuery.cs" />
+    <Compile Include="UDT\EnumAction.cs" />
+    <Compile Include="UDT\EnumModule.cs" />
+    <Compile Include="UDT\EnumResult.cs" />
+    <Compile Include="UDT\ErrorLogQuery.cs" />
+    <Compile Include="UDT\LGACCTCategoryQuery.cs" />
+    <Compile Include="UDT\LGSPFEECategoryQuery.cs" />
+    <Compile Include="UDT\LGVWAliasQuery.cs" />
+    <Compile Include="UDT\LGVWCityQuery.cs" />
+    <Compile Include="UDT\LGVWPortQuery.cs" />
+    <Compile Include="UDT\LGVWSIPLContactQuery.cs" />
+    <Compile Include="UDT\LGVWStateQuery.cs" />
+    <Compile Include="UDT\LoadTypeQuery.cs" />
+    <Compile Include="UDT\LocationQuery.cs" />
+    <Compile Include="UDT\MCSQBQuery.cs" />
+    <Compile Include="UDT\MCSReportQuery.cs" />
+    <Compile Include="UDT\ModuleQuery.cs" />
+    <Compile Include="UDT\ModuleTypeQuery.cs" />
+    <Compile Include="UDT\OperationResult.cs" />
+    <Compile Include="UDT\PortGroupQuery.cs" />
+    <Compile Include="UDT\QuickBookListQuery.cs" />
+    <Compile Include="UDT\QuotationListQuery.cs" />
+    <Compile Include="UDT\QuotationReportQuery.cs" />
+    <Compile Include="UDT\RailRampQuery.cs" />
+    <Compile Include="UDT\RoleMapQuery.cs" />
+    <Compile Include="UDT\RoleQuery.cs" />
+    <Compile Include="UDT\SIPLBookingStatusQuery.cs" />
+    <Compile Include="UDT\SIPLCityQuery.cs" />
+    <Compile Include="UDT\SIPLContactQuery.cs" />
+    <Compile Include="UDT\SIPLCountryQuery.cs" />
+    <Compile Include="UDT\SIPLDepartment.cs" />
+    <Compile Include="UDT\SIPLDepartmentQuery.cs" />
+    <Compile Include="UDT\SIPLPortQuery.cs" />
+    <Compile Include="UDT\SIPLStateQuery.cs" />
+    <Compile Include="UDT\SIPLUSer.cs" />
+    <Compile Include="UDT\SIPLUserQuery.cs" />
+    <Compile Include="UDT\SiteQuery.cs" />
+    <Compile Include="UDT\SiteRoleQuery.cs" />
+    <Compile Include="UDT\StateQuery.cs" />
+    <Compile Include="UDT\SurchargeGroupQuery.cs" />
+    <Compile Include="UDT\TerminalQuery.cs" />
+    <Compile Include="UDT\TimezoneQuery.cs" />
+    <Compile Include="UDT\TitleQuery.cs" />
+    <Compile Include="UDT\TradeServiceQuery.cs" />
+    <Compile Include="UDT\UserQuery.cs" />
+    <Compile Include="UDT\WarehouseLocationQuery.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="Models\AppMGL.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AppMGL.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\AppMGL.edmx.diagram">
+      <DependentUpon>AppMGL.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\AppMGL.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AppMGL.edmx</DependentUpon>
+      <LastGenOutput>AppMGL.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\AppMGL.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AppMGL.edmx</DependentUpon>
+      <LastGenOutput>AppMGL.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppMGL.DTO\AppMGL.DTO.csproj">
+      <Project>{3ACA887B-9B9F-4868-BDAC-D1A88774CB2D}</Project>
+      <Name>AppMGL.DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

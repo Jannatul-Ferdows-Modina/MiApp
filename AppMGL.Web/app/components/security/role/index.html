@@ -1,0 +1,27 @@
+﻿<div class="view indent">
+    <div class="box box-info" ng-show="viewList">
+        <div class="box-header with-border">
+            <h3 class="box-title"></h3>
+            <div class="box-tools pull-right">
+                <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+            </div>
+        </div>
+        <div class="box-body">
+            <div ng-include="page.urls.listFilter"></div>
+        </div>
+    </div>
+    <div id="mainBoxWidget" class="box box-primary">
+        <div class="box-header with-border">
+            <h3 class="box-title"></h3>
+            <div class="box-tools pull-right">
+                <div ng-include="'app/views/shared/actions.html'"></div>
+            </div>
+        </div>
+        <div class="box-body">
+            <div id="divList" ng-show="viewList" ng-include="page.urls.list" onload="requestLoad()" when-ready="requestCompleted()" wait-for-interpolation="true"></div>
+            <div id="divContainer" ng-hide="viewList" ng-include="page.urls.container" onload="requestLoad()" when-ready="requestCompleted()" wait-for-interpolation="true"></div>
+        </div>
+        <div class="box-footer"></div>
+    </div>
+
+</div>

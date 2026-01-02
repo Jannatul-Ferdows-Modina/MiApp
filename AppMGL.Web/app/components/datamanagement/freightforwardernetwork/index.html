@@ -1,0 +1,56 @@
+﻿<div class="view indent">
+    <div class="box box-info" ng-show="viewList">
+        <div class="box-header with-border">
+            <h3 class="box-title"></h3>
+            <div class="box-tools pull-right">
+                <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+            </div>
+        </div>
+        <div class="box-body">
+            <div ng-include="page.urls.listFilter"></div>
+        </div>
+    </div>
+    <div id="mainBoxWidget" class="box box-primary">
+        <div class="box-header with-border">
+            <h3 class="box-title"></h3>
+            <div class="box-tools pull-right">
+                <div ng-show="viewList" id="divAdd">
+                    <button name="btnAdd" type="button" class="btn btn-sm btn-primary" ng-click="performAction($event, true)" show-action="10" action="add" entityid="0"><i class="fa fa-pencil"></i> Add {{pageTitle}}</button>                    
+                                        
+                    <button ng-hide="true" type="button" class="btn btn-sm btn-info" ng-click="actionList($event)" action="filterList" uib-tooltip="Filter"><i class="fa fa-search"></i> <span class="hidden-xs">Filter</span></button>
+                    <button ng-hide="true" type="button" class="btn btn-sm btn-info" ng-click="actionList($event)" action="refreshList" uib-tooltip="Refresh"><i class="fa fa-refresh"></i> <span class="hidden-xs">Refresh</span></button>
+                </div>
+                <div ng-hide="viewList">
+                    <div ng-hide="editMode">
+                        <button type="button" class="btn btn-sm btn-info" ng-click="goBack()"><i class="fa fa-circle-arrow-left"></i> Back</button>
+                        <div class="inline" ng-show="isTab0">
+                            <button type="button" class="btn btn-sm btn-primary" ng-click="performAction($event, false)" show-action="20" action="edit"><i class="fa fa-edit"></i> Edit</button>
+                            <div class="btn-group" uib-dropdown>
+                                <button type="button" class="btn btn-sm btn-primary" status-id="entity.statusId" uib-dropdown-toggle><span class="fa fa-ellipsis-h"></span></button>
+                                <ul class="dropdown-menu" list-action="true">
+                                    <li class="list-sm" ng-click="performAction($event, false)" show-action="30" action="delete"><a><i class="fa fa-remove"></i> Delete</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-show="editMode">
+                        <button type="button" class="btn btn-sm btn-primary" ng-click="saveCustomerContact($event, false)" action="save"><i class="fa fa-floppy-o"></i> Save</button>
+                        <button type="button" class="btn btn-sm btn-default" ng-click="performAction($event, false)" action="cancel">Cancel</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="box-body">
+            <div id="divList" ng-show="viewList" ng-include="page.urls.list" onload="requestLoad()" when-ready="requestCompleted()" wait-for-interpolation="true"></div>
+            <div id="divContainer" ng-hide="viewList" ng-include="page.urls.container" onload="requestLoad()" when-ready="requestCompleted()" wait-for-interpolation="true"></div>
+        </div>
+        <div class="box-footer">
+            <div ng-show="editMode">
+                <button type="button" class="btn btn-sm btn-primary pull-right" ng-click="saveCustomerContact($event, false)" action="save"><i class="fa fa-floppy-o"></i> Save</button>
+                <button type="button" class="btn btn-sm btn-default pull-right" ng-click="performAction($event, false)" action="cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+</div>

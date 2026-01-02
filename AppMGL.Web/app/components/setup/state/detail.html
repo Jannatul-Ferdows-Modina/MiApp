@@ -1,0 +1,27 @@
+﻿<ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+    <p>&nbsp;</p>
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredInsert ? 'required' : ''}}">State Id</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="ustId" ng-model="entity.ustId" ng-disabled="disabledInsert" ng-required="requiredInsert" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Name</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="ustName" ng-model="entity.ustName" maxlength="200" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Abbrevation</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="ustAbbrev" ng-model="entity.ustAbbrev" maxlength="200" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Status</label>
+        <div class="col-sm-4 checkbox-control">
+            <input type="checkbox" name="ustStatus" ng-model="entity.ustStatus" ng-disabled="disabledUpdate" />
+        </div>
+    </div>
+</ng-form>

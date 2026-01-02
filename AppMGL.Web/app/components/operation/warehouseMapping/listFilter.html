@@ -1,0 +1,31 @@
+﻿<div class="box-container form-horizontal detail-container">
+    <div class="form-group">
+        <label class="col-sm-1 control-label text-left">Warehouse Name</label>
+        <div class="col-sm-3"><input type="text" class="form-control" name="NameF" ng-model="NameF" lookup-field="name" entity-key-field="contactCategoryId" custom-clear="true" /></div>
+        <label class="col-sm-1 control-label text-left">Challan No</label>
+        <div class="col-sm-3"><input type="text" class="form-control" name="ChallanNoF" ng-model="ChallanNoF" lookup-field="ChallanNo" entity-key-field="contactCategoryId" custom-clear="true" /></div>
+        <label class="col-sm-1 control-label text-left">Quotation No</label>
+        <div class="col-sm-3"><input type="text" class="form-control" name="QuotationNoF" ng-model="QuotationNoF" lookup-field="QuotationNoF" entity-key-field="contactCategoryId" custom-clear="true" /></div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-1 control-label text-left">Challan Start Date</label>
+        <div class="col-sm-3">
+            <input type="text" input-date="true" show-time="false" class="form-control" name="ChallanDateF" ng-model="ChallanDateF" lookup-field="ChallanDate" entity-key-field="contactCategoryId" custom-clear="true" />
+
+        </div>
+        <label class="col-sm-1 control-label text-left">Challan End Date</label>
+        <div class="col-sm-3">
+            <input type="text" input-date="true" show-time="false" class="form-control" name="ChallanEndDateF" ng-model="ChallanEndDateF" lookup-field="ChallanEndDate" entity-key-field="contactCategoryId" custom-clear="true" />
+        </div>
+        <label class="col-sm-1 control-label text-left">Shipper Name</label>
+        <div class="col-sm-3">
+            <input type="text" autocomplete="off"  class="form-control" name="ShipperNameF" ng-model="ShipperNameF" lookup-field="ShipperNameF" entity-key-field="contactCategoryId"  uib-typeahead="o.name for o in searchValuesCompany($viewValue, 'companyName')"  ng-change="delayedSearch()" typeahead-on-select="selectTypeaheadAES($item, $model, $label, $event,'SIPLContact1')" lookup-module="SIPLContact1" custom-clear="true" />
+        </div>
+       
+    </div>
+    <div class="form-group">
+        <div class="col-sm-1" style="float:right">
+            <button class="btn btn-sm btn-primary" ng-click="performActionWareHouse($event)" action="search">Search</button>
+        </div>
+    </div>
+    </div>

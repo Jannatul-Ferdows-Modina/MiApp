@@ -1,0 +1,70 @@
+﻿<ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+    <p>&nbsp;</p>
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}"> Company Name</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" autocomplete="off" class="form-control" name="companyName" maxlength="30" ng-model="entity.companyName" uib-typeahead="o.name for o in searchValues($viewValue, 'companyName')" typeahead-on-select="selectTypeaheadsli($item, $model, $label, $event,'companyName')" ng-blur="validateTypeahead($event)" lookup-module="SIPLContact" lookup-field="companyName" entity-key-field="contactID" custom-clear="true" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+        </div>
+        <label class="col-sm-2 control-label">First Name</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="firstName" maxlength="13" ng-model="entity.firstName" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Last Name</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="lastName" maxlength="20" ng-model="entity.lastName" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+        </div>
+        <label class="col-sm-2 control-label"> Phone Number</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="phoneNumber" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="13" ng-model="entity.phoneNumber" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}"> Address Line 1</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="addressLine1" maxlength="32" ng-model="entity.addressLine1" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+        </div>
+        <label class="col-sm-2 control-label">Address Line 2</label>
+        <div class="col-sm-4 ">
+            <input type="text" class="form-control" name="addressLine2" maxlength="32" ng-model="entity.addressLine2" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}"> Country</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+
+            <input type="text" autocomplete="off" class="form-control" name="countryName" ng-model="entity.countryName" maxlength="100" uib-typeahead="o.itemName for o in searchValues($viewValue,'country')" typeahead-on-select="selectTypeaheadsli($item, $model, $label, $event,'ultimateCountryCode')" ng-required="requiredUpdate" />
+        </div>
+        <label class="col-sm-2 control-label"> Postal Code</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="postalCode" maxlength="9" ng-model="entity.postalCode" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">City </label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="cityName" ng-model="entity.cityName" maxlength="25" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+        </div>
+        <label class="col-sm-2 control-label">State</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" autocomplete="off" class="form-control" name="stateName" ng-model="entity.stateName" maxlength="100" uib-typeahead="o.itemName for o in searchValues($viewValue,'state')" typeahead-on-select="selectTypeaheadsli($item, $model, $label, $event,'ultimateStateCode')" ng-required="requiredUpdate" />
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}"> EIN Number</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="einNo" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="11" ng-model="entity.einNo" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+        </div>
+        <label class="col-sm-2 control-label">Template Type</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <select class="form-control" name="templateType" ng-model="entity.templateType" ng-options="item.optionValue as item.optionName for item in tempType" ng-required="requiredUpdate"></select>
+
+        </div>
+        <label class="col-sm-2 control-label">IsActive</label>
+        <div class="col-sm-4 checkbox-control">
+            <input type="checkbox" name="isActive" ng-model="entity.isActive" ng-disabled="disabledUpdate" />
+        </div>
+    </div>
+</ng-form>

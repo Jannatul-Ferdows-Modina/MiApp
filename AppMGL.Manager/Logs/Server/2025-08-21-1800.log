@@ -1,0 +1,433 @@
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 09:17:30.8988 PM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Validate access token
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 09:17:30.9098 PM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Validate access token OK
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 09:17:31.5432 PM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : GetSiteLocations data 13
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 09:17:31.5700 PM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Dasboard id 117
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 09:17:34.1031 PM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Dasboard id data0
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 10:25:21.4537 PM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Validate access token
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 10:25:21.4547 PM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Validate access token OK No
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 10:26:28.4278 PM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Validate access token
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 10:26:28.4553 PM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Validate access token OK
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 10:26:29.2408 PM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : GetSiteLocations data 13
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 10:26:30.4370 PM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Dasboard id 140
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 10:26:31.3989 PM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Dasboard id data0
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 10:44:38.2039 PM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Validate access token
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 10:44:38.2079 PM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Validate access token OK No
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 10:45:14.0712 PM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Validate access token
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 10:45:14.0712 PM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Validate access token OK
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 10:45:17.7361 PM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : GetSiteLocations data 13
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 10:45:18.1029 PM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Dasboard id 138
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 10:45:22.7622 PM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Dasboard id data0
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 11:10:17.8704 PM
+ENTRY TYPE  : Error
+SOURCE      : .Net SqlClient Data Provider
+MESSAGE     : The parameterized query '(@CommodityId nvarchar(4000),@Name nvarchar(4),@Description nvar' expects the parameter '@CommodityId', which was not supplied.
+STACK TRACE :    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass69`1.<ExecuteStoreQueryReliably>b__68()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass69`1.<ExecuteStoreQueryReliably>b__67()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryReliably[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClass14`1.<ExecuteSqlQuery>b__13()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at AppMGL.Manager.Areas.DataManagement.Controllers.CommodityController.Insert(CommodityDTO objcom) in F:\New folder\MGL-Logistics\AppMGL.Manager\Areas\DataManagement\Controllers\CommodityController.cs:line 67
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 11:10:18.1783 PM
+ENTRY TYPE  : Error
+SOURCE      : EntityFramework
+MESSAGE     : The argument 'sql' cannot be null, empty or contain only white space.
+STACK TRACE :    at System.Data.Entity.Utilities.Check.NotEmpty(String value, String parameterName)
+   at System.Data.Entity.Database.ExecuteSqlCommand(TransactionalBehavior transactionalBehavior, String sql, Object[] parameters)
+   at System.Data.Entity.Database.ExecuteSqlCommand(String sql, Object[] parameters)
+   at AppMGL.DAL.Models.AppMGL.ExecuteCommand(String sqlCommand, Object[] parameters) in F:\New folder\MGL-Logistics\AppMGL.DAL\AppMGL.cs:line 455
+   at AppMGL.DAL.Repository`1.ExecuteCommand(String sqlCommand, Object[] parameters) in F:\New folder\MGL-Logistics\AppMGL.DAL\Repository.cs:line 112
+   at AppMGL.Manager.Infrastructure.BaseController`3.InsertErrorLog(Exception ex) in F:\New folder\MGL-Logistics\AppMGL.Manager\Infrastructure\BaseController.cs:line 270
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 11:20:59.1550 PM
+ENTRY TYPE  : Error
+SOURCE      : .Net SqlClient Data Provider
+MESSAGE     : The parameterized query '(@CommodityId bigint,@Name nvarchar(1),@Description nvarchar(4),' expects the parameter '@CommodityId', which was not supplied.
+STACK TRACE :    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass69`1.<ExecuteStoreQueryReliably>b__68()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass69`1.<ExecuteStoreQueryReliably>b__67()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryReliably[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClass14`1.<ExecuteSqlQuery>b__13()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at AppMGL.Manager.Areas.DataManagement.Controllers.CommodityController.Insert(CommodityDTO objcom) in F:\New folder\MGL-Logistics\AppMGL.Manager\Areas\DataManagement\Controllers\CommodityController.cs:line 67
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 11:20:59.2897 PM
+ENTRY TYPE  : Error
+SOURCE      : EntityFramework
+MESSAGE     : The argument 'sql' cannot be null, empty or contain only white space.
+STACK TRACE :    at System.Data.Entity.Utilities.Check.NotEmpty(String value, String parameterName)
+   at System.Data.Entity.Database.ExecuteSqlCommand(TransactionalBehavior transactionalBehavior, String sql, Object[] parameters)
+   at System.Data.Entity.Database.ExecuteSqlCommand(String sql, Object[] parameters)
+   at AppMGL.DAL.Models.AppMGL.ExecuteCommand(String sqlCommand, Object[] parameters) in F:\New folder\MGL-Logistics\AppMGL.DAL\AppMGL.cs:line 455
+   at AppMGL.DAL.Repository`1.ExecuteCommand(String sqlCommand, Object[] parameters) in F:\New folder\MGL-Logistics\AppMGL.DAL\Repository.cs:line 112
+   at AppMGL.Manager.Infrastructure.BaseController`3.InsertErrorLog(Exception ex) in F:\New folder\MGL-Logistics\AppMGL.Manager\Infrastructure\BaseController.cs:line 270
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 11:34:49.6830 PM
+ENTRY TYPE  : Error
+SOURCE      : .Net SqlClient Data Provider
+MESSAGE     : The parameterized query '(@CommodityId bigint,@Name nvarchar(1),@Description nvarchar(1),' expects the parameter '@CommodityId', which was not supplied.
+STACK TRACE :    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass69`1.<ExecuteStoreQueryReliably>b__68()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass69`1.<ExecuteStoreQueryReliably>b__67()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryReliably[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClass14`1.<ExecuteSqlQuery>b__13()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at AppMGL.Manager.Areas.DataManagement.Controllers.CommodityController.Insert(CommodityDTO objcom) in F:\New folder\MGL-Logistics\AppMGL.Manager\Areas\DataManagement\Controllers\CommodityController.cs:line 52
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 11:34:49.8504 PM
+ENTRY TYPE  : Error
+SOURCE      : EntityFramework
+MESSAGE     : The argument 'sql' cannot be null, empty or contain only white space.
+STACK TRACE :    at System.Data.Entity.Utilities.Check.NotEmpty(String value, String parameterName)
+   at System.Data.Entity.Database.ExecuteSqlCommand(TransactionalBehavior transactionalBehavior, String sql, Object[] parameters)
+   at System.Data.Entity.Database.ExecuteSqlCommand(String sql, Object[] parameters)
+   at AppMGL.DAL.Models.AppMGL.ExecuteCommand(String sqlCommand, Object[] parameters) in F:\New folder\MGL-Logistics\AppMGL.DAL\AppMGL.cs:line 455
+   at AppMGL.DAL.Repository`1.ExecuteCommand(String sqlCommand, Object[] parameters) in F:\New folder\MGL-Logistics\AppMGL.DAL\Repository.cs:line 112
+   at AppMGL.Manager.Infrastructure.BaseController`3.InsertErrorLog(Exception ex) in F:\New folder\MGL-Logistics\AppMGL.Manager\Infrastructure\BaseController.cs:line 270
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 11:49:12.3401 PM
+ENTRY TYPE  : Error
+SOURCE      : .Net SqlClient Data Provider
+MESSAGE     : The parameterized query '(@CommodityId bigint,@Name nvarchar(4),@Description nvarchar(4),' expects the parameter '@CommodityId', which was not supplied.
+STACK TRACE :    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass69`1.<ExecuteStoreQueryReliably>b__68()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass69`1.<ExecuteStoreQueryReliably>b__67()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryReliably[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClass14`1.<ExecuteSqlQuery>b__13()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at AppMGL.Manager.Areas.DataManagement.Controllers.CommodityController.Insert(CommodityDTO objcom) in F:\New folder\MGL-Logistics\AppMGL.Manager\Areas\DataManagement\Controllers\CommodityController.cs:line 52
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 11:49:12.4496 PM
+ENTRY TYPE  : Error
+SOURCE      : EntityFramework
+MESSAGE     : The argument 'sql' cannot be null, empty or contain only white space.
+STACK TRACE :    at System.Data.Entity.Utilities.Check.NotEmpty(String value, String parameterName)
+   at System.Data.Entity.Database.ExecuteSqlCommand(TransactionalBehavior transactionalBehavior, String sql, Object[] parameters)
+   at System.Data.Entity.Database.ExecuteSqlCommand(String sql, Object[] parameters)
+   at AppMGL.DAL.Models.AppMGL.ExecuteCommand(String sqlCommand, Object[] parameters) in F:\New folder\MGL-Logistics\AppMGL.DAL\AppMGL.cs:line 455
+   at AppMGL.DAL.Repository`1.ExecuteCommand(String sqlCommand, Object[] parameters) in F:\New folder\MGL-Logistics\AppMGL.DAL\Repository.cs:line 112
+   at AppMGL.Manager.Infrastructure.BaseController`3.InsertErrorLog(Exception ex) in F:\New folder\MGL-Logistics\AppMGL.Manager\Infrastructure\BaseController.cs:line 270
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 11:50:45.7090 PM
+ENTRY TYPE  : Error
+SOURCE      : .Net SqlClient Data Provider
+MESSAGE     : The parameterized query '(@CommodityId bigint,@Name nvarchar(4),@Description nvarchar(4),' expects the parameter '@CommodityId', which was not supplied.
+STACK TRACE :    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass69`1.<ExecuteStoreQueryReliably>b__68()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass69`1.<ExecuteStoreQueryReliably>b__67()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryReliably[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClass14`1.<ExecuteSqlQuery>b__13()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at AppMGL.Manager.Areas.DataManagement.Controllers.CommodityController.Insert(CommodityDTO objcom) in F:\New folder\MGL-Logistics\AppMGL.Manager\Areas\DataManagement\Controllers\CommodityController.cs:line 52
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 11:50:45.7922 PM
+ENTRY TYPE  : Error
+SOURCE      : EntityFramework
+MESSAGE     : The argument 'sql' cannot be null, empty or contain only white space.
+STACK TRACE :    at System.Data.Entity.Utilities.Check.NotEmpty(String value, String parameterName)
+   at System.Data.Entity.Database.ExecuteSqlCommand(TransactionalBehavior transactionalBehavior, String sql, Object[] parameters)
+   at System.Data.Entity.Database.ExecuteSqlCommand(String sql, Object[] parameters)
+   at AppMGL.DAL.Models.AppMGL.ExecuteCommand(String sqlCommand, Object[] parameters) in F:\New folder\MGL-Logistics\AppMGL.DAL\AppMGL.cs:line 455
+   at AppMGL.DAL.Repository`1.ExecuteCommand(String sqlCommand, Object[] parameters) in F:\New folder\MGL-Logistics\AppMGL.DAL\Repository.cs:line 112
+   at AppMGL.Manager.Infrastructure.BaseController`3.InsertErrorLog(Exception ex) in F:\New folder\MGL-Logistics\AppMGL.Manager\Infrastructure\BaseController.cs:line 270
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 11:51:11.2707 PM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Validate access token
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 11:51:11.2737 PM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Validate access token OK
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 11:58:45.4914 PM
+ENTRY TYPE  : Error
+SOURCE      : .Net SqlClient Data Provider
+MESSAGE     : The parameterized query '(@CommodityId bigint,@Name nvarchar(1),@Description nvarchar(4),' expects the parameter '@CommodityId', which was not supplied.
+STACK TRACE :    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass69`1.<ExecuteStoreQueryReliably>b__68()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass69`1.<ExecuteStoreQueryReliably>b__67()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryReliably[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClass14`1.<ExecuteSqlQuery>b__13()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at AppMGL.Manager.Areas.DataManagement.Controllers.CommodityController.Insert(CommodityDTO objcom)
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 11:58:45.5604 PM
+ENTRY TYPE  : Error
+SOURCE      : EntityFramework
+MESSAGE     : The argument 'sql' cannot be null, empty or contain only white space.
+STACK TRACE :    at System.Data.Entity.Utilities.Check.NotEmpty(String value, String parameterName)
+   at System.Data.Entity.Database.ExecuteSqlCommand(TransactionalBehavior transactionalBehavior, String sql, Object[] parameters)
+   at System.Data.Entity.Database.ExecuteSqlCommand(String sql, Object[] parameters)
+   at AppMGL.DAL.Models.AppMGL.ExecuteCommand(String sqlCommand, Object[] parameters) in F:\New folder\MGL-Logistics\AppMGL.DAL\AppMGL.cs:line 455
+   at AppMGL.DAL.Repository`1.ExecuteCommand(String sqlCommand, Object[] parameters) in F:\New folder\MGL-Logistics\AppMGL.DAL\Repository.cs:line 112
+   at AppMGL.Manager.Infrastructure.BaseController`3.InsertErrorLog(Exception ex)
+

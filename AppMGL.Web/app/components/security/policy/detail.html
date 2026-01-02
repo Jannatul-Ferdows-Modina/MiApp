@@ -1,0 +1,24 @@
+﻿<ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+    <p>&nbsp;</p>
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredInsert ? 'required' : ''}}">Policy Code</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="policyCode" ng-model="entity.policyCode" maxlength="50" input-text="CODE" ng-disabled="disabledInsert" ng-required="requiredInsert" />
+        </div>
+        <label class="col-sm-2 control-label">Status</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="statusCaption" ng-model="entity.statusCaption" ng-disabled="true" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Policy Name</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="policyName" ng-model="entity.policyName" maxlength="200" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+        </div>
+    </div>
+    <div class="hide">
+        <input type="hidden" name="policyId" ng-model="entity.policyId" />
+        <input type="hidden" name="statusId" ng-model="entity.statusId" />
+        <input type="hidden" name="lastAccess" ng-model="entity.lastAccess" />
+    </div>
+</ng-form>

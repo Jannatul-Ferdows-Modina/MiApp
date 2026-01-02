@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="MGL">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=vikas;Initial Catalog=MIAMI_11Nov</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>a5b146ba-8dd7-49a0-8b59-bc2bfc8f8b6d</DataSourceID>
+</RptDataSource>

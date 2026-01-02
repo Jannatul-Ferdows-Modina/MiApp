@@ -1,0 +1,36 @@
+﻿<ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+    <p>&nbsp;</p>
+     
+    <div class="form-group">
+        <label class="col-sm-2 control-label ">Select Type</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+   
+
+            <select class="form-control" name="type" ng-model="entity.type" ng-options="item.optionValue as item.optionName for item in aliastypes" ng-disabled="disabledUpdate"></select>
+             
+        </div>
+    </div>
+
+    <div class="form-group"  ng-show="entity.type=='City'">
+        <label class="col-sm-2 control-label ">City</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <select class="form-control" name="AliasReferenceID"  ng-model="entity.aliasReferenceID"  ng-options="t.cityId as t.name for t in lookups.citynames" ng-disabled="disabledUpdate" ></select>
+        </div>
+    </div>
+
+    <div class="form-group" ng-show="entity.type=='State'">
+        <label class="col-sm-2 control-label ">State</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <select class="form-control" name="AliasReferenceID"  ng-model="entity.aliasReferenceID"  ng-options="t.stateId as t.name for t in lookups.statenames" ng-disabled="disabledUpdate" ></select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label ">Alias</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="alias" ng-model="entity.alias" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+        </div>
+    </div>
+     
+    
+</ng-form>

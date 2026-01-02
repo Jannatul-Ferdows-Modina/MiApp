@@ -1,0 +1,351 @@
+﻿
+
+
+
+<div class="modal-header">
+    <h3 class="modal-title"><span ng-show="isNew">View Booking</span></h3>
+
+</div>
+<div class="modal-body form-horizontal detail-container" wait-for-interpolation="true" style="width:100%;overflow-x:auto;">
+    <ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+        <table ng-table="bookinglistTable" class="table table-striped table-bordered table-hover" template-pagination="customPager" style="width:200px;">
+            <thead>
+                <tr class="bg-thead">
+                    <!--<th class="list-actions">QB</th>
+                    <th class="list-actions">QB Status</th>-->
+                    <th class="col-sm-1 text-left">System RefNo</th>
+                    <th class="col-sm-1 text-left">Booking No</th>
+                    <th class="col-sm-1 text-left">Quote No</th>
+                    <th class="col-sm-1 text-left">Customer</th>
+                    <th class="col-sm-1 text-left">VESSEL</th>
+                    <th class="col-sm-1 text-left">VOYAGE</th>
+                    <th class="col-sm-1 text-left">Line B/L#</th>
+                    <th class="col-sm-1 text-left">Container NO</th>
+                    <th class="col-sm-1 text-left">Line Name</th>
+                    <th class="col-sm-1 text-left">Trucker Name</th>
+                    <th class="col-sm-1 text-left">Other Name</th>
+                    <th class="col-sm-1 text-left">Mode Of Service</th>
+                    <th class="col-sm-1 text-left">Origin Port</th>
+                    <th class="col-sm-1 text-left">Descharge Port</th>
+                    <th class="col-sm-1 text-left">ETS</th>
+                    <th class="col-sm-1 text-left">ETA</th>
+                    <th class="col-sm-1 text-left">40'</th>
+                    <th class="col-sm-1 text-left">45'</th>
+                    <th class="col-sm-1 text-left">20'</th>
+                    <th class="col-sm-1 text-left">RORO & LCL IN CBM</th>
+                    <th class="col-sm-1 text-right">FREIGHT Sales</th>
+                    <th class="col-sm-1 text-right">INLAND Sales</th>
+                    <th class="col-sm-1 text-right">COURIER Sales</th>
+                    <th class="col-sm-1 text-right">OTHER Sales</th>
+                    <th class="col-sm-1 text-right">GROSS SALES</th>
+                    <th class="col-sm-1 text-right">FREIGHT COST</th>
+                    <th class="col-sm-1 text-right">LINER COMM AMT / ADJ</th>
+                    <th class="col-sm-1 text-right">INLAND COST</th>
+                    <th class="col-sm-1 text-right">COURIER COST</th>
+                    <th class="col-sm-1 text-right">OTHER COST</th>
+                    <th class="col-sm-1 text-right">GROSS COST</th>
+                    <th class="col-sm-1 text-right">First Party Comm.</th>
+                    <th class="col-sm-1 text-right">Sec. Party Comm.</th>
+                    <th class="col-sm-1 text-right">QB Status</th>
+                    <th class="col-sm-1 text-right">QB Matured Month</th>
+                    <th class="col-sm-1 text-right"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="ng-table-group" ng-repeat-start="group in $groups">
+                    <td colspan="36">
+                        <a href="" ng-click="group.$hideRows = !group.$hideRows">
+                            <span class="fa" ng-class="{ 'fa-chevron-right': group.$hideRows, 'fa-chevron-down': !group.$hideRows }"></span>
+                            {{group.data[0].sitName}}
+                        </a>
+                    </td>
+                </tr>
+                <tr ng-hide="group.$hideRows" ng-repeat="d in group.data">
+                    
+                    <td class="col-sm-1 text-left">
+                        <a ng-click="performBookingAction($event, true,d.enquiryID,d.quotationID,d.documentCommonID)" entityid="entity.quotationID"> {{d.fileNo }}</a>
+
+</td>
+                    <td class="col-sm-1 text-left">
+                        {{d.bookingNo}}
+                    </td>
+                    <td class="col-sm-1 text-left">
+                        {{d.quotationNo}}
+                    </td>
+                    <td class="col-sm-1 text-left">
+                      {{d.companyName}}
+                    </td>
+                    <td class="col-sm-1 text-left">
+                        {{d.vessel}}
+                    </td>
+                    <td class="col-sm-1 text-left">
+                        {{d.voyage}}
+                    </td>
+                    <td class="col-sm-1 text-left">
+                        {{d.blNumber}}
+                    </td>
+                    <td class="col-sm-1 text-left">
+                        {{d.containerNumber}}
+                    </td>
+                    <td class="col-sm-1 text-left">
+                        {{d.shippingLine}}
+                    </td>
+                    <td class="col-sm-1 text-left">
+                        {{d.transporter}}
+                    </td>
+                    <td class="col-sm-1 text-left">
+                        {{d.otherName}}
+                    </td>
+                    <td class="col-sm-1 text-left">
+                        {{d.modeofService}}
+                    </td>
+                    <td class="col-sm-1 text-left">
+                        {{d.portOfOrigin}}
+                    </td>
+                    <td class="col-sm-1 text-left">
+                        {{d.portOfDischarge}}
+                    </td>
+                    <td class="col-sm-1 text-left">
+                        {{d.ets | date:'MM/dd/yyyy'}}
+                    </td>
+                    <td class="col-sm-1 text-left">
+                        {{d.eta | date:'MM/dd/yyyy'}}
+                    </td>
+
+                    <td class="col-sm-1 text-left">
+                        {{d.isContainer40Exits}}
+                    </td>
+                    <td class="col-sm-1 text-left">
+                        {{d.isContainer45Exits}}
+                    </td>
+                    <td class="col-sm-1 text-left">
+                        {{d.isContainer20Exits}}
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        {{d.volumeInCB}}
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        {{d.freighT_SELLING_RATE | number:2}}
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        {{d.inlanD_SELLING_RATE | number:2}}
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        {{d.courieR_SELLING_RATE | number:2}}
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        {{d.otheR_SELLING_RATE | number:2}}
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        {{d.totaL_SELLING_RATE | number:2}}
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        {{d.freighT_BUYING_RATE | number:2}}
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        {{d.freighT_Comm | number:2}}
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        {{d.inlanD_BUYING_RATE | number:2}}
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        {{d.courieR_BUYING_RATE | number:2}}
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        {{d.otheR_BUYING_RATE | number:2}}
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        {{d.totaL_BUYING_RATE | number:2}}
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        {{d.firstPartyAmount }}
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        {{d.secondPartyAmount }}
+                    </td>
+                    <td class="col-sm-1 text-left">
+                        {{d.qbStatus }}
+                    </td>
+
+                    <td class="col-sm-1 text-right">
+                        {{d.qbMaturedMonth }}
+                    </td>
+
+                    <td class="col-sm-1 text-right">
+                        <!--<span ng-show="d.invoiceid != '0'">
+                            <button type="button" class="btn btn-sm btn-primary" ng-click="resetInvoice($event, null)" action="QBSignInBatchRef" docno="{{d.fileNo}}" entityid="{{d.documentCommonID}}"><i class="fa fa-download"></i> Reset</button>
+                        </span>-->
+                    </td>
+                </tr>
+                <tr ng-repeat-end>
+                    <td class="col-sm-1 text-right">
+                        &nbsp;
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        &nbsp;
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        &nbsp;
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        &nbsp;
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        &nbsp;
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        &nbsp;
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        &nbsp;
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        &nbsp;
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        &nbsp;
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        &nbsp;
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        &nbsp;
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        &nbsp;
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        &nbsp;
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        &nbsp;
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        &nbsp;
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        &nbsp;
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        &nbsp;
+                    </td>
+
+                    <td class="col-sm-1 text-right">
+                        Total
+                    </td>
+                    <td class="col-sm-1 text-left text-bold text-italic">
+                        {{sum(group.data, "isContainer40Exits") | number:2}}
+                    </td>
+
+                    <td class="col-sm-1 text-left text-bold text-italic">
+                        {{sum(group.data, "isContainer45Exits") | number:2}}
+                    </td>
+
+                    <td class="col-sm-1 text-right">
+                        {{sum(group.data, "isContainer20Exits") | number:2}}
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        &nbsp;
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        {{sum(group.data, "freighT_SELLING_RATE") | number:2}}
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        {{sum(group.data, "inlanD_SELLING_RATE") | number:2}}
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        {{sum(group.data, "courieR_SELLING_RATE") | number:2}}
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        {{sum(group.data, "otheR_SELLING_RATE") | number:2}}
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        {{sum(group.data, "totaL_SELLING_RATE") | number:2}}
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        {{sum(group.data, "freighT_BUYING_RATE") | number:2}}
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        {{sum(group.data, "freighT_Comm") | number:2}}
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        {{sum(group.data, "inlanD_BUYING_RATE") | number:2}}
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        {{sum(group.data, "courieR_BUYING_RATE") | number:2}}
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        {{sum(group.data, "otheR_BUYING_RATE") | number:2}}
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        {{sum(group.data, "totaL_BUYING_RATE") | number:2}}
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        &nbsp;
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        &nbsp;
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        &nbsp;
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        &nbsp;
+                    </td>
+                    <td class="col-sm-1 text-right">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr ng-if="params.total() == 0">
+                    <td class="text-center text-italic" colspan="38">No Record(s) Found</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!--<table ng-table="bookinglistTable" class="table table-striped table-bordered table-hover" template-pagination="customPager">
+            <thead class="header" id="myHeader">
+                <tr class="bg-thead">
+                    <th class="list-checkbox"></th>
+                    <th class="text-left sortable hidden-xs" table-name="bookinglistTable">Company Name</th>
+                    <th class="col-sm-1 text-left "  table-name="bookinglistTable">System Ref.</th>
+                    <th class="col-sm-1 text-left "  table-name="bookinglistTable">Miami Ref.</th>
+                    <th class="col-sm-1 text-left "  table-name="bookinglistTable">Booking No.</th>
+                    <th class="text-left  hidden-xs" table-name="bookinglistTable">Enquiry No</th>
+                    <th class="text-left  hidden-xs" table-name="bookinglistTable">Quotation No</th>
+                </tr>
+            </thead>
+            <tbody class="content">
+                <tr ng-repeat="entity in fdata">
+
+                    <td>
+                        <input type="checkbox" class="selquo" ng-model="entity.selected" ng-change="selquo()" />
+                    </td>
+                    <td class="hidden-xs">
+                        {{entity.companyName}}
+                    </td>
+                    <td class="col-sm-1 text-left">
+                        <a  ng-click="performBookingAction($event, true,entity.enquiryID,entity.quotationID,entity.documentCommonID)"  entityid="entity.quotationID"> {{entity.systemRef}} </a>
+                    </td>
+                    <td class="col-sm-1 text-left">
+                        {{entity.miamiRef}}
+                    </td>
+                    <td class="col-sm-1 text-left">
+                        {{entity.bookingNo}}
+                    </td>
+                    
+                    <td>{{entity.enquiryNo}}</td>
+                    <td>
+                        {{entity.quotationNo}}
+                    </td>
+                </tr>
+                <tr ng-if="params.total() == 0">
+                    <td class="text-center text-italic" colspan="3">No Record(s) Found</td>
+                </tr>
+            </tbody>
+        </table>-->
+       
+    </ng-form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-sm btn-default" ng-click="closeModel('close')" action="cancel">Close</button>
+</div>

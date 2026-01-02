@@ -1,0 +1,12 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title"><span>Enquiry - View</span></h3>
+</div>
+<div class="modal-body form-horizontal detail-container" when-ready="filterModalLoaded()" wait-for-interpolation="true">
+    <ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+        <p>&nbsp;</p>
+        <div ng-include="'app/components/operation/enquiry/detail.html'"></div>
+    </ng-form>
+</div>
+<div class="modal-footer">
+        <button class="btn btn-sm btn-default" ng-click="closeEnquiryModel('close')" action="cancel">Close</button>
+</div>

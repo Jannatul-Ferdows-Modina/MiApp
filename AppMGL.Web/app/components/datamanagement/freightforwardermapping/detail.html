@@ -1,0 +1,25 @@
+﻿<ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+    <p>&nbsp;</p>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Network Name</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="ffNetworkName" ng-model="entity.ffNetworkName" uib-typeahead="o.ffNetworkName for o in callTypeaheadnetwork($viewValue, 'freightforwardernetwork', 'companyName', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="freightforwardernetwork" lookup-field="ffNetworkName"  custom-clear="true" />
+        </div>
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Company Name</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="companyName" maxlength="30" ng-model="entity.companyName" uib-typeahead="o.companyName for o in searchValuesCompany($viewValue, 'companyName')" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="SIPLContact" lookup-field="companyName" entity-key-field="contactId" custom-clear="true"  ng-required="requiredUpdate" />
+        </div>
+    </div>
+   
+    <div class="form-group">
+        <label class="col-sm-2 control-label ">Remarks</label>
+        <div class="col-sm-6">
+            <textarea rows="2" class="form-control" name="remarks" ng-model="entity.remarks" maxlength="200" ng-disabled="disabledUpdate" />
+        </div>
+        <div class="col-sm-4">
+            <span>&nbsp;</span>
+        </div>
+    </div>       
+</ng-form>
+

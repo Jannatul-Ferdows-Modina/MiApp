@@ -1,0 +1,156 @@
+﻿<ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+    <p>&nbsp;</p>
+
+    <div class="form-group" ng-show="entity.dos_Id == 2">
+        <label class="col-sm-3 text-right control-label text-nowrap">Shipping Instruction Received </label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="doc_ReceiptDate" ng-model="entity.doc_ReceiptDate" input-date="true" show-time="false" />
+        </div>
+        <div class="col-sm-6">
+            &nbsp;
+        </div>
+    </div>
+    <div class="form-group" ng-show="entity.dos_Id == 3">
+        <label class="col-sm-3 control-label">AES NOT REQUIRED </label>
+        <div class="col-sm-3">
+            <input type="checkbox" name="doc_IS_AES_ITN_REQ" ng-model="entity.doc_IS_AES_ITN_REQ" />
+        </div>
+        <div class="col-sm-6">
+            &nbsp;
+        </div>
+    </div>
+    <div class="form-group" ng-show="entity.dos_Id == 3">        
+        <label class="col-sm-3 text-right control-label">AES-ITN #</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="doc_AES_ITN" maxlength="50" ng-model="entity.doc_AES_ITN" ng-disabled="entity.doc_IS_AES_ITN_REQ"/>
+        </div>
+        <div class="col-sm-6">
+            &nbsp;
+        </div>
+    </div>
+    <div class="form-group" ng-show="entity.dos_Id == 4">
+        <label class="col-sm-3 text-right control-label text-nowrap">Capture receipt of B/L instruction </label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="doc_ReceiptBLInstructionDate" ng-model="entity.doc_ReceiptBLInstructionDate" input-date="true" show-time="false" />
+        </div>
+        <div class="col-sm-6">
+            &nbsp;
+        </div>
+    </div>
+    <div class="form-group" ng-show="entity.dos_Id == 5">
+        <label class="col-sm-3 text-right control-label">BL Instruction Submitted Date</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="doc_BLInstructionLineDate" ng-model="entity.doc_BLInstructionLineDate" input-date="true" show-time="false" />
+        </div>
+        <div class="col-sm-6">
+            &nbsp;
+        </div>
+    </div>
+    <div class="form-group" ng-show="entity.dos_Id == 6">
+        <label class="col-sm-3 text-right control-label">Date Of Proof BL </label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="doc_DraftBLLineDate" ng-model="entity.doc_DraftBLLineDate" input-date="true" show-time="false" />
+        </div>
+        <div class="col-sm-6">
+            &nbsp;
+        </div>
+    </div>
+    <div class="form-group" ng-show="entity.dos_Id == 7">
+        <div class="box-body">
+            <div style="border-color:blue;border:thin">
+                <div class="form-group">
+                    <label class="col-sm-1 control-label">To :</label>
+                    <div class="col-sm-11">
+                        <input class="form-control" placeholder="To:" name="emailTo" ng-model="entity.emailTo" uib-typeahead="emailTo=o.email for o in getEmailIds($viewValue, 'email', 'email', null)">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-1 control-label">CC :</label>
+                    <div class="col-sm-11">
+                        <input class="form-control" placeholder="CC:" name="emailcc" ng-model="entity.emailcc" uib-typeahead="emailcc=o.email for o in getEmailIds($viewValue, 'email', 'email', null)">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-1 control-label">BCC :</label>
+                    <div class="col-sm-11">
+                        <input class="form-control" placeholder="BCC:" name="emailBcc" ng-model="entity.emailBcc" uib-typeahead="emailcc=o.email for o in getEmailIds($viewValue, 'email', 'email', null)">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-1 control-label">Subject :</label>
+                    <div class="col-sm-11">
+                        <input class="form-control" placeholder="Subject:" name="emailSubject" ng-model="entity.emailSubject">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-1 control-label">Body :</label>
+                    <div class="col-sm-11">
+                        <div class="form-control" ckeditor="ckOptions" name="emailBody" ng-model="entity.emailBody" maxlength="8000"></div>
+                    </div>
+
+                </div>
+            </div>
+           
+        </div>
+
+    </div>
+    <div class="form-group" ng-show="entity.dos_Id == 8">
+        <label class="col-sm-3 text-right control-label">Customer Proof Read Date </label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="doc_DraftBLApprovalDate" ng-model="entity.doc_DraftBLApprovalDate" input-date="true" show-time="false" />
+        </div>
+        <div class="col-sm-6">
+            &nbsp;
+        </div>
+    </div>
+    <div class="form-group" ng-show="entity.dos_Id == 9">
+        <label class="col-sm-3 text-right control-label">Proof BL Confirmed Date </label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="doc_ApprovedDraftBLToLineDate" ng-model="entity.doc_ApprovedDraftBLToLineDate" input-date="true" show-time="false" />
+        </div>
+        <div class="col-sm-6">
+            &nbsp;
+        </div>
+    </div>
+    <div class="form-group" ng-show="entity.dos_Id == 10">
+        <label class="col-sm-3 text-right control-label">Final Released Date </label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="doc_BLReleaseAwaitedFromLineDate" ng-model="entity.doc_BLReleaseAwaitedFromLineDate" input-date="true" show-time="false" />
+        </div>
+        <div class="col-sm-6">
+            &nbsp;
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-3 control-label ">Add Attachment</label>
+        <div class="col-sm-3">
+            <input type="file" ngf-select ng-model="entity.customerfile" multiple name="file" ng-disabled="disabledUpdate" />
+        </div>
+        <div class="col-sm-6">
+            &nbsp;
+        </div>
+    </div>
+
+    <div class="form-group" ng-show="entity.dos_Id != 7">
+        <label class="col-sm-3 control-label">Next Action Remarks</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" maxlength="250" name="nextActionRemarks" ng-model="entity.nextActionRemarks" />
+        </div>
+        <div class="col-sm-1">
+            <button name="btnAdd" type="button" class="btn btn-sm btn-primary" ng-click="showNextActionRemarksModel()" action="view" uib-tooltip="View Action Remarks" ng-disabled="disabledUpdate"><i class="fa fa-pencil"></i>Previous Remarks</button>
+        </div>
+        <div class="col-sm-5">
+            &nbsp;
+        </div>
+    </div>
+    <div class="form-group" ng-show="entity.dos_Id != 7">        
+        <label class="col-sm-3 control-label">Next Action Due Date</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="nextActionDueDate" ng-model="entity.nextActionDueDate" ng-disabled="disabledUpdate" input-date="true" show-time="false" />
+        </div>
+        <div class="col-sm-6">
+            &nbsp;
+        </div>
+    </div>
+
+</ng-form>

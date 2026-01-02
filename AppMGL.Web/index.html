@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="keywords" content="FSM" />
+    <meta name="description" content="FSM" />
+    <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="icon" type="image/x-icon" href="Images/favicon.ico" />
+    <title>MGL - Miami Global Lines</title>
+</head>
+<body ng-controller="indexController" class="hold-transition skin-blue fixed sidebar-mini">
+    <div id="splash" ng-cloak>
+        <img src="Images/loading.gif" class="img-responsive" style="position: absolute; top: 40%; left: 44%;" />
+    </div>
+    <script src="bower_components/requirejs/require.js?v=2.0.1.170701" data-main="app/main.js?v=2.0.1.170701"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBvFfRolCVJCbJ57l18l8tHpVSWcOoLbsA&extension=.js"></script>
+     
+ 
+
+<link rel="manifest" type="application/json+oembed" href="Images/favicon.ico" />
+ 
+
+<div class="wrapper {{authentication.isAuth ? '' : 'hide-login-wrapper'}}" style="display: none">
+    <!-- Main Header -->
+    <header class="main-header {{authentication.isAuth ? '' : 'hide'}}">
+
+        <nav class="navbar navbar-static-top" style="margin-left: 0px;" role="navigation">
+
+            <a href="#" class="sidebar-toggle sidebar-collapse" data-toggle="offcanvas" role="button" style="margin-right: 8px;">
+                <span class="sr-only">Toggle Navigation</span>
+            </a>
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav"  aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar" style="background-color: white " ></span>
+                        <span class="icon-bar" style="background-color: white " ></span>
+                        <span class="icon-bar" style="background-color: white " ></span>
+                    </button>
+                    
+                    <a href="#!/home" ng-click="setHeader(null);" class="navbar-brand" style="padding-top:0px">
+                        <span class="logo-lg"><img src="{{config.header.logo}}" alt="logo"></span>
+                        <!--<span class="logo-mini"><img src="Images/Icons/mgl_icon.png" alt="logo"></span>  -->
+                    </a>
+                </div>
+
+                    <div class="collapse navbar-collapse" id="bs-nav">
+                         
+                            <ul class="nav navbar-nav navbar-custom-menu" ng-show="authentication.isAuth">
+                                <!-- User Account Menu -->
+                                
+                                    <li class="dropdown user user-menu">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            <img ng-src="{{userImage}}" class="user-image" />
+                                            <span name="spanUserName" class="hidden-xs text-uppercase">{{authentication.userName}}</span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="user-header">
+                                                <img ng-src="{{userImage}}" class="img-circle" />
+                                                <p>
+                                                    {{userInfo.fullName}}
+                                                    <small>{{userInfo.dptName}}</small>
+                                                </p>
+                                            </li>
+                                            <li class="user-footer" style="background-color: #39cccc">
+                                                <div class="pull-left">
+                                                    <a class="btn btn-sm btn-default btn-flat" ng-click="redirectTo('profile')">Profile</a>
+                                                </div>
+                                                <div class="pull-right">
+                                                    <a class="btn btn-sm btn-default btn-flat" ng-click="logOut(true)">Sign Out</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                
+                                <!-- Site Selection -->
+                                
+                                    <li class="dropdown" style="padding-top: 10px">
+                                        <select class="form-control" name="selectedSiteId" ng-model="selectedSiteId" ng-options="t.SitId as t.SitName for t in authentication.userSite" ng-change="changeSite(selectedSiteId)"></select>
+                                    </li>
+                                
+                                <!-- Logout Button -->
+                                <li class="dropdown">
+                                    <a style="cursor:pointer;" ng-click="logOut(true)"><i class="fa fa-power-off"></i> Signout</a>
+                                </li>
+                                <!-- Control Sidebar Toggle Button -->
+                                <li ng-hide="true">
+                                    <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                                </li>
+                            </ul>
+                            <ul class="nav navbar-nav" ng-hide="authentication.isAuth">
+                                <li> <a href="#!/login">Login</a></li>
+                            </ul>
+                         
+                    </div>
+                </div>
+        </nav>
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar sidebar-collapse {{authentication.isAuth ? '' : 'hide-login-sidebar'}}">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar" ng-show="authentication.isAuth">
+            <!-- Sidebar user panel (optional) -->
+            <div class="user-panel hide">
+                <div class="pull-left image">
+                    <img ng-src="{{userInfo.userIcon}}" class="img-circle" />
+                </div>
+                <div class="pull-left info">
+                    <p class="text-slim">Welcome, <span class="text-semibold">{{userInfo.displayName}}</span></p>
+                    <div class="btn-group">
+                        <a class="btn btn-xs btn-primary btn-outline dark"><i class="fa fa-envelope"></i></a>
+                        <a class="btn btn-xs btn-primary btn-outline dark"><i class="fa fa-user"></i></a>
+                        <a class="btn btn-xs btn-primary btn-outline dark"><i class="fa fa-cog"></i></a>
+                        <a class="btn btn-xs btn-danger btn-outline dark" ng-click="logOut()"><i class="fa fa-power-off"></i></a>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+            <br />
+            <ul class="sidebar-menu"  >
+                <li class="header text-uppercase">Main Menu</li>
+                <li class="treeview" ng-repeat="menu in menus" show-action="40" mod-id="menu.roles" ng-include="'app/views/shared/menu.html'"></li>
+            </ul>
+        </section>
+        <!-- /.sidebar -->
+    </aside>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper {{authentication.isAuth ? '' : 'hide-login-content'}}">
+        <section class="content-header" ng-show="authentication.isAuth" style="margin-top: 40px">
+            <h1 class="hidden-xs">
+                {{pageTitle}}
+                <small class="hide">Optional Description ...</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li ng-repeat="crumb in breadcrumbs"><i class="fa fa-link" ng-if="$first"></i><span ng-if="$first">&nbsp;</span>{{crumb}}</li>
+            </ol>
+        </section>
+        <section class="content {{authentication.isAuth ? '' : 'bg-login'}}">
+            <div class="slide-animation-container">
+                <div ng-view id="ng-view" class="slide-animation"></div>
+            </div>
+        </section>
+        <section class="hidden">
+            <div ng-include="'app/views/shared/pager.html'"></div>
+        </section>
+    </div>
+    <!-- Main Footer -->
+    <footer class="main-footer {{authentication.isAuth ? '' : 'hide'}}">
+        <!-- To the right -->
+        <div class="pull-right">
+            Version: {{config.footer.version}}
+        </div>
+        <!-- Default to the left -->
+        <strong ng-bind-html="config.footer.copyRight"></strong>
+    </footer>
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Create the tabs -->
+        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+            <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+            <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <!-- Home tab content -->
+            <div class="tab-pane active" id="control-sidebar-home-tab">
+                <h3 class="control-sidebar-heading">Recent Enquiry</h3>
+            </div><!-- /.tab-pane -->
+            <!-- Stats tab content -->
+            <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div><!-- /.tab-pane -->
+            <!-- Settings tab content -->
+            <div class="tab-pane" id="control-sidebar-settings-tab">
+                <form method="post">
+                    <h3 class="control-sidebar-heading">General Settings</h3>
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Language
+                            <select name="language" class="pull-right" style="color: black">
+                                <option value="en" selected="selected">English</option>
+                                <option value="es">Spanish</option>
+                            </select>
+                        </label>
+                        <p>
+                            Change the site language
+                        </p>
+                    </div><!-- /.form-group -->
+                </form>
+            </div><!-- /.tab-pane -->
+        </div>
+    </aside>
+    <!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
+    <div class="control-sidebar-bg"></div>
+    <script type="text/ng-template" id="warning-dialog.html">
+        <div class="modal-header">
+            <h3>{{$root.webConfig.idleTimeOutHeaderMsg}}</h3>
+        </div>
+        <div idle-countdown="countdown" ng-init="countdown=5" class="modal-body">
+            <uib-progressbar max="5" value="5" animate="false" class="progress-striped active">You'll be logged out in {{countdown}} second(s). {{$root.webConfig.idleTimeOutContentMsg}}</uib-progressbar>
+        </div>
+    </script>
+</div>
+</body>
+</html>

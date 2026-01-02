@@ -1,0 +1,62 @@
+﻿<div class="modal-header">
+    <div class="pull-right">
+        <button type="button" class="btn btn-sm btn-primary" ng-hide="editMode" ng-click="performAction($event, null)" show-action="200" action="edit">Edit</button>
+        <button type="button" class="btn btn-sm btn-default" ng-hide="editMode" ng-click="performAction($event, null)" action="close">Close</button>
+        <button type="button" class="btn btn-sm btn-primary" ng-show="editMode" ng-click="performAction($event, null)" action="save">Save</button>
+        <button type="button" class="btn btn-sm btn-default" ng-show="editMode" ng-click="performAction($event, null)" action="cancel">Cancel</button>
+    </div>
+    <h3 class="modal-title">Assign/Unassign Site_s Group</h3>
+</div>
+<div class="modal-body form-horizontal">
+    <ng-form class="form-horizontal detail-container" name="form.subdetail" novalidate="novalidate">
+        <div class="form-group">
+            <label class="col-sm-2 control-label {{requiredInput ? 'required' : ''}}"><a ng-disabled="disabledInput" ng-click="callLookup($event, 'site', 'siteId', null, 'lookupUsersSite', null)">Site Code</a></label>
+            <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+                <input type="text" class="form-control" name="siteCode" ng-model="roles.siteCode" maxlength="50" input-text="CODE" ng-disabled="disabledInput" ng-required="requiredInput" ng-blur="callLookup($event, 'site', 'siteCode', 'siteId', 'lookupUsersSite', null)" />
+                <input type="hidden" name="siteId" ng-model="roles.siteId" />
+            </div>
+            <label class="col-sm-2 control-label">Site Name</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" name="siteName" ng-model="roles.siteName" ng-disabled="true" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">IsDefault</label>
+            <div class="col-sm-4 checkbox-control">
+                <input type="checkbox" name="isDefault" ng-model="roles.isDefault" ng-disabled="!editMode" />
+            </div>
+        </div>
+        <div uib-accordion close-others="true">
+            <div uib-accordion-group is-open="isSelected" is-disabled="isSelected">
+                <div uib-accordion-heading>
+                    Group Listing: <i class="pull-right fa" ng-class="{'fa-chevron-down': isSelected, 'fa-chevron-right': !isSelected}"></i>
+                </div>
+                <table ng-table="groupsTable" class="table table-striped table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th class="list-checkbox"><input type="checkbox" ng-disabled="!editMode" ng-click="selectAll()" ng-checked="getSelectedAll()" /></th>
+                            <th class="text-left">Group Id</th>
+                            <th class="text-left">Group Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="entity in $data">
+                            <td>
+                                <input type="checkbox" ng-model="entity.selected" ng-disabled="!editMode" />
+                            </td>
+                            <td>
+                                {{entity.groupCode}}
+                            </td>
+                            <td>
+                                {{entity.groupName}}
+                            </td>
+                        </tr>
+                        <tr ng-if="params.total() == 0">
+                            <td class="text-center text-italic" colspan="3">No Record(s) Found</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </ng-form>
+</div>

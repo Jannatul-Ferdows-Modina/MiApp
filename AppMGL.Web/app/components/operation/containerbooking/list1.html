@@ -1,0 +1,49 @@
+﻿<table ng-table="containerBookedlistTable" class="table table-striped table-bordered table-hover" template-pagination="customPager">
+    <thead>
+        <tr class="bg-thead">
+            <th class="text-left sortable hidden-xs" table-name="pendingStuffingListTable">S.No</th>
+            <th class="text-left sortable hidden-xs" custom-sortable="BookedNo" table-name="containerBookedlistTable">Booked No</th>
+            <th class="text-left sortable hidden-xs" custom-sortable="BookingDescription" table-name="containerBookedlistTable">Descriptio</th>
+            <th class="text-left sortable hidden-xs" custom-sortable="CreatedBy" table-name="containerBookedlistTable">Created By</th>
+            <th class="text-left sortable hidden-xs" custom-sortable="CreatedOn" table-name="containerBookedlistTable">Created On</th>
+            <th class="list-actions">Edit</th>
+            <th class="list-actions">Delete</th>
+            <th class="list-actions">Process Booking</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="entity in itemss">
+            <td class="hidden-xs">
+                {{$index+1 }}
+            </td>
+            <td class="hidden-xs">
+                {{entity.bookedNo}}
+            </td>
+
+            <td class="hidden-xs">
+                {{entity.bookingDescription}}
+            </td>
+            <td class="hidden-xs">
+                {{entity.createdBy}}
+            </td>
+            <td class="hidden-xs">
+                {{entity.createdOn | date:'MM/dd/yyyy'}}
+            </td>
+            <td>
+                <button type="button" class="btn btn-xs btn-primary" ng-click="performBookedContainerAction($event, true)" show-action="20" action="edit" entityid="{{entity.bookedId}}" uib-tooltip="Edit"><i class="fa fa-edit"></i></button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-xs btn-danger" ng-click="deleteBookedContainer(entity.bookedId)" show-action="30" action="delete" entityid="{{entity.bookedId}}" uib-tooltip="Delete"><i class="fa fa-remove"></i></button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-xs btn-danger" ng-click="processBooking(entity.bookedId)" show-action="30" entityid="{{entity.bookedId}}"><i class="fa fa-circle"></i></button>
+            </td>
+        </tr>
+        <tr ng-if="params.total() == 0">
+            <td class="text-center text-italic" colspan="5">No Record(s) Found</td>
+        </tr>
+    </tbody>
+   
+
+</table>

@@ -1,0 +1,24 @@
+﻿<div class="box-container form-horizontal detail-container">
+    <div class="form-group">
+        <label class="col-sm-3 control-label text-left">Country Name</label>
+        <label class="col-sm-3 control-label text-left">Abbrevation</label>
+        <label class="col-sm-3 control-label text-left">Phone Code</label>
+        <div class="col-sm-3">&nbsp;</div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="CryNameF" ng-model="CryNameF" uib-typeahead="o.cryName for o in callTypeahead($viewValue, 'country', 'cryName', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="country" lookup-field="cryName" entity-key-field="cryId" custom-clear="true" />
+        </div>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="CryAbbrevF" ng-model="CryAbbrevF" uib-typeahead="o.cryAbbrev for o in callTypeahead($viewValue, 'country', 'cryAbbrev', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="country" lookup-field="cryAbbrev" entity-key-field="cryId" custom-clear="true" />
+        </div>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="CryPhoneCodeF" ng-model="CryPhoneCodeF" uib-typeahead="o.cryPhoneCode for o in callTypeahead($viewValue, 'country', 'cryPhoneCode', null, 'numeric')" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="country" lookup-field="cryPhoneCode" entity-key-field="cryId" custom-clear="true" />
+        </div>
+        <div class="col-sm-3">
+            <div class="pull-right">
+                <button class="btn btn-sm btn-primary" ng-click="performAction($event)" action="search">Search</button>
+            </div>
+        </div>
+    </div>
+</div>

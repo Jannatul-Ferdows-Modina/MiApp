@@ -1,0 +1,293 @@
+﻿<div class="view indent">
+    <div>
+        <div class="box box-primary">
+            <div class="box-body">
+                <br />
+                <div class="form-horizontal detail-container">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Department</label>
+                        <div class="col-sm-4">
+                            <select class="form-control" name="departmentType" ng-model="entity.departmentType" ng-options="t.fieldName as t.fieldValue for t in lookups.departmentTypes" ng-disabled="!disabledUpdate"></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-2">
+                            <select class="form-control filter-select" name="filterFieldName" ng-model="entity.filterFieldName" ng-options="t.fieldName as t.fieldValue for t in lookups.filterFields" style="font-weight: bolder;" dir="rtl" ng-disabled="!disabledUpdate"></select>
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="filterFieldValue" ng-model="entity.filterFieldValue" ng-disabled="!disabledUpdate" />
+                        </div>
+                        <div class="col-sm-6">
+                            <button type="button" class="btn btn-primary" ng-click="performSubAction($event, null)" action="search" ng-disabled="!disabledUpdate">Search</button>
+                            <button type="button" class="btn btn-primary" ng-click="performSubAction($event, null)" action="viewDocumentList" ng-disabled="!disabledUpdate">View Document List</button>
+                        </div>
+                    </div>
+                    <hr class="line-primary" />
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Exporter/Cargo Pickup Location</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="exporterName" maxlength="30" ng-model="document.exporterName" uib-typeahead="o.companyName for o in callTypeahead($viewValue, 'SIPLContact', 'companyName', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="SIPLContact1" lookup-field="companyName" entity-key-field="contactID" custom-clear="true"/>
+                        </div>
+                        <div class="col-sm-1">
+                            <button name="btnExporterAdd" type="button" class="btn btn-sm btn-primary" ng-click="callExporter()" action="add" entityid="0" uib-tooltip="Click here to add new Exporter" ng-disabled="disabledUpdate"><i class="fa fa-pencil"></i>Add</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">&nbsp;</label>
+                        <div class="col-sm-4 checkbox-control">
+                            <input type="checkbox" name="sameAsShipper" ng-model="document.sameAsShipper" ng-disabled="disabledUpdate" ng-click="sameAsShipper()" />&nbsp;<span class="text-bold">Same As Shipper</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-2">
+                            &nbsp;
+                        </div>
+                        <div class="col-sm-4">
+                            <textarea rows="3" class="form-control" name="exporterAddress" ng-model="document.exporterAddress" />
+                        </div>
+                        <label class="col-sm-2 control-label">Free Text</label>
+                        <div class="col-sm-4">
+                            <textarea rows="3" class="form-control" name="freeText" ng-model="document.freeText" ng-disabled="disabledUpdate" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Document No.</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="documentNumber" ng-model="document.documentNumber" ng-disabled="disabledUpdate" />
+                        </div>
+                        <label class="col-sm-2 control-label">B/L or AWB No.</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="blNumber" ng-model="document.blNumber" ng-disabled="disabledUpdate" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Export References</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="fileNo" ng-model="document.fileNo" ng-disabled="disabledUpdate" />
+                        </div>
+                        <label class="col-sm-2 control-label">&nbsp;</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="exportRef" ng-model="document.exportRef" ng-disabled="disabledUpdate" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Consigned To</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="consignedToName" maxlength="30" ng-model="document.consignedToName" uib-typeahead="o.companyName for o in callTypeahead($viewValue, 'SIPLContact', 'companyName', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="SIPLContact" lookup-field="companyName" entity-key-field="contactID" custom-clear="true" />
+                        </div>
+                        <div class="col-sm-1">
+                            <button name="btnConsignedToAdd" type="button" class="btn btn-sm btn-primary" ng-click="callConsignedTo()" action="add" entityid="0" uib-tooltip="Click here to add new Consigned To" ng-disabled="disabledUpdate"><i class="fa fa-pencil"></i>Add</button>
+                        </div>
+                        <label class="col-sm-2 control-label">Forwarding Agent</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="fwdAgentName" maxlength="30" ng-model="document.fwdAgentName" uib-typeahead="o.companyName for o in callTypeahead($viewValue, 'SIPLContact', 'companyName', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="SIPLContactAgent" lookup-field="companyName" entity-key-field="contactID" custom-clear="true"  />
+                        </div>
+                        <div class="col-sm-1">
+                            <button name="btnForwardingAgentAdd" type="button" class="btn btn-sm btn-primary" ng-click="callForwardingAgent()" action="add" entityid="0" uib-tooltip="Click here to add new Forwarding Agent" ng-disabled="disabledUpdate"><i class="fa fa-pencil"></i>Add</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-2">
+                            <select class="form-control" name="consignedToType" ng-model="document.consignedToType" ng-options="t.fieldValue as t.fieldValue for t in lookups.consignedToTypes" ng-disabled="disabledUpdate"></select>
+                        </div>
+                        <div class="col-sm-4">
+                            <textarea rows="3" class="form-control" name="consignedToAddress" ng-model="document.consignedToAddress" />
+                        </div>
+                        <label class="col-sm-2 control-label">&nbsp;</label>
+                        <div class="col-sm-4">
+                            <textarea rows="3" class="form-control" name="fwdAgentAddress" ng-model="document.fwdAgentAddress"  />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">&nbsp;</label>
+                        <div class="col-sm-4 checkbox-control">
+                            <input type="checkbox" name="isPrintAddress" ng-model="document.isPrintAddress" ng-disabled="disabledUpdate" />&nbsp;<span class="text-bold">Print Address</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Notify Party Intermediate Consignee</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="consigneeName" maxlength="30" ng-model="document.consigneeName" uib-typeahead="o.companyName for o in callTypeahead($viewValue, 'SIPLContact', 'companyName', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="SIPLContactConsignee" lookup-field="companyName" entity-key-field="contactID" custom-clear="true"/>
+                        </div>
+                        <div class="col-sm-1">
+                            <button name="btnConsigneeNameAdd" type="button" class="btn btn-sm btn-primary" ng-click="callConsignee()" action="add" entityid="0" uib-tooltip="Click here to add new Consignee" ng-disabled="disabledUpdate"><i class="fa fa-pencil"></i>Add</button>
+                        </div>
+                        <label class="col-sm-2 control-label">Point(state) of origin or FTZ No.</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="ftzNumber" ng-model="document.ftzNumber" ng-disabled="disabledUpdate" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">&nbsp;</label>
+                        <div class="col-sm-4 checkbox-control">
+                            <input type="checkbox" name="sameAsConsignedTo" ng-model="document.sameAsConsignedTo" ng-disabled="disabledUpdate" ng-click="sameAsConsignedTo()" />&nbsp;<span class="text-bold">Same As Consigned To</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">&nbsp;</label>
+                        <div class="col-sm-4">
+                            <textarea rows="3" class="form-control" name="consigneeAddress" ng-model="document.consigneeAddress" />
+                        </div>
+                        <label class="col-sm-2 control-label">Domestic Routing Export Instructions</label>
+                        <div class="col-sm-4">
+                            <textarea rows="3" class="form-control" name="exportInstruction" ng-model="document.exportInstruction" ng-disabled="disabledUpdate" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Pre Carriage By</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="carriageBy" ng-model="document.carriageBy" ng-disabled="disabledUpdate" />
+                        </div>
+                        <label class="col-sm-2 control-label">Place of Receipt</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="placeOfReceipt" ng-model="document.placeOfReceipt" ng-disabled="disabledUpdate" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Vessel</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="vessel" ng-model="document.vessel" ng-disabled="disabledUpdate" />
+                        </div>
+                        <label class="col-sm-2 control-label">Port of Loading/Export</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="landingPort" ng-model="document.landingPort" uib-typeahead="o.name for o in callTypeahead($viewValue, 'LGVWPort', 'name', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="origin" lookup-field="name" entity-key-field="portId" custom-clear="true" ng-disabled="disabledUpdate" />
+                        </div>
+                        <div class="col-sm-1">
+                            <button name="btnLandingPortAdd" type="button" class="btn btn-sm btn-primary" ng-click="callLandingPort()" action="add" entityid="0" uib-tooltip="Click here to add new Loading Port" ng-disabled="disabledUpdate"><i class="fa fa-pencil"></i>Add</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Loading Pier/Terminal</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="loadingPert" ng-model="document.loadingPert" ng-disabled="disabledUpdate" />
+                        </div>
+                        <label class="col-sm-2 control-label">Voyage</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="voyage" ng-model="document.voyage" ng-disabled="disabledUpdate" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Foreign Port of Unloading (Vessel and Air only)</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="foreignPort" ng-model="document.foreignPort" uib-typeahead="o.name for o in callTypeahead($viewValue, 'LGVWPort', 'name', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="discharge" lookup-field="name" entity-key-field="portId" custom-clear="true" ng-disabled="disabledUpdate" />
+                        </div>
+                        <div class="col-sm-1">
+                            <button name="btnForeignPortAdd" type="button" class="btn btn-sm btn-primary" ng-click="callForeignPort()" action="add" entityid="0" uib-tooltip="Click here to add new Foreign Port" ng-disabled="disabledUpdate"><i class="fa fa-pencil"></i>Add</button>
+                        </div>
+                        <label class="col-sm-2 control-label">For Transshipment To</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="transshipment" ng-model="document.transshipment" ng-disabled="disabledUpdate" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Type of Move</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="moveType" ng-model="document.moveType" ng-disabled="disabledUpdate" />
+                        </div>
+                        <label class="col-sm-2 control-label">Containerized</label>
+                        <div class="col-sm-4 checkbox-control">
+                            <input type="checkbox" name="containerized" ng-model="document.containerized" ng-disabled="disabledUpdate" />
+                        </div>
+                    </div>
+                    <hr class="line-primary" />
+                    <table ng-table="detailTable" class="table table-striped table-bordered table-hover">
+                        <thead>
+                            <tr class="bg-thead">
+                                <th class="col-sm-3 text-left text-top" rowspan="2">
+                                    Number
+                                    <br /><span style="color:red">(Maximun 16 character lenght)</span>
+                                </th>
+                                <th class="col-sm-1 text-left text-top" rowspan="2">
+                                    Package
+                                    <br /><span style="color:red">(Maximun 16 character lenght)</span>
+                                </th>
+                                <th class="col-sm-5 text-left text-top" rowspan="2">
+                                    Commodity
+                                    <br /><span style="color:red">(Maximun 46 character lenght)</span>
+                                </th>
+                                <th class="col-sm-1 text-left">Weight</th>
+                                <th class="col-sm-1 text-left">Measurement</th>
+                                <th class="col-sm-1 text-right" rowspan="2">&nbsp;</th>
+                            </tr>
+                            <tr class="bg-thead">
+                                <th class="col-sm-1 text-left">
+                                    <select class="form-control" name="weightType" ng-model="entity.weightType" ng-disabled="disabledUpdate" ng-change="updateWeight()">
+                                        <option value="KILO" selected="selected">KILO</option>
+                                        <option value="LBS">LBS</option>
+                                    </select>
+                                </th>
+                                <th class="col-sm-1 text-left">
+                                    <select class="form-control" name="measurementType" ng-model="entity.measurementType" ng-disabled="disabledUpdate" ng-change="updateMeasurement()">
+                                        <option value="CBM" selected="selected">CBM</option>
+                                        <option value="CFT">CFT</option>
+                                    </select>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="d in $data">
+                                <td class="col-sm-3 text-left">
+                                    <textarea rows="3" class="form-control" name="number" maxlength="16" ng-model="d.number" ng-disabled="disabledUpdate" />
+                                </td>
+                                <td class="col-sm-1 text-left">
+                                    <input type="text" class="form-control" name="package" maxlength="16" ng-model="d.package" ng-disabled="disabledUpdate" />
+                                </td>
+                                <td class="col-sm-5 text-left">
+                                    <textarea rows="3" class="form-control" name="commodity" maxlength="46" ng-model="d.commodity" ng-disabled="disabledUpdate" />
+                                </td>
+                                <td class="col-sm-1 text-left">
+                                    <input type="text" class="form-control" name="package" ng-model="d.weight" ng-disabled="disabledUpdate" input-number="true" allow-decimal="true" />
+                                </td>
+                                <td class="col-sm-1 text-left">
+                                    <input type="text" class="form-control" name="package" ng-model="d.measuremant" ng-disabled="disabledUpdate" input-number="true" allow-decimal="true" />
+                                </td>
+                                <td class="col-sm-1 text-right">
+                                    <button type="button" class="btn btn-sm btn-primary" ng-show="$last" ng-disabled="disabledUpdate" ng-click="dynamicRow(true, d, $index)"><i class="fa fa-plus"></i></button>
+                                    <button type="button" class="btn btn-sm btn-danger" ng-hide="document.commodityDetail.length==1" ng-disabled="disabledUpdate" ng-click="dynamicRow(false, d, $index)"><i class="fa fa-minus"></i></button>
+                                </td>
+                            </tr>
+                            <tr ng-if="params.total() == 0">
+                                <td class="text-center text-italic" colspan="6">No Record(s) Found</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr class="line-primary" />
+                    <div class="form-group">
+                        <div class="col-sm-12" style="padding-left: 20px;">
+                            The undersigned <input type="text" name="undersigned" ng-model="document.undersigned" ng-disabled="disabledUpdate" /> (Owner or Agent), does hereby declare for the above named Shipper, the goods as described above were shipped on the above date and indicated and are products of the UNITED STATES OF AMERICA dated at <input type="text" name="datedAt" ng-model="document.datedAt" ng-disabled="disabledUpdate" /> on the <input type="text" name="dayof1" ng-model="document.dayof1" ng-disabled="disabledUpdate" /> day of <input type="text" name="dayof2" ng-model="document.dayof2" ng-disabled="disabledUpdate" /> Sworn to before me this <input type="text" name="signDayof1" ng-model="document.signDayof1" ng-disabled="disabledUpdate" /> day of <input type="text" name="signDayof2" ng-model="document.signDayof2" ng-disabled="disabledUpdate" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12" style="padding-left: 20px;">
+                            SIGNATURE OF OWNER OR AGENT
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12" style="padding-left: 20px;">
+                            The <input type="text" name="chamber" ng-model="document.chamber" ng-disabled="disabledUpdate" /> a recognized Chamber of Commerce under the laws of the State of <input type="text" name="stateof" ng-model="document.stateof" ng-disabled="disabledUpdate" /> has examined the manufacturers invoice or shippers affidavit - concerning the origin of thc merchandise, and, according to the best of its knowledge and belief, find that the products named originated in the UNITED STATES OF AMERICA
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-offset-8 col-sm-2 control-label">Secretary</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" name="secretary" ng-model="document.secretary" ng-disabled="disabledUpdate" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box-footer">
+            <div class="box-tools pull-right">
+                <div ng-hide="editMode">
+                    <button type="button" class="btn btn-sm btn-primary" ng-click="performSubAction($event, null)" action="editDocument"><i class="fa fa-edit"></i> Edit</button>
+                    <button type="button" class="btn btn-sm btn-primary" ng-click="performSubAction($event, null)" action="exportPdf"><i class="fa fa-download"></i> PDF</button>
+                    <button type="button" class="btn btn-sm btn-primary" ng-click="performSubAction($event, null)" action="sendEmail"><i class="fa fa-envelope"></i> Send Email</button>
+                </div>
+                <div ng-show="editMode">
+                    <button type="button" class="btn btn-sm btn-primary" ng-click="performSubAction($event, null)" action="saveDocument"><i class="fa fa-save"></i> Save</button>
+                    <button type="button" class="btn btn-sm btn-default" ng-click="performSubAction($event, null)" action="cancelDocument">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

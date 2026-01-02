@@ -1,0 +1,302 @@
+﻿<div class="view indent">
+    <div class="box box-info" ng-show="viewList">
+        <div class="box-header with-border">
+            <h3 class="box-title"></h3>
+            <div class="box-tools pull-right">
+                <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+            </div>
+        </div>
+        <div class="box-body">
+
+            <div class="box-container form-horizontal detail-container">
+                <div class="form-group">
+                    <div class="col-sm-2">
+                        &nbsp;
+                    </div>
+                    <div class="col-sm-2">
+                        <label>
+                            <input type="checkbox" name="isCurrentYear" ng-model="isCurrentYear" checked /> Current Year
+                        </label>
+                    </div>
+                    <div class="col-sm-4">
+                        <label>
+                            <input type="checkbox" name="isExcludeCancellRollover" ng-model="isExcludeCancellRollover" checked /> Excluding Cancelled and Rolled Over records
+                        </label>
+                    </div>
+                    <div class="col-sm-4">
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">DateWise Filters</label>
+                    <div class="col-sm-2">
+                        <select class="form-control" name="selectDateOption" ng-model="selectDateOption" ng-options="item.optionValue as item.optionName for item in seachDateFilters" ng-change="clearDates(selectDateOption)"></select>
+                    </div>
+                    <label class="col-sm-2 control-label">From Date</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="fromDate" ng-model="fromDate" input-date="true" show-time="false" />
+                    </div>
+                    <label class="col-sm-2 control-label">To Date</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="toDate" ng-model="toDate" input-date="true" show-time="false" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Department</label>
+                    <div class="col-sm-2">
+                        <select class="form-control" name="departmentID" ng-model=entity.departmentID ng-options="t.departmentID as t.department for t in lookups.siplDepartments"></select>
+                    </div>
+                    <label class="col-sm-2 control-label">Booking Status</label>
+                    <div class="col-sm-2">
+                        <select class="form-control" name="galBookingStatusID" ng-model="galBookingStatusID" ng-options="t.statusID as t.status for t in lookups.miamiBookingStatus"></select>
+                    </div>
+                    <div class="col-sm-8">
+                        &nbsp;
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Advance Search</h3>
+                    <div class="box-tools pull-right">
+                        <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+                    </div>
+                </div>
+                <div class="box-body">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Search 1</label>
+                        <div class="col-sm-2">
+                            <select class="form-control" name="searchOption1" ng-model="entity.selectOption1" ng-options="item.optionValue as item.optionName for item in searchOptions" ng-change="UpdateSearch2(entity.selectOption1)"></select>
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" name="searchBox1" ng-model="searchBox1" maxlength="100" uib-typeahead="o.name for o in searchValues($viewValue,'searchBox1')"/>
+                        </div>
+                        <div class="col-sm-1">
+                            &nbsp;
+                        </div>
+                        <label class="col-sm-1 control-label">Search 2</label>
+                        <div class="col-sm-2">
+                            <select class="form-control" name="searchOption2" ng-model="entity.selectOption2" ng-options="item.optionValue as item.optionName for item in searchOptions2" ng-change="UpdateSearch3(entity.selectOption1,entity.selectOption2)" ng-disabled="isOption2disabled"></select>
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" name="searchBox2" ng-model="searchBox2" maxlength="100" uib-typeahead="o.name for o in searchValues($viewValue,'searchBox2')"/>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Search 3</label>
+                        <div class="col-sm-2">
+                            <select class="form-control" name="searchOption3" ng-model="entity.selectOption3" ng-options="item.optionValue as item.optionName for item in searchOptions3" ng-disabled="isOption3disabled"></select>
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" name="searchBox3" ng-model="searchBox3" maxlength="100" uib-typeahead="o.name for o in searchValues($viewValue,'searchBox3')"/>
+                        </div>
+                        <div class="col-sm-6">
+                            &nbsp;
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="box-footer">
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-sm btn-primary" ng-click="performBookingSearch($event,selectDateOption, fromDate, toDate, galBookingStatusID, departmentID, searchOption1, searchBox1,searchOption2, searchBox2,searchOption3, searchBox3,isCurrentYear,isExcludeCancellRollover)" action="showReport"><i class="fa fa-bar-chart"></i> Show</button>
+                <button type="button" class="btn btn-sm btn-primary" ng-click="exportRegisterReport($event,selectDateOption, fromDate, toDate, galBookingStatusID, departmentID, searchOption1, searchBox1,searchOption2, searchBox2,searchOption3, searchBox3,isCurrentYear,isExcludeCancellRollover)" action="exportReport"><i class="fa fa-download"></i> Export to Excel</button>
+            </div>
+        </div>
+    </div>
+    <div id="mainBoxWidget" class="box box-primary">
+
+        <div class="box-body">
+            <div style="overflow:auto;height: 400px;" id="tableContainer">
+                <table ng-table="bookinglistTable" class="table table-striped table-bordered table-hover" template-pagination="customPager" id="reportTable">
+                    <thead>
+                        <tr class="bg-thead">
+                            <th class="text-left hidden-xs" table-name="bookinglistTable">Pre Alert</th>
+                            <th class="text-left hidden-xs" table-name="bookinglistTable">View</th>
+                            <th class="text-left hidden-xs" table-name="bookinglistTable">Email</th>
+                            <th class="text-left hidden-xs" table-name="bookinglistTable">Remarks</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="fileNo" table-name="bookinglistTable">System Ref</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="consigneePONo" table-name="bookinglistTable">Consignee's PO #</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="bookingDate" table-name="bookinglistTable">Booking Date</th>                            
+                            <th class="text-left sortable hidden-xs" custom-sortable="quotationNo" table-name="bookinglistTable">Quotation No</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="enquiryNo" table-name="bookinglistTable">Enquiry No</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="bookingNo" table-name="bookinglistTable">Booking No</th>                            
+                            <th class="text-left sortable hidden-xs" custom-sortable="companyName" table-name="bookinglistTable">Customer</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="vessel" table-name="bookinglistTable">VESSEL</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="voyage" table-name="bookinglistTable">VOYAGE</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="earliestPickUpDate" table-name="bookinglistTable">Earliest PickUp Date</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="erd" table-name="bookinglistTable">ERD</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="rampCutOff" table-name="bookinglistTable">RAMP CUT-OFF</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="autoCutOff" table-name="bookinglistTable">AUTO CUT-OFF</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="cutOffDate" table-name="bookinglistTable">DOC CUT-OFF</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="portcutoffDate" table-name="bookinglistTable">Cargo CUT-OFF</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="ets" table-name="bookinglistTable">ETS</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="eta" table-name="bookinglistTable">ETA</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="origin" table-name="bookinglistTable">Origin</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="railRamp" table-name="bookinglistTable">Rail Ramp</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="portOfOrigin" table-name="bookinglistTable">Port Of Loding</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="portOfDischarge" table-name="bookinglistTable">Destination</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="blNumber" table-name="bookinglistTable">Line B/L#</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="vin" table-name="bookinglistTable">VIN #</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="commodity" table-name="bookinglistTable">Commodity</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="commodity" table-name="bookinglistTable">Commodity Group</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="containerName" table-name="bookinglistTable">Container Type</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="cntno" table-name="bookinglistTable">Container NO</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="sealNo" table-name="bookinglistTable">Seal No</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="shippingLine" table-name="bookinglistTable">Shipping Line</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="pickupCategory" table-name="bookinglistTable">Line BKG Type</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="galBookingType" table-name="bookinglistTable">Miami Booking Type</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="transporter" table-name="bookinglistTable">Transporter</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="galBookingStatus" table-name="bookinglistTable">Current Operation Status</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="supplier" table-name="bookinglistTable">Supplier</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="dockReceiptIssueDate" table-name="bookinglistTable">Dock Receipt Issue Date</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="emptyPickupLocation" table-name="bookinglistTable">Empty Pickup Location</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="fullDeliveryLocation" table-name="bookinglistTable">Full Delivery Location</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="consigneeName" table-name="bookinglistTable">Consignee Name</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="entity in items">
+                            <td class="hidden-xs">
+                                <button name="btnPreAlert" type="button" class="btn btn-sm btn-primary" ng-click="PreAlert(entity.quotationID , entity.documentCommonID)" action="add" entityid="{{entity.documentCommonID}}" uib-tooltip="PreAlert"><i class="fa fa-upload"></i>Pre Alert</button>
+                            </td>
+                            <td class="hidden-xs">
+                                <button name="btnUpload" type="button" class="btn btn-sm btn-primary" ng-click="callDocumentUploadModel(entity.documentCommonID)" action="add" entityid="{{entity.documentCommonID}}" uib-tooltip="Click here to Upload Document"><i class="fa fa-upload"></i>View & Upload Doc</button>
+                            </td>
+                            <td class="hidden-xs">
+                                <button name="btnEmail" type="button" class="btn btn-sm btn-primary" ng-click="callEmailUploadModel(entity.quotationID)" action="add" entityid="{{entity.documentCommonID}}" uib-tooltip="Click here to View Email Document"><i class="fa fa-upload"></i>View Email</button>
+                            </td>
+                            <td class="hidden-xs">
+                                <button name="btnRemarks" type="button" class="btn btn-sm btn-primary" ng-click="showNextActionRemarksModel(entity.documentCommonID)" action="add" entityid="{{entity.documentCommonID}}" uib-tooltip="Click here to View Remarks"><i class="fa fa-upload"></i>View Remarks</button>
+                            </td>
+                            <td class="hidden-xs">
+                                <a ng-click="showViewDocumentModel(entity.documentCommonID)" action="add" >{{entity.fileNo}}</a>
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.consigneePONo}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.bookingDate | date:'MM/dd/yyyy'}}
+                            </td>                            
+                            <td class="hidden-xs">
+                                {{entity.quotationNo}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.enquiryNo}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.bookingNo}}
+                            </td>                            
+                            <td class="hidden-xs">
+                                {{entity.companyName}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.vessel}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.voyage}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.earliestPickUpDate | date:'MM/dd/yyyy'}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.erd | date:'MM/dd/yyyy'}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.rampCutOff | date:'MM/dd/yyyy'}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.autoCutOff | date:'MM/dd/yyyy'}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.cutOffDate | date:'MM/dd/yyyy'}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.portcutoffDate | date:'MM/dd/yyyy'}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.ets | date:'MM/dd/yyyy'}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.eta | date:'MM/dd/yyyy'}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.origin}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.railRamp}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.portOfOrigin}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.portOfDischarge}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.blNumber}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.vin}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.commodity}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.commodityGroup}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.containerName}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.cntno}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.sealNo}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.shippingLine}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.pickupCategory}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.galBookingType}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.transporter}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.galBookingStatus}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.supplier}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.dockReceiptIssueDate | date:'MM/dd/yyyy'}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.emptyPickupLocation}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.fullDeliveryLocation}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.consigneeName}}
+                            </td>
+                        </tr>
+                        <tr ng-if="params.total() == 0">
+                            <td class="text-center text-italic" colspan="5">No Record(s) Found</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="box-footer"></div>
+    </div>
+
+</div>

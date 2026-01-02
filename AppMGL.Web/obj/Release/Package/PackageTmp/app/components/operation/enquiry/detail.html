@@ -1,0 +1,1173 @@
+﻿<ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+    <p>&nbsp;</p>
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Department</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <select class="form-control" name="departmentID" ng-model=entity.departmentID ng-options="t.departmentID as t.department for t in lookups.siplDepartments" ng-change="getLatestEnquiryNo(entity.departmentID)" ng-disabled="disabledUpdate" ng-required="requiredUpdate"></select>
+        </div>
+
+        <label class="col-sm-2 control-label">License Type</label>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="licenseType" ng-model="entity.licenseType" value="1" ng-disabled="disabledUpdate">
+                        NVO
+                    </label>
+                    <label>
+                        <input type="radio" name="licenseType" ng-model="entity.licenseType" value="2" ng-disabled="disabledUpdate">
+                        FF
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Inquiry Date</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="enquiryDate" ng-model="entity.enquiryDate" ng-disabled="disabledUpdate" ng-required="requiredUpdate" input-date="true" show-time="false" />
+        </div>
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Inquiry No</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="enquiryNo" ng-model="entity.enquiryNo" ng-disabled="true" ng-required="requiredUpdate" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Company</label>
+        <div class="col-sm-3" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="companyName" maxlength="30" ng-model="entity.companyName" uib-typeahead="o.companyName for o in callTypeahead($viewValue, 'SIPLContact', 'companyName', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="SIPLContact" lookup-field="companyName" entity-key-field="contactID" custom-clear="true" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+        </div>
+        <div class="col-sm-1">
+            <button name="btnAdd" type="button" class="btn btn-sm btn-primary" ng-click="callCompanyModal()" action="add" entityid="0" uib-tooltip="Click here to add new Exporter" ng-disabled="disabledUpdate"><i class="fa fa-pencil"></i>Add</button>
+        </div>
+        <label class="col-sm-2 control-label text-nowrap">Source of Inquiry</label>
+        <div class="col-sm-4">
+            <select class="form-control" name="typeOfEnquiry" ng-model="entity.typeOfEnquiry" ng-options="item.optionValue as item.optionName for item in enquiryTypes" ng-disabled="disabledUpdate"></select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Address</label>
+        <div class="col-sm-4">
+            <textarea rows="2" class="form-control" maxlength="200" name="address" ng-model="entity.expAddress" ng-disabled="disabledUpdate" />
+        </div>
+        <label class="col-sm-2 control-label">Received By</label>
+        <div class="col-sm-4">
+            <select class="form-control" name="receivedByID" ng-model="entity.receivedByID" ng-options="t.usrId as t.name for t in lookups.siplUsers" ng-disabled="disabledUpdate"></select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Bill To</label>
+        <div class="col-sm-4">
+            <select class="form-control" name="billTo" ng-model="entity.billTo" ng-options="item.optionValue as item.optionName for item in billToTypes" ng-change="updateBillType(entity.billTo)" ng-disabled="disabledUpdate"></select>
+        </div>
+        <label class="col-sm-2 control-label">Bill To Company Name</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" maxlength="200" name="billToCompanyName" ng-model="entity.billToCompanyName" uib-typeahead="o.companyName for o in callTypeahead($viewValue, 'SIPLContact', 'companyName', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="BillToCompany" lookup-field="BillToCompany" entity-key-field="contactID" custom-clear="true" ng-disabled="entity.billTo == 1 || disabledUpdate" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Bill To Address</label>
+        <div class="col-sm-4">
+            <textarea rows="2" class="form-control" maxlength="200" name="billToAddress" ng-model="entity.billToAddress" ng-disabled="entity.billTo == 1 || disabledUpdate" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Customer Reference No</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" maxlength="200" name="address" ng-model="entity.customerInqNo" ng-disabled="disabledUpdate" />
+        </div>
+        <label class="col-sm-2 control-label">Contact Person</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" maxlength="30" name="contactPerson" ng-model="entity.contactPerson" ng-disabled="disabledUpdate" />
+        </div>
+    </div>
+    <hr class="line-info" />
+    <div class="form-group">
+
+        <label class="col-sm-2 alignleft control-label required">Mode Of Service</label>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="modeOfService" ng-model="entity.modeOfService" value="7" ng-change="updateContainerCategoryList(entity.modeOfService)" ng-disabled="disabledUpdate">
+                        AIR
+                    </label>
+                    <label>
+                        <input type="radio" name="modeOfService" ng-model="entity.modeOfService" value="5" ng-change="updateContainerCategoryList(entity.modeOfService)" ng-disabled="disabledUpdate">
+                        BREAK BULK
+                    </label>
+                    <label>
+                        <input type="radio" name="modeOfService" ng-model="entity.modeOfService" value="1" ng-change="updateContainerCategoryList(entity.modeOfService)" ng-disabled="disabledUpdate">
+                        FCL
+                    </label>
+                    <label>
+                        <input type="radio" name="modeOfService" ng-model="entity.modeOfService" value="2" ng-change="updateContainerCategoryList(entity.modeOfService)" ng-disabled="disabledUpdate">
+                        LCL
+                    </label>
+                    <label>
+                        <input type="radio" name="modeOfService" ng-model="entity.modeOfService" value="3" ng-change="updateContainerCategoryList(entity.modeOfService)" ng-disabled="disabledUpdate">
+                        RORO
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            &nbsp;
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 alignleft control-label required}}">QTY of Containers</label>
+        <div class="col-sm-2">
+            <input type="number" min="0" max="99999" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="noOfContainer" ng-model="entity.noOfContainer" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+        </div>
+        <div class="col-sm-8">
+            &nbsp;
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 alignleft control-label required">Type Of Container / Unit :</label>
+        <div class="col-sm-10">
+            &nbsp;
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Container Category</label>
+        <div class="col-sm-2">
+            <select class="form-control" name="categoryItem" ng-model="entity.categoryItem" ng-options="t as t.categoryName for t in containerCategoryList" ng-change="UpdateContainerSizes(entity.categoryItem)" ng-disabled="disabledUpdate"></select>
+        </div>
+        <label class="col-sm-2 control-label">Container Size</label>
+        <div class="col-sm-2">
+            <select class="form-control" name="containerTypeItem" ng-model="entity.containerTypeItem" ng-options="t as t.name for t in containerSizesList" ng-disabled="disabledUpdate"></select>
+        </div>
+        <label class="col-sm-1 control-label">Qty</label>
+        <div class="col-sm-1">
+            <input type="number" min="0" max="99999" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" maxlength="5" class="form-control" name="containerQty" ng-model="entity.containerQty" ng-disabled="disabledUpdate" />
+        </div>
+        <div class="col-sm-1">
+            <button name="btnAddContainer" type="button" class="btn btn-sm btn-primary" ng-click="addContainerRow()" action="add" entityid="0" uib-tooltip="Add Container" ng-disabled="disabledUpdate"><i class="fa fa-pencil"></i>Add</button>
+        </div>
+        <div class="col-sm-1">
+            &nbsp;
+        </div>
+    </div>
+    <div ng-show="containerServiceList.length > 0">
+        <table class="table table-striped table-bordered table-hover " template-pagination="none">
+            <thead>
+                <tr class="bg-thead">
+                    <th class="text-left  hidden-xs">Container Category</th>
+                    <th class="text-left  hidden-xs">Continer Size</th>
+                    <th class="text-left  hidden-xs">Qty</th>
+                    <th class="list-actions">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="containerService in containerServiceList">
+                    <td>
+                        {{containerService.categoryName}}
+                    </td>
+                    <td>
+                        {{containerService.containerName}}
+                    </td>
+                    <td>
+                        {{containerService.quantity}}
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-xs btn-danger" ng-click="removeContainerServiceRow($index)" uib-tooltip="Delete" ng-disabled="disabledUpdate"><i class="fa fa-remove"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="box box-info" ng-show="entity.modeOfService == 7">
+        <div class="box-header with-border">
+            <h3 class="box-title">AIR</h3>
+            <div class="box-tools pull-right">
+                <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="form-group">
+
+                <label class="col-sm-1 control-label">Piece Count</label>
+                <label class="col-sm-1 control-label">Wt/Pcs(kgs)</label>
+                <label class="col-sm-1 control-label">Wt/Pcs(lbs)</label>
+                <label class="col-sm-1 control-label">Total Wt</label>
+                <label class="col-sm-1 control-label">Total Wt(lbs)</label>
+                <label class="col-sm-2 control-label">Length(inch/CM)</label>
+                <label class="col-sm-2 control-label">Width(inch/CM)</label>
+                <label class="col-sm-2 control-label">Height(inch/CM)</label>
+                <div class="col-sm-1">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtPieceCount" ng-model="entity.txtPieceCount" ng-blur="calculateTotalwtAir()" bng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtwtpckg" ng-model="entity.txtwtpckg" ng-blur="calculatewtAir('txtwtpckg');calculateTotalwtAir()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtwtpclbs" ng-model="entity.txtwtpclbs" ng-blur="calculatewtAir('txtwtpclbs');calculateTotalwtAir()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtTotalWtkg" ng-model="entity.txtTotalWtkg" ng-disabled="true" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtTotalWtlbs" ng-model="entity.txtTotalWtlbs" ng-disabled="true" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtLengthInch" ng-model="entity.txtLengthInch" ng-blur="calculatewtAir('txtLengthInch');calculateTotalwtAir()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtLengthCM" ng-model="entity.txtLengthCM" ng-blur="calculatewtAir('txtLengthCM');calculateTotalwtAir()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtwidthInch" ng-model="entity.txtwidthInch" ng-blur="calculatewtAir('txtwidthInch');calculateTotalwtAir()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtwidthCM" ng-model="entity.txtwidthCM" ng-blur="calculatewtAir('txtwidthCM');calculateTotalwtAir()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtHightInch" ng-model="entity.txtHightInch" ng-blur="calculatewtAir('txtHightInch');calculateTotalwtAir()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtHightCM" ng-model="entity.txtHightCM" ng-blur="calculatewtAir('txtHightCM');calculateTotalwtAir()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <button name="btnAdd" type="button" class="btn btn-sm btn-primary" ng-click="addAirRow()" action="add" entityid="0" uib-tooltip="Add" ng-disabled="disabledUpdate"><i class="fa fa-pencil"></i>Add</button>
+                </div>
+            </div>
+            <div ng-show="airServiceList.length > 0">
+                <table class="table table-striped table-bordered table-hover " template-pagination="none">
+                    <thead>
+                        <tr class="bg-thead">
+                            <th class="text-left  hidden-xs">Pieace count</th>
+                            <th class="text-left  hidden-xs">Wt/Pcs</th>
+                            <th class="text-left  hidden-xs">Total Wt</th>
+                            <th class="text-left  hidden-xs">Length</th>
+                            <th class="text-left  hidden-xs">Width</th>
+                            <th class="text-left  hidden-xs">Height</th>
+                            <th class="text-left  hidden-xs">Volume</th>
+                            <th class="list-actions">Edit</th>
+                            <th class="list-actions">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="airService in airServiceList">
+                            <td>
+                                {{airService.pieceCount}}
+                            </td>
+                            <td>
+                                {{airService.weight}}
+                            </td>
+                            <td>
+                                {{airService.totalWt | number :  3}}
+                            </td>
+                            <td>
+                                {{airService.length  | number :  3}}
+                            </td>
+                            <td>
+                                {{airService.width | number :  3}}
+                            </td>
+                            <td>
+                                {{airService.height | number :  3}}
+                            </td>
+                            <td>
+                                {{airService.volume | number :  3}}
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-xs btn-primary" ng-click="editAirServiceRow($index)" action="edit" uib-tooltip="Edit" ng-disabled="disabledUpdate"><i class="fa fa-edit"></i></button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-xs btn-danger" ng-click="removeAirServiceRow($index)" uib-tooltip="Delete" ng-disabled="disabledUpdate"><i class="fa fa-remove"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-1">
+                    &nbsp;
+                </div>
+                <label class="col-sm-2 control-label">Actual Weight</label>
+                <div class="col-sm-1">
+                    <input type="text" class="form-control" name="txtActualWeightkg" ng-model="entity.txtActualWeightkg" ng-disabled="true" />
+                </div>
+                <label class="col-sm-1 control-label">Kgs</label>
+                <div class="col-sm-1">
+                    &nbsp;
+                </div>
+                <div class="col-sm-1">
+                    <input type="text" class="form-control" name="txtActualWeightLbs" ng-model="entity.txtActualWeightLbs" ng-disabled="true" />
+                </div>
+                <label class="col-sm-1 control-label pull-left ">Lbs</label>
+                <div class="col-sm-4">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-1">
+                    &nbsp;
+                </div>
+                <label class="col-sm-2 control-label">Volume weight</label>
+                <div class="col-sm-1">
+                    <input type="text" class="form-control" name="txtVolumeWeight" ng-model="entity.txtVolumeWeight" ng-disabled="true" />
+                </div>
+                <label class="col-sm-1 control-label">Kgs</label>
+                <div class="col-sm-7">
+                    &nbsp;
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div class="col-sm-1">
+                    &nbsp;
+                </div>
+                <label class="col-sm-2 control-label">Chargeable Weight </label>
+                <div class="col-sm-1">
+                    <input type="text" class="form-control" name="txtChargeableWeight" ng-model="entity.txtChargeableWeight" ng-disabled="true" />
+                </div>
+                <label class="col-sm-1 control-label">Kgs</label>
+                <div class="col-sm-7">
+                    &nbsp;
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="box box-info" ng-show="entity.modeOfService == 2">
+        <div class="box-header with-border">
+            <h3 class="box-title">LCL</h3>
+            <div class="box-tools pull-right">
+                <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="form-group">
+
+                <label class="col-sm-1 control-label">Piece Count</label>
+                <label class="col-sm-1 control-label">Wt/Pcs(kgs)</label>
+                <label class="col-sm-1 control-label">Wt/Pcs(lbs)</label>
+                <label class="col-sm-1 control-label">Total Wt</label>
+                <label class="col-sm-1 control-label">Total Wt(lbs)</label>
+                <label class="col-sm-2 control-label">Length(inch/CM)</label>
+                <label class="col-sm-2 control-label">Width(inch/CM)</label>
+                <label class="col-sm-2 control-label">Height(inch/CM)</label>
+                <div class="col-sm-1">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtLCLPieceCount" ng-model="entity.txtLCLPieceCount" ng-blur="calculateTotalwtLCL()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtLCLwtpckg" ng-model="entity.txtLCLwtpckg" ng-blur="calculatewtLCL('txtLCLwtpckg');calculateTotalwtLCL()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtLCLwtpclbs" ng-model="entity.txtLCLwtpclbs" ng-blur="calculatewtLCL('txtLCLwtpclbs');calculateTotalwtLCL()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtLCLTotalWtkg" ng-model="entity.txtLCLTotalWtkg" ng-disabled="true" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtLCLTotalWtlbs" ng-model="entity.txtLCLTotalWtlbs" ng-disabled="true" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtLCLLengthInch" ng-model="entity.txtLCLLengthInch" ng-blur="calculatewtLCL('txtLCLLengthInch');calculateTotalwtLCL()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtLCLLengthCM" ng-model="entity.txtLCLLengthCM" ng-blur="calculatewtLCL('txtLCLLengthCM');calculateTotalwtLCL()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtLCLwidthInch" ng-model="entity.txtLCLwidthInch" ng-blur="calculatewtLCL('txtLCLwidthInch');calculateTotalwtLCL()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtLCLwidthCM" ng-model="entity.txtLCLwidthCM" ng-blur="calculatewtLCL('txtLCLwidthCM');calculateTotalwtLCL()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtLCLHightInch" ng-model="entity.txtLCLHightInch" ng-blur="calculatewtLCL('txtLCLHightInch');calculateTotalwtLCL()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtLCLHightCM" ng-model="entity.txtLCLHightCM" ng-blur="calculatewtLCL('txtLCLHightCM');calculateTotalwtLCL()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <button name="btnAddLCL" type="button" class="btn btn-sm btn-primary" ng-click="addLCLRow()" action="add" entityid="0" uib-tooltip="Add" ng-disabled="disabledUpdate"><i class="fa fa-pencil"></i>Add</button>
+                </div>
+            </div>
+            <div ng-show="lclServiceList.length > 0">
+                <table class="table table-striped table-bordered table-hover " template-pagination="none">
+                    <thead>
+                        <tr class="bg-thead">
+                            <th class="text-left  hidden-xs">Pieace count</th>
+                            <th class="text-left  hidden-xs">Wt/Pcs</th>
+                            <th class="text-left  hidden-xs">Total Wt</th>
+                            <th class="text-left  hidden-xs">Length</th>
+                            <th class="text-left  hidden-xs">Width</th>
+                            <th class="text-left  hidden-xs">Height</th>
+                            <th class="text-left  hidden-xs">Volume</th>
+                            <th class="list-actions">Edit</th>
+                            <th class="list-actions">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="lclService in lclServiceList">
+                            <td>
+                                {{lclService.pieceCount | number :  3}}
+                            </td>
+                            <td>
+                                {{lclService.weight | number :  3}}
+                            </td>
+                            <td>
+                                {{lclService.totalWt | number :  3}}
+                            </td>
+                            <td>
+                                {{lclService.length | number :  3}}
+                            </td>
+                            <td>
+                                {{lclService.width | number :  3}}
+                            </td>
+                            <td>
+                                {{lclService.height | number :  3}}
+                            </td>
+                            <td>
+                                {{lclService.volume | number :  3}}
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-xs btn-primary" ng-click="editLCLServiceRow($index)" action="edit" uib-tooltip="Edit" ng-disabled="disabledUpdate"><i class="fa fa-edit"></i></button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-xs btn-danger" ng-click="removeLCLServiceRow($index)" uib-tooltip="Delete" ng-disabled="disabledUpdate"><i class="fa fa-remove"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-1">
+                    &nbsp;
+                </div>
+                <label class="col-sm-2 control-label">Total Weight</label>
+                <div class="col-sm-1">
+                    <input type="text" class="form-control" name="txtLCLActualWeightkg" ng-model="entity.txtLCLActualWeightkg" ng-disabled="true" />
+                </div>
+                <label class="col-sm-1 control-label fa-align-left">Kgs</label>
+                <div class="col-sm-1">
+                    &nbsp;
+                </div>
+                <div class="col-sm-1">
+                    <input type="text" class="form-control" name="txtLCLActualWeightLbs" ng-model="entity.txtLCLActualWeightLbs" ng-disabled="true" />
+                </div>
+                <label class="col-sm-1 control-label pull-left ">Lbs</label>
+                <div class="col-sm-4">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-1">
+                    &nbsp;
+                </div>
+                <label class="col-sm-2 control-label">Total Volume</label>
+                <div class="col-sm-1">
+                    <input type="text" class="form-control" name="txtLCLVolumeWeight" ng-model="entity.txtLCLVolumeWeight" ng-disabled="true" />
+                </div>
+                <label class="col-sm-1 control-label">cub Mt</label>
+                <div class="col-sm-1">
+                    &nbsp;
+                </div>
+                <div class="col-sm-1">
+                    <input type="text" class="form-control" name="txtLCLVolumeWeightfeet" ng-model="entity.txtLCLVolumeWeightfeet" ng-disabled="true" />
+                </div>
+                <label class="col-sm-1 control-label pull-left ">Cub Feet</label>
+                <div class="col-sm-4">
+                    &nbsp;
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div class="col-sm-1">
+                    &nbsp;
+                </div>
+                <label class="col-sm-2 control-label">Chargeable W\M </label>
+                <div class="col-sm-1">
+                    <input type="text" class="form-control" name="txtLCLChargeableWeight" ng-model="entity.txtLCLChargeableWeight" ng-disabled="true" />
+                </div>
+                <div class="col-sm-8">
+                    &nbsp;
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="box box-info" ng-show="entity.modeOfService == 5">
+        <div class="box-header with-border">
+            <h3 class="box-title">Break Bulk</h3>
+            <div class="box-tools pull-right">
+                <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="form-group">
+
+                <label class="col-sm-1 control-label">Description</label>
+                <label class="col-sm-1 control-label">Qty</label>
+                <label class="col-sm-1 control-label">Wt/Pcs(kgs)</label>
+                <label class="col-sm-1 control-label">Wt/Pcs(lbs)</label>
+                <label class="col-sm-1 control-label">Total Wt(kgs)</label>
+                <label class="col-sm-1 control-label">Total Wt(lbs)</label>
+                <label class="col-sm-2 control-label">Length(inch/CM)</label>
+                <label class="col-sm-2 control-label">Width(inch/CM)</label>
+                <label class="col-sm-2 control-label">Height(inch/CM)</label>
+
+            </div>
+            <div class="form-group">
+                <div class="col-sm-1">
+                    <input type="text" class="form-control" name="txtDescription" ng-model="entity.txtDescription" bng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.001" class="form-control" name="txtBQty" ng-model="entity.txtBQty" ng-blur="calculateTotalWtBB()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.001" class="form-control" name="txtBwtpcKg" ng-model="entity.txtBwtpcKg" ng-blur="calculateWtBB('txtBwtpcKg');calculateTotalWtBB()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.001" class="form-control" name="txtBwtpcLbs" ng-model="entity.txtBwtpcLbs" ng-blur="calculateWtBB('txtBwtpcLbs');calculateTotalWtBB()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.001" class="form-control" name="txtBTotalWtlbs" ng-model="entity.txtBTotalWtkgs" ng-disabled="true" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.001" class="form-control" name="txtBTotalWtlbs" ng-model="entity.txtBTotalWtlbs" ng-disabled="true" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.001" class="form-control" name="txtBLengthInch" ng-model="entity.txtBLengthInch" ng-blur="calculateWtBB('txtBLengthInch');calculateTotalWtBB()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.001" class="form-control" name="txtBLengthCM" ng-model="entity.txtBLengthCM" ng-blur="calculateWtBB('txtBLengthCM');calculateTotalWtBB()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.001" class="form-control" name="txtBwidthInch" ng-model="entity.txtBwidthInch" ng-blur="calculateWtBB('txtBwidthInch');calculateTotalWtBB()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.001" class="form-control" name="txtBwidthCM" ng-model="entity.txtBwidthCM" ng-blur="calculateWtBB('txtBwidthCM');calculateTotalWtBB()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.001" class="form-control" name="txtBHightInch" ng-model="entity.txtBHightInch" ng-blur="calculateWtBB('txtBHightInch');calculateTotalWtBB()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.001" class="form-control" name="txtBHightCM" ng-model="entity.txtBHightCM" ng-blur="calculateWtBB('txtBHightCM');calculateTotalWtBB()" ng-disabled="disabledUpdate" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-11">
+                    &nbsp;
+                </div>
+                <div class="col-sm-1">
+                    <button name="btnAddBB" type="button" class="btn btn-sm btn-primary" ng-click="addBreakBulkRow()" action="add" entityid="0" uib-tooltip="Add" ng-disabled="disabledUpdate"><i class="fa fa-pencil"></i>Add</button>
+                </div>
+            </div>
+            <div ng-show="breakBulkServiceList.length > 0">
+                <table class="table table-striped table-bordered table-hover " template-pagination="none">
+                    <thead>
+                        <tr class="bg-thead">
+                            <th class="text-left  hidden-xs">Description</th>
+                            <th class="text-left  hidden-xs">Qty</th>
+                            <th class="text-left  hidden-xs">Weight</th>
+                            <th class="text-left  hidden-xs">Length</th>
+                            <th class="text-left  hidden-xs">Width</th>
+                            <th class="text-left  hidden-xs">Height</th>
+                            <th class="text-left  hidden-xs">Volume</th>
+                            <th class="list-actions">Edit</th>
+                            <th class="list-actions">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="breakBulkService in breakBulkServiceList">
+                            <td>
+                                {{breakBulkService.description}}
+                            </td>
+                            <td>
+                                {{breakBulkService.qty | number :  3}}
+                            </td>
+                            <td>
+                                {{breakBulkService.weight | number :  3}}
+                            </td>
+                            <td>
+                                {{breakBulkService.length | number :  3}}
+                            </td>
+                            <td>
+                                {{breakBulkService.width | number :  3}}
+                            </td>
+                            <td>
+                                {{breakBulkService.height | number :  3}}
+                            </td>
+                            <td>
+                                {{breakBulkService.volume | number :  3}}
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-xs btn-primary" ng-click="editBreakBulkServiceRow($index)" action="edit" uib-tooltip="Edit" ng-disabled="disabledUpdate"><i class="fa fa-edit"></i></button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-xs btn-danger" ng-click="removeBreakBulkServiceRow($index)" uib-tooltip="Delete" ng-disabled="disabledUpdate"><i class="fa fa-remove"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-1">
+                    &nbsp;
+                </div>
+                <label class="col-sm-1 control-label">Volume </label>
+                <div class="col-sm-1">
+                    <input type="text" class="form-control" name="txtBVolume" ng-model="entity.txtBVolume" ng-disabled="true" />
+                </div>
+                <label class="col-sm-1 control-label">Cub Mt</label>
+                <div class="col-sm-1">
+                    &nbsp;
+                </div>
+                <div class="col-sm-1">
+                    <input type="text" class="form-control" name="txtBCubMt" ng-model="entity.txtBCubMt" ng-disabled="true" />
+                </div>
+                <label class="col-sm-1 control-label">Cub Feet</label>
+                <div class="col-sm-5">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-1">
+                    &nbsp;
+                </div>
+                <label class="col-sm-1 control-label">Weight </label>
+                <div class="col-sm-1">
+                    <input type="text" class="form-control" name="txtBWeight" ng-model="entity.txtBWeight" ng-disabled="true" />
+                </div>
+                <label class="col-sm-1 control-label">Kgs</label>
+                <div class="col-sm-1">
+                    &nbsp;
+                </div>
+                <div class="col-sm-1">
+                    <input type="text" class="form-control" name="txtBWeightLbs" ng-model="entity.txtBWeightLbs" ng-disabled="true" />
+                </div>
+                <label class="col-sm-1 control-label">Lbs</label>
+                <div class="col-sm-5">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-1">
+                    &nbsp;
+                </div>
+                <label class="col-sm-1 control-label">Inland </label>
+                <div class="col-sm-1">
+                    <input type="checkbox" name="chkInland" ng-model="entity.chkInland" ng-disabled="true" />
+                </div>
+                <label class="col-sm-1 control-label">Yes/No</label>
+                <div class="col-sm-1">
+                    &nbsp;
+                </div>
+                <div class="col-sm-1">
+                    <input type="text" class="form-control" name="txtBInland" ng-model="entity.txtBInland" ng-disabled="true" />
+                </div>
+                <div class="col-sm-6">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-1">
+                    &nbsp;
+                </div>
+                <label class="col-sm-1 control-label">MAFI </label>
+                <div class="col-sm-1">
+                    <input type="checkbox" name="chkMAFI" ng-model="entity.chkMAFI" />
+                </div>
+                <div class="col-sm-9">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box box-info" ng-show="entity.modeOfService == 3">
+        <div class="box-header with-border">
+            <h3 class="box-title">RORO</h3>
+            <div class="box-tools pull-right">
+                <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="form-group">
+                <label class="col-sm-1 control-label">No of Units</label>
+                <div class="col-sm-1">
+                    <input type="number" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtNoofCranes" ng-model="entity.txtNoofCranes" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-10">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-1 control-label">Qty</label>
+                <label class="col-sm-1 control-label">Wt/Pcs(kgs)</label>
+                <label class="col-sm-1 control-label">Wt/Pcs(lbs)</label>
+                <label class="col-sm-1 control-label">Total Wt(kgs)</label>
+                <label class="col-sm-1 control-label">Total Wt(lbs)</label>
+                <label class="col-sm-2 control-label">Length(inch/CM)</label>
+                <label class="col-sm-2 control-label">Width(inch/CM)</label>
+                <label class="col-sm-2 control-label">Height(inch/CM)</label>
+                <div class="col-sm-1">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtROROQty" ng-model="entity.txtROROQty" ng-blur="calculateTotalWtRORO()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtROROwtpcKg" ng-model="entity.txtROROwtpcKg" ng-blur="calculateWtRORO('txtROROwtpcKg');calculateTotalWtRORO()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtROROwtpcLbs" ng-model="entity.txtROROwtpcLbs" ng-blur="calculateWtRORO('txtROROwtpcLbs');calculateTotalWtRORO()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtROROTotalWtkgs" ng-model="entity.txtROROTotalWtkgs" ng-disabled="true" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtROROTotalWtlbs" ng-model="entity.txtROROTotalWtlbs" ng-disabled="true" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtROROLengthInch" ng-model="entity.txtROROLengthInch" ng-blur="calculateWtRORO('txtROROLengthInch');calculateTotalWtRORO()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtROROLengthCM" ng-model="entity.txtROROLengthCM" ng-blur="calculateWtRORO('txtROROLengthCM');calculateTotalWtRORO()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtROROwidthInch" ng-model="entity.txtROROwidthInch" ng-blur="calculateWtRORO('txtROROwidthInch');calculateTotalWtRORO()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtROROwidthCM" ng-model="entity.txtROROwidthCM" ng-blur="calculateWtRORO('txtROROwidthCM');calculateTotalWtRORO()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtROROHightInch" ng-model="entity.txtROROHightInch" ng-blur="calculateWtRORO('txtROROHightInch');calculateTotalWtRORO()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="txtROROHightCM" ng-model="entity.txtROROHightCM" ng-blur="calculateWtRORO('txtROROHightCM');calculateTotalWtRORO()" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    <button name="btnAddRORO" type="button" class="btn btn-sm btn-primary" ng-click="addRORORow()" action="add" entityid="0" uib-tooltip="Add" ng-disabled="disabledUpdate"><i class="fa fa-pencil"></i>Add</button>
+                </div>
+            </div>
+            <div ng-show="roroServiceList.length > 0">
+                <table class="table table-striped table-bordered table-hover " template-pagination="none">
+                    <thead>
+                        <tr class="bg-thead">
+                            <th class="text-left  hidden-xs">Piece Count</th>
+                            <th class="text-left  hidden-xs">Wt/Pcs</th>
+                            <th class="text-left  hidden-xs">Total Wt</th>
+                            <th class="text-left  hidden-xs">Length</th>
+                            <th class="text-left  hidden-xs">Width</th>
+                            <th class="text-left  hidden-xs">Height</th>
+                            <th class="text-left  hidden-xs">Volume</th>
+                            <th class="list-actions">Edit</th>
+                            <th class="list-actions">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="roroService in roroServiceList">
+                            <td>
+                                {{roroService.qty | number :  3}}
+                            </td>
+                            <td>
+                                {{roroService.weight | number :  3}}
+                            </td>
+                            <td>
+                                {{roroService.totalwt | number :  3}}
+                            </td>
+                            <td>
+                                {{roroService.length | number :  3}}
+                            </td>
+                            <td>
+                                {{roroService.width | number :  3}}
+                            </td>
+                            <td>
+                                {{roroService.height | number :  3}}
+                            </td>
+                            <td>
+                                {{roroService.volume | number :  3}}
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-xs btn-primary" ng-click="editROROServiceRow($index)" action="edit" uib-tooltip="Edit" ng-disabled="disabledUpdate"><i class="fa fa-edit"></i></button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-xs btn-danger" ng-click="removeROROServiceRow($index)" uib-tooltip="Delete" ng-disabled="disabledUpdate"><i class="fa fa-remove"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-1">
+                    &nbsp;
+                </div>
+                <label class="col-sm-1 control-label">Volume </label>
+                <div class="col-sm-1">
+                    <input type="text" class="form-control" name="txtROROVolume" ng-model="entity.txtROROVolume" ng-disabled="true" />
+                </div>
+                <label class="col-sm-1 control-label">Cub Mt</label>
+                <div class="col-sm-1">
+                    &nbsp;
+                </div>
+                <div class="col-sm-1">
+                    <input type="text" class="form-control" name="txtROROCubMt" ng-model="entity.txtROROCubMt" ng-disabled="true" />
+                </div>
+                <label class="col-sm-1 control-label">Cub Feet</label>
+                <div class="col-sm-5">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-1">
+                    &nbsp;
+                </div>
+                <label class="col-sm-1 control-label">Weight </label>
+                <div class="col-sm-1">
+                    <input type="text" class="form-control" name="txtROROWeight" ng-model="entity.txtROROWeight" ng-disabled="true" />
+                </div>
+                <label class="col-sm-1 control-label">Kgs</label>
+                <div class="col-sm-1">
+                    &nbsp;
+                </div>
+                <div class="col-sm-1">
+                    <input type="text" class="form-control" name="txtROROWeightLbs" ng-model="entity.txtROROWeightLbs" ng-disabled="true" />
+                </div>
+                <label class="col-sm-1 control-label">Lbs</label>
+                <div class="col-sm-5">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-1">
+                    &nbsp;
+                </div>
+                <label class="col-sm-1 control-label">Inland </label>
+                <div class="col-sm-1">
+                    <input type="checkbox" name="chkInland" ng-model="entity.chkInland" ng-disabled="true" />
+                </div>
+                <label class="col-sm-1 control-label">Yes/No</label>
+                <div class="col-sm-1">
+                    &nbsp;
+                </div>
+                <div class="col-sm-1">
+                    <input type="text" class="form-control" name="txtROROInland" ng-model="entity.txtROROInland" ng-disabled="true" />
+                </div>
+                <div class="col-sm-6">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-1">
+                    &nbsp;
+                </div>
+                <label class="col-sm-1 control-label">MAFI </label>
+                <div class="col-sm-1">
+                    <input type="checkbox" name="chkMAFI" ng-model="entity.chkMAFI" />
+                </div>
+                <div class="col-sm-9">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="line-info" />
+    <div class="form-group">
+        <label class="col-sm-3 alignleft control-label {{requiredUpdate ? 'required' : ''}}">Pick Up(MGL Booking Terms)  </label>
+        <div class="col-sm-9" show-errors="{ skipFormGroupCheck: true }">
+            <div class="form-group">
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" ng-model="entity.pickupType" value="0" checked ng-change="showPickupType(entity.pickupType)" ng-disabled="disabledUpdate">
+                        SD/Port
+                    </label>
+                    <label>
+                        <input type="radio" name="optionsRadios" ng-model="entity.pickupType" value="1" ng-change="showPickupType(entity.pickupType)" ng-disabled="disabledUpdate">
+                        Port/Port
+                    </label>
+                    <label>
+                        <input type="radio" name="optionsRadios" ng-model="entity.pickupType" value="2" ng-change="showPickupType(entity.pickupType)" ng-disabled="disabledUpdate">
+                        Door/Door
+                    </label>
+                    <label>
+                        <input type="radio" name="optionsRadios" ng-model="entity.pickupType" value="3" ng-change="showPickupType(entity.pickupType)" ng-disabled="disabledUpdate">
+                        CFS/CFS
+                    </label>
+                    <label>
+                        <input type="radio" name="optionsRadios" ng-model="entity.pickupType" value="4" ng-change="showPickupType(entity.pickupType)" ng-disabled="disabledUpdate">
+                        RAILRAMP/PORT
+                    </label>
+                    <label>
+                        <input type="radio" name="optionsRadios" ng-model="entity.pickupType" value="5" ng-change="showPickupType(entity.pickupType)" ng-disabled="disabledUpdate">
+                        SD/CFS
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-3 control-label {{requiredUpdate ? 'required' : ''}}">Expected Date of Shippment Move</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="shipmentMoveDate" ng-model="entity.shipmentMoveDate" ng-disabled="disabledUpdate" input-date="true" show-time="false" />
+        </div>
+        <div class="col-sm-6">
+            &nbsp;
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Port of Origin</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="origin" ng-model="entity.origin" uib-typeahead="origin=o.name + ' (' + o.countryName + ')' for o in callTypeahead($viewValue, 'LGVWPort', 'name', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="origin" lookup-field="name" entity-key-field="portId" custom-clear="true" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+        </div>
+        <div class="col-sm-1">
+            <button name="btnOriginAdd" type="button" class="btn btn-sm btn-primary" ng-click="callPortModal('origin')" action="add" entityid="0" uib-tooltip="Click here to add new Origin" ng-disabled="disabledUpdate"><i class="fa fa-pencil"></i>Save</button>
+        </div>
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Port of Discharge</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="discharge" ng-model="entity.discharge" uib-typeahead="discharge=o.name + ' (' + o.countryName + ')' for o in callTypeahead($viewValue, 'LGVWPort', 'name', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="discharge" lookup-field="name" entity-key-field="portId" custom-clear="true" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+        </div>
+        <div class="col-sm-1">
+            <button name="btnDischargeAdd" type="button" class="btn btn-sm btn-primary" ng-click="callPortModal('discharge')" action="add" entityid="0" uib-tooltip="Click here to save new Port" ng-disabled="disabledUpdate"><i class="fa fa-pencil"></i>Save</button>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Origin State</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="originState" ng-model="entity.originState" uib-typeahead="originState=o.name for o in searchValues($viewValue,'originState')" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="originState" lookup-field="name" entity-key-field="stateId" custom-clear="true" ng-disabled="disabledUpdate" ng-required="{{entity.pickupType == '0' ||entity.pickupType == '1' ||entity.pickupType == '2' || entity.pickupType == '3' || entity.pickupType == '4' ? 'required' : ''}}" />
+        </div>
+        <div class="col-sm-1">
+            <button name="btnOriginStateAdd" type="button" class="btn btn-sm btn-primary" ng-click="callStateModal('originState')" action="add" entityid="0" uib-tooltip="Click here to save new State" ng-disabled="disabledUpdate"><i class="fa fa-pencil"></i>Save</button>
+        </div>
+        <label class="col-sm-2 control-label">Discharge State</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="dischargeState" ng-model="entity.dischargeState" uib-typeahead="dischargeState=o.name for o in searchValues($viewValue,'dischargeState')" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="dischargeState" lookup-field="name" entity-key-field="stateId" custom-clear="true" ng-disabled="disabledUpdate" />
+        </div>
+        <div class="col-sm-1">
+            <button name="btnDischargeStateAdd" type="button" class="btn btn-sm btn-primary" ng-click="callStateModal('dischargeState')" action="add" entityid="0" uib-tooltip="Click here to save new State" ng-disabled="disabledUpdate"><i class="fa fa-pencil"></i>Save</button>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label ">City of Origin</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="originCity" ng-model="entity.originCity" uib-typeahead="originCity=o.name for o in searchValues($viewValue,'originCity')" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="originCity" lookup-field="name" entity-key-field="cityId" custom-clear="true" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+        </div>
+        <div class="col-sm-1">
+            <button name="btnOriginCityAdd" type="button" class="btn btn-sm btn-primary" ng-click="callCityModal('originCity')" action="add" entityid="0" uib-tooltip="Click here to save new City" ng-disabled="disabledUpdate"><i class="fa fa-pencil"></i>Save</button>
+        </div>
+        <label class="col-sm-2 control-label">City of Discharge</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="dischargeCity" ng-model="entity.dischargeCity" uib-typeahead="dischargeCity=o.name for o in searchValues($viewValue,'dischargeCity')" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="dischargeCity" lookup-field="name" entity-key-field="cityId" custom-clear="true" ng-disabled="disabledUpdate" />
+        </div>
+        <div class="col-sm-1">
+            <button name="btnDischargeStateAdd" type="button" class="btn btn-sm btn-primary" ng-click="callCityModal('dischargeCity')" action="add" entityid="0" uib-tooltip="Click here to save new City" ng-disabled="disabledUpdate"><i class="fa fa-pencil"></i>Save</button>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Origin Country</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="originCountry" ng-model="entity.originCountry" uib-typeahead="originCountry=o.name for o in callTypeahead($viewValue, 'SIPLCountry', 'name', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="originCountry" lookup-field="name" entity-key-field="countryId" custom-clear="true" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+        </div>
+        <div class="col-sm-1">
+            <button name="btnAdd" type="button" class="btn btn-sm btn-primary" ng-click="callCountryModal('originCountry')" action="add" entityid="0" uib-tooltip="Click here to Add new Country" ng-disabled="disabledUpdate"><i class="fa fa-pencil"></i>Add</button>
+        </div>
+        <label class="col-sm-2 control-label">Destination Country</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="dischargeCountry" ng-model="entity.dischargeCountry" uib-typeahead="dischargeCountry=o.name for o in callTypeahead($viewValue, 'SIPLCountry', 'name', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="dischargeCountry" lookup-field="name" entity-key-field="countryId" custom-clear="true" ng-disabled="disabledUpdate" />
+        </div>
+        <div class="col-sm-1">
+            <button name="btnAdd" type="button" class="btn btn-sm btn-primary" ng-click="callCountryModal('dischargeCountry')" action="add" entityid="0" uib-tooltip="Click here to Add new Country" ng-disabled="disabledUpdate"><i class="fa fa-pencil"></i>Add</button>
+        </div>
+    </div>
+
+
+
+    <hr class="line-info" />
+    <div class="form-group">
+        <label class="col-sm-2 control-label" ng-hide="!isWHSuplierVisible">Pick up from Ware House / Supplier</label>
+        <div class="col-sm-4" ng-hide="!isWHSuplierVisible">
+            <input type="text" class="form-control" name="originDoorName" maxlength="50" ng-model="entity.originDoorName" uib-typeahead="o.companyName for o in callTypeahead($viewValue, 'SIPLContact', 'companyName', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="originDoorName" lookup-field="originDoorName" entity-key-field="contactID" custom-clear="true" ng-disabled="disabledUpdate" />
+        </div>
+        <label class="col-sm-2 control-label" ng-hide="!isDestDoorVisible">Place of Delivery / Destination Door</label>
+        <div class="col-sm-4" ng-hide="!isDestDoorVisible">
+            <input type="text" class="form-control" name="destinationDoorName" maxlength="50" ng-model="entity.destinationDoorName" uib-typeahead="o.companyName for o in callTypeahead($viewValue, 'SIPLContact', 'companyName', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="destinationDoorName" lookup-field="destinationDoorName" entity-key-field="contactID" custom-clear="true" ng-disabled="disabledUpdate" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label" ng-hide="!isWHSuplierAddressVisible">Pick up from Ware House / Supplier Address</label>
+        <div class="col-sm-4" ng-hide="!isWHSuplierAddressVisible">
+            <textarea row="2" class="form-control" maxlength="500" name="originDoorAddress" ng-model="entity.originDoorAddress" ng-disabled="disabledUpdate" />
+        </div>
+        <label class="col-sm-2 control-label" ng-hide="!isDestDoorAddressVisible">Place of Delivery / Destination Door Address</label>
+        <div class="col-sm-4" ng-hide="!isDestDoorAddressVisible">
+            <textarea rows="2" class="form-control" maxlength="500" name="destinationDoorAddress" ng-model="entity.destinationDoorAddress" ng-disabled="disabledUpdate" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label" ng-hide="!isOriginRailRampVisible">Origin RailRamp</label>
+        <div class="col-sm-3" ng-hide="!isOriginRailRampVisible">
+            <input type="text" class="form-control" name="railRamp" ng-model="entity.railRamp" uib-typeahead="o.railRamp for o in callTypeahead($viewValue, 'RailRamp', 'railRamp', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="RailRamp" lookup-field="railRamp" entity-key-field="railID" custom-clear="true" ng-disabled="disabledUpdate" />
+        </div>
+        <div class="col-sm-1" ng-hide="!isOriginRailRampVisible">
+            <button name="btnRailRampAdd" type="button" class="btn btn-sm btn-primary" ng-click="callRailRampModal()" action="add" entityid="0" ng-disabled="disabledUpdate"><i class="fa fa-pencil"></i>Add</button>
+        </div>
+        <label class="col-sm-2 control-label" ng-hide="!isDestTerminalVisible">Destination Terminal</label>
+        <div class="col-sm-3" ng-hide="!isDestTerminalVisible">
+            <input type="text" class="form-control" name="terminal" ng-model="entity.terminal" uib-typeahead="terminal=o.terminalName for o in callTypeahead($viewValue, 'Terminal', 'terminalName', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="Terminal" lookup-field="terminalName" entity-key-field="terminalid" custom-clear="true" ng-disabled="disabledUpdate" />
+
+        </div>
+        <div class="col-sm-1" ng-hide="!isDestTerminalVisible">
+            <button name="btnTerminalAdd" type="button" class="btn btn-sm btn-primary" ng-click="callTerminalModal()" action="add" entityid="0" ng-disabled="disabledUpdate"><i class="fa fa-pencil"></i>Add</button>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Latest Remark</label>
+        <div class="col-sm-3">
+            <textarea rows="2" class="form-control" maxlength="500" name="lastRemarks" ng-model="entity.lastRemarks" ng-disabled="true" />
+        </div>
+        <div class="col-sm-1">
+            <button name="btnAdd" type="button" class="btn btn-sm btn-primary" ng-click="showNextActionRemarksModel()" action="view" uib-tooltip="View Previous Remarks" ng-disabled="disabledUpdate"><i class="fa fa-pencil"></i>Previous Remarks</button>
+        </div>
+        <label class="col-sm-2 control-label">Latest Remark Date</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="lastRemarkDate" ng-model="entity.lastRemarkDate" ng-disabled="true" input-date="true" show-time="false" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Next Action Due Remarks</label>
+        <div class="col-sm-4">
+            <textarea rows="2" class="form-control" maxlength="500" name="nextActionRemarks" ng-model="entity.nextActionRemarks" ng-disabled="disabledUpdate" />
+        </div>
+        <label class="col-sm-2 control-label">Next Action Due Date</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="nextActionDueDate" ng-model="entity.nextActionDueDate" input-date="true" show-time="false" ng-disabled="disabledUpdate" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Remark Noted By:</label>
+        <div class="col-sm-4">
+            <select class="form-control" name="galRepID" ng-model="entity.galRepID" ng-options="t.usrId as t.name for t in lookups.siplUsers" ng-disabled="disabledUpdate"></select>
+        </div>
+    </div>
+    <hr class="line-info" />
+    <div class="form-group">
+        <div class="col-sm-1">
+            &nbsp;
+        </div>
+        <div class="col-sm-4">
+            <label>
+                <input type="checkbox" name="isHaz" ng-model="entity.isHaz" ng-disabled="disabledUpdate" ng-change="updateIsHaz(entity.isHaz)" /> Please select here if material is hazardous
+            </label>
+        </div>
+        <div class="col-sm-7">
+            &nbsp;
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-2">
+            &nbsp;
+        </div>
+        <label class="col-sm-2 control-label">Class</label>
+        <div class="col-sm-2">
+            <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" maxlength="20" class="form-control" name="class" ng-model="entity.class" ng-disabled="disabledUpdate || !isHaz" />
+        </div>
+        <label class="col-sm-2 control-label">UN No</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" maxlength="8" name="unNo" ng-model="entity.unNo" ng-disabled="disabledUpdate  || !isHaz" />
+        </div>
+        <div class="col-sm-2">
+            &nbsp;
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-2">
+            &nbsp;
+        </div>
+        <label class="col-sm-2 control-label">Weight(KGS/LBS)</label>
+        <div class="col-sm-1">
+            <input type="number" min="0" max="99999" step="0.001" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" class="form-control" name="hazWeight" ng-model="entity.hazweight" ng-blur="calculateHaz('KGS')" ng-disabled="disabledUpdate || !isHaz" />
+        </div>
+        <div class="col-sm-1">
+            <input type="number" min="0" max="99999" step="0.001" class="form-control" name="hazWeightLBS" ng-model="entity.hazWeightLBS" ng-blur="calculateHaz('LBS')" ng-disabled="disabledUpdate || !isHaz" />
+        </div>
+        <label class="col-sm-2 control-label">Volume(CM/CF)</label>
+        <div class="col-sm-1">
+            <input type="number" min="0" max="99999" step="0.001" class="form-control" name="hazVolume" ng-model="entity.hazVolume" ng-blur="calculateHaz('CM')" ng-disabled="disabledUpdate || !isHaz" />
+        </div>
+        <div class="col-sm-1">
+            <input type="number" min="0" max="99999" step="0.001" class="form-control" name="hazVolumeCF" ng-model="entity.hazVolumeCF" ng-blur="calculateHaz('CF')" ng-disabled="disabledUpdate || !isHaz" />
+        </div>
+        <div class="col-sm-2">
+            &nbsp;
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-2">
+            &nbsp;
+        </div>
+        <label class="col-sm-2 control-label">Packing Type</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" name="packingType" maxlength="50" ng-model="entity.packingType" ng-disabled="disabledUpdate || !isHaz" />
+        </div>
+        <label class="col-sm-2 control-label">Description</label>
+        <div class="col-sm-2">
+            <textarea rows="2" class="form-control" name="description" ng-model="entity.description" ng-disabled="disabledUpdate || !isHaz" />
+        </div>
+        <div class="col-sm-2">
+            &nbsp;
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-2">
+            &nbsp;
+        </div>
+        <label class="col-sm-2 control-label">Remarks</label>
+        <div class="col-sm-6">
+            <textarea rows="2" class="form-control" maxlength="250" name="hazRemarks" ng-model="entity.hazRemarks" ng-disabled="disabledUpdate" />
+        </div>
+        <div class="col-sm-2">
+            &nbsp;
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Remark for Incomplete</label>
+        <div class="col-sm-8" show-errors="{ skipFormGroupCheck: true }">
+            <textarea rows="2" class="form-control" name="remarks" maxlength="500" ng-model="entity.remarks" ng-disabled="disabledUpdate" />
+        </div>
+        <div class="col-sm-2">
+            &nbsp;
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label required : ''}}">Commodity</label>
+        <div class="col-sm-2">
+            <select class="form-control" name="commodityTypeID" ng-model="entity.commodityTypeID" ng-options="t.commodityTypeID as t.commodityType for t in lookups.commodityTypes" ng-disabled="true"></select>
+        </div>
+        <div class="form-group col-sm-4">
+            <select multiple="multiple" ng-model="entity.commodityIds" ng-options="t.commodityId as t.name for t in lookups.commodities | filter: {commodityTypeID : entity.commodityTypeID} " ng-disabled="disabledUpdate"></select>
+        </div>
+        <div class="col-sm-1">
+            &nbsp;
+        </div>
+        <div class="col-sm-1">
+            <button name="btnAdd" type="button" class="btn btn-sm btn-primary" ng-click="callCommodityModal()" action="add" entityid="0" uib-tooltip="Add Commodity" ng-disabled="disabledUpdate"><i class="fa fa-pencil"></i>Add</button>
+        </div>
+        <div class="col-sm-2">
+            &nbsp;
+        </div>
+
+    </div>
+</ng-form>

@@ -1,0 +1,15 @@
+﻿<div when-ready="refreshSession()" wait-for-interpolation="true">
+    <script type="text/ng-template" id="refreshSession.tpl.html">
+        <div class="modal-header">
+            <h3 class="modal-title">Warning</h3>
+        </div>
+        <div class="modal-body">
+            <p>Your current session is expired. For your security, this session automatically end after 60 minutes.</p>
+            <p>You can continue by refreshing your session or can logout from the system.</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="performAction('refresh')">Refresh Session</button>
+            <button class="btn btn-warning" type="button" ng-click="performAction('logout')">Logout</button>
+        </div>
+    </script>
+</div>

@@ -1,0 +1,24 @@
+﻿<ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+    <p>&nbsp;</p>
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredInsert ? 'required' : ''}}">Parameter Key</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="paramKey" ng-model="entity.paramKey" maxlength="50" ng-disabled="disabledInsert" ng-required="requiredInsert" />
+        </div>
+        <label class="col-sm-2 control-label">Status</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="statusCaption" ng-model="entity.statusCaption" ng-disabled="true" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Parameter Value</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="paramValue" ng-model="entity.paramValue" maxlength="200" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+        </div>
+    </div>
+    <div class="hide">
+        <input type="hidden" name="systemParameterId" ng-model="entity.systemParameterId" />
+        <input type="hidden" name="statusId" ng-model="entity.statusId" />
+        <input type="hidden" name="lastAccess" ng-model="entity.lastAccess" />
+    </div>
+</ng-form>

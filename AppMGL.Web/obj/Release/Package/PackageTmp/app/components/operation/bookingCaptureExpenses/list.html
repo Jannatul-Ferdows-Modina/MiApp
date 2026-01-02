@@ -1,0 +1,122 @@
+﻿<div class="box-container form-horizontal detail-container">
+    <div class="form-group">
+        <label class="col-sm-2 text-right control-label">System Ref No</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="fileNo" ng-model="entity.fileNo" ng-disabled="true" />
+        </div>
+        <label class="col-sm-2 text-right control-label">Miami Ref No</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="exportRef" ng-model="entity.exportRef" ng-disabled="true" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 text-right control-label">Booking No</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="bookingNo" ng-model="entity.bookingNo" ng-disabled="true" />
+        </div>
+        <label class="col-sm-2 text-right control-label">Customer</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="customerName" ng-model="entity.customerName" ng-disabled="true" />
+        </div>
+    </div>
+    
+
+    <hr class="line-primary" />
+    <div class="form-group">
+        <label class="col-sm-2 text-right control-label">Vendor Name</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" name="vendorName" ng-model="entity.vendorName" ng-disabled="!entity.fileNo" maxlength="50" />
+        </div>
+        <label class="col-sm-2 text-right control-label">Document Ref No</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" name="docNo" ng-model="entity.docNo" ng-disabled="!entity.fileNo" maxlength="50" />
+        </div>
+        <label class="col-sm-2 text-right control-label">DocumentDate </label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" name="docDate" ng-model="entity.docDate" maxlength="30" ng-disabled="!entity.fileNo" input-date="true" show-time="false" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 text-right control-label">Selling Amount (USD)</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" name="sellingAmount" maxlength="30" ng-model="entity.sellingAmount" ng-disabled="!entity.fileNo" />
+        </div>
+        <label class="col-sm-2 text-right control-label">Buying Amount (USD)</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" name="buyingAmount" maxlength="30" ng-model="entity.buyingAmount" ng-disabled="!entity.fileNo" />
+        </div>
+        <label class="col-sm-2 text-right control-label">Narration</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" name="narration" maxlength="100" ng-model="entity.narration" ng-disabled="!entity.fileNo" />
+        </div>
+        
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 text-right control-label">Expense Head </label>
+        <div class="col-sm-2">
+            <select class="form-control" name="expenseHead" ng-model="entity.expenseHead" ng-options="t as t.expenseName for t in lookups.siplExpenseHeads" ng-disabled="!entity.fileNo"></select>
+        </div>
+        <div class="col-sm-8">
+            &nbsp;
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 text-right control-label">Remarks</label>
+        <div class="col-sm-6">
+            <textarea rows="2" class="form-control" name="remarks" maxlength="1000" ng-model="entity.remarks" ng-disabled="!entity.fileNo"></textarea>
+        </div>
+        <div class="col-sm-4">
+            <button name="btnAdd" type="button" class="btn btn-sm btn-primary pull-right" ng-click="addExpenseRow()" action="add" uib-tooltip="Add Expenses" ng-disabled="!entity.fileNo"><i class="fa fa-pencil"></i>Add Expense</button>
+        </div>
+    </div>
+    <hr class="line-primary" />
+    <div ng-show="expenseList.length > 0">
+        <table class="table table-striped table-bordered table-hover " template-pagination="none">
+            <thead>
+                <tr class="bg-thead">
+                    <th class="text-left  hidden-xs">Vendar Name</th>
+                    <th class="text-left  hidden-xs">Document Ref No.</th>
+                    <th class="text-left  hidden-xs">Document Date</th>
+                    <th class="text-left  hidden-xs">Selling Amount (USD)</th>
+                    <th class="text-left  hidden-xs">Buying Amount (USD)</th>
+                    <th class="text-left  hidden-xs">Narration</th>
+                    <th class="text-left  hidden-xs">Expense Head</th>
+                    <th class="text-left  hidden-xs">Remaks</th>
+                    <th class="list-actions">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="expenseItem in expenseList">
+                    <td>
+                        {{expenseItem.vendorName}}
+                    </td>
+                    <td>
+                        {{expenseItem.docNo}}
+                    </td>
+                    <td>
+                        {{expenseItem.docDate  | date:'MM/dd/yyyy'}}
+                    </td>
+                    <td>
+                        {{expenseItem.sellingAmount}}
+                    </td>
+                    <td>
+                        {{expenseItem.buyingAmount}}
+                    </td>
+                    <td>
+                        {{expenseItem.narration}}
+                    </td>
+                    <td>
+                        {{expenseItem.expenseHead}}
+                    </td>
+                    <td>
+                        {{expenseItem.remarks}}
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-xs btn-danger" ng-click="removeExpenseRow($index)" uib-tooltip="Delete Expense"><i class="fa fa-remove"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</div>

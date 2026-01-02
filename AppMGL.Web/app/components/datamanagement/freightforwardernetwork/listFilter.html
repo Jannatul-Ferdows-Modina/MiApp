@@ -1,0 +1,58 @@
+﻿<div class="box-container form-horizontal detail-container">
+    <div class="form-group">
+        <label class="col-sm-2 control-label text-right">Network Name</label>
+        <div class="col-sm-2">            
+            <input type="text" class="form-control" name="companyNameF" ng-model="companyName" uib-typeahead="o.ffNetworkName for o in callTypeaheadnetwork($viewValue, 'freightforwardernetwork', 'companyName', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="freightforwardernetwork" lookup-field="ffNetworkName" entity-key-field="FFNetworkID" custom-clear="true"/>
+        </div>
+        
+        <label class="col-sm-2 control-label text-right">Network Code</label>
+        <div class="col-sm-2">            
+            <input type="text" class="form-control" name="customerCodeF" ng-model="customerCode" uib-typeahead="o.ffNetworkCode for o in callTypeaheadnetwork($viewValue, 'freightforwardernetwork', 'customerCode', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="freightforwardernetwork" lookup-field="customerCode" entity-key-field="FFNetworkID" custom-clear="true" />            
+        </div>
+       
+        <label class="col-sm-2 control-label text-right">Miami Representative</label>
+        <div class="col-sm-2">            
+            <select class="form-control" name="galRepresentativeF" ng-model="cntId" ng-options="t.usrId as t.name for t in lookups.users"></select>
+        </div>        
+    </div>
+    <div class="form-group">
+        
+        <label class="col-sm-2 control-label">Site</label>
+        <div class="col-sm-2">
+            <select class="form-control" name="siteId" ng-model="siteId" ng-options="t.SitId as t.SitName for t in lookups.sites"></select>
+        </div>
+    </div>
+   
+    <div class="form-group">
+        <label class="col-sm-2 control-label text-right">Region/Continent</label>
+        <div class="col-sm-2">
+            <select class="form-control" name="contID" ng-model="contID" ng-options="t.continentId as t.name for t in lookups.siplContinents"></select>
+            
+        </div>
+       
+        <label class="col-sm-2 control-label text-right">Country</label>
+        <div class="col-sm-2">
+            <select class="form-control" name="cryId" ng-model="cryId" ng-options="t.countryId as t.name for t in lookups.siplcountries  | filter: {continentID: contID}"  ng-disabled="!contID"></select>
+        </div>
+        <label class="col-sm-2 control-label text-right" >State/ Province</label>
+        <div class="col-sm-2">            
+                <select class="form-control" name="stateId"  ng-model="stateId" ng-options="t.stateId as t.name for t in lookups.lgvwstates  | filter: {countryId: cryId} " ng-change="getSearchCities(stateId)" ng-disabled="!cryId"></select>
+        </div>        
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label text-right">Town/City</label>
+        <div class="col-sm-2">           
+            <select class="form-control" name="cityID" ng-model="cityID" ng-options="t.cityId as t.name for t in searchCitiesList" ng-disabled="!stateId"></select>           
+        </div>
+        <div class="col-sm-6">
+            &nbsp;
+        </div> 
+        <div class="col-sm-2 pull-right">
+            <button class="btn btn-sm btn-primary" ng-click="performCustomerContactSearch($event, companyName, customerCode, cntId, contactCategoryId,gradationId, orgCryId, commodityId, contID, cryId, stateId, cityID,siteId)" action="search">Search</button>
+            <!--<button class="btn btn-sm btn-primary" ng-click="exportContactReport($event,siteId)" action="exportReport"><i class="fa fa-download"></i> Export to Excel</button>-->
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,54 @@
+﻿<table ng-table="bookinglistTable" class="table table-striped table-bordered table-hover" template-pagination="customPager">
+    <thead>
+        <tr class="bg-thead"> 
+            <th class="list-actions">Edit Attachment</th> 
+            <th class="text-left hidden-xs" table-name="bookinglistTable">Booking Date</th>           
+            <th class="text-left sortable hidden-xs" custom-sortable="fileNo" table-name="bookinglistTable">System Ref</th>
+            <th class="text-left sortable hidden-xs" custom-sortable="lastRemarkDate" table-name="bookinglistTable">Last Action Date</th>
+            <th class="text-left sortable hidden-xs" custom-sortable="bookingNo" table-name="bookinglistTable">Booking No</th>            
+            <th class="text-left sortable hidden-xs" custom-sortable="companyName" table-name="bookinglistTable">Customer</th>
+            <th class="text-left hidden-xs" table-name="bookinglistTable">Port Of Loading</th>
+            <th class="text-left hidden-xs" table-name="bookinglistTable">Destination</th>
+            <th class="text-left hidden-xs" table-name="bookinglistTable">Shipping Line</th>
+            <th class="text-left hidden-xs" table-name="bookinglistTable">Line BKG Type</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="entity in items"> 
+            <td>
+                <button type="button" class="btn btn-xs btn-primary" ng-click="getDocumentAttachmentDetail($event, entity.documentCommonID)" show-action="20" action="add" entityid="{{entity.documentCommonID}}" uib-tooltip="Edit"><i class="fa fa-edit"></i></button>
+            </td>
+            <td class="hidden-xs">
+                {{entity.bookingDate | date:'MM/dd/yyyy'}}
+            </td>            
+            <td class="hidden-xs">
+                {{entity.fileNo}}
+            </td>
+            <td class="hidden-xs">
+                {{entity.lastRemarkDate | date:'MM/dd/yyyy'}}
+            </td>
+            <td class="hidden-xs">
+                {{entity.bookingNo}}
+            </td>            
+            <td class="hidden-xs">
+                {{entity.companyName}}
+            </td>
+            <td class="hidden-xs">
+                {{entity.origin}}
+            </td>
+            <td class="hidden-xs">
+                {{entity.discharge}}
+            </td>
+            <td class="hidden-xs">
+                {{entity.shippingLine}}
+            </td>
+            <td class="hidden-xs">
+                {{entity.pickupCategory}}
+            </td>
+        </tr>
+        <tr ng-if="params.total() == 0">
+            <td class="text-center text-italic" colspan="5">No Record(s) Found</td>
+        </tr>
+    </tbody>
+</table>

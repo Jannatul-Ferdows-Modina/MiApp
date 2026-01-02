@@ -1,0 +1,113 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title">View Charges</h3>
+</div>
+<div class="modal-body form-horizontal detail-container">
+    <ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Inquiry No</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" name="enquiryNo" ng-model="entity.enquiryNo" ng-disabled="true" />
+            </div>
+            <label class="col-sm-2 control-label">Quotation No</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" name="quotationNo" ng-model="entity.quotationNo" ng-disabled="true" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Origin Port</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" name="originPort" ng-model="entity.originPort" ng-disabled="true" />
+            </div>
+            <label class="col-sm-2 control-label">Destination Port</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" name="desinationPort" ng-model="entity.desinationPort" ng-disabled="true" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Customer</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" name="customerName" ng-model="entity.customerName" ng-disabled="true" />
+            </div>
+            <label class="col-sm-2 control-label">Commodity</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" name="commodityName" ng-model="entity.commodityName" ng-disabled="true" />
+            </div>
+        </div>
+        <div class="box box-default">            
+            <div class="box-body">
+                <table ng-table="chargesTable" class="table table-striped table-bordered table-hover">
+                    <thead>
+                        <tr class="bg-thead">
+                            <th class="text-left col-sm-2">Container Type</th>
+                            <th class="text-left col-sm-2">Charge Name</th>
+                            <th class="text-right col-sm-3">Selling Price</th>
+                            <th class="text-right col-sm-3">Buying Price</th>
+                            <th class="text-left col-sm-3">Remarks</th>
+                            <th class="text-left col-sm-1">Approved?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="ng-table-group" ng-repeat-start="group in $groups">
+                            <td colspan="13">
+
+                                <a href="" ng-click="group.$hideRows = !group.$hideRows">
+                                    <span class="fa" ng-class="{ 'fa-chevron-right': group.$hideRows, 'fa-chevron-down': !group.$hideRows }">Carrier Name : </span>
+                                    {{group.data[0].carrierName}}
+                                </a>
+                            </td>
+                        </tr>
+                        <tr ng-hide="group.$hideRows" ng-repeat="d in group.data">
+                            <td class="col-sm-1 text-left">
+                                {{d.containerTypeName}}
+                            </td>
+                            <td class="col-sm-1 text-left">
+                                {{d.refName}}
+                            </td>
+                            <td class="col-sm-1 text-right">
+                                {{d.sellingRate | number:2}}
+                            </td> 
+                            <td class="col-sm-1 text-right">
+                                {{d.buyingRate | number:2}}
+                            </td> 
+                            <td class="col-sm-1 text-left">
+                                {{d.remarks}}
+                            </td>
+                            <td class="col-sm-1 text-left">
+                                {{d.isApproved}}
+                            </td>                                                    
+
+                        </tr>
+                        <tr ng-repeat-end>
+
+                            <td class="col-sm-1 text-right">
+                                &nbsp;
+                            </td>                           
+                            <td class="col-sm-1 text-right">
+                                Total
+                            </td>
+                            <td class="col-sm-1 text-right text-bold text-italic">
+                                {{sum(group.data, "sellingRate") | number:2}}
+                            </td>
+                            <td class="col-sm-1 text-right text-bold text-italic">
+                                {{sum(group.data, "buyingRate") | number:2}}
+                            </td>
+                            <td class="col-sm-1 text-right">
+                                &nbsp;
+                            </td>
+                            <td class="col-sm-1 text-right">
+                                &nbsp;
+                            </td>
+                            
+                        </tr>
+                        <tr ng-if="params.total() == 0">
+                            <td class="text-center text-italic" colspan="13">No Record(s) Found</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </ng-form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-sm btn-default" ng-click="performAction($event)" action="cancel">Close</button>
+</div>

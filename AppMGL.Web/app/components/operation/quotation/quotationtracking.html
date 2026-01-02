@@ -1,0 +1,43 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title"><span ng-show="isNew">Quotation Tracking</span></h3>
+    
+</div>
+<div class="modal-body form-horizontal detail-container"  wait-for-interpolation="true">
+    <ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+        <div class="form-group">
+            <label class="col-sm-2 control-label"></label>
+            <div class="col-sm-4">
+
+                <button class="btn btn-sm btn-primary" ng-click="exportReportTracking()" action="save">Download Daily Accumulated Quotation File</button>
+            </div>
+            <div class="col-sm-4">
+                <button class="btn btn-sm btn-primary" ng-click="deleteTempQuotation()" action="save">Delete Daily Accumulated Quotation File</button>
+            </div>
+        </div>
+      
+        <div class="form-group">
+            <label class="col-sm-2 control-label"></label>
+            <div class="col-sm-4">
+                <input type="file" id="qutfile"  file-model="myFiles($files)" />
+               
+            </div>
+            <div class="col-sm-4">
+                
+                <button ng-click="uploadQuotationFinal()" class="btn btn-sm btn-primary">Upload Quotation Tracking File</button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label"> </label>
+            <div class="col-sm-4" >
+                <button class="btn btn-sm btn-primary" ng-click="downloadAttachment()" action="save">Down Load Quotation Tracking File</button>
+            </div>
+        </div>
+       
+    </ng-form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-sm btn-default" ng-click="closeQuotationtraModel('close')" action="cancel">Close</button>
+</div>
+
+

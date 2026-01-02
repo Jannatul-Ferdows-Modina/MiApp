@@ -1,0 +1,2061 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AppMGL.DAL.Models" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="AppMGL" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AspNetRefreshToken" EntityType="AppMGL.DAL.Models.AspNetRefreshToken" />
+    <EntitySet Name="AspNetClient" EntityType="AppMGL.DAL.Models.AspNetClient" />
+    <EntitySet Name="LG_ACTION" EntityType="AppMGL.DAL.Models.LG_ACTION" />
+    <EntitySet Name="LG_CONTACT" EntityType="AppMGL.DAL.Models.LG_CONTACT" />
+    <EntitySet Name="LG_COUNTRY" EntityType="AppMGL.DAL.Models.LG_COUNTRY" />
+    <EntitySet Name="LG_DEPARTMENT" EntityType="AppMGL.DAL.Models.LG_DEPARTMENT" />
+    <EntitySet Name="LG_LOCATION" EntityType="AppMGL.DAL.Models.LG_LOCATION" />
+    <EntitySet Name="LG_MAM_ROL_MAP" EntityType="AppMGL.DAL.Models.LG_MAM_ROL_MAP" />
+    <EntitySet Name="LG_MODULE" EntityType="AppMGL.DAL.Models.LG_MODULE" />
+    <EntitySet Name="LG_MODULE_TYPE" EntityType="AppMGL.DAL.Models.LG_MODULE_TYPE" />
+    <EntitySet Name="LG_ROLE" EntityType="AppMGL.DAL.Models.LG_ROLE" />
+    <EntitySet Name="LG_SITE" EntityType="AppMGL.DAL.Models.LG_SITE" />
+    <EntitySet Name="LG_SITE_CONTACT_ROLE" EntityType="AppMGL.DAL.Models.LG_SITE_CONTACT_ROLE" />
+    <EntitySet Name="LG_TIMEZONE" EntityType="AppMGL.DAL.Models.LG_TIMEZONE" />
+    <EntitySet Name="LG_TITLE" EntityType="AppMGL.DAL.Models.LG_TITLE" />
+    <EntitySet Name="LG_USER" EntityType="AppMGL.DAL.Models.LG_USER" />
+    <EntitySet Name="LG_USSTATE" EntityType="AppMGL.DAL.Models.LG_USSTATE" />
+    <AssociationSet Name="FK_MRM_ACT" Association="AppMGL.DAL.Models.FK_MRM_ACT">
+      <End Role="LG_ACTION" EntitySet="LG_ACTION" />
+      <End Role="LG_MAM_ROL_MAP" EntitySet="LG_MAM_ROL_MAP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CNT_DPT" Association="AppMGL.DAL.Models.FK_CNT_DPT">
+      <End Role="LG_DEPARTMENT" EntitySet="LG_DEPARTMENT" />
+      <End Role="LG_CONTACT" EntitySet="LG_CONTACT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CNT_TTL" Association="AppMGL.DAL.Models.FK_CNT_TTL">
+      <End Role="LG_TITLE" EntitySet="LG_TITLE" />
+      <End Role="LG_CONTACT" EntitySet="LG_CONTACT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LCN_CNT" Association="AppMGL.DAL.Models.FK_LCN_CNT">
+      <End Role="LG_CONTACT" EntitySet="LG_CONTACT" />
+      <End Role="LG_LOCATION" EntitySet="LG_LOCATION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SCR_CNT" Association="AppMGL.DAL.Models.FK_SCR_CNT">
+      <End Role="LG_CONTACT" EntitySet="LG_CONTACT" />
+      <End Role="LG_SITE_CONTACT_ROLE" EntitySet="LG_SITE_CONTACT_ROLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USR_CNT" Association="AppMGL.DAL.Models.FK_USR_CNT">
+      <End Role="LG_CONTACT" EntitySet="LG_CONTACT" />
+      <End Role="LG_USER" EntitySet="LG_USER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LCN_CRY" Association="AppMGL.DAL.Models.FK_LCN_CRY">
+      <End Role="LG_COUNTRY" EntitySet="LG_COUNTRY" />
+      <End Role="LG_LOCATION" EntitySet="LG_LOCATION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LCN_TMZ" Association="AppMGL.DAL.Models.FK_LCN_TMZ">
+      <End Role="LG_TIMEZONE" EntitySet="LG_TIMEZONE" />
+      <End Role="LG_LOCATION" EntitySet="LG_LOCATION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LCN_UST" Association="AppMGL.DAL.Models.FK_LCN_UST">
+      <End Role="LG_USSTATE" EntitySet="LG_USSTATE" />
+      <End Role="LG_LOCATION" EntitySet="LG_LOCATION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SIT_CNT" Association="AppMGL.DAL.Models.FK_SIT_CNT">
+      <End Role="LG_LOCATION" EntitySet="LG_LOCATION" />
+      <End Role="LG_SITE" EntitySet="LG_SITE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MRM_MOD" Association="AppMGL.DAL.Models.FK_MRM_MOD">
+      <End Role="LG_MODULE" EntitySet="LG_MODULE" />
+      <End Role="LG_MAM_ROL_MAP" EntitySet="LG_MAM_ROL_MAP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MRM_RLE" Association="AppMGL.DAL.Models.FK_MRM_RLE">
+      <End Role="LG_ROLE" EntitySet="LG_ROLE" />
+      <End Role="LG_MAM_ROL_MAP" EntitySet="LG_MAM_ROL_MAP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MOD_MTE" Association="AppMGL.DAL.Models.FK_MOD_MTE">
+      <End Role="LG_MODULE_TYPE" EntitySet="LG_MODULE_TYPE" />
+      <End Role="LG_MODULE" EntitySet="LG_MODULE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SCR_RLE" Association="AppMGL.DAL.Models.FK_SCR_RLE">
+      <End Role="LG_ROLE" EntitySet="LG_ROLE" />
+      <End Role="LG_SITE_CONTACT_ROLE" EntitySet="LG_SITE_CONTACT_ROLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SCR_SIT" Association="AppMGL.DAL.Models.FK_SCR_SIT">
+      <End Role="LG_SITE" EntitySet="LG_SITE" />
+      <End Role="LG_SITE_CONTACT_ROLE" EntitySet="LG_SITE_CONTACT_ROLE" />
+    </AssociationSet>
+    <EntitySet Name="DashboardData_Job" EntityType="AppMGL.DAL.Models.DashboardData_Job" />
+    <FunctionImport Name="USP_GET_ENQUIRY_DATA" ReturnType="Collection(AppMGL.DAL.Models.USP_GET_ENQUIRY_DATA_Result)">
+      <Parameter Name="SEARCH" Mode="In" Type="String" />
+      <Parameter Name="COLNAME" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="SIPL_Commodity" EntityType="AppMGL.DAL.Models.SIPL_Commodity" />
+    <EntitySet Name="SIPL_ContainerType" EntityType="AppMGL.DAL.Models.SIPL_ContainerType" />
+    <EntitySet Name="SIPL_LoadType" EntityType="AppMGL.DAL.Models.SIPL_LoadType" />
+    <FunctionImport Name="USP_GET_ENQUIRY_DETAIL" ReturnType="Collection(AppMGL.DAL.Models.USP_GET_ENQUIRY_DETAIL_Result)">
+      <Parameter Name="ENQUIRYID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="USP_GET_ENQUIRY_LIST" ReturnType="Collection(AppMGL.DAL.Models.USP_GET_ENQUIRY_LIST_Result)">
+      <Parameter Name="PAGENO" Mode="In" Type="Int32" />
+      <Parameter Name="PAGESIZE" Mode="In" Type="Int32" />
+      <Parameter Name="OPTIONVALUE" Mode="In" Type="String" />
+      <Parameter Name="SEARCHVALUE" Mode="In" Type="String" />
+      <Parameter Name="SORTCOLUMN" Mode="In" Type="String" />
+      <Parameter Name="SORTORDER" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="SIPL_City" EntityType="AppMGL.DAL.Models.SIPL_City" />
+    <EntitySet Name="SIPL_ContactBranch" EntityType="AppMGL.DAL.Models.SIPL_ContactBranch" />
+    <EntitySet Name="SIPL_Continent" EntityType="AppMGL.DAL.Models.SIPL_Continent" />
+    <EntitySet Name="SIPL_Country" EntityType="AppMGL.DAL.Models.SIPL_Country" />
+    <EntitySet Name="SIPL_State" EntityType="AppMGL.DAL.Models.SIPL_State" />
+    <AssociationSet Name="FK_SIPL_Country_SIPL_Continent" Association="AppMGL.DAL.Models.FK_SIPL_Country_SIPL_Continent">
+      <End Role="SIPL_Continent" EntitySet="SIPL_Continent" />
+      <End Role="SIPL_Country" EntitySet="SIPL_Country" />
+    </AssociationSet>
+    <EntitySet Name="SIPL_TradeService" EntityType="AppMGL.DAL.Models.SIPL_TradeService" />
+    <FunctionImport Name="USP_GET_CUSTOMERCONTACT_DETAIL" ReturnType="Collection(AppMGL.DAL.Models.USP_GET_CUSTOMERCONTACT_DETAIL_Result)">
+      <Parameter Name="CONTACTID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="USP_GET_CUSTOMERCONTACT_LIST" ReturnType="Collection(AppMGL.DAL.Models.USP_GET_CUSTOMERCONTACT_LIST_Result)">
+      <Parameter Name="PAGENO" Mode="In" Type="Int32" />
+      <Parameter Name="PAGESIZE" Mode="In" Type="Int32" />
+      <Parameter Name="CompanyName" Mode="In" Type="String" />
+      <Parameter Name="CustomerCode" Mode="In" Type="String" />
+      <Parameter Name="MiamiRep" Mode="In" Type="String" />
+      <Parameter Name="Category" Mode="In" Type="String" />
+      <Parameter Name="CompanyGradation" Mode="In" Type="String" />
+      <Parameter Name="OriginCountries" Mode="In" Type="String" />
+      <Parameter Name="Commodity" Mode="In" Type="String" />
+      <Parameter Name="Region" Mode="In" Type="String" />
+      <Parameter Name="Country" Mode="In" Type="String" />
+      <Parameter Name="State" Mode="In" Type="String" />
+      <Parameter Name="City" Mode="In" Type="String" />
+      <Parameter Name="IsVendor" Mode="In" Type="Boolean" />
+      <Parameter Name="SIT_ID" Mode="In" Type="String" />
+      <Parameter Name="SORTCOLUMN" Mode="In" Type="String" />
+      <Parameter Name="SORTORDER" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="USP_GET_CUSTOMERCONTACT_DATA" ReturnType="Collection(AppMGL.DAL.Models.USP_GET_CUSTOMERCONTACT_DATA_Result)">
+      <Parameter Name="SEARCH" Mode="In" Type="String" />
+      <Parameter Name="COLNAME" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="USP_UPDATE_CUSTOMERCONTACT">
+      <Parameter Name="ContactID" Mode="In" Type="Int32" />
+      <Parameter Name="CompanyName" Mode="In" Type="String" />
+      <Parameter Name="TelNo" Mode="In" Type="String" />
+      <Parameter Name="Address" Mode="In" Type="String" />
+      <Parameter Name="ContactPerson" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="AccountDetail" Mode="In" Type="String" />
+      <Parameter Name="WebSite" Mode="In" Type="String" />
+      <Parameter Name="ZipCode" Mode="In" Type="String" />
+      <Parameter Name="MobNo" Mode="In" Type="String" />
+      <Parameter Name="Fax" Mode="In" Type="String" />
+      <Parameter Name="TaxID" Mode="In" Type="String" />
+      <Parameter Name="AccountNo" Mode="In" Type="String" />
+      <Parameter Name="CustomerCode" Mode="In" Type="String" />
+      <Parameter Name="IsDeleted" Mode="In" Type="Boolean" />
+      <Parameter Name="Remarks" Mode="In" Type="String" />
+      <Parameter Name="Attachment" Mode="In" Type="String" />
+      <Parameter Name="CompanyGradation" Mode="In" Type="String" />
+      <Parameter Name="RepresentativeID" Mode="In" Type="Int64" />
+      <Parameter Name="ContactCategoryID" Mode="In" Type="String" />
+      <Parameter Name="Continent" Mode="In" Type="String" />
+      <Parameter Name="State" Mode="In" Type="String" />
+      <Parameter Name="CountryName" Mode="In" Type="String" />
+      <Parameter Name="City" Mode="In" Type="String" />
+      <Parameter Name="GalRepresentative" Mode="In" Type="String" />
+      <Parameter Name="BranchName" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="SIPL_CommodityType" EntityType="AppMGL.DAL.Models.SIPL_CommodityType" />
+    <AssociationSet Name="FK_SIPL_Commodity_SIPL_CommodityType" Association="AppMGL.DAL.Models.FK_SIPL_Commodity_SIPL_CommodityType">
+      <End Role="SIPL_CommodityType" EntitySet="SIPL_CommodityType" />
+      <End Role="SIPL_Commodity" EntitySet="SIPL_Commodity" />
+    </AssociationSet>
+    <EntitySet Name="LG_VW_CONTACTCATEGORY" EntityType="AppMGL.DAL.Models.LG_VW_CONTACTCATEGORY" />
+    <EntitySet Name="SIPL_Department" EntityType="AppMGL.DAL.Models.SIPL_Department" />
+    <FunctionImport Name="LG_ContactCategory_IUD_Detail">
+      <Parameter Name="ContactCategoryID" Mode="InOut" Type="Int32" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="CreatedBy" Mode="In" Type="Int32" />
+      <Parameter Name="ModifiedBy" Mode="In" Type="Int32" />
+      <Parameter Name="IsActive" Mode="In" Type="Boolean" />
+      <Parameter Name="IsVendor" Mode="In" Type="Boolean" />
+      <Parameter Name="ActionType" Mode="In" Type="String" />
+      <Parameter Name="CSIDCommodity" Mode="In" Type="Int32" />
+      <Parameter Name="CSIDOrigin" Mode="In" Type="Int32" />
+      <Parameter Name="CSIDDestination" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="SIPL_Contract" EntityType="AppMGL.DAL.Models.SIPL_Contract" />
+    <EntitySet Name="SIPL_Contact" EntityType="AppMGL.DAL.Models.SIPL_Contact" />
+    <AssociationSet Name="FK_SIPL_Contact_SIPL_City" Association="AppMGL.DAL.Models.FK_SIPL_Contact_SIPL_City">
+      <End Role="SIPL_City" EntitySet="SIPL_City" />
+      <End Role="SIPL_Contact" EntitySet="SIPL_Contact" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SIPL_ContactBranch_SIPL_Contact" Association="AppMGL.DAL.Models.FK_SIPL_ContactBranch_SIPL_Contact">
+      <End Role="SIPL_Contact" EntitySet="SIPL_Contact" />
+      <End Role="SIPL_ContactBranch" EntitySet="SIPL_ContactBranch" />
+    </AssociationSet>
+    <EntitySet Name="SIPL_CompanyGradation" EntityType="AppMGL.DAL.Models.SIPL_CompanyGradation" />
+    <EntitySet Name="SIPL_Port" EntityType="AppMGL.DAL.Models.SIPL_Port" />
+    <EntitySet Name="SIPL_User" EntityType="AppMGL.DAL.Models.SIPL_User" />
+    <EntitySet Name="LG_VW_Commodity" EntityType="AppMGL.DAL.Models.LG_VW_Commodity" />
+    <EntitySet Name="LG_VW_Port" EntityType="AppMGL.DAL.Models.LG_VW_Port" />
+    <EntitySet Name="LG_VW_SIPLCity" EntityType="AppMGL.DAL.Models.LG_VW_SIPLCity" />
+    <EntitySet Name="LG_VW_SIPLState" EntityType="AppMGL.DAL.Models.LG_VW_SIPLState" />
+    <EntitySet Name="LGV_CONTACT_INFO" EntityType="AppMGL.DAL.Models.LGV_CONTACT_INFO" />
+    <EntitySet Name="SIPL_RailRamp" EntityType="AppMGL.DAL.Models.SIPL_RailRamp" />
+    <EntitySet Name="Sipl_Terminal" EntityType="AppMGL.DAL.Models.Sipl_Terminal" />
+    <EntitySet Name="SIPL_PortGroup" EntityType="AppMGL.DAL.Models.SIPL_PortGroup" />
+    <AssociationSet Name="FK_SIPL_Contact_SIPL_State" Association="AppMGL.DAL.Models.FK_SIPL_Contact_SIPL_State">
+      <End Role="SIPL_State" EntitySet="SIPL_State" />
+      <End Role="SIPL_Contact" EntitySet="SIPL_Contact" />
+    </AssociationSet>
+    <EntitySet Name="LG_VW_Alias" EntityType="AppMGL.DAL.Models.LG_VW_Alias" />
+    <EntitySet Name="LG_VW_SurchargeGroup" EntityType="AppMGL.DAL.Models.LG_VW_SurchargeGroup" />
+    <EntitySet Name="LG_CONTACT_WORK_TYPE" EntityType="AppMGL.DAL.Models.LG_CONTACT_WORK_TYPE" />
+    <AssociationSet Name="FK_CNT_CWT" Association="AppMGL.DAL.Models.FK_CNT_CWT">
+      <End Role="LG_CONTACT_WORK_TYPE" EntitySet="LG_CONTACT_WORK_TYPE" />
+      <End Role="LG_CONTACT" EntitySet="LG_CONTACT" />
+    </AssociationSet>
+    <EntitySet Name="LG_LOGIN_HISTORY" EntityType="AppMGL.DAL.Models.LG_LOGIN_HISTORY" />
+    <FunctionImport Name="RPT_GET_ENQUIRY" ReturnType="Collection(AppMGL.DAL.Models.RPT_GET_ENQUIRY_Result)">
+      <Parameter Name="Year" Mode="In" Type="Int32" />
+      <Parameter Name="Type" Mode="In" Type="Int32" />
+      <Parameter Name="EnquiryDateFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="EnquiryDateTo" Mode="In" Type="DateTime" />
+      <Parameter Name="EnquiryNo" Mode="In" Type="String" />
+      <Parameter Name="CompanyName" Mode="In" Type="String" />
+      <Parameter Name="QuotationNo" Mode="In" Type="String" />
+      <Parameter Name="SystemRefNo" Mode="In" Type="String" />
+      <Parameter Name="MiamiRefNo" Mode="In" Type="String" />
+      <Parameter Name="BookingNo" Mode="In" Type="String" />
+      <Parameter Name="SitId" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="RPT_GET_QUOTATION" ReturnType="Collection(AppMGL.DAL.Models.RPT_GET_QUOTATION_Result)">
+      <Parameter Name="Type" Mode="In" Type="Int32" />
+      <Parameter Name="EnquiryDateFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="EnquiryDateTo" Mode="In" Type="DateTime" />
+      <Parameter Name="EnquiryNo" Mode="In" Type="String" />
+      <Parameter Name="CompanyName" Mode="In" Type="String" />
+      <Parameter Name="QuotationNo" Mode="In" Type="String" />
+      <Parameter Name="SystemRefNo" Mode="In" Type="String" />
+      <Parameter Name="MiamiRefNo" Mode="In" Type="String" />
+      <Parameter Name="BookingNo" Mode="In" Type="String" />
+      <Parameter Name="SitId" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="RPT_GET_BOOKING" ReturnType="Collection(AppMGL.DAL.Models.RPT_GET_BOOKING_Result)">
+      <Parameter Name="DepartmentId" Mode="In" Type="Int32" />
+      <Parameter Name="EnquiryNo" Mode="In" Type="String" />
+      <Parameter Name="CompanyName" Mode="In" Type="String" />
+      <Parameter Name="QuotationNo" Mode="In" Type="String" />
+      <Parameter Name="SystemRefNo" Mode="In" Type="String" />
+      <Parameter Name="MiamiRefNo" Mode="In" Type="String" />
+      <Parameter Name="BookingNo" Mode="In" Type="String" />
+      <Parameter Name="SitId" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="RPT_GET_BOOKING_STATUS" ReturnType="Collection(AppMGL.DAL.Models.RPT_GET_BOOKING_STATUS_Result)">
+      <Parameter Name="BookingStatusId" Mode="In" Type="Int32" />
+      <Parameter Name="EnquiryNo" Mode="In" Type="String" />
+      <Parameter Name="CompanyName" Mode="In" Type="String" />
+      <Parameter Name="QuotationNo" Mode="In" Type="String" />
+      <Parameter Name="SystemRefNo" Mode="In" Type="String" />
+      <Parameter Name="MiamiRefNo" Mode="In" Type="String" />
+      <Parameter Name="BookingNo" Mode="In" Type="String" />
+      <Parameter Name="SitId" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <EntitySet Name="SIPL_BookingStatus" EntityType="AppMGL.DAL.Models.SIPL_BookingStatus" />
+    <FunctionImport Name="GET_QUOTATION_CARRIER" ReturnType="Collection(AppMGL.DAL.Models.GET_QUOTATION_CARRIER_Result)">
+      <Parameter Name="QuotationId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GET_QUOTATION_COMMODITY" ReturnType="Collection(String)">
+      <Parameter Name="QuotationId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GET_QUOTATION_ENQUIRY" ReturnType="Collection(AppMGL.DAL.Models.GET_QUOTATION_ENQUIRY_Result)">
+      <Parameter Name="QuotationId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="SIPL_DocumentCommon" EntityType="AppMGL.DAL.Models.SIPL_DocumentCommon" />
+    <EntitySet Name="LG_ACCT_CATEGORY" EntityType="AppMGL.DAL.Models.LG_ACCT_CATEGORY" />
+    <EntitySet Name="LG_SP_FEE_CATEGORY" EntityType="AppMGL.DAL.Models.LG_SP_FEE_CATEGORY" />
+    <EntitySet Name="LG_VW_SITE_CONTACT" EntityType="AppMGL.DAL.Models.LG_VW_SITE_CONTACT" />
+    <EntitySet Name="LG_SHIPMENT_DOCS" EntityType="AppMGL.DAL.Models.LG_SHIPMENT_DOCS" />
+    <EntitySet Name="LG_VW_Contract" EntityType="AppMGL.DAL.Models.LG_VW_Contract" />
+    <EntitySet Name="LG_VW_SIPL_CONTACT" EntityType="AppMGL.DAL.Models.LG_VW_SIPL_CONTACT" />
+    <EntitySet Name="tbl_scheduler_TempContractRateDetail" EntityType="AppMGL.DAL.Models.tbl_scheduler_TempContractRateDetail" />
+    <EntitySet Name="LG_VW_DisplayRate" EntityType="AppMGL.DAL.Models.LG_VW_DisplayRate" />
+    <EntitySet Name="SIPL_ContractRate" EntityType="AppMGL.DAL.Models.SIPL_ContractRate" />
+    <AssociationSet Name="FK_SIPL_ContractRate_SIPL_Contract1" Association="AppMGL.DAL.Models.FK_SIPL_ContractRate_SIPL_Contract1">
+      <End Role="SIPL_Contract" EntitySet="SIPL_Contract" />
+      <End Role="SIPL_ContractRate" EntitySet="SIPL_ContractRate" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AspNetRefreshToken">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Subject" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ClientId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IssuedUtc" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ExpiresUtc" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ProtectedTicket" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="AspNetClient">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Secret" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ApplicationType" Type="Int32" Nullable="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="RefreshTokenLifeTime" Type="Int32" Nullable="false" />
+    <Property Name="AllowedOrigin" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LG_ACTION">
+    <Key>
+      <PropertyRef Name="ActId" />
+    </Key>
+    <Property Name="ActId" Type="Decimal" Nullable="false" Precision="20" Scale="0" />
+    <Property Name="ActName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ActCaption" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ActCreatedTs" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ActUpdatedTs" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="LG_MAM_ROL_MAP" Relationship="AppMGL.DAL.Models.FK_MRM_ACT" FromRole="LG_ACTION" ToRole="LG_MAM_ROL_MAP" />
+    <Property Name="ActCreatedBy" Type="Decimal" Precision="20" Scale="0" />
+    <Property Name="ActUpdatedBy" Type="Decimal" Precision="20" Scale="0" />
+  </EntityType>
+  <EntityType Name="LG_CONTACT">
+    <Key>
+      <PropertyRef Name="CntId" />
+    </Key>
+    <Property Name="CntId" Type="Decimal" Nullable="false" Precision="20" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DptId" Type="Decimal" Nullable="false" Precision="20" Scale="0" />
+    <Property Name="TtlId" Type="Decimal" Nullable="false" Precision="20" Scale="0" />
+    <Property Name="CntType" Type="Decimal" Nullable="false" Precision="1" Scale="0" />
+    <Property Name="CntFirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CntMiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CntLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CntEmail" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CntStatus" Type="Boolean" />
+    <Property Name="CntReason" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CntCreatedTs" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CntUpdatedTs" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="LG_DEPARTMENT" Relationship="AppMGL.DAL.Models.FK_CNT_DPT" FromRole="LG_CONTACT" ToRole="LG_DEPARTMENT" />
+    <NavigationProperty Name="LG_TITLE" Relationship="AppMGL.DAL.Models.FK_CNT_TTL" FromRole="LG_CONTACT" ToRole="LG_TITLE" />
+    <NavigationProperty Name="LG_LOCATION" Relationship="AppMGL.DAL.Models.FK_LCN_CNT" FromRole="LG_CONTACT" ToRole="LG_LOCATION" />
+    <NavigationProperty Name="LG_SITE_CONTACT_ROLE" Relationship="AppMGL.DAL.Models.FK_SCR_CNT" FromRole="LG_CONTACT" ToRole="LG_SITE_CONTACT_ROLE" />
+    <NavigationProperty Name="LG_USER" Relationship="AppMGL.DAL.Models.FK_USR_CNT" FromRole="LG_CONTACT" ToRole="LG_USER" />
+    <Property Name="CwtId" Type="Decimal" Precision="20" Scale="0" />
+    <NavigationProperty Name="LG_CONTACT_WORK_TYPE" Relationship="AppMGL.DAL.Models.FK_CNT_CWT" FromRole="LG_CONTACT" ToRole="LG_CONTACT_WORK_TYPE" />
+    <Property Name="CntCreatedBy" Type="Decimal" Precision="20" Scale="0" />
+    <Property Name="CntUpdatedBy" Type="Decimal" Precision="20" Scale="0" />
+    <Property Name="CntImageName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="LG_COUNTRY">
+    <Key>
+      <PropertyRef Name="CryId" />
+    </Key>
+    <Property Name="CryId" Type="Decimal" Nullable="false" Precision="20" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CryName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CryAbbrev" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CryStatus" Type="Boolean" />
+    <Property Name="CryCreatedTs" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CryUpdatedTs" Type="DateTime" Precision="3" />
+    <Property Name="CryPhoneCode" Type="Decimal" Precision="20" Scale="0" />
+    <NavigationProperty Name="LG_LOCATION" Relationship="AppMGL.DAL.Models.FK_LCN_CRY" FromRole="LG_COUNTRY" ToRole="LG_LOCATION" />
+    <Property Name="CryCreatedBy" Type="Decimal" Precision="20" Scale="0" />
+    <Property Name="CryUpdatedBy" Type="Decimal" Precision="20" Scale="0" />
+  </EntityType>
+  <EntityType Name="LG_DEPARTMENT">
+    <Key>
+      <PropertyRef Name="DptId" />
+    </Key>
+    <Property Name="DptId" Type="Decimal" Nullable="false" Precision="20" Scale="0" />
+    <Property Name="DptName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="DptStatus" Type="Boolean" />
+    <Property Name="DptCreatedTs" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DptUpdatedTs" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="LG_CONTACT" Relationship="AppMGL.DAL.Models.FK_CNT_DPT" FromRole="LG_DEPARTMENT" ToRole="LG_CONTACT" />
+    <Property Name="DptCreatedBy" Type="Decimal" Precision="20" Scale="0" />
+    <Property Name="DptUpdatedBy" Type="Decimal" Precision="20" Scale="0" />
+  </EntityType>
+  <EntityType Name="LG_LOCATION">
+    <Key>
+      <PropertyRef Name="LcnId" />
+    </Key>
+    <Property Name="LcnId" Type="Decimal" Nullable="false" Precision="20" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CntId" Type="Decimal" Precision="20" Scale="0" />
+    <Property Name="TmzId" Type="Decimal" Precision="20" Scale="0" />
+    <Property Name="CcyId" Type="Decimal" Precision="3" Scale="0" />
+    <Property Name="LcnInstitutionName" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="LcnContactRole" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="LcnAddress1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="LcnAddress2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="LcnAddress3" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="LcnCity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LcnPostalCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="LcnForiegnProvince" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UstId" Type="Decimal" Precision="20" Scale="0" />
+    <Property Name="CryId" Type="Decimal" Precision="20" Scale="0" />
+    <Property Name="LcnLatitute" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="LcnLongitude" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="LcnPhone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="LcnPhoneExt" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LcnFax" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="LcnMobilePhone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="LcnStatus" Type="Boolean" />
+    <Property Name="LcnReason" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="LcnCreatedTs" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LcnUpdatedTs" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="LG_CONTACT" Relationship="AppMGL.DAL.Models.FK_LCN_CNT" FromRole="LG_LOCATION" ToRole="LG_CONTACT" />
+    <NavigationProperty Name="LG_COUNTRY" Relationship="AppMGL.DAL.Models.FK_LCN_CRY" FromRole="LG_LOCATION" ToRole="LG_COUNTRY" />
+    <NavigationProperty Name="LG_TIMEZONE" Relationship="AppMGL.DAL.Models.FK_LCN_TMZ" FromRole="LG_LOCATION" ToRole="LG_TIMEZONE" />
+    <NavigationProperty Name="LG_USSTATE" Relationship="AppMGL.DAL.Models.FK_LCN_UST" FromRole="LG_LOCATION" ToRole="LG_USSTATE" />
+    <NavigationProperty Name="LG_SITE" Relationship="AppMGL.DAL.Models.FK_SIT_CNT" FromRole="LG_LOCATION" ToRole="LG_SITE" />
+    <Property Name="LcnCreatedBy" Type="Decimal" Precision="20" Scale="0" />
+    <Property Name="LcnUpdatedBy" Type="Decimal" Precision="20" Scale="0" />
+  </EntityType>
+  <EntityType Name="LG_MAM_ROL_MAP">
+    <Key>
+      <PropertyRef Name="MrmId" />
+    </Key>
+    <Property Name="MrmId" Type="Decimal" Nullable="false" Precision="20" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RleId" Type="Decimal" Nullable="false" Precision="20" Scale="0" />
+    <Property Name="ModId" Type="Decimal" Nullable="false" Precision="20" Scale="0" />
+    <Property Name="ActId" Type="Decimal" Nullable="false" Precision="20" Scale="0" />
+    <Property Name="MamIsEnable" Type="Boolean" />
+    <Property Name="MrmCreatedTs" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="MrmUpdatedTs" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="LG_ACTION" Relationship="AppMGL.DAL.Models.FK_MRM_ACT" FromRole="LG_MAM_ROL_MAP" ToRole="LG_ACTION" />
+    <NavigationProperty Name="LG_MODULE" Relationship="AppMGL.DAL.Models.FK_MRM_MOD" FromRole="LG_MAM_ROL_MAP" ToRole="LG_MODULE" />
+    <NavigationProperty Name="LG_ROLE" Relationship="AppMGL.DAL.Models.FK_MRM_RLE" FromRole="LG_MAM_ROL_MAP" ToRole="LG_ROLE" />
+    <Property Name="MrmCreatedBy" Type="Decimal" Precision="20" Scale="0" />
+    <Property Name="MrmUpdatedBy" Type="Decimal" Precision="20" Scale="0" />
+  </EntityType>
+  <EntityType Name="LG_MODULE">
+    <Key>
+      <PropertyRef Name="ModId" />
+    </Key>
+    <Property Name="ModId" Type="Decimal" Nullable="false" Precision="20" Scale="0" />
+    <Property Name="MteId" Type="Decimal" Nullable="false" Precision="20" Scale="0" />
+    <Property Name="ModName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ModCaption" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ModCreatedTs" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModUpdatedTs" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="LG_MAM_ROL_MAP" Relationship="AppMGL.DAL.Models.FK_MRM_MOD" FromRole="LG_MODULE" ToRole="LG_MAM_ROL_MAP" />
+    <NavigationProperty Name="LG_MODULE_TYPE" Relationship="AppMGL.DAL.Models.FK_MOD_MTE" FromRole="LG_MODULE" ToRole="LG_MODULE_TYPE" />
+    <Property Name="ModCreatedBy" Type="Decimal" Precision="20" Scale="0" />
+    <Property Name="ModUpdatedBy" Type="Decimal" Precision="20" Scale="0" />
+  </EntityType>
+  <EntityType Name="LG_MODULE_TYPE">
+    <Key>
+      <PropertyRef Name="MteId" />
+    </Key>
+    <Property Name="MteId" Type="Decimal" Nullable="false" Precision="20" Scale="0" />
+    <Property Name="MteName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="MteCaption" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="MteCreatedTs" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="MteUpdatedTs" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="LG_MODULE" Relationship="AppMGL.DAL.Models.FK_MOD_MTE" FromRole="LG_MODULE_TYPE" ToRole="LG_MODULE" />
+    <Property Name="MteCreatedBy" Type="Decimal" Precision="20" Scale="0" />
+    <Property Name="MteUpdatedBy" Type="Decimal" Precision="20" Scale="0" />
+  </EntityType>
+  <EntityType Name="LG_ROLE">
+    <Key>
+      <PropertyRef Name="RleId" />
+    </Key>
+    <Property Name="RleId" Type="Decimal" Nullable="false" Precision="20" Scale="0" />
+    <Property Name="RleName" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="RleStatus" Type="Boolean" />
+    <Property Name="RleCreatedTs" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="RleUpdatedTs" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="LG_MAM_ROL_MAP" Relationship="AppMGL.DAL.Models.FK_MRM_RLE" FromRole="LG_ROLE" ToRole="LG_MAM_ROL_MAP" />
+    <NavigationProperty Name="LG_SITE_CONTACT_ROLE" Relationship="AppMGL.DAL.Models.FK_SCR_RLE" FromRole="LG_ROLE" ToRole="LG_SITE_CONTACT_ROLE" />
+    <Property Name="RleDisplay" Type="Boolean" Nullable="false" />
+    <Property Name="rleType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RleCreatedBy" Type="Decimal" Precision="20" Scale="0" />
+    <Property Name="RleUpdatedBy" Type="Decimal" Precision="20" Scale="0" />
+  </EntityType>
+  <EntityType Name="LG_SITE">
+    <Key>
+      <PropertyRef Name="SitId" />
+    </Key>
+    <Property Name="SitId" Type="Decimal" Nullable="false" Precision="20" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LcnId" Type="Decimal" Nullable="false" Precision="20" Scale="0" />
+    <Property Name="SitType" Type="Decimal" Nullable="false" Precision="1" Scale="0" />
+    <Property Name="SitName" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="SitCode" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SitStatus" Type="Boolean" />
+    <Property Name="SitReason" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="SitCreatedTs" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SitUpdatedTs" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="LG_LOCATION" Relationship="AppMGL.DAL.Models.FK_SIT_CNT" FromRole="LG_SITE" ToRole="LG_LOCATION" />
+    <NavigationProperty Name="LG_SITE_CONTACT_ROLE" Relationship="AppMGL.DAL.Models.FK_SCR_SIT" FromRole="LG_SITE" ToRole="LG_SITE_CONTACT_ROLE" />
+    <Property Name="SitCreatedBy" Type="Decimal" Precision="20" Scale="0" />
+    <Property Name="SitUpdatedBy" Type="Decimal" Precision="20" Scale="0" />
+  </EntityType>
+  <EntityType Name="LG_SITE_CONTACT_ROLE">
+    <Key>
+      <PropertyRef Name="ScrId" />
+    </Key>
+    <Property Name="ScrId" Type="Decimal" Nullable="false" Precision="20" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SitId" Type="Decimal" Precision="20" Scale="0" />
+    <Property Name="CntId" Type="Decimal" Nullable="false" Precision="20" Scale="0" />
+    <Property Name="RleId" Type="Decimal" Nullable="false" Precision="20" Scale="0" />
+    <Property Name="ScrCreatedTs" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ScrUpdatedTs" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="LG_CONTACT" Relationship="AppMGL.DAL.Models.FK_SCR_CNT" FromRole="LG_SITE_CONTACT_ROLE" ToRole="LG_CONTACT" />
+    <NavigationProperty Name="LG_ROLE" Relationship="AppMGL.DAL.Models.FK_SCR_RLE" FromRole="LG_SITE_CONTACT_ROLE" ToRole="LG_ROLE" />
+    <NavigationProperty Name="LG_SITE" Relationship="AppMGL.DAL.Models.FK_SCR_SIT" FromRole="LG_SITE_CONTACT_ROLE" ToRole="LG_SITE" />
+    <Property Name="ScrCreatedBy" Type="Decimal" Precision="20" Scale="0" />
+    <Property Name="ScrUpdatedBy" Type="Decimal" Precision="20" Scale="0" />
+  </EntityType>
+  <EntityType Name="LG_TIMEZONE">
+    <Key>
+      <PropertyRef Name="TmzId" />
+    </Key>
+    <Property Name="TmzId" Type="Decimal" Nullable="false" Precision="20" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TmzName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TmzOffset" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TmzAbbrev" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="TmzLocation" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="TmzStatus" Type="Boolean" />
+    <Property Name="TmzCreatedTs" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TmzUpdatedTs" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="LG_LOCATION" Relationship="AppMGL.DAL.Models.FK_LCN_TMZ" FromRole="LG_TIMEZONE" ToRole="LG_LOCATION" />
+    <Property Name="TmzCreatedBy" Type="Decimal" Precision="20" Scale="0" />
+    <Property Name="TmzUpdatedBy" Type="Decimal" Precision="20" Scale="0" />
+  </EntityType>
+  <EntityType Name="LG_TITLE">
+    <Key>
+      <PropertyRef Name="TtlId" />
+    </Key>
+    <Property Name="TtlId" Type="Decimal" Nullable="false" Precision="20" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TtlName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TtlStatus" Type="Boolean" />
+    <Property Name="TtlCreatedTs" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TtlUpdatedTs" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="LG_CONTACT" Relationship="AppMGL.DAL.Models.FK_CNT_TTL" FromRole="LG_TITLE" ToRole="LG_CONTACT" />
+    <Property Name="TtlCreatedBy" Type="Decimal" Precision="20" Scale="0" />
+    <Property Name="TtlUpdatedBy" Type="Decimal" Precision="20" Scale="0" />
+  </EntityType>
+  <EntityType Name="LG_USER">
+    <Key>
+      <PropertyRef Name="UsrId" />
+    </Key>
+    <Property Name="UsrId" Type="Decimal" Nullable="false" Precision="20" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CntId" Type="Decimal" Nullable="false" Precision="20" Scale="0" />
+    <Property Name="AspNetUserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="UsrPwd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UsrTempPwd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UsrPwdCreatedTs" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsrValidFrom" Type="DateTime" Precision="3" />
+    <Property Name="UsrValidTo" Type="DateTime" Precision="3" />
+    <Property Name="UsrFailedCount" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="UsrIsLocked" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="UsrLockedComments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UsrPwdNeverExpire" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="UsrLastLoginTs" Type="DateTime" Precision="3" />
+    <Property Name="UsrIsPowerUser" Type="Boolean" />
+    <Property Name="UsrCreatedTs" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsrUpdatedTs" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="LG_CONTACT" Relationship="AppMGL.DAL.Models.FK_USR_CNT" FromRole="LG_USER" ToRole="LG_CONTACT" />
+    <Property Name="UsrCreatedBy" Type="Decimal" Precision="20" Scale="0" />
+    <Property Name="UsrUpdatedBy" Type="Decimal" Precision="20" Scale="0" />
+    <Property Name="UsrSmtpUsername" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UsrSmtpPassword" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="LG_USSTATE">
+    <Key>
+      <PropertyRef Name="UstId" />
+    </Key>
+    <Property Name="UstId" Type="Decimal" Nullable="false" Precision="20" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UstName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="UstAbbrev" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="UstStatus" Type="Boolean" />
+    <Property Name="UstCreatedTs" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UstUpdatedTs" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="LG_LOCATION" Relationship="AppMGL.DAL.Models.FK_LCN_UST" FromRole="LG_USSTATE" ToRole="LG_LOCATION" />
+    <Property Name="UstCreatedBy" Type="Decimal" Precision="20" Scale="0" />
+    <Property Name="UstUpdatedBy" Type="Decimal" Precision="20" Scale="0" />
+  </EntityType>
+  <Association Name="FK_MRM_ACT">
+    <End Type="AppMGL.DAL.Models.LG_ACTION" Role="LG_ACTION" Multiplicity="1" />
+    <End Type="AppMGL.DAL.Models.LG_MAM_ROL_MAP" Role="LG_MAM_ROL_MAP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LG_ACTION">
+        <PropertyRef Name="ActId" />
+      </Principal>
+      <Dependent Role="LG_MAM_ROL_MAP">
+        <PropertyRef Name="ActId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CNT_DPT">
+    <End Type="AppMGL.DAL.Models.LG_DEPARTMENT" Role="LG_DEPARTMENT" Multiplicity="1" />
+    <End Type="AppMGL.DAL.Models.LG_CONTACT" Role="LG_CONTACT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LG_DEPARTMENT">
+        <PropertyRef Name="DptId" />
+      </Principal>
+      <Dependent Role="LG_CONTACT">
+        <PropertyRef Name="DptId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CNT_TTL">
+    <End Type="AppMGL.DAL.Models.LG_TITLE" Role="LG_TITLE" Multiplicity="1" />
+    <End Type="AppMGL.DAL.Models.LG_CONTACT" Role="LG_CONTACT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LG_TITLE">
+        <PropertyRef Name="TtlId" />
+      </Principal>
+      <Dependent Role="LG_CONTACT">
+        <PropertyRef Name="TtlId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LCN_CNT">
+    <End Type="AppMGL.DAL.Models.LG_CONTACT" Role="LG_CONTACT" Multiplicity="0..1" />
+    <End Type="AppMGL.DAL.Models.LG_LOCATION" Role="LG_LOCATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LG_CONTACT">
+        <PropertyRef Name="CntId" />
+      </Principal>
+      <Dependent Role="LG_LOCATION">
+        <PropertyRef Name="CntId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SCR_CNT">
+    <End Type="AppMGL.DAL.Models.LG_CONTACT" Role="LG_CONTACT" Multiplicity="1" />
+    <End Type="AppMGL.DAL.Models.LG_SITE_CONTACT_ROLE" Role="LG_SITE_CONTACT_ROLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LG_CONTACT">
+        <PropertyRef Name="CntId" />
+      </Principal>
+      <Dependent Role="LG_SITE_CONTACT_ROLE">
+        <PropertyRef Name="CntId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USR_CNT">
+    <End Type="AppMGL.DAL.Models.LG_CONTACT" Role="LG_CONTACT" Multiplicity="1" />
+    <End Type="AppMGL.DAL.Models.LG_USER" Role="LG_USER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LG_CONTACT">
+        <PropertyRef Name="CntId" />
+      </Principal>
+      <Dependent Role="LG_USER">
+        <PropertyRef Name="CntId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LCN_CRY">
+    <End Type="AppMGL.DAL.Models.LG_COUNTRY" Role="LG_COUNTRY" Multiplicity="0..1" />
+    <End Type="AppMGL.DAL.Models.LG_LOCATION" Role="LG_LOCATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LG_COUNTRY">
+        <PropertyRef Name="CryId" />
+      </Principal>
+      <Dependent Role="LG_LOCATION">
+        <PropertyRef Name="CryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LCN_TMZ">
+    <End Type="AppMGL.DAL.Models.LG_TIMEZONE" Role="LG_TIMEZONE" Multiplicity="0..1" />
+    <End Type="AppMGL.DAL.Models.LG_LOCATION" Role="LG_LOCATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LG_TIMEZONE">
+        <PropertyRef Name="TmzId" />
+      </Principal>
+      <Dependent Role="LG_LOCATION">
+        <PropertyRef Name="TmzId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LCN_UST">
+    <End Type="AppMGL.DAL.Models.LG_USSTATE" Role="LG_USSTATE" Multiplicity="0..1" />
+    <End Type="AppMGL.DAL.Models.LG_LOCATION" Role="LG_LOCATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LG_USSTATE">
+        <PropertyRef Name="UstId" />
+      </Principal>
+      <Dependent Role="LG_LOCATION">
+        <PropertyRef Name="UstId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SIT_CNT">
+    <End Type="AppMGL.DAL.Models.LG_LOCATION" Role="LG_LOCATION" Multiplicity="1" />
+    <End Type="AppMGL.DAL.Models.LG_SITE" Role="LG_SITE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LG_LOCATION">
+        <PropertyRef Name="LcnId" />
+      </Principal>
+      <Dependent Role="LG_SITE">
+        <PropertyRef Name="LcnId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MRM_MOD">
+    <End Type="AppMGL.DAL.Models.LG_MODULE" Role="LG_MODULE" Multiplicity="1" />
+    <End Type="AppMGL.DAL.Models.LG_MAM_ROL_MAP" Role="LG_MAM_ROL_MAP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LG_MODULE">
+        <PropertyRef Name="ModId" />
+      </Principal>
+      <Dependent Role="LG_MAM_ROL_MAP">
+        <PropertyRef Name="ModId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MRM_RLE">
+    <End Type="AppMGL.DAL.Models.LG_ROLE" Role="LG_ROLE" Multiplicity="1" />
+    <End Type="AppMGL.DAL.Models.LG_MAM_ROL_MAP" Role="LG_MAM_ROL_MAP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LG_ROLE">
+        <PropertyRef Name="RleId" />
+      </Principal>
+      <Dependent Role="LG_MAM_ROL_MAP">
+        <PropertyRef Name="RleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MOD_MTE">
+    <End Type="AppMGL.DAL.Models.LG_MODULE_TYPE" Role="LG_MODULE_TYPE" Multiplicity="1" />
+    <End Type="AppMGL.DAL.Models.LG_MODULE" Role="LG_MODULE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LG_MODULE_TYPE">
+        <PropertyRef Name="MteId" />
+      </Principal>
+      <Dependent Role="LG_MODULE">
+        <PropertyRef Name="MteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SCR_RLE">
+    <End Type="AppMGL.DAL.Models.LG_ROLE" Role="LG_ROLE" Multiplicity="1" />
+    <End Type="AppMGL.DAL.Models.LG_SITE_CONTACT_ROLE" Role="LG_SITE_CONTACT_ROLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LG_ROLE">
+        <PropertyRef Name="RleId" />
+      </Principal>
+      <Dependent Role="LG_SITE_CONTACT_ROLE">
+        <PropertyRef Name="RleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SCR_SIT">
+    <End Type="AppMGL.DAL.Models.LG_SITE" Role="LG_SITE" Multiplicity="0..1" />
+    <End Type="AppMGL.DAL.Models.LG_SITE_CONTACT_ROLE" Role="LG_SITE_CONTACT_ROLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LG_SITE">
+        <PropertyRef Name="SitId" />
+      </Principal>
+      <Dependent Role="LG_SITE_CONTACT_ROLE">
+        <PropertyRef Name="SitId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="DashboardData_Job">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="I1" Type="Int32" />
+    <Property Name="I2" Type="Int32" />
+    <Property Name="I3" Type="Int32" />
+    <Property Name="UI1" Type="Int32" />
+    <Property Name="Q1" Type="Int32" />
+    <Property Name="Q2" Type="Int32" />
+    <Property Name="Q3" Type="Int32" />
+    <Property Name="Q4" Type="Int32" />
+    <Property Name="Q5" Type="Int32" />
+    <Property Name="UQ1" Type="Int32" />
+    <Property Name="UQ2" Type="Int32" />
+    <Property Name="UQ3" Type="Int32" />
+    <Property Name="B1" Type="Int32" />
+    <Property Name="B2" Type="Int32" />
+    <Property Name="B3" Type="Int32" />
+    <Property Name="B4" Type="Int32" />
+    <Property Name="B5" Type="Int32" />
+    <Property Name="B6" Type="Int32" />
+    <Property Name="B7" Type="Int32" />
+    <Property Name="UB1" Type="Int32" />
+    <Property Name="UB2" Type="Int32" />
+    <Property Name="UB3" Type="Int32" />
+    <Property Name="UB4" Type="Int32" />
+    <Property Name="T1" Type="Int32" />
+    <Property Name="T2" Type="Int32" />
+    <Property Name="T3" Type="Int32" />
+    <Property Name="D1" Type="Int32" />
+    <Property Name="UD1" Type="Int32" />
+    <Property Name="TA" Type="Int32" />
+    <Property Name="ADT" Type="Int32" />
+    <Property Name="LastUpdated" Type="DateTime" Precision="3" />
+    <Property Name="Id" Type="Int64" Nullable="false" />
+  </EntityType>
+  <ComplexType Name="USP_GET_ENQUIRY_DATA_Result">
+    <Property Type="String" Name="EnquiryNo" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="EnquiryDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ExpectedDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="NoOfContainer" Nullable="true" />
+    <Property Type="String" Name="CompanyName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Address" Nullable="true" />
+    <Property Type="String" Name="ContactPerson" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <EntityType Name="SIPL_Commodity">
+    <Key>
+      <PropertyRef Name="CommodityId" />
+    </Key>
+    <Property Name="CommodityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="Flag" Type="Boolean" />
+    <Property Name="CommodityTypeID" Type="Int32" />
+    <NavigationProperty Name="SIPL_CommodityType" Relationship="AppMGL.DAL.Models.FK_SIPL_Commodity_SIPL_CommodityType" FromRole="SIPL_Commodity" ToRole="SIPL_CommodityType" />
+  </EntityType>
+  <EntityType Name="SIPL_ContainerType">
+    <Key>
+      <PropertyRef Name="ContainerTypeId" />
+    </Key>
+    <Property Name="ContainerTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="Flag" Type="Boolean" />
+    <Property Name="InsideLengthInch" Type="Double" />
+    <Property Name="InsideLengthMeter" Type="Double" />
+    <Property Name="InsideWidthInch" Type="Double" />
+    <Property Name="InsideWidthMeter" Type="Double" />
+    <Property Name="InsideHeightInch" Type="Double" />
+    <Property Name="InsideHeightMeter" Type="Double" />
+    <Property Name="DoorHeightinch" Type="Double" />
+    <Property Name="DoorHeightM" Type="Double" />
+    <Property Name="ContainerCapacitycft" Type="Double" />
+    <Property Name="ContainerCapacityCM" Type="Double" />
+    <Property Name="TareWeightLbs" Type="Double" />
+    <Property Name="TareWeightKGS" Type="Double" />
+    <Property Name="MaxiCargoLbs" Type="Double" />
+    <Property Name="MaxiCargoKGS" Type="Double" />
+    <Property Name="Doorwidthinch" Type="Double" />
+    <Property Name="DoorwidthM" Type="Double" />
+    <Property Name="CCID" Type="Decimal" Precision="20" Scale="0" />
+  </EntityType>
+  <EntityType Name="SIPL_LoadType">
+    <Key>
+      <PropertyRef Name="LoadTypeId" />
+    </Key>
+    <Property Name="LoadTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="Flag" Type="Boolean" />
+  </EntityType>
+  <ComplexType Name="USP_GET_ENQUIRY_DETAIL_Result">
+    <Property Type="String" Name="ExpAdd" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ExpAddress" Nullable="true" />
+    <Property Type="String" Name="CustomerInqNo" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="OriginDoorName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="OriginDoorAddress" Nullable="true" />
+    <Property Type="String" Name="OriginDoor" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="DestinationDoorName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="DestinationDoorAddress" Nullable="true" />
+    <Property Type="String" Name="DestinationDoor" Nullable="true" MaxLength="500" />
+    <Property Type="Decimal" Name="LastEnquiryNo" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="EnquiryControlNo" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Int32" Name="DepartmentID" Nullable="true" />
+    <Property Type="Decimal" Name="EnquiryID" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="String" Name="EnquiryNo" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="EnquiryDate" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="ShipmentMoveDate" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="PickupRemark" Nullable="true" MaxLength="200" />
+    <Property Type="Int32" Name="fkCompanyID" Nullable="true" />
+    <Property Type="Int32" Name="fkCountryID" Nullable="true" />
+    <Property Type="Int32" Name="StateID" Nullable="true" />
+    <Property Type="Int32" Name="UserID" Nullable="true" />
+    <Property Type="String" Name="Remarks" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="EnquiryTypeID" Nullable="true" />
+    <Property Type="String" Name="PickupType" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="NoOfContainer" Nullable="true" />
+    <Property Type="String" Name="TypeOfEnquiry" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ReceivedBy" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CompanyName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="TelNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Address" Nullable="true" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ContactPerson" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="State" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="WebSite" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ZipCode" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="Fax" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="IsHaz" Nullable="true" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="500" />
+    <Property Type="Double" Name="Class" Nullable="true" />
+    <Property Type="String" Name="UNNo" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="PackingType" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="HazRemarks" Nullable="true" MaxLength="250" />
+    <Property Type="Double" Name="Hazweight" Nullable="true" />
+    <Property Type="Double" Name="HazVolume" Nullable="true" />
+    <Property Type="Int32" Name="OriginID" Nullable="true" />
+    <Property Type="Int32" Name="DischargeID" Nullable="true" />
+    <Property Type="Decimal" Name="QuotationID" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Int32" Name="OriginCountryID" Nullable="true" />
+    <Property Type="String" Name="OriginCountry" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="DestinationCountryID" Nullable="true" />
+    <Property Type="String" Name="DischargeCountry" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="OriginCityID" Nullable="true" />
+    <Property Type="String" Name="OriginCity" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="DestinationCityID" Nullable="true" />
+    <Property Type="String" Name="DischargeCity" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="OrignStateID" Nullable="true" />
+    <Property Type="String" Name="OriginState" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="DestinationStateID" Nullable="true" />
+    <Property Type="String" Name="DischargeState" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Origin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Discharge" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="GalRepID" Nullable="true" />
+    <Property Type="String" Name="RailRamp" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Terminal" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="OrgnRailRampId" Nullable="true" />
+    <Property Type="Int32" Name="DestnTerminalId" Nullable="true" />
+    <Property Type="Int32" Name="OrgnRailRampId1" Nullable="true" />
+    <Property Type="Int32" Name="DestnTerminalId1" Nullable="true" />
+    <Property Type="String" Name="RailRamp1" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Terminal1" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="USP_GET_ENQUIRY_LIST_Result">
+    <Property Type="Int64" Name="ROWNUM" Nullable="true" />
+    <Property Type="Int32" Name="TotalCount" Nullable="true" />
+    <Property Type="Decimal" Name="EnquiryID" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="String" Name="EnquiryNo" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="EnquiryDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ShipmentMoveDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="NoOfContainer" Nullable="true" />
+    <Property Type="String" Name="CompanyName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Address" Nullable="true" />
+    <Property Type="String" Name="ContactPerson" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Commodity" Nullable="true" />
+    <Property Type="String" Name="Remarks" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="State" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <EntityType Name="SIPL_City">
+    <Key>
+      <PropertyRef Name="CityId" />
+    </Key>
+    <Property Name="CityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fkStateId" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="Flag" Type="Boolean" />
+    <NavigationProperty Name="SIPL_Contact" Relationship="AppMGL.DAL.Models.FK_SIPL_Contact_SIPL_City" FromRole="SIPL_City" ToRole="SIPL_Contact" />
+  </EntityType>
+  <EntityType Name="SIPL_ContactBranch">
+    <Key>
+      <PropertyRef Name="ContactBranchID" />
+    </Key>
+    <Property Name="ContactBranchID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContactID" Type="Int32" />
+    <Property Name="BranchName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TelNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CellNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TaxID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StateID" Type="Int32" Nullable="false" />
+    <Property Name="City" Type="Int32" />
+    <Property Name="ContactPerson" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ZipCode" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SIPL_Contact" Relationship="AppMGL.DAL.Models.FK_SIPL_ContactBranch_SIPL_Contact" FromRole="SIPL_ContactBranch" ToRole="SIPL_Contact" />
+  </EntityType>
+  <EntityType Name="SIPL_Continent">
+    <Key>
+      <PropertyRef Name="ContinentId" />
+    </Key>
+    <Property Name="ContinentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="Flag" Type="Boolean" />
+    <NavigationProperty Name="SIPL_Country" Relationship="AppMGL.DAL.Models.FK_SIPL_Country_SIPL_Continent" FromRole="SIPL_Continent" ToRole="SIPL_Country" />
+  </EntityType>
+  <EntityType Name="SIPL_Country">
+    <Key>
+      <PropertyRef Name="CountryId" />
+    </Key>
+    <Property Name="CountryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ContinentID" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="Flag" Type="Boolean" />
+    <NavigationProperty Name="SIPL_Continent" Relationship="AppMGL.DAL.Models.FK_SIPL_Country_SIPL_Continent" FromRole="SIPL_Country" ToRole="SIPL_Continent" />
+  </EntityType>
+  <EntityType Name="SIPL_State">
+    <Key>
+      <PropertyRef Name="StateId" />
+    </Key>
+    <Property Name="StateId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="fkCountryId" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="Flag" Type="Boolean" />
+    <Property Name="Abb" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SIPL_Contact" Relationship="AppMGL.DAL.Models.FK_SIPL_Contact_SIPL_State" FromRole="SIPL_State" ToRole="SIPL_Contact" />
+  </EntityType>
+  <Association Name="FK_SIPL_Country_SIPL_Continent">
+    <End Type="AppMGL.DAL.Models.SIPL_Continent" Role="SIPL_Continent" Multiplicity="0..1" />
+    <End Type="AppMGL.DAL.Models.SIPL_Country" Role="SIPL_Country" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SIPL_Continent">
+        <PropertyRef Name="ContinentId" />
+      </Principal>
+      <Dependent Role="SIPL_Country">
+        <PropertyRef Name="ContinentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="SIPL_TradeService">
+    <Key>
+      <PropertyRef Name="TradeServiceId" />
+    </Key>
+    <Property Name="TradeServiceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="Flag" Type="Boolean" />
+  </EntityType>
+  <ComplexType Name="USP_GET_CUSTOMERCONTACT_DETAIL_Result">
+    <Property Type="Int32" Name="ContactID" Nullable="false" />
+    <Property Type="String" Name="CompanyName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="TelNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Address" Nullable="true" />
+    <Property Type="String" Name="ContactPerson" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AccountDetail" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="WebSite" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ZipCode" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="MobNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Fax" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TaxID" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AccountNo" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CustomerCode" Nullable="false" MaxLength="2000" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="true" />
+    <Property Type="String" Name="Remarks" Nullable="true" />
+    <Property Type="String" Name="Attachment" Nullable="true" />
+    <Property Type="String" Name="CompanyGradation" Nullable="true" />
+    <Property Type="Int32" Name="RepresentativeID" Nullable="true" />
+    <Property Type="String" Name="ContactCategoryID" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Continent" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="State" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CountryName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="GalRepresentative" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BranchName" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="USP_GET_CUSTOMERCONTACT_LIST_Result">
+    <Property Type="Int64" Name="ROWNUM" Nullable="true" />
+    <Property Type="Int32" Name="TotalCount" Nullable="true" />
+    <Property Type="String" Name="CompanyName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="TelNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Address" Nullable="true" />
+    <Property Type="String" Name="ContactPerson" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="State" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="WebSite" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ZipCode" Nullable="true" MaxLength="15" />
+    <Property Type="Int32" Name="ContactID" Nullable="false" />
+    <Property Type="String" Name="MobNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Fax" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TaxID" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Remarks" Nullable="true" />
+    <Property Type="Int32" Name="fkCountryId" Nullable="true" />
+    <Property Type="Int32" Name="StateID" Nullable="true" />
+    <Property Type="Int32" Name="ContinentId" Nullable="true" />
+    <Property Type="String" Name="Continent" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CountryName" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="true" />
+    <Property Type="String" Name="AccountDetail" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AccountNo" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CustomerCode" Nullable="false" MaxLength="2000" />
+    <Property Type="String" Name="ContactCategoryID" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="CityId" Nullable="true" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="RepresentativeID" Nullable="true" />
+    <Property Type="String" Name="GalRepresentative" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BranchName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CompanyGradation" Nullable="true" />
+    <Property Type="String" Name="Attachment" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="USP_GET_CUSTOMERCONTACT_DATA_Result">
+    <Property Type="Int32" Name="ContactID" Nullable="false" />
+    <Property Type="String" Name="CompanyName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="TelNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Address" Nullable="true" />
+    <Property Type="String" Name="ContactPerson" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AccountDetail" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="WebSite" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ZipCode" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="MobNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Fax" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TaxID" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AccountNo" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CustomerCode" Nullable="false" MaxLength="2000" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="true" />
+    <Property Type="String" Name="Remarks" Nullable="true" />
+    <Property Type="String" Name="Attachment" Nullable="true" />
+    <Property Type="String" Name="CompanyGradation" Nullable="true" />
+    <Property Type="Int32" Name="RepresentativeID" Nullable="true" />
+    <Property Type="String" Name="ContactCategoryID" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Continent" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="State" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CountryName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="GalRepresentative" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BranchName" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <EntityType Name="SIPL_CommodityType">
+    <Key>
+      <PropertyRef Name="CommodityTypeID" />
+    </Key>
+    <Property Name="CommodityTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CommodityType" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SIPL_Commodity" Relationship="AppMGL.DAL.Models.FK_SIPL_Commodity_SIPL_CommodityType" FromRole="SIPL_CommodityType" ToRole="SIPL_Commodity" />
+  </EntityType>
+  <Association Name="FK_SIPL_Commodity_SIPL_CommodityType">
+    <End Type="AppMGL.DAL.Models.SIPL_CommodityType" Role="SIPL_CommodityType" Multiplicity="0..1" />
+    <End Type="AppMGL.DAL.Models.SIPL_Commodity" Role="SIPL_Commodity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SIPL_CommodityType">
+        <PropertyRef Name="CommodityTypeID" />
+      </Principal>
+      <Dependent Role="SIPL_Commodity">
+        <PropertyRef Name="CommodityTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="LG_VW_CONTACTCATEGORY">
+    <Key>
+      <PropertyRef Name="ContactCategoryId" />
+    </Key>
+    <Property Name="ContactCategoryId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="Commodity" Type="Int32" />
+    <Property Name="Origin" Type="Int32" />
+    <Property Name="Destination" Type="Int32" />
+    <Property Name="IsVendor" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="SIPL_Department">
+    <Key>
+      <PropertyRef Name="DepartmentID" />
+    </Key>
+    <Property Name="DepartmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Department" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="fkTransportModeID" Type="Int32" />
+    <Property Name="fkOperationTypeID" Type="Int32" />
+    <Property Name="Prefix" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="LastEnquiryNo" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="EnquiryControlNo" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="DisplayOrder" Type="Int32" />
+    <Property Name="DeptCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SIPL_Contract">
+    <Key>
+      <PropertyRef Name="ContractID" />
+    </Key>
+    <Property Name="ContractID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractNo" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsValid" Type="Int32" Nullable="false" />
+    <Property Name="CarrierID" Type="Int32" Nullable="false" />
+    <Property Name="ContractDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="MQCTYPE" Type="Int32" Nullable="false" />
+    <Property Name="MQC" Type="Double" Nullable="false" />
+    <Property Name="ContractType" Type="Int32" />
+    <Property Name="fkOriginID" Type="Int32" />
+    <Property Name="fkDestinationID" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Attachments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TradeLane" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SCTermNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SIPL_ContractRate" Relationship="AppMGL.DAL.Models.FK_SIPL_ContractRate_SIPL_Contract1" FromRole="SIPL_Contract" ToRole="SIPL_ContractRate" />
+  </EntityType>
+  <EntityType Name="SIPL_Contact">
+    <Key>
+      <PropertyRef Name="ContactID" />
+    </Key>
+    <Property Name="ContactID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TelNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MobNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WebSite" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CityID" Type="Int32" />
+    <Property Name="ContactPerson" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TaxID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ZipCode" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StateID" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="Flag" Type="Boolean" />
+    <Property Name="AccountDetail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AccountNo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Attachment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyGradation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerCode" Type="String" Nullable="false" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="ContactCategoryID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="RepresentativeID" Type="Int32" />
+    <Property Name="ContinentId" Type="Int32" />
+    <Property Name="CountryId" Type="Int32" />
+    <NavigationProperty Name="SIPL_City" Relationship="AppMGL.DAL.Models.FK_SIPL_Contact_SIPL_City" FromRole="SIPL_Contact" ToRole="SIPL_City" />
+    <NavigationProperty Name="SIPL_ContactBranch" Relationship="AppMGL.DAL.Models.FK_SIPL_ContactBranch_SIPL_Contact" FromRole="SIPL_Contact" ToRole="SIPL_ContactBranch" />
+    <NavigationProperty Name="SIPL_State" Relationship="AppMGL.DAL.Models.FK_SIPL_Contact_SIPL_State" FromRole="SIPL_Contact" ToRole="SIPL_State" />
+    <Property Name="BillTo" Type="Int32" />
+    <Property Name="BillToCompanyName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BillToAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_SIPL_Contact_SIPL_City">
+    <End Type="AppMGL.DAL.Models.SIPL_City" Role="SIPL_City" Multiplicity="0..1" />
+    <End Type="AppMGL.DAL.Models.SIPL_Contact" Role="SIPL_Contact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SIPL_City">
+        <PropertyRef Name="CityId" />
+      </Principal>
+      <Dependent Role="SIPL_Contact">
+        <PropertyRef Name="CityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SIPL_ContactBranch_SIPL_Contact">
+    <End Type="AppMGL.DAL.Models.SIPL_Contact" Role="SIPL_Contact" Multiplicity="0..1" />
+    <End Type="AppMGL.DAL.Models.SIPL_ContactBranch" Role="SIPL_ContactBranch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SIPL_Contact">
+        <PropertyRef Name="ContactID" />
+      </Principal>
+      <Dependent Role="SIPL_ContactBranch">
+        <PropertyRef Name="ContactID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="SIPL_CompanyGradation">
+    <Key>
+      <PropertyRef Name="GradationID" />
+    </Key>
+    <Property Name="GradationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGradation" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="0" />
+    <Property Name="IsActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="SIPL_Port">
+    <Key>
+      <PropertyRef Name="PortId" />
+    </Key>
+    <Property Name="PortId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="Flag" Type="Boolean" />
+    <Property Name="IsAirLine" Type="Boolean" />
+    <Property Name="StateID" Type="Int32" />
+    <Property Name="CityID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="SIPL_User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LoginID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fkRoleID" Type="Int32" />
+    <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ZipCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ContactNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="EmailID" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="Flag" Type="Boolean" />
+    <Property Name="ClientID" Type="Int32" />
+    <Property Name="DepartmentID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="LG_VW_Commodity">
+    <Key>
+      <PropertyRef Name="CommodityId" />
+    </Key>
+    <Property Name="CommodityId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CommodityTypeID" Type="Int32" />
+    <Property Name="CommodityType" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="LG_VW_Port">
+    <Key>
+      <PropertyRef Name="PortId" />
+    </Key>
+    <Property Name="CountryId" Type="Int32" Nullable="false" />
+    <Property Name="CountryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PortId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="fkCountryId" Type="Int32" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="Flag" Type="Boolean" />
+    <Property Name="IsAirLine" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="LG_VW_SIPLCity">
+    <Key>
+      <PropertyRef Name="CityId" />
+    </Key>
+    <Property Name="CityId" Type="Int32" Nullable="false" />
+    <Property Name="fkStateId" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="Flag" Type="Boolean" />
+    <Property Name="StateId" Type="Int32" Nullable="false" />
+    <Property Name="StateName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="LG_VW_SIPLState">
+    <Key>
+      <PropertyRef Name="StateId" />
+    </Key>
+    <Property Name="CountryId" Type="Int32" Nullable="false" />
+    <Property Name="CountryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StateId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="fkCountryId" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="Flag" Type="Boolean" />
+    <Property Name="Abb" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="LGV_CONTACT_INFO">
+    <Key>
+      <PropertyRef Name="ContactID" />
+    </Key>
+    <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TelNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ContactPerson" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="WebSite" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ZipCode" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="ContactID" Type="Int32" Nullable="false" />
+    <Property Name="MobNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TaxID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="fkCountryId" Type="Int32" />
+    <Property Name="StateID" Type="Int32" />
+    <Property Name="Continent" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CountryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="AccountDetail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AccountNo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerCode" Type="String" Nullable="false" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="ContactCategoryID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RepresentativeID" Type="Int32" />
+    <Property Name="GalRepresentative" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BranchName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SIPL_RailRamp">
+    <Key>
+      <PropertyRef Name="railId" />
+    </Key>
+    <Property Name="railId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="railRamp" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="railDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Sipl_Terminal">
+    <Key>
+      <PropertyRef Name="terminalId" />
+    </Key>
+    <Property Name="terminalId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="terminalName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="terminalDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="SIPL_PortGroup">
+    <Key>
+      <PropertyRef Name="PortGroupId" />
+    </Key>
+    <Property Name="PortGroupId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ShortCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="Flag" Type="Boolean" />
+  </EntityType>
+  <Association Name="FK_SIPL_Contact_SIPL_State">
+    <End Type="AppMGL.DAL.Models.SIPL_State" Role="SIPL_State" Multiplicity="0..1" />
+    <End Type="AppMGL.DAL.Models.SIPL_Contact" Role="SIPL_Contact" Multiplicity="*" />
+  </Association>
+  <EntityType Name="LG_VW_Alias">
+    <Key>
+      <PropertyRef Name="AliasID" />
+    </Key>
+    <Property Name="AliasID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Alias" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AliasReferenceID" Type="Int32" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="0" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="LG_VW_SurchargeGroup">
+    <Key>
+      <PropertyRef Name="SurchargesGroupID" />
+    </Key>
+    <Property Name="SurchargesGroupID" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ShortCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="Flag" Type="Boolean" />
+    <Property Name="C1" Type="Int32" />
+    <Property Name="C2" Type="Int32" />
+    <Property Name="C3" Type="Int32" />
+    <Property Name="C4" Type="Int32" />
+    <Property Name="C5" Type="Int32" />
+    <Property Name="C6" Type="Int32" />
+    <Property Name="C7" Type="Int32" />
+    <Property Name="C8" Type="Int32" />
+    <Property Name="C9" Type="Int32" />
+    <Property Name="C10" Type="Int32" />
+    <Property Name="C11" Type="Int32" />
+    <Property Name="C12" Type="Int32" />
+    <Property Name="C13" Type="Int32" />
+    <Property Name="C14" Type="Int32" />
+    <Property Name="C16" Type="Int32" />
+    <Property Name="C17" Type="Int32" />
+    <Property Name="C19" Type="Int32" />
+    <Property Name="C20" Type="Int32" />
+    <Property Name="C21" Type="Int32" />
+    <Property Name="C22" Type="Int32" />
+    <Property Name="C23" Type="Int32" />
+    <Property Name="C24" Type="Int32" />
+    <Property Name="C25" Type="Int32" />
+    <Property Name="C27" Type="Int32" />
+    <Property Name="C28" Type="Int32" />
+    <Property Name="C29" Type="Int32" />
+    <Property Name="C30" Type="Int32" />
+    <Property Name="C31" Type="Int32" />
+    <Property Name="C32" Type="Int32" />
+    <Property Name="C33" Type="Int32" />
+    <Property Name="C34" Type="Int32" />
+    <Property Name="C36" Type="Int32" />
+    <Property Name="C37" Type="Int32" />
+    <Property Name="C38" Type="Int32" />
+    <Property Name="C39" Type="Int32" />
+    <Property Name="C40" Type="Int32" />
+    <Property Name="C41" Type="Int32" />
+    <Property Name="C42" Type="Int32" />
+    <Property Name="C43" Type="Int32" />
+    <Property Name="C44" Type="Int32" />
+    <Property Name="C45" Type="Int32" />
+    <Property Name="C46" Type="Int32" />
+    <Property Name="C47" Type="Int32" />
+    <Property Name="C48" Type="Int32" />
+    <Property Name="C49" Type="Int32" />
+    <Property Name="C50" Type="Int32" />
+    <Property Name="C51" Type="Int32" />
+    <Property Name="C52" Type="Int32" />
+    <Property Name="C53" Type="Int32" />
+    <Property Name="C54" Type="Int32" />
+    <Property Name="C55" Type="Int32" />
+    <Property Name="C57" Type="Int32" />
+    <Property Name="C58" Type="Int32" />
+    <Property Name="C59" Type="Int32" />
+    <Property Name="C60" Type="Int32" />
+    <Property Name="C61" Type="Int32" />
+  </EntityType>
+  <EntityType Name="LG_CONTACT_WORK_TYPE">
+    <Key>
+      <PropertyRef Name="CwtId" />
+    </Key>
+    <Property Name="CwtId" Type="Decimal" Nullable="false" Precision="20" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CwtName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CwtStatus" Type="Boolean" Nullable="false" />
+    <Property Name="CwtCreatedTs" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CwtCreatedBy" Type="Decimal" Nullable="false" Precision="20" Scale="0" />
+    <Property Name="CwtUpdatedTs" Type="DateTime" Precision="3" />
+    <Property Name="CwtUpdatedBy" Type="Decimal" Precision="20" Scale="0" />
+    <NavigationProperty Name="LG_CONTACT" Relationship="AppMGL.DAL.Models.FK_CNT_CWT" FromRole="LG_CONTACT_WORK_TYPE" ToRole="LG_CONTACT" />
+  </EntityType>
+  <Association Name="FK_CNT_CWT">
+    <End Type="AppMGL.DAL.Models.LG_CONTACT_WORK_TYPE" Role="LG_CONTACT_WORK_TYPE" Multiplicity="0..1" />
+    <End Type="AppMGL.DAL.Models.LG_CONTACT" Role="LG_CONTACT" Multiplicity="*" />
+  </Association>
+  <EntityType Name="LG_LOGIN_HISTORY">
+    <Key>
+      <PropertyRef Name="LhyId" />
+    </Key>
+    <Property Name="LhyId" Type="Decimal" Nullable="false" Precision="20" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LhyLoginName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="lhyLoginSuccess" Type="Boolean" />
+    <Property Name="lhyLoginComment" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="lhyCreatedTs" Type="DateTime" Precision="3" />
+  </EntityType>
+  <ComplexType Name="RPT_GET_ENQUIRY_Result">
+    <Property Type="Decimal" Name="EnquiryID" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="DateTime" Name="EnquiryDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="EnquiryNo" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CompanyName" Nullable="true" MaxLength="100" />
+    <Property Type="Int64" Name="SerialNo" Nullable="true" />
+    <Property Type="Int32" Name="SystemRef" Nullable="true" />
+    <Property Type="String" Name="MiamiRef" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BookingNo" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="QuotationNo" Nullable="true" />
+    <Property Type="DateTime" Name="ExpectedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="SourceCountry" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DestinationCountry" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PortOfOrigin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PortOfDestination" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PickupRemark" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="OriginCity" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="OriginState" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="OriginRailRamp" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="RPT_GET_QUOTATION_Result">
+    <Property Type="Int64" Name="SerialNo" Nullable="true" />
+    <Property Type="Int32" Name="SystemRef" Nullable="true" />
+    <Property Type="String" Name="MiamiRef" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BookingNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="EnquiryNo" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="QuotationNo" Nullable="true" />
+    <Property Type="DateTime" Name="EnquiryDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CompanyName" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="ExpectedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="SourceCountry" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DestinationCountry" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PortOfOrigin" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PortOfDestination" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PickupRemark" Nullable="true" MaxLength="200" />
+    <Property Type="Decimal" Name="QuotationID" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="DateTime" Name="QuotationSentDate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="RPT_GET_BOOKING_Result">
+    <Property Type="Int64" Name="SerialNo" Nullable="true" />
+    <Property Type="DateTime" Name="BookingDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="SystemRef" Nullable="true" />
+    <Property Type="String" Name="MiamiRef" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BookingNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="EnquiryNo" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="QuotationNo" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Customer" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Vessel" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Voyage" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="CutOff" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ETS" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ETA" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ERD" Nullable="true" Precision="23" />
+    <Property Type="String" Name="OriginDoor" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="PortOfLoading" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Destination" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="FCRCutoffDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="BillOfLadingNo" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="VIN" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Commodity" Nullable="true" />
+    <Property Type="String" Name="CntType" Nullable="true" />
+    <Property Type="String" Name="CntNo" Nullable="true" />
+    <Property Type="String" Name="SealNo" Nullable="true" />
+    <Property Type="String" Name="Shipper" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="PickupCategory" Nullable="false" MaxLength="13" />
+  </ComplexType>
+  <ComplexType Name="RPT_GET_BOOKING_STATUS_Result">
+    <Property Type="Int64" Name="SerialNo" Nullable="true" />
+    <Property Type="DateTime" Name="BookingDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="SystemRef" Nullable="true" />
+    <Property Type="String" Name="MiamiRef" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BookingNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="EnquiryNo" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="QuotationNo" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CompanyName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Vessel" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Voyage" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="CutOff" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ETS" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ETA" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ERD" Nullable="true" Precision="23" />
+    <Property Type="String" Name="OriginDoor" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="PortOfLoading" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Destination" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="FCRCutoffDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="BillOfLadingNo" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="VIN" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Commodity" Nullable="true" />
+    <Property Type="String" Name="CntType" Nullable="true" />
+    <Property Type="String" Name="CntNo" Nullable="true" />
+    <Property Type="String" Name="SealNo" Nullable="true" />
+    <Property Type="String" Name="Shipper" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="BookingStatus" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="NewSysNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BookingRequest" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ModeOfCommunication" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="PortCutOffDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="EarliestPickUpDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="PickupCategory" Nullable="false" MaxLength="13" />
+  </ComplexType>
+  <EntityType Name="SIPL_BookingStatus">
+    <Key>
+      <PropertyRef Name="StatusID" />
+    </Key>
+    <Property Name="StatusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+  </EntityType>
+  <ComplexType Name="GET_QUOTATION_CARRIER_Result">
+    <Property Type="Int32" Name="Days" Nullable="true" />
+    <Property Type="String" Name="CompanyName" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="EndDate" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Selected" Nullable="true" />
+    <Property Type="Decimal" Name="fkQuotationID" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Int32" Name="fkCarrierID" Nullable="true" />
+    <Property Type="Decimal" Name="QuotationCarrierID" Nullable="true" Precision="18" Scale="0" />
+  </ComplexType>
+  <ComplexType Name="GET_QUOTATION_ENQUIRY_Result">
+    <Property Type="DateTime" Name="EnquiryDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="EnquiryID" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="OriginDoor" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CustomerInqNo" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="DestinationDoor" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="PickupType" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="TodayDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="EnquiryNo" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="SourceCountryId" Nullable="true" />
+    <Property Type="Int32" Name="DestinationCountryId" Nullable="false" />
+    <Property Type="Decimal" Name="EnquiryID1" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Int32" Name="fkCompanyID" Nullable="true" />
+    <Property Type="DateTime" Name="ShipmentMoveDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="PickupType1" Nullable="true" MaxLength="81" />
+    <Property Type="Int32" Name="PortOfOrigin" Nullable="true" />
+    <Property Type="Int32" Name="PortOfDischarge" Nullable="true" />
+    <Property Type="Int32" Name="NoOfContainer" Nullable="true" />
+    <Property Type="String" Name="Discharge" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Origin" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ContactID" Nullable="true" />
+    <Property Type="String" Name="CompanyName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Address" Nullable="true" />
+    <Property Type="Double" Name="TruckingCharges" Nullable="true" />
+    <Property Type="String" Name="TruckingRemarks" Nullable="true" />
+    <Property Type="String" Name="SourceCountry" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DestinationCountry" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="EnqNo" Nullable="true" />
+    <Property Type="String" Name="TypeOfEnquiry" Nullable="true" MaxLength="100" />
+    <Property Type="Decimal" Name="QuotationId" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="String" Name="QuotationNo" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <EntityType Name="SIPL_DocumentCommon">
+    <Key>
+      <PropertyRef Name="DocumentCommonID" />
+    </Key>
+    <Property Name="DocumentCommonID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FileNo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CustomerID" Type="Int32" />
+    <Property Name="ExporterID" Type="Int32" />
+    <Property Name="DocumentNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BLNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Model" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="FTZNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ExportRef" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ConsignedTo" Type="Int32" />
+    <Property Name="FwdAgent" Type="Int32" />
+    <Property Name="ConsigneeID" Type="Int32" />
+    <Property Name="ExportingCarrier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ExportInstruction" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CarriageBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PlaceOfReceiptID" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="LandingPortID" Type="Int32" />
+    <Property Name="LoadingPert" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ForeignPortID" Type="Int32" />
+    <Property Name="Transshipment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Voyage" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MoveType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsExport" Type="Int32" />
+    <Property Name="IsAir" Type="Int32" />
+    <Property Name="Originport" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DestinationPort" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BookingStatus" Type="Boolean" />
+    <Property Name="CutOffDate" Type="DateTime" Precision="3" />
+    <Property Name="CNTNO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VIN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GALBookingType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BookedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BookingReceivedBy" Type="Int32" />
+    <Property Name="BookingDate" Type="DateTime" Precision="3" />
+    <Property Name="ShipperID" Type="Int32" />
+    <Property Name="PickupCategory" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PickupCategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Vessel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ETSailing" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ETA" Type="DateTime" Precision="3" />
+    <Property Name="ETS" Type="DateTime" Precision="3" />
+    <Property Name="ERD" Type="DateTime" Precision="3" />
+    <Property Name="ExpecteddateOfMove" Type="DateTime" Precision="3" />
+    <Property Name="CarrierBooking" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="OriginCountry" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DestinationCountry" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DeliverdBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CheckedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IssuedOn" Type="DateTime" Precision="3" />
+    <Property Name="ArrivalDate" Type="DateTime" Precision="3" />
+    <Property Name="DepartureDate" Type="DateTime" Precision="3" />
+    <Property Name="BillOfLadingNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PlaceOfAcceptance" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="QuotationChargesID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Class" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="UNNo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PackingType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HazRemarks" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="IsHaz" Type="Boolean" />
+    <Property Name="Hazweight" Type="Double" />
+    <Property Name="HazVolume" Type="Double" />
+    <Property Name="ETAFinalplaceid" Type="Int32" />
+    <Property Name="Finalplaceid" Type="Int32" />
+    <Property Name="IsContractBooking" Type="Boolean" />
+    <Property Name="BookingCategory" Type="Int32" />
+    <Property Name="OriginDoor" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" />
+    <Property Name="DestinationDoor" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" />
+    <Property Name="PortcutoffDate" Type="DateTime" Precision="3" />
+    <Property Name="EarliestPickUpDate" Type="DateTime" Precision="3" />
+    <Property Name="GALBookingStatusID" Type="Int32" />
+    <Property Name="BookingRequestID" Type="Int32" />
+    <Property Name="CommunicationRecdDate" Type="DateTime" Precision="3" />
+    <Property Name="ModeID" Type="Int32" />
+    <Property Name="SpaceBookingRemarks" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="AttachFile" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="RevisedID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ContractBookingID" Type="Int32" />
+    <Property Name="AttachFile1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AttachFile2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ShipperConfirmDate" Type="DateTime" Precision="3" />
+    <Property Name="ShipperConfirmMode" Type="Int32" />
+    <Property Name="ShipperRepName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ShipperAttachFile" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ToShipperEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="OriginRailRamp" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="RampCutOff" Type="DateTime" Precision="3" />
+    <Property Name="DestinationTerminal" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="AutoCutOff" Type="DateTime" Precision="3" />
+    <Property Name="ReqdSailingRemarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="OriginDoorAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="OriginAddId" Type="Int32" />
+    <Property Name="InvoiceStatusID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DestinationAddId" Type="Int32" />
+    <Property Name="HBL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MBL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DR" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CD" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Shipper" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Others" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Booking" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PONO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ShipperCustomerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SitId" Type="Decimal" Nullable="false" Precision="20" Scale="0" />
+    <Property Name="BookingReqtRecivedDate" Type="DateTime" Precision="3" />
+    <Property Name="CustReqCutOffDate" Type="DateTime" Precision="3" />
+    <Property Name="CustReqSailingDate" Type="DateTime" Precision="3" />
+    <Property Name="Trucking_ContactID" Type="Int32" />
+    <Property Name="Loading_ContactID" Type="Int32" />
+    <Property Name="LoadingDate" Type="DateTime" Precision="3" />
+    <Property Name="ReqStuffingDate" Type="DateTime" Precision="3" />
+    <Property Name="ConfStuffedDate" Type="DateTime" Precision="3" />
+    <Property Name="BookingRemarks" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="Dos_ID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="LG_ACCT_CATEGORY">
+    <Key>
+      <PropertyRef Name="AcyID" />
+    </Key>
+    <Property Name="AcyID" Type="Decimal" Nullable="false" Precision="20" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AcyNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AcyCreatedTs" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Acy_UpdatedTs" Type="DateTime" Precision="3" />
+    <Property Name="Acy_CreatedBy" Type="Decimal" Precision="20" Scale="0" />
+    <Property Name="Acy_UpdatedBy" Type="Decimal" Precision="20" Scale="0" />
+  </EntityType>
+  <EntityType Name="LG_SP_FEE_CATEGORY">
+    <Key>
+      <PropertyRef Name="SfcID" />
+    </Key>
+    <Property Name="SfcID" Type="Decimal" Nullable="false" Precision="20" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SfcName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SfcCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SfcCreatedTs" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Sfc_UpdatedTs" Type="DateTime" Precision="3" />
+    <Property Name="Sfc_CreatedBy" Type="Decimal" Precision="20" Scale="0" />
+    <Property Name="Sfc_UpdatedBy" Type="Decimal" Precision="20" Scale="0" />
+    <Property Name="SfcPercentage" Type="Decimal" Precision="5" Scale="2" />
+  </EntityType>
+  <EntityType Name="LG_VW_SITE_CONTACT">
+    <Key>
+      <PropertyRef Name="UsrId" />
+    </Key>
+    <Property Name="UsrId" Type="Decimal" Nullable="false" Precision="20" Scale="0" />
+    <Property Name="CntId" Type="Decimal" Nullable="false" Precision="20" Scale="0" />
+    <Property Name="Name" Type="String" MaxLength="101" FixedLength="false" Unicode="false" />
+    <Property Name="SitId" Type="Decimal" Precision="20" Scale="0" />
+  </EntityType>
+  <EntityType Name="LG_SHIPMENT_DOCS">
+    <Key>
+      <PropertyRef Name="SdId" />
+    </Key>
+    <Property Name="SdId" Type="Decimal" Nullable="false" Precision="20" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DocumentCommonID" Type="Int32" Nullable="false" />
+    <Property Name="SdDocName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="sdDocType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SdCreatedTs" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SdCreatedBy" Type="Decimal" Nullable="false" Precision="20" Scale="0" />
+    <Property Name="SdUpdatedTs" Type="DateTime" Precision="3" />
+    <Property Name="SdUpdatedBy" Type="Decimal" Precision="20" Scale="0" />
+    <Property Name="IsSysGenerated" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LG_VW_Contract">
+    <Key>
+      <PropertyRef Name="ContractID" />
+    </Key>
+    <Property Name="ContractID" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="ContractNo" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Carrier" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="StartDate" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="EndDate" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="IsValid" Type="Int32" Nullable="false" />
+    <Property Name="ContractDate" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="MQC" Type="String" MaxLength="34" FixedLength="false" Unicode="false" />
+    <Property Name="ContractType" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="curdate" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="diff" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="CarrierID" Type="Int32" Nullable="false" />
+    <Property Name="MQCTYPE" Type="Int32" Nullable="false" />
+    <Property Name="fkOriginID" Type="Int32" />
+    <Property Name="fkDestinationID" Type="Int32" />
+    <Property Name="mqcvalue" Type="Double" Nullable="false" />
+    <Property Name="ContractTypeVal" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="LG_VW_SIPL_CONTACT">
+    <Key>
+      <PropertyRef Name="ContactID" />
+    </Key>
+    <Property Name="ContactID" Type="Int32" Nullable="false" />
+    <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TelNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MobNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WebSite" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CityID" Type="Int32" />
+    <Property Name="ContactPerson" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TaxID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ZipCode" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StateID" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="Flag" Type="Boolean" />
+    <Property Name="AccountDetail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AccountNo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Attachment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyGradation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerCode" Type="String" Nullable="false" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="ContactCategoryID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="RepresentativeID" Type="Int32" />
+    <Property Name="ContinentId" Type="Int32" />
+    <Property Name="CountryId" Type="Int32" />
+    <Property Name="BillTo" Type="Int32" />
+    <Property Name="BillToCompanyName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BillToAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CityName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StateName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tbl_scheduler_TempContractRateDetail">
+    <Key>
+      <PropertyRef Name="CCID" />
+    </Key>
+    <Property Name="CCID" Type="Int32" Nullable="false" />
+    <Property Name="Commodity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Route" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OriginType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DestinationType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Origin" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Destination" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ViaType1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ViaType2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Via1Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Via2Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Rate" Type="Double" />
+    <Property Name="ContractNo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Precision="3" />
+    <Property Name="ContractID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Carrier" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="RouteId" Type="Int32" />
+    <Property Name="Standard20" Type="Double" />
+    <Property Name="Standard40" Type="Double" />
+    <Property Name="HighCube40" Type="Double" />
+    <Property Name="C45F" Type="Double" />
+    <Property Name="SurST20" Type="Double" />
+    <Property Name="SurST40" Type="Double" />
+    <Property Name="SurHC40" Type="Double" />
+    <Property Name="Sur45F" Type="Double" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ContractRemark" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="LastUpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="C45F1" Type="Double" />
+  </EntityType>
+  <EntityType Name="LG_VW_DisplayRate">
+    <Key>
+      <PropertyRef Name="CCID" />
+    </Key>
+    <Property Name="CCID" Type="Int32" Nullable="false" />
+    <Property Name="Commodity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Route" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OriginType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DestinationType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Origin" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Destination" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ViaType1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ViaType2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Via1Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Via2Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Rate" Type="Double" />
+    <Property Name="ContractNo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="StartDate" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="EndDate" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ContractID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Carrier" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="RouteId" Type="Int32" />
+    <Property Name="Standard20" Type="Double" />
+    <Property Name="Standard40" Type="Double" />
+    <Property Name="HighCube40" Type="Double" />
+    <Property Name="C45F" Type="Double" />
+    <Property Name="SurST20" Type="Double" />
+    <Property Name="SurST40" Type="Double" />
+    <Property Name="SurHC40" Type="Double" />
+    <Property Name="Sur45F" Type="Double" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ContractRemark" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="LastUpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SIPL_ContractRate">
+    <Key>
+      <PropertyRef Name="ContractRateID" />
+    </Key>
+    <Property Name="ContractRateID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RefID" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="Ref" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Rate" Type="Double" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CommodityId" Type="Int32" Nullable="false" />
+    <Property Name="RouteId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="SIPL_Contract" Relationship="AppMGL.DAL.Models.FK_SIPL_ContractRate_SIPL_Contract1" FromRole="SIPL_ContractRate" ToRole="SIPL_Contract" />
+  </EntityType>
+  <Association Name="FK_SIPL_ContractRate_SIPL_Contract1">
+    <End Type="AppMGL.DAL.Models.SIPL_Contract" Role="SIPL_Contract" Multiplicity="1" />
+    <End Type="AppMGL.DAL.Models.SIPL_ContractRate" Role="SIPL_ContractRate" Multiplicity="*" />
+  </Association>
+</Schema>

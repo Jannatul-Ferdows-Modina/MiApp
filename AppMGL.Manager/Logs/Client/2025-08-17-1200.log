@@ -1,0 +1,345 @@
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 12:40:11.0964 PM
+ENTRY TYPE  : Error
+SOURCE      : Username => bahuguna.vimal@gmail.com
+              IP Address => ::1
+              Url => http://localhost:50676/#!/crm/leadgeneration
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => Possibly unhandled rejection: {}
+MESSAGE     : TypeError: input.replace is not a function
+STACK TRACE : Utility.messageEncode()@http://localhost:50676/app/common.js?v=2.0.2.17085:183:30
+              Object.logError()@http://localhost:50676/app/notifier.js?v=2.0.2.17085:89:42
+              {anonymous}()@http://localhost:50676/app/components/crm/enquiry/nextdateModelController.js?v=2.0.2.17085:105:32
+              processQueue()@http://localhost:50676/bower_components/angular/angular.js:17051:36
+              null()@http://localhost:50676/bower_components/angular/angular.js:18233:14
+              $apply()@http://localhost:50676/bower_components/angular/angular.js:18531:12
+              resolveHttpPromise()@http://localhost:50676/bower_components/angular/angular.js:12547:35
+              completeRequest()@http://localhost:50676/bower_components/angular/angular.js:12785:6
+              onload()@http://localhost:50676/bower_components/angular/angular.js:12702:8
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 12:40:11.2375 PM
+ENTRY TYPE  : Error
+SOURCE      : Username => bahuguna.vimal@gmail.com
+              IP Address => ::1
+              Url => http://localhost:50676/#!/crm/leadgeneration
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => Possibly unhandled rejection: {}
+MESSAGE     : Error: [$compile:tpload] http://errors.angularjs.org/1.6.6/$compile/tpload?p0=app%2Fcomponents%2Fcrm%2Fenquiry%2Faddremark.html&p1=404&p2=Not%20Found
+STACK TRACE : minErr()@http://localhost:50676/bower_components/angular/angular.js:88:0
+              handleError()@http://localhost:50676/bower_components/angular/angular.js:20254:19
+              processQueue()@http://localhost:50676/bower_components/angular/angular.js:17051:36
+              null()@http://localhost:50676/bower_components/angular/angular.js:18233:14
+              $apply()@http://localhost:50676/bower_components/angular/angular.js:18531:12
+              resolveHttpPromise()@http://localhost:50676/bower_components/angular/angular.js:12547:35
+              completeRequest()@http://localhost:50676/bower_components/angular/angular.js:12785:6
+              onload()@http://localhost:50676/bower_components/angular/angular.js:12702:8
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 12:43:44.9162 PM
+ENTRY TYPE  : Error
+SOURCE      : Username => bahuguna.vimal@gmail.com
+              IP Address => ::1
+              Url => http://localhost:50676/#!/crm/leadgeneration
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => 
+MESSAGE     : Error: [ngRepeat:dupes] http://errors.angularjs.org/1.6.6/ngRepeat/dupes?p0=crumb%20in%20breadcrumbs&p1=string%3ACRM&p2=CRM
+STACK TRACE : minErr()@http://localhost:50676/bower_components/angular/angular.js:88:0
+              null()@http://localhost:50676/bower_components/angular/angular.js:31449:20
+              $watchCollectionAction()@http://localhost:50676/bower_components/angular/angular.js:18123:12
+              null()@http://localhost:50676/bower_components/angular/angular.js:18261:22
+              $apply()@http://localhost:50676/bower_components/angular/angular.js:18531:12
+              callback()@http://localhost:50676/bower_components/angular/angular.js:27346:16
+              HTMLAnchorElement.dispatch()@http://localhost:50676/bower_components/jquery/dist/jquery.min.js?v=2.0.2.17085:3:10316
+              q.handle()@http://localhost:50676/bower_components/jquery/dist/jquery.min.js?v=2.0.2.17085:3:8343
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 12:43:46.8371 PM
+ENTRY TYPE  : Error
+SOURCE      : Username => bahuguna.vimal@gmail.com
+              IP Address => ::1
+              Url => http://localhost:50676/#!/crm/leadgeneration
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => 
+MESSAGE     : Error: [ngRepeat:dupes] http://errors.angularjs.org/1.6.6/ngRepeat/dupes?p0=crumb%20in%20breadcrumbs&p1=string%3ACRM&p2=CRM
+STACK TRACE : minErr()@http://localhost:50676/bower_components/angular/angular.js:88:0
+              null()@http://localhost:50676/bower_components/angular/angular.js:31449:20
+              $watchCollectionAction()@http://localhost:50676/bower_components/angular/angular.js:18123:12
+              null()@http://localhost:50676/bower_components/angular/angular.js:18261:22
+              $apply()@http://localhost:50676/bower_components/angular/angular.js:18531:12
+              callback()@http://localhost:50676/bower_components/angular/angular.js:27346:16
+              HTMLAnchorElement.dispatch()@http://localhost:50676/bower_components/jquery/dist/jquery.min.js?v=2.0.2.17085:3:10316
+              q.handle()@http://localhost:50676/bower_components/jquery/dist/jquery.min.js?v=2.0.2.17085:3:8343
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 12:43:48.8912 PM
+ENTRY TYPE  : Error
+SOURCE      : Username => bahuguna.vimal@gmail.com
+              IP Address => ::1
+              Url => http://localhost:50676/#!/crm/leadgeneration
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => 
+MESSAGE     : Error: [ngRepeat:dupes] http://errors.angularjs.org/1.6.6/ngRepeat/dupes?p0=crumb%20in%20breadcrumbs&p1=string%3ACRM&p2=CRM
+STACK TRACE : minErr()@http://localhost:50676/bower_components/angular/angular.js:88:0
+              null()@http://localhost:50676/bower_components/angular/angular.js:31449:20
+              $watchCollectionAction()@http://localhost:50676/bower_components/angular/angular.js:18123:12
+              null()@http://localhost:50676/bower_components/angular/angular.js:18261:22
+              $apply()@http://localhost:50676/bower_components/angular/angular.js:18531:12
+              callback()@http://localhost:50676/bower_components/angular/angular.js:27346:16
+              HTMLAnchorElement.dispatch()@http://localhost:50676/bower_components/jquery/dist/jquery.min.js?v=2.0.2.17085:3:10316
+              q.handle()@http://localhost:50676/bower_components/jquery/dist/jquery.min.js?v=2.0.2.17085:3:8343
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 12:44:07.2039 PM
+ENTRY TYPE  : Error
+SOURCE      : Username => bahuguna.vimal@gmail.com
+              IP Address => ::1
+              Url => http://localhost:50676/#!/crm/leadgeneration
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => Possibly unhandled rejection: {}
+MESSAGE     : TypeError: input.replace is not a function
+STACK TRACE : Utility.messageEncode()@http://localhost:50676/app/common.js?v=2.0.2.17085:183:30
+              Object.logError()@http://localhost:50676/app/notifier.js?v=2.0.2.17085:89:42
+              {anonymous}()@http://localhost:50676/app/components/crm/enquiry/nextdateModelController.js?v=2.0.2.17085:105:32
+              processQueue()@http://localhost:50676/bower_components/angular/angular.js:17051:36
+              null()@http://localhost:50676/bower_components/angular/angular.js:18233:14
+              $apply()@http://localhost:50676/bower_components/angular/angular.js:18531:12
+              resolveHttpPromise()@http://localhost:50676/bower_components/angular/angular.js:12547:35
+              completeRequest()@http://localhost:50676/bower_components/angular/angular.js:12785:6
+              onload()@http://localhost:50676/bower_components/angular/angular.js:12702:8
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 12:44:07.2099 PM
+ENTRY TYPE  : Error
+SOURCE      : Username => bahuguna.vimal@gmail.com
+              IP Address => ::1
+              Url => http://localhost:50676/#!/crm/leadgeneration
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => 
+MESSAGE     : Error: [$compile:tpload] http://errors.angularjs.org/1.6.6/$compile/tpload?p0=app%2Fcomponents%2Fcrm%2Fenquiry%2Faddremark.html&p1=404&p2=Not%20Found
+STACK TRACE : minErr()@http://localhost:50676/bower_components/angular/angular.js:88:0
+              handleError()@http://localhost:50676/bower_components/angular/angular.js:20254:19
+              processQueue()@http://localhost:50676/bower_components/angular/angular.js:17051:36
+              null()@http://localhost:50676/bower_components/angular/angular.js:18233:14
+              $apply()@http://localhost:50676/bower_components/angular/angular.js:18531:12
+              resolveHttpPromise()@http://localhost:50676/bower_components/angular/angular.js:12547:35
+              completeRequest()@http://localhost:50676/bower_components/angular/angular.js:12785:6
+              onload()@http://localhost:50676/bower_components/angular/angular.js:12702:8
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 12:44:07.2119 PM
+ENTRY TYPE  : Error
+SOURCE      : Username => bahuguna.vimal@gmail.com
+              IP Address => ::1
+              Url => http://localhost:50676/#!/crm/leadgeneration
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => Possibly unhandled rejection: {}
+MESSAGE     : Error: [$compile:tpload] http://errors.angularjs.org/1.6.6/$compile/tpload?p0=app%2Fcomponents%2Fcrm%2Fenquiry%2Faddremark.html&p1=404&p2=Not%20Found
+STACK TRACE : minErr()@http://localhost:50676/bower_components/angular/angular.js:88:0
+              handleError()@http://localhost:50676/bower_components/angular/angular.js:20254:19
+              processQueue()@http://localhost:50676/bower_components/angular/angular.js:17051:36
+              null()@http://localhost:50676/bower_components/angular/angular.js:18233:14
+              $apply()@http://localhost:50676/bower_components/angular/angular.js:18531:12
+              resolveHttpPromise()@http://localhost:50676/bower_components/angular/angular.js:12547:35
+              completeRequest()@http://localhost:50676/bower_components/angular/angular.js:12785:6
+              onload()@http://localhost:50676/bower_components/angular/angular.js:12702:8
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 12:44:58.0619 PM
+ENTRY TYPE  : Error
+SOURCE      : Username => bahuguna.vimal@gmail.com
+              IP Address => ::1
+              Url => http://localhost:50676/#!/crm/leadgeneration
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => 
+MESSAGE     : Error: [$compile:tpload] http://errors.angularjs.org/1.6.6/$compile/tpload?p0=app%2Fcomponents%2Fcrm%2Fenquiry%2Faddremark.html&p1=404&p2=Not%20Found
+STACK TRACE : minErr()@http://localhost:50676/bower_components/angular/angular.js:88:0
+              handleError()@http://localhost:50676/bower_components/angular/angular.js:20254:19
+              processQueue()@http://localhost:50676/bower_components/angular/angular.js:17051:36
+              null()@http://localhost:50676/bower_components/angular/angular.js:18233:14
+              $apply()@http://localhost:50676/bower_components/angular/angular.js:18531:12
+              resolveHttpPromise()@http://localhost:50676/bower_components/angular/angular.js:12547:35
+              completeRequest()@http://localhost:50676/bower_components/angular/angular.js:12785:6
+              onload()@http://localhost:50676/bower_components/angular/angular.js:12702:8
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 12:44:58.0619 PM
+ENTRY TYPE  : Error
+SOURCE      : Username => bahuguna.vimal@gmail.com
+              IP Address => ::1
+              Url => http://localhost:50676/#!/crm/leadgeneration
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => Possibly unhandled rejection: {}
+MESSAGE     : TypeError: input.replace is not a function
+STACK TRACE : Utility.messageEncode()@http://localhost:50676/app/common.js?v=2.0.2.17085:183:30
+              Object.logError()@http://localhost:50676/app/notifier.js?v=2.0.2.17085:89:42
+              {anonymous}()@http://localhost:50676/app/components/crm/enquiry/nextdateModelController.js?v=2.0.2.17085:105:32
+              processQueue()@http://localhost:50676/bower_components/angular/angular.js:17051:36
+              null()@http://localhost:50676/bower_components/angular/angular.js:18233:14
+              $apply()@http://localhost:50676/bower_components/angular/angular.js:18531:12
+              resolveHttpPromise()@http://localhost:50676/bower_components/angular/angular.js:12547:35
+              completeRequest()@http://localhost:50676/bower_components/angular/angular.js:12785:6
+              onload()@http://localhost:50676/bower_components/angular/angular.js:12702:8
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 12:44:58.0619 PM
+ENTRY TYPE  : Error
+SOURCE      : Username => bahuguna.vimal@gmail.com
+              IP Address => ::1
+              Url => http://localhost:50676/#!/crm/leadgeneration
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => Possibly unhandled rejection: {}
+MESSAGE     : Error: [$compile:tpload] http://errors.angularjs.org/1.6.6/$compile/tpload?p0=app%2Fcomponents%2Fcrm%2Fenquiry%2Faddremark.html&p1=404&p2=Not%20Found
+STACK TRACE : minErr()@http://localhost:50676/bower_components/angular/angular.js:88:0
+              handleError()@http://localhost:50676/bower_components/angular/angular.js:20254:19
+              processQueue()@http://localhost:50676/bower_components/angular/angular.js:17051:36
+              null()@http://localhost:50676/bower_components/angular/angular.js:18233:14
+              $apply()@http://localhost:50676/bower_components/angular/angular.js:18531:12
+              resolveHttpPromise()@http://localhost:50676/bower_components/angular/angular.js:12547:35
+              completeRequest()@http://localhost:50676/bower_components/angular/angular.js:12785:6
+              onload()@http://localhost:50676/bower_components/angular/angular.js:12702:8
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 01:14:29.4392 PM
+ENTRY TYPE  : Error
+SOURCE      : Username => bahuguna.vimal@gmail.com
+              IP Address => ::1
+              Url => http://localhost:50676/#!/crm/leadgeneration
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => 
+MESSAGE     : Error: [$compile:tpload] http://errors.angularjs.org/1.6.6/$compile/tpload?p0=app%2Fcomponents%2Fcrm%2Fenquiry%2Faddremark.html&p1=404&p2=Not%20Found
+STACK TRACE : minErr()@http://localhost:50676/bower_components/angular/angular.js:88:0
+              handleError()@http://localhost:50676/bower_components/angular/angular.js:20254:19
+              processQueue()@http://localhost:50676/bower_components/angular/angular.js:17051:36
+              null()@http://localhost:50676/bower_components/angular/angular.js:18233:14
+              $apply()@http://localhost:50676/bower_components/angular/angular.js:18531:12
+              resolveHttpPromise()@http://localhost:50676/bower_components/angular/angular.js:12547:35
+              completeRequest()@http://localhost:50676/bower_components/angular/angular.js:12785:6
+              onload()@http://localhost:50676/bower_components/angular/angular.js:12702:8
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 01:19:55.2847 PM
+ENTRY TYPE  : Error
+SOURCE      : Username => bahuguna.vimal@gmail.com
+              IP Address => ::1
+              Url => http://localhost:50676/#!/crm/leadgeneration
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => Possibly unhandled rejection: {}
+MESSAGE     : Error: [$controller:ctrlreg] http://errors.angularjs.org/1.6.6/$controller/ctrlreg?p0=addRemarkController
+STACK TRACE : minErr()@http://localhost:50676/bower_components/angular/angular.js:88:0
+              $controllerMinErr()@http://localhost:50676/bower_components/angular/angular.js:10973:16
+              {anonymous}()@http://localhost:50676/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js?v=2.0.2.17085:8:20996
+              processQueue()@http://localhost:50676/bower_components/angular/angular.js:17051:36
+              null()@http://localhost:50676/bower_components/angular/angular.js:18233:14
+              $apply()@http://localhost:50676/bower_components/angular/angular.js:18531:12
+              resolveHttpPromise()@http://localhost:50676/bower_components/angular/angular.js:12547:35
+              completeRequest()@http://localhost:50676/bower_components/angular/angular.js:12785:6
+              onload()@http://localhost:50676/bower_components/angular/angular.js:12702:8
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 02:02:54.2149 PM
+ENTRY TYPE  : Error
+SOURCE      : Username => bahuguna.vimal@gmail.com
+              IP Address => ::1
+              Url => http://localhost:50676/#!/crm/leadgeneration
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => 
+MESSAGE     : ReferenceError: addRemarks is not defined
+STACK TRACE : $scope.select()@http://localhost:50676/app/components/crm/enquiry/addRemarkController.js?v=2.0.2.17085:24:17
+              null()@http://localhost:50676/bower_components/angular/angular.js:15551:14
+              callback()@http://localhost:50676/bower_components/angular/angular.js:27341:16
+              $eval()@http://localhost:50676/bower_components/angular/angular.js:18423:28
+              $apply()@http://localhost:50676/bower_components/angular/angular.js:18523:19
+              callback()@http://localhost:50676/bower_components/angular/angular.js:27346:16
+              HTMLButtonElement.dispatch()@http://localhost:50676/bower_components/jquery/dist/jquery.min.js?v=2.0.2.17085:3:10316
+              q.handle()@http://localhost:50676/bower_components/jquery/dist/jquery.min.js?v=2.0.2.17085:3:8343
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 02:18:21.6183 PM
+ENTRY TYPE  : Error
+SOURCE      : Username => bahuguna.vimal@gmail.com
+              IP Address => ::1
+              Url => http://localhost:50676/#!/crm/leadgeneration
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => Possibly unhandled rejection: {}
+MESSAGE     : ReferenceError: closepopup is not defined
+STACK TRACE : {anonymous}()@http://localhost:50676/app/components/crm/enquiry/addRemarkController.js?v=2.0.2.17085:42:25
+              processQueue()@http://localhost:50676/bower_components/angular/angular.js:17051:36
+              null()@http://localhost:50676/bower_components/angular/angular.js:18233:14
+              $apply()@http://localhost:50676/bower_components/angular/angular.js:18531:12
+              resolveHttpPromise()@http://localhost:50676/bower_components/angular/angular.js:12547:35
+              completeRequest()@http://localhost:50676/bower_components/angular/angular.js:12785:6
+              onload()@http://localhost:50676/bower_components/angular/angular.js:12702:8
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 02:18:31.7539 PM
+ENTRY TYPE  : Error
+SOURCE      : Username => bahuguna.vimal@gmail.com
+              IP Address => ::1
+              Url => http://localhost:50676/#!/crm/leadgeneration
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => 
+MESSAGE     : ReferenceError: closepopup is not defined
+STACK TRACE : $scope.select()@http://localhost:50676/app/components/crm/enquiry/addRemarkController.js?v=2.0.2.17085:51:17
+              null()@http://localhost:50676/bower_components/angular/angular.js:15551:14
+              callback()@http://localhost:50676/bower_components/angular/angular.js:27341:16
+              $eval()@http://localhost:50676/bower_components/angular/angular.js:18423:28
+              $apply()@http://localhost:50676/bower_components/angular/angular.js:18523:19
+              callback()@http://localhost:50676/bower_components/angular/angular.js:27346:16
+              HTMLButtonElement.dispatch()@http://localhost:50676/bower_components/jquery/dist/jquery.min.js?v=2.0.2.17085:3:10316
+              q.handle()@http://localhost:50676/bower_components/jquery/dist/jquery.min.js?v=2.0.2.17085:3:8343
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 02:18:33.8036 PM
+ENTRY TYPE  : Error
+SOURCE      : Username => bahuguna.vimal@gmail.com
+              IP Address => ::1
+              Url => http://localhost:50676/#!/crm/leadgeneration
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => 
+MESSAGE     : ReferenceError: closepopup is not defined
+STACK TRACE : $scope.select()@http://localhost:50676/app/components/crm/enquiry/addRemarkController.js?v=2.0.2.17085:51:17
+              null()@http://localhost:50676/bower_components/angular/angular.js:15551:14
+              callback()@http://localhost:50676/bower_components/angular/angular.js:27341:16
+              $eval()@http://localhost:50676/bower_components/angular/angular.js:18423:28
+              $apply()@http://localhost:50676/bower_components/angular/angular.js:18523:19
+              callback()@http://localhost:50676/bower_components/angular/angular.js:27346:16
+              HTMLButtonElement.dispatch()@http://localhost:50676/bower_components/jquery/dist/jquery.min.js?v=2.0.2.17085:3:10316
+              q.handle()@http://localhost:50676/bower_components/jquery/dist/jquery.min.js?v=2.0.2.17085:3:8343
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 02:20:43.8071 PM
+ENTRY TYPE  : Error
+SOURCE      : Username => bahuguna.vimal@gmail.com
+              IP Address => ::1
+              Url => http://localhost:50676/#!/crm/leadgeneration
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => 
+MESSAGE     : ReferenceError: closepopup is not defined
+STACK TRACE : $scope.select()@http://localhost:50676/app/components/crm/enquiry/addRemarkController.js?v=2.0.2.17085:51:17
+              null()@http://localhost:50676/bower_components/angular/angular.js:15551:14
+              callback()@http://localhost:50676/bower_components/angular/angular.js:27341:16
+              $eval()@http://localhost:50676/bower_components/angular/angular.js:18423:28
+              $apply()@http://localhost:50676/bower_components/angular/angular.js:18523:19
+              callback()@http://localhost:50676/bower_components/angular/angular.js:27346:16
+              HTMLButtonElement.dispatch()@http://localhost:50676/bower_components/jquery/dist/jquery.min.js?v=2.0.2.17085:3:10316
+              q.handle()@http://localhost:50676/bower_components/jquery/dist/jquery.min.js?v=2.0.2.17085:3:8343
+

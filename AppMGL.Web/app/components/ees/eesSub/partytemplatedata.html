@@ -1,0 +1,87 @@
+﻿<style>
+    .modal-lg {
+        width: 1200px;
+    }
+</style>
+<div class="modal-header">
+    <h3 class="modal-title"><span>Template list</span></h3>
+    
+</div>
+
+    <div class="modal-body form-horizontal detail-container"  wait-for-interpolation="true">
+        <ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+            <div>
+                <div class="form-group">
+
+                    <div class="col-sm-1">
+                        <label class="col-sm-2 control-label">Select</label>
+                    </div>
+                    <div class="col-sm-2">
+                        <select class="form-control" name="searchOption" ng-model="selectOption" ng-options="item.optionValue as item.optionName for item in searchOptions"></select>
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="text" id="txtsearchBox" ng-model="searchBox" class="form-control" uib-typeahead="o.name for o in searchValues($viewValue,selectOption)" />
+                    </div>
+                    <div class="col-sm-4">
+                        <button class="btn btn-sm btn-primary" ng-click="partyTemplateSearch($event,selectOption,searchBox)">  Search</button>
+                    </div>
+                </div>
+                <table ng-table="partyTemplatelistTable" class="table table-striped table-bordered table-hover" template-pagination="customPager">
+                    <thead>
+                        <tr class="bg-thead">
+                            <th class="text-left sortable hidden-xs" table-name="partyTemplatelistTable" >Sr No</th>
+                            <th class="text-left sortable hidden-xs" table-name="partyTemplatelistTable">Company Name</th>
+                            <th class="text-left sortable hidden-xs" table-name="partyTemplatelistTable">First Name</th>
+                            <th class="text-left sortable hidden-xs" table-name="partyTemplatelistTable">Last Name</th>
+                            <th class="text-left sortable hidden-xs" table-name="partyTemplatelistTable">Country Name</th>
+                            <th class="text-left sortable hidden-xs" table-name="partyTemplatelistTable">State Name</th>
+                            <th class="text-left sortable hidden-xs" table-name="partyTemplatelistTable">Address</th>
+                            <th class="text-left sortable hidden-xs" table-name="partyTemplatelistTable">EIN No</th>
+                            <th class="text-left sortable hidden-xs" table-name="partyTemplatelistTable">Template  Type </th>
+                            <th class="list-actions">Select</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="entity in items">
+                            <td class="hidden-xs">
+                                {{$index+1 }}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.companyName}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.firstName}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.lastName}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.countryName}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.stateName}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.addressLine1}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.einNo}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.templateType}}
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-success btn-sm createLineBtn" style="background-color:green" action="Update" ng-click="getAesTemplateDetail(entity.templateId)">Select</button>
+                                <!--<button type="button" class="btn btn-xs btn-primary" ng-click="getAesTemplateDetail(entity.templateId)" show-action="20"><i class="fa fa-edit"></i></button>-->
+                            </td>
+                        </tr>
+<tbody>
+                </table>
+            </div>
+        </ng-form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-sm btn-default" ng-click="closemodal('close')" action="cancel">Close</button>
+    </div>
+
+

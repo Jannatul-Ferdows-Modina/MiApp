@@ -1,0 +1,53 @@
+﻿<div class="box-container form-horizontal detail-container">
+    <div class="form-group">
+        <label class="col-sm-2 text-right control-label">Shipping Line</label>
+        <div class="col-sm-4">
+            <select class="form-control" name="contactID" ng-model="entity.contactID" ng-options="t.contactID as t.companyName for t in lookups.siplContact" ng-change="getShipperRemarks(entity.contactID)" ></select>
+        </div>
+        <div class="col-sm-6">
+            <span>&nbsp;</span>
+        </div>
+    </div>
+    <div class="form-group">       
+            <label class="col-sm-2 text-right control-label">Remarks</label>
+            <div class="col-sm-6">
+                <textarea rows="2" class="form-control" name="remarks" ng-model="entity.remarks" maxlength="8000"></textarea>
+            </div>
+            <div class="col-sm-1">
+                <button name="btnAdd" type="button" class="btn btn-sm btn-primary" ng-click="addRemarksRow()" action="add" entityid="0" uib-tooltip="" ><i class="fa fa-pencil"></i>Add</button>
+            </div>
+            <div class="col-sm-1">
+                <span>&nbsp;</span>
+            </div>       
+    </div>
+    <div ng-show="remarksList.length > 0">
+        <table class="table table-striped table-bordered table-hover " template-pagination="none">
+            <thead>
+                <tr class="bg-thead">
+                    <th class="text-left  hidden-xs">Remarks</th>
+                    <th class="list-actions">Edit</th>
+                    <th class="list-actions">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in remarksList">
+                    <td>
+                        {{item.remarks}}
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-xs btn-primary" ng-click="editRemarksRow($index)" action="edit" uib-tooltip="Edit"><i class="fa fa-edit"></i></button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-xs btn-danger" ng-click="removeRemarksRow($index)" uib-tooltip="Delete"><i class="fa fa-remove"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 text-right control-label">Common Remraks</label>
+        <div class="col-sm-10">
+            <div class="form-control" ckeditor="ckOptions" name="shipperCommonRemarks" ng-model="entity.shipperCommonRemarks" maxlength="8000"></div>
+        </div>
+    </div>
+</div>

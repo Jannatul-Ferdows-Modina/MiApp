@@ -1,0 +1,26 @@
+﻿<ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+    <p>&nbsp;</p>
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">License Code</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="licenseCode" ng-model="entity.licenseCode" maxlength="200" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+        </div>
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Description</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <textarea rows="2" class="form-control" name="description" ng-model="entity.description" ng-disabled="disabledUpdate" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">lic Value </label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="licval" ng-model="entity.licval" maxlength="100" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+        </div>
+       
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">DeActive</label>
+        <div class="col-sm-4 checkbox-control">
+            <input type="checkbox" name="isDel" ng-model="entity.isDel" ng-disabled="disabledUpdate" />
+        </div>
+    </div>
+</ng-form>

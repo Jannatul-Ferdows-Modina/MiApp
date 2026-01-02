@@ -1,0 +1,405 @@
+C:\MGL-Logistics\AppMGL.Manager\bin\AppMGL.Manager.dll.config
+C:\MGL-Logistics\AppMGL.Manager\bin\AppMGL.Manager.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\AppMGL.Manager.pdb
+C:\MGL-Logistics\AppMGL.Manager\bin\Accessibility.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\Antlr3.Runtime.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\AppMGL.DAL.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\AppMGL.DTO.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\AutoMapper.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\CustomMarshalers.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\DevDefined.OAuth.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\EntityFramework.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\EntityFramework.SqlServer.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\ISymWrapper.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Activities.Build.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\Microsoft.AspNet.Identity.Core.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Build.Conversion.v4.0.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Build.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Build.Engine.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Build.Framework.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Build.Tasks.v4.0.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Build.Utilities.v4.0.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\Microsoft.CSharp.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\Microsoft.JScript.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Owin.Cors.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Owin.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Owin.Security.Cookies.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Owin.Security.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Owin.Security.OAuth.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\Microsoft.VisualBasic.Compatibility.Data.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\Microsoft.VisualBasic.Compatibility.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\Microsoft.VisualBasic.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\Microsoft.VisualC.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\Microsoft.VisualC.STLCLR.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Web.Infrastructure.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\Newtonsoft.Json.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\Owin.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\PresentationBuildTasks.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\PresentationCore.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\PresentationFramework.Aero.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\PresentationFramework.Aero2.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\PresentationFramework.AeroLite.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\PresentationFramework.Classic.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\PresentationFramework.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\PresentationFramework.Luna.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\PresentationFramework.Royale.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\ReachFramework.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\StructureMap.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\sysglobl.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Activities.Core.Presentation.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Activities.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Activities.DurableInstancing.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Activities.Presentation.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.AddIn.Contract.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.AddIn.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Collections.Concurrent.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Collections.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.ComponentModel.Annotations.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.ComponentModel.Composition.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.ComponentModel.Composition.Registration.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.ComponentModel.DataAnnotations.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.ComponentModel.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.ComponentModel.EventBasedAsync.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Configuration.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Configuration.Install.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Data.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Data.Entity.Design.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Data.Entity.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Data.Linq.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Data.OracleClient.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Data.Services.Client.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Data.Services.Design.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Data.Services.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Data.SqlXml.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Deployment.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Design.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Device.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Diagnostics.Contracts.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Diagnostics.Debug.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Diagnostics.Tools.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Diagnostics.Tracing.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.DirectoryServices.AccountManagement.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.DirectoryServices.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.DirectoryServices.Protocols.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Drawing.Design.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Drawing.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Dynamic.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Dynamic.Runtime.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.EnterpriseServices.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Globalization.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.IO.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Linq.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Linq.Expressions.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Linq.Parallel.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Linq.Queryable.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Net.Http.Formatting.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Net.NetworkInformation.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Net.Primitives.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Net.Requests.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Net.WebHeaderCollection.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.ObjectModel.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Reflection.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Reflection.Emit.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Reflection.Emit.ILGeneration.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Reflection.Emit.Lightweight.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Reflection.Extensions.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Reflection.Primitives.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Resources.ResourceManager.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Runtime.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Runtime.Extensions.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Runtime.Handles.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Runtime.InteropServices.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Runtime.InteropServices.WindowsRuntime.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Runtime.Numerics.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Runtime.Serialization.Json.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Runtime.Serialization.Primitives.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Runtime.Serialization.Xml.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Security.Principal.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.ServiceModel.Duplex.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.ServiceModel.Http.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.ServiceModel.NetTcp.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.ServiceModel.Primitives.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.ServiceModel.Security.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Text.Encoding.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Text.Encoding.Extensions.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Text.RegularExpressions.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Threading.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Threading.Tasks.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Threading.Tasks.Parallel.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Threading.Timer.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Web.Cors.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Web.Helpers.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Web.Http.Cors.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Web.Http.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Web.Http.Owin.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Web.Http.WebHost.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Web.Mvc.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Web.Optimization.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Web.Razor.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Web.WebPages.Deployment.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Web.WebPages.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Web.WebPages.Razor.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Xml.ReaderWriter.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Xml.XDocument.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Xml.XmlSerializer.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\WebGrease.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Linq.Dynamic.dll
+C:\MGL-Logistics\AppMGL.Manager\bin\AppMGL.DAL.pdb
+C:\MGL-Logistics\AppMGL.Manager\bin\AppMGL.DTO.pdb
+C:\MGL-Logistics\AppMGL.Manager\bin\Antlr3.Runtime.pdb
+C:\MGL-Logistics\AppMGL.Manager\bin\AutoMapper.xml
+C:\MGL-Logistics\AppMGL.Manager\bin\EntityFramework.xml
+C:\MGL-Logistics\AppMGL.Manager\bin\EntityFramework.SqlServer.xml
+C:\MGL-Logistics\AppMGL.Manager\bin\Microsoft.AspNet.Identity.Core.xml
+C:\MGL-Logistics\AppMGL.Manager\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\MGL-Logistics\AppMGL.Manager\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Owin.xml
+C:\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Owin.Cors.xml
+C:\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Owin.Security.xml
+C:\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Owin.Security.Cookies.xml
+C:\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Owin.Security.OAuth.xml
+C:\MGL-Logistics\AppMGL.Manager\bin\Newtonsoft.Json.pdb
+C:\MGL-Logistics\AppMGL.Manager\bin\Newtonsoft.Json.xml
+C:\MGL-Logistics\AppMGL.Manager\bin\StructureMap.xml
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Net.Http.Formatting.xml
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Web.Helpers.xml
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Web.Http.xml
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Web.Http.Cors.xml
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Web.Http.Owin.xml
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Web.Http.WebHost.xml
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Web.Mvc.xml
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Web.Optimization.xml
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Web.Razor.xml
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Web.WebPages.xml
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Web.WebPages.Deployment.xml
+C:\MGL-Logistics\AppMGL.Manager\bin\System.Web.WebPages.Razor.xml
+C:\MGL-Logistics\AppMGL.Manager\obj\Debug\AppMGL.Manager.csprojResolveAssemblyReference.cache
+C:\MGL-Logistics\AppMGL.Manager\obj\Debug\AppMGL.Manager.dll
+C:\MGL-Logistics\AppMGL.Manager\obj\Debug\AppMGL.Manager.pdb
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\AppMGL.Manager.dll.config
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\AppMGL.Manager.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\AppMGL.Manager.pdb
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Antlr3.Runtime.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\AppMGL.DAL.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\AppMGL.DTO.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\AutoMapper.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\DevDefined.OAuth.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\EntityFramework.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\EntityFramework.SqlServer.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.Core.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.Data.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.DataService.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.Diagnostics.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.EntitlementService.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.Exception.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.GlobalTaxService.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.LinqExtender.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.OAuth2PlatformClient.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.PlatformService.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.QueryFilter.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.ReportService.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.Retry.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.Security.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.Utility.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.WebHooksService.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Microsoft.AspNet.Identity.Core.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Owin.Cors.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Owin.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Owin.Security.Cookies.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Owin.Security.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Owin.Security.OAuth.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Web.Infrastructure.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Newtonsoft.Json.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Owin.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\StructureMap.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\System.Net.Http.Formatting.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\System.Web.Cors.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\System.Web.Helpers.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\System.Web.Http.Cors.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\System.Web.Http.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\System.Web.Http.Owin.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\System.Web.Http.WebHost.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\System.Web.Mvc.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\System.Web.Optimization.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\System.Web.Razor.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\System.Web.WebPages.Deployment.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\System.Web.WebPages.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\System.Web.WebPages.Razor.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\WebGrease.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\System.Linq.Dynamic.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\AppMGL.DAL.pdb
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\AppMGL.DTO.pdb
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Antlr3.Runtime.pdb
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\AutoMapper.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\EntityFramework.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\EntityFramework.SqlServer.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.Core.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.Data.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.DataService.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.Diagnostics.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.EntitlementService.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.Exception.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.GlobalTaxService.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.LinqExtender.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.OAuth2PlatformClient.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.PlatformService.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.QueryFilter.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.ReportService.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.Retry.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.Security.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.Utility.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.WebHooksService.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Microsoft.AspNet.Identity.Core.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Owin.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Owin.Cors.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Owin.Security.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Owin.Security.Cookies.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Owin.Security.OAuth.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\Newtonsoft.Json.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\StructureMap.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\System.Net.Http.Formatting.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\System.Web.Helpers.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\System.Web.Http.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\System.Web.Http.Cors.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\System.Web.Http.Owin.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\System.Web.Http.WebHost.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\System.Web.Mvc.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\System.Web.Optimization.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\System.Web.Razor.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\System.Web.WebPages.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\System.Web.WebPages.Deployment.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\bin\System.Web.WebPages.Razor.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\obj\Debug\AppMGL.Manager.csprojResolveAssemblyReference.cache
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\obj\Debug\AppMGL.Manager.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Manager\obj\Debug\AppMGL.Manager.pdb
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\AppMGL.Manager.dll.config
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\AppMGL.Manager.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\AppMGL.Manager.pdb
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Antlr3.Runtime.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\AppMGL.DAL.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\AppMGL.DTO.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\AutoMapper.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\BouncyCastle.Crypto.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\ClosedXML.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\DevDefined.OAuth.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\DocumentFormat.OpenXml.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\EAGetMail.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\EntityFramework.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\EntityFramework.SqlServer.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\EPPlus.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\EPPlus.Interfaces.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\EPPlus.System.Drawing.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\ExcelNumberFormat.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.Core.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.Data.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.DataService.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.Diagnostics.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.EntitlementService.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.Exception.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.GlobalTaxService.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.LinqExtender.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.OAuth2PlatformClient.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.PlatformService.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.QueryFilter.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.ReportService.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.Retry.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.Security.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.Utility.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.WebHooksService.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\itextsharp.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Microsoft.AspNet.Identity.Core.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Exchange.WebServices.Auth.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Exchange.WebServices.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Owin.Cors.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Owin.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Owin.Security.Cookies.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Owin.Security.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Owin.Security.OAuth.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Web.Infrastructure.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Newtonsoft.Json.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Owin.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Renci.SshNet.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\StructureMap.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\System.IO.FileSystem.Primitives.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\System.IO.Packaging.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\System.Net.Http.Formatting.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\System.Web.Cors.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\System.Web.Helpers.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\System.Web.Http.Cors.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\System.Web.Http.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\System.Web.Http.Owin.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\System.Web.Http.WebHost.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\System.Web.Mvc.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\System.Web.Optimization.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\System.Web.Razor.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\System.Web.WebPages.Deployment.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\System.Web.WebPages.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\System.Web.WebPages.Razor.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\WebGrease.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\System.Linq.Dynamic.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Microsoft.IdentityModel.Extensions.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\System.Data.SqlServerCe.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\AppMGL.DAL.pdb
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\AppMGL.DTO.pdb
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Antlr3.Runtime.pdb
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\AutoMapper.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\ClosedXML.pdb
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\ClosedXML.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\DocumentFormat.OpenXml.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\EntityFramework.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\EntityFramework.SqlServer.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\EPPlus.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\ExcelNumberFormat.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.Core.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.Data.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.DataService.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.Diagnostics.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.EntitlementService.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.Exception.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.GlobalTaxService.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.LinqExtender.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.OAuth2PlatformClient.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.PlatformService.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.QueryFilter.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.ReportService.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.Retry.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.Security.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.Utility.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Intuit.Ipp.WebHooksService.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\itextsharp.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Microsoft.AspNet.Identity.Core.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Exchange.WebServices.pdb
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Exchange.WebServices.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Exchange.WebServices.Auth.pdb
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Microsoft.Exchange.WebServices.Auth.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Newtonsoft.Json.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\Renci.SshNet.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\StructureMap.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\System.Web.Helpers.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\System.Web.Http.Owin.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\System.Web.Http.WebHost.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\System.Web.Optimization.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\System.Web.Razor.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\System.Web.WebPages.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\System.Web.WebPages.Deployment.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\System.Web.WebPages.Razor.xml
+F:\New folder\MGL-Logistics\AppMGL.Manager\obj\Debug\AppMGL.Manager.csprojResolveAssemblyReference.cache
+F:\New folder\MGL-Logistics\AppMGL.Manager\obj\Debug\AppMGL.Manager.dll
+F:\New folder\MGL-Logistics\AppMGL.Manager\obj\Debug\AppMGL.Manager.pdb
+F:\New folder\MGL-Logistics\AppMGL.Manager\bin\EASendMail.dll

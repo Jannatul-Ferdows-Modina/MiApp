@@ -1,0 +1,93 @@
+﻿<ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+    <p>&nbsp;</p>
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Unit Code</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="sitCode" ng-model="entity.sitCode" maxlength="50" input-text="CODE" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Name</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="sitName" ng-model="entity.sitName" maxlength="200" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Type</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <select class="form-control" name="sitType" ng-model="entity.sitType" ng-options="t.sitTypeId as t.sitTypeName for t in lookups.siteTypes" ng-disabled="disabledUpdate" ng-required="requiredUpdate"></select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Reason</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="sitReason" ng-model="entity.sitReason" maxlength="200" ng-disabled="disabledUpdate" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Status</label>
+        <div class="col-sm-4 checkbox-control">
+            <input type="checkbox" name="sitStatus" ng-model="entity.sitStatus" ng-disabled="disabledUpdate" />
+        </div>
+    </div>
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">Location</h3>
+            <div class="box-tools pull-right">
+                <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Address</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="lcnAddress1" ng-model="entity.location.lcnAddress1" maxlength="1000" ng-disabled="disabledUpdate" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-4">
+                    <input type="text" class="form-control" name="lcnAddress2" ng-model="entity.location.lcnAddress2" maxlength="1000" ng-disabled="disabledUpdate" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-4">
+                    <input type="text" class="form-control" name="lcnAddress3" ng-model="entity.location.lcnAddress3" maxlength="1000" ng-disabled="disabledUpdate" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">City</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="lcnCity" ng-model="entity.location.lcnCity" maxlength="100" ng-disabled="disabledUpdate" />
+                </div>
+                <label class="col-sm-2 control-label">Zip Code</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control text-left" name="lcnPostalCode" ng-model="entity.location.lcnPostalCode" ng-disabled="disabledUpdate" input-number="false" max-digit="10" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Country</label>
+                <div class="col-sm-4">
+                    <select class="form-control" name="cryId" ng-model="entity.location.cryId" ng-options="t.cryId as t.cryName for t in lookups.countries" ng-disabled="disabledUpdate" ng-change="changeCountry(entity.location.cryId)"></select>
+                </div>
+                <label class="col-sm-2 control-label">State</label>
+                <div class="col-sm-4" ng-show="entity.location.cryId==171">
+                    <select class="form-control" name="ustId" ng-model="entity.location.ustId" ng-options="t.ustId as t.ustName for t in lookups.states" ng-disabled="disabledUpdate"></select>
+                </div>
+                <div class="col-sm-4" ng-hide="entity.location.cryId==171">
+                    <input type="text" class="form-control" name="lcnForiegnProvince" ng-model="entity.location.lcnForiegnProvince" maxlength="100" ng-disabled="disabledUpdate" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Phone</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" style="width: 70%; display: inline;" name="lcnPhone" ng-model="entity.location.lcnPhone" ng-disabled="disabledUpdate" ui-mask="(999) 999-9999" />
+                    <input type="text" class="form-control" style="width: 29%; display: inline;" name="lcnPhoneExt" ng-model="entity.location.lcnPhoneExt" maxlength="10" ng-disabled="disabledUpdate" />
+                </div>
+                <label class="col-sm-2 control-label">Fax</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="lcnFax" ng-model="entity.location.lcnFax" ng-disabled="disabledUpdate" ui-mask="(999) 999-9999" />
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-form>

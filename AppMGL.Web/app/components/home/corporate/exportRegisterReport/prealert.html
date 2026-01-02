@@ -1,0 +1,116 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title"> Email </h3>
+</div>
+<div class="modal-body form-horizontal detail-container" when-ready="filterModalLoaded()" wait-for-interpolation="true">
+    <ng-form class="form-horizontal detail-container" name="form.emaildetail" novalidate="novalidate">
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title"></h3>
+                <div class="box-tools pull-right">
+                    <!--<button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>-->
+                   
+                        <button type="button" class="btn btn-default" ng-click="select('close')" action="select">Close</button>
+                   
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="form-group">
+                    <label class="col-sm-1 text-left control-label">Email To</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="fileNo" ng-model="emaildetail[0].emailTo" />
+                    </div>
+                    </div>
+                <div class="form-group">
+                    <label class="col-sm-1 text-left control-label">Email BCC</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="bookingNo" ng-model="emaildetail[0].emailBcc"  />
+                    </div>
+                   </div>
+                <div class="form-group">
+                    <label class="col-sm-1 text-left control-label">Email CC</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="companyName" ng-model="emaildetail[0].emailcc"  />
+                    </div>
+                   </div>
+                <div class="form-group">
+                    <label class="col-sm-1 text-left control-label">Subject</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="companyName" ng-model="emaildetail[0].emailSubject"  />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label ">Add External attachments</label>
+                    <div class="col-sm-6">
+                        <input type="file" ngf-select ng-model="emaildetail[0].fileAttachementDTOList" multiple name="file"  />
+                    </div>
+
+                    <div class="col-sm-1">
+                        <button class="btn btn-sm btn-primary" ng-click="saveDocumentAttachementPreAlert()" action="save">
+                            Upload
+                        </button>
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <!--<label class="col-sm-1 control-label">Email Body</label>
+                   
+                    <div class="col-sm-15" ckeditor="ckOptions" ng-bind-html="emaildetail[0].emailBody | trustHtml">
+
+                    </div>-->
+                    <div class="col-sm-15">
+                      
+                        <table  class="table table-striped table-bordered table-hover " template-pagination="customPager">
+                            <thead>
+                                <tr class="bg-thead">
+                                    <th class="text-left  hidden-xs">Document Name</th>
+                                    <th class="list-actions">Document Type</th>
+                                    <th class="list-actions">Delete</th>
+                                    <!--<th class="list-actions">Download</th>-->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="shipmentDoc in emaildetail[0].shipmentDocsDTOList">
+                                    <td>
+                                        {{shipmentDoc.docName}}
+                                    </td>
+                                    <td>
+                                        {{shipmentDoc.documentType}}
+                                        <!--{{shipmentDoc.createdDate | date:'MM/dd/yyyy'}}-->
+                                    </td>
+                                    <td>
+                                        <!--<button type="button" class="btn btn-xs btn-danger" ng-click="deleteattachement($index,shipmentDoc.documentCommonID,shipmentDoc.docName,shipmentDoc.documentType,shipmentDoc.isSysGenerated)" uib-tooltip="Delete" ng-disabled="disabledUpdate" ng-show="{{shipmentDoc.isSysGenerated == false}}"><i class="fa fa-remove"></i></button>-->
+                                        <button type="button" class="btn btn-xs btn-danger" ng-click="deleteattachement(shipmentDoc.docName ,shipmentDoc.documentType)" uib-tooltip="Delete" ng-disabled="disabledUpdate"><i class="fa fa-remove"></i></button>
+                                        <button type="button" class="btn btn-xs btn-primary" ng-click="downloadAttachmentPreAlert(shipmentDoc.documentCommonID,shipmentDoc.docName,shipmentDoc.documentType,shipmentDoc.isSysGenerated)" uib-tooltip="Download" ><i class="fa fa-download"></i></button>
+                                    </td>
+                                   
+                                        
+                                    
+                                </tr>
+                                <tr ng-if="params.total() == 0">
+                                    <td class="text-center text-italic" colspan="5">No Record(s) Found</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                        <label class="col-sm-1 control-label">Body :</label>
+                        <div class="col-sm-11">
+                            <div class="form-control" name="emailMessage" ckeditor="ckOptions"  ng-model="emaildetail[0].emailBody" maxlength="8000"></div>
+                        </div>
+
+
+
+                </div>
+               
+            </div>
+        </div>       
+    </ng-form>
+</div>
+<div class="modal-footer">
+    <div class="pull-right">
+        <button type="button" class="btn btn-default" ng-click="sendprealertemail()" action="select">Send Email</button>
+        <button type="button" class="btn btn-default" ng-click="select('close')" action="select">Close</button>
+    </div>
+</div>
+

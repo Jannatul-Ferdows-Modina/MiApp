@@ -1,0 +1,36 @@
+﻿    <div class="modal-header">
+        <h3 class="modal-title"><span ng-show="isNew">Create New</span><span ng-hide="isNew">Edit</span> Continent/Region</h3>
+    </div>
+    <div class="modal-body form-horizontal detail-container" when-ready="filterModalLoaded()" wait-for-interpolation="true">
+        <ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+            <div class="form-group">
+                <label class="col-sm-2 control-label {{requiredInsert ? 'required' : ''}}">Continent Id</label>
+                <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+                    <input type="text" class="form-control" name="continentId" ng-model="entity.continentId" disabled="disabled" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Continent</label>
+                <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+                    <input type="text" class="form-control" name="name" ng-model="entity.name" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Description</label>
+                <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+                    <select class="form-control" name="description" ng-model="entity.description" ng-disabled="disabledUpdate" ng-required="requiredUpdate" ></select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">IsActive</label>
+                <div class="col-sm-4 checkbox-control">
+                    <input type="checkbox" name="isActive" ng-model="entity.isActive" ng-disabled="disabledUpdate" />
+                </div>
+            </div>
+        </ng-form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-sm btn-primary" ng-click="performAction($event)" action="save">Save</button>
+        <button class="btn btn-sm btn-default" ng-click="performAction($event)" action="cancel">Cancel</button>
+    </div>
+

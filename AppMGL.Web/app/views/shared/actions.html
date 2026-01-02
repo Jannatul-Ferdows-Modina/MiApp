@@ -1,0 +1,24 @@
+﻿<div ng-show="viewList" id="divAdd">
+    <button name="btnAdd" type="button" class="btn btn-sm btn-primary" ng-click="performAction($event, true)" show-action="10" action="add" entityid="0"><i class="fa fa-pencil"></i> Add {{pageTitle}}</button>
+    <button ng-hide="true" type="button" class="btn btn-sm btn-info" ng-click="actionList($event)" action="filterList" uib-tooltip="Filter"><i class="fa fa-search"></i> <span class="hidden-xs">Filter</span></button>
+    <button ng-hide="true" type="button" class="btn btn-sm btn-info" ng-click="actionList($event)" action="refreshList" uib-tooltip="Refresh"><i class="fa fa-refresh"></i> <span class="hidden-xs">Refresh</span></button>
+</div>
+<div ng-hide="viewList">
+    <div ng-hide="editMode">
+        <button type="button" class="btn btn-sm btn-info" ng-click="goBack()"><i class="fa fa-circle-arrow-left"></i> Back</button>
+        <div class="inline" ng-show="isTab0">
+            <button type="button" class="btn btn-sm btn-primary" ng-click="performAction($event, false)" show-action="20" action="edit"><i class="fa fa-edit"></i> Edit</button>
+            <div class="btn-group" uib-dropdown>
+                <button type="button" class="btn btn-sm btn-primary" status-id="entity.statusId" uib-dropdown-toggle><span class="fa fa-ellipsis-h"></span></button>
+                <ul class="dropdown-menu" list-action="true">
+                    <li class="list-sm" ng-click="performAction($event, false)" show-action="30" action="delete"><a><i class="fa fa-remove"></i> Delete</a></li>
+                    <li class="list-sm" ng-click="performAction($event, false)" show-action="80" action="resetPassword"><a><i class="fa fa-key"></i> Resend Email</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div ng-show="editMode">
+        <button type="button" class="btn btn-sm btn-primary" ng-click="performAction($event, false)" action="save"><i class="fa fa-floppy-o"></i> Save</button>
+        <button type="button" class="btn btn-sm btn-default" ng-click="performAction($event, false)" action="cancel">Cancel</button>
+    </div>
+</div>

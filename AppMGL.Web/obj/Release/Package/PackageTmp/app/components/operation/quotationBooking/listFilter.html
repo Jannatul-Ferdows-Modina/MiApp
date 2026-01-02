@@ -1,0 +1,28 @@
+﻿<div class="box-container form-horizontal detail-container">
+    <div class="form-group">
+        <div class="col-sm-1">
+            <label class="col-sm-2 control-label">Select</label>
+        </div>
+        <div class="col-sm-4">
+            <select class="form-control" name="searchOption" ng-model="selectOption" ng-options="item.optionValue as item.optionName for item in searchOptions"></select>
+        </div>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="searchBox" ng-model="searchBox" maxlength="100" uib-typeahead="o.name for o in searchValues($viewValue,selectOption)" />
+        </div>
+        <div class="col-sm-3">
+            <div class="pull-right">
+                <button class="btn btn-sm btn-primary" ng-click="performQuotationSearch($event,selectOption,searchBox)" action="search">Search</button>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-8">            
+                <ul>                                        
+                    <li style="color:green">To send Quotation in Booking Queue , select the check box and click on "Send for Booking To Do Queue” button</li>
+                </ul>             
+        </div>
+        <div class="col-sm-4">
+            <span>&nbsp;</span>
+        </div>
+    </div>
+</div>

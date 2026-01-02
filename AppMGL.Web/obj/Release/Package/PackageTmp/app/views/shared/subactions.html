@@ -1,0 +1,11 @@
+﻿<div>
+    <div ng-hide="editModeSub">
+        <button class="btn btn-sm btn-primary" ng-click="performSubAction($event, null)" action="addC">Add</button>
+        <button class="btn btn-sm btn-primary" ng-click="performSubAction($event, null)" action="editC" disabled="disabled">Edit</button>
+        <button class="btn btn-sm btn-primary" ng-click="performSubAction($event, null)" action="deleteC" disabled="disabled">Delete</button>
+    </div>
+    <div ng-show="editModeSub">
+        <button class="btn btn-sm btn-primary" ng-click="performSubAction($event, null)" action="saveC">Save</button>
+        <button class="btn btn-sm btn-default" ng-click="performSubAction($event, null)" action="cancelC">Cancel</button>
+    </div>
+</div>

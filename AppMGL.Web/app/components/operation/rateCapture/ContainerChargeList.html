@@ -1,0 +1,39 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title"><span>Container Detail</span></h3>
+</div>
+<div class="modal-body form-horizontal detail-container" when-ready="filterModalLoaded()" wait-for-interpolation="true">
+    <ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+        <p>&nbsp;</p>
+        <!--<div ng-show="containerChargesList.length > 0">-->
+            <table class="table table-striped table-bordered table-hover " template-pagination="none">
+                <thead>
+                    <tr class="bg-thead">
+                        <th class="text-left  hidden-xs">Container Category</th>
+                        <th class="text-left  hidden-xs">Continer Size</th>
+                        <th class="text-left  hidden-xs">Total Buying Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="containerItem in containermodelChargesList">
+                        <td>
+                            {{containerItem.categoryName}}
+                        </td>
+                        <td>
+                            {{containerItem.containerName}}
+                        </td>
+                        <td>
+                            {{containerItem.total}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        <!--</div>-->
+    </ng-form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-sm btn-default" ng-click="closeModel('close')" action="cancel">Close</button>
+</div>
+
+
+
+

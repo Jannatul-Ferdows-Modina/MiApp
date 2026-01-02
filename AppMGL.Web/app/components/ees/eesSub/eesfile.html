@@ -1,0 +1,602 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title"> File Generate</h3>
+</div>
+<div class="modal-body form-horizontal detail-container" when-ready="filterModalLoaded()" wait-for-interpolation="true">
+    <ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title">(Input A Record)</h3>
+                <div class="box-tools pull-right">
+                    <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label">Filer ID</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="fileNo" ng-model="entity.FilerID" ng-disabled="false" />
+                    </div>
+                    
+                    <label class="col-sm-2 control-label">Application Identifier</label>
+                    <div class="col-sm-2">
+                        <input type="text" value="X" class="form-control" name="companyName" ng-model="entity.ApplicationIdentifier" ng-disabled="false" readonly />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label">Filer ID Type</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="bookingNo" ng-model="entity.FilerIDType" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">Transmitter Date</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="InquiryNo" ng-model="entity.TransmitterDate" ng-disabled="false" />
+                    </div>
+                    
+                    <div class="col-sm-4">
+                        &nbsp;
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title">Input Z Record</h3>
+                <div class="box-tools pull-right">
+                    <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label">Filer ID</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="shippingLine" ng-model="entity.FilerIDZ" ng-disabled="false" />
+                    </div>
+                    
+                    <label class="col-sm-2 text-right control-label">Application Identifier</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" value="XP" name="galBookingType" ng-model="entity.ApplicationIdentifierZ" ng-disabled="false" />
+                    </div>
+                    
+                    <label class="col-sm-2 text-right control-label">Batch Control Number</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" value="XP" name="galBookingType" ng-model="entity.BatchControlNumberZ" ng-disabled="false" />
+                    </div>
+                   
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label">Filer ID Type</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="commodity" ng-model="entity.FilerIDTypeZ" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">Transmitter Date</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" value="XP" name="galBookingType" ng-model="entity.TransmitterDateZ" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">Transmitter ID</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" value="XP" name="galBookingType" ng-model="entity.TransmitterIDZ" ng-disabled="false" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title">(Input B Record)</h3>
+                <div class="box-tools pull-right">
+                    <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label">USPPI ID </label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="containerName" ng-model="entity.USPPIIDB" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">USPPI Name</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="sealNo" ng-model="entity.USPPINameB" ng-disabled="false" />
+                    </div>
+                    <div class="col-sm-4">
+                        &nbsp;
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label">USPPI ID Type </label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="cntNo" ng-model="entity.USPPIIDTypeB" ng-disabled="false" />
+                    </div>
+                    
+                    
+                    <div class="col-sm-4">
+                        &nbsp;
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title">Input Y Record</h3>
+                <div class="box-tools pull-right">
+                    <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label">USPPI ID</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="origin" ng-model="entity.USPPIIDY" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">USPPI Name</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="railRamp" ng-model="entity.USPPINameY" ng-disabled="false" />
+                    </div>
+                    <div class="col-sm-4">
+                        &nbsp;
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label">USPPI ID Type</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="portOfOrigin" ng-model="entity.USPPIIDTypeY" ng-disabled="false" />
+                    </div>
+                   
+                    <div class="col-sm-4">
+                        &nbsp;
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title">(Input SC1 Record)</h3>
+                <div class="box-tools pull-right">
+                    <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label">Related Company Indicator</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="bookingStatus" ng-model="entity.RelatedCompanyIndicatorSC1" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">Country of Ultimate Destination Code</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="documentationStatus" ng-model="entity.CountryofUltimateDestinationCodeSC1" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">Carrier ID </label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="documentationStatus" ng-model="entity.CarrierIDSC1" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">Shipment Filing  Action Request Indicator </label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="documentationStatus" ng-model="entity.ShipmentFilingActionRequestIndicatorSC1" ng-disabled="false" />
+                    </div>
+
+                    <label class="col-sm-2 text-right control-label">Filing Option Indicator </label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="documentationStatus" ng-model="entity.FilingOptionIndicatorSC1" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">Port of Unlading Code</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="documentationStatus" ng-model="entity.PortofUnladingCode" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">Estimated Date of Export</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="documentationStatus" ng-model="entity.EstimatedDateofExport" ng-disabled="false" />
+                    </div>
+                    <div class="col-sm-4">
+                        &nbsp;
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Mode of Transportation Code</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" maxlength="250" name="lastRemarks" ng-model="entity.ModeofTransportationCodeSC1" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 control-label">U.S. State of OriginCode</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="lastRemarkDate" ng-model="entity.USStateofOriginCodeSC1" ng-disabled="true" input-date="true" show-time="false" />
+                    </div>
+                    <label class="col-sm-2 control-label">Shipment Reference Number</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="blNumber" ng-model="entity.ShipmentReferenceNumberSC1" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 control-label">Conveyance Name/Carrier Name</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="blNumber" ng-model="entity.ConveyanceNameSC1" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 control-label">AEI Filing Type</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="blNumber" ng-model="entity.AEIFilingTypeSC1" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 control-label">Port of Exportation Code</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="blNumber" ng-model="entity.PortofExportationCode" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 control-label">Hazardous Material Indicator (HAZMAT)</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="blNumber" ng-model="entity.HazardousMaterialIndicatorSC1" ng-disabled="false" />
+                    </div>
+
+                    
+
+                </div>
+            </div>
+        </div>
+
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title">Input SC2 Record</h3>
+                <div class="box-tools pull-right">
+                    <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label">Inbond Code</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="bookingDate" ng-model="entity.InbondCodeSC2" ng-disabled="true" input-date="true" show-time="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">Foreign Trade Zone Identifier</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="earliestPickUpDate" ng-model="entity.ForeignTradeZoneIdentifierSC2" ng-disabled="true" input-date="true" show-time="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">Original ITN </label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="erd" ng-model="entity.OriginalITNSC2" ng-disabled="true" input-date="true" show-time="false" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label">Entry Number</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="rampCutOff" ng-model="entity.EntryNumberSC2" ng-disabled="false" input-date="true" show-time="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">Routed Export Transaction Indicator</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="autoCutOff" ng-model="entity.RoutedExportTransactionIndicatorSC2" ng-disabled="true" input-date="true" show-time="false" />
+                    </div>
+                   
+                </div>
+
+               
+            </div>
+        </div>
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title">Input SC3 Record</h3>
+                <div class="box-tools pull-right">
+                    <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label"> Equipment Number</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="transporter" ng-model="entity.EquipmentNumberSC3" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label"> Transportation Reference Number</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="contactPerson" ng-model="entity.TransportationReferenceNumberSC3" ng-disabled="false" />
+                    </div>
+                    
+
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label">Seal Number</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="cutOffDate" ng-model="entity.SealNumberSC3" ng-disabled="false" input-date="true" show-time="false" />
+                    </div>
+                    
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title">Input N01 Record</h3>
+                <div class="box-tools pull-right">
+                    <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label"> Party ID</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="transporter" ng-model="entity.PartyIDN01" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label"> Party Type</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="contactPerson" ng-model="entity.PartyTypeN01" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label"> Contact First Name</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="contactPerson" ng-model="entity.ContactFirstNameN01" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label"> To Be Sold en Route Indicator </label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="contactPerson" ng-model="entity.RouteIndicatorN01" ng-disabled="false" />
+                    </div>
+                    
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label">Party ID Type</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="cutOffDate" ng-model="entity.PartyIDTypeN01" ng-disabled="false" input-date="true" show-time="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">Party Name</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="cutOffDate" ng-model="entity.PartyNameN01" ng-disabled="false" input-date="true" show-time="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">Contact Last Name</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="cutOffDate" ng-model="entity.ContactLastNameN01" ng-disabled="false" input-date="true" show-time="false" />
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title">Input N02 Record</h3>
+                <div class="box-tools pull-right">
+                    <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label"> Address Line 1</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="transporter" ng-model="entity.AddressLine1N02" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label"> Contact Phone Number</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="contactPerson" ng-model="entity.ContactPhoneNumberN02" ng-disabled="false" />
+                    </div>
+                    
+
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label">Address Line 2</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="cutOffDate" ng-model="entity.AddressLine2N02" ng-disabled="false" input-date="true" show-time="false" />
+                    </div>
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title">Input N03 Record</h3>
+                <div class="box-tools pull-right">
+                    <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label"> City</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="transporter" ng-model="entity.CityN03" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label"> Country Code</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="contactPerson" ng-model="entity.CountryCodeN03" ng-disabled="false" />
+                    </div>
+
+                    <label class="col-sm-2 text-right control-label"> USPPI IRS Number</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="contactPerson" ng-model="entity.USPPIIRSNumberN03" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label"> Ultimate Consignee Type</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="contactPerson" ng-model="entity.UltimateConsigneeTypeN03" ng-disabled="false" />
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label">State Code</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="cutOffDate" ng-model="entity.StateCodeN03" ng-disabled="false" input-date="true" show-time="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">Postal Code</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="cutOffDate" ng-model="entity.PostalCodeN03" ng-disabled="false" input-date="true" show-time="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label"> USPPI IRS ID Type</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="contactPerson" ng-model="entity.USPPIIRSIDTypeNo3" ng-disabled="false" />
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title">Input CL1 Record</h3>
+                <div class="box-tools pull-right">
+                    <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label"> Export Information Code</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="transporter" ng-model="entity.ExportInformationCodeCL1" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label"> Commodity Description</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="contactPerson" ng-model="entity.CommodityDescriptionCL1" ng-disabled="false" />
+                    </div>
+
+                    <label class="col-sm-2 text-right control-label"> Line Item Filing Action Request Indicator</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="contactPerson" ng-model="entity.ActionRequestIndicatorCL1" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label"> Foreign/Domestic Origin Indicator</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="contactPerson" ng-model="entity.DomesticOriginIndicatorCL1" ng-disabled="false" />
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label">Line Number</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="cutOffDate" ng-model="entity.LineNumberCL1" ng-disabled="false" input-date="true" show-time="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">License Value </label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="cutOffDate" ng-model="entity.LicenseValueCL1" ng-disabled="false" input-date="true" show-time="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label"> License Code/License Exemption Code</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="contactPerson" ng-model="entity.LicenseExemptionCodeCL1" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label"> Additional PGA Data Required Indicator</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="contactPerson" ng-model="entity.PGADataCL1" ng-disabled="false" />
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title">Input CL2 Record</h3>
+                <div class="box-tools pull-right">
+                    <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label"> Schedule B/HTS Number</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="transporter" ng-model="entity.HTSNumberCL2" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label"> Quantity</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="contactPerson" ng-model="entity.QuantityCL2" ng-disabled="false" />
+                    </div>
+
+                    <label class="col-sm-2 text-right control-label"> Value of Goods</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="contactPerson" ng-model="entity.ValueofGoodsCL2" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label"> Unit of Measure (2)</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="contactPerson" ng-model="entity.UnitofMeasure2CL2" ng-disabled="false" />
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label">Unit of Measure</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="cutOffDate" ng-model="entity.UnitofMeasureCL2" ng-disabled="false" input-date="true" show-time="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">Shipping Weight </label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="cutOffDate" ng-model="entity.ShippingWeightCL2" ng-disabled="false" input-date="true" show-time="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label"> Export Control Classification Number (ECCN)</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="contactPerson" ng-model="entity.ECCNCL2" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label"> Export License Number/CFR Citation/Authorization Symbol/KCP#/ACM#/OFAC</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="contactPerson" ng-model="entity.CFRCitationCL2" ng-disabled="false" />
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title">DDTC Detail (Input ODT Record)</h3>
+                <div class="box-tools pull-right">
+                    <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label"> DDTC ITAR Exemption Number</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="transporter" ng-model="entity.DDTCITARExemptionNumberODT" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label"> DDTC Significant Military Equipment(SME) Indicator</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="contactPerson" ng-model="entity.SMEODT" ng-disabled="false" />
+                    </div>
+
+                    <label class="col-sm-2 text-right control-label"> DDTC USML Category Code</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="contactPerson" ng-model="entity.USMLCCodeODT" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label"> DDTC Quantity</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="contactPerson" ng-model="entity.DDTCQuantityODT" ng-disabled="false" />
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label">DDTC Registration Number</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="cutOffDate" ng-model="entity.DDTCRegistrationNumberODT" ng-disabled="false" input-date="true" show-time="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">DDTC Eligible Party Certification Indicator </label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="cutOffDate" ng-model="entity.EPCIODT" ng-disabled="false" input-date="true" show-time="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label"> DDTC Unit of Measure Code</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="contactPerson" ng-model="entity.DDTCUMCOdeODT" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label"> DDTC License Line Number</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="contactPerson" ng-model="entity.DDTCLLNUMBERODT" ng-disabled="false" />
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </ng-form>
+</div>
+<div class="modal-footer">
+    <div class="pull-right">
+
+        <button type="button" class="btn btn-default" action="update">AES Submission</button>
+        <button type="button" class="btn btn-default" ng-click="select('close')" action="select">Close</button>
+
+    </div>
+</div>
+

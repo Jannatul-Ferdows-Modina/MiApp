@@ -1,0 +1,23 @@
+﻿<div class="modal-header">
+
+    <h3 class="modal-title" id="headercopy" ng-if="cancel == 1"> Action  </h3>
+</div>
+<div class="modal-body form-horizontal detail-container" when-ready="filterModalLoaded()" wait-for-interpolation="true">
+    <ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+        <div id="divcopy" ng-if="cancel == 1">
+            <div class="form-group">
+
+                <label id="lblcopy" class="col-sm-12 control-label">{{msg}}</label>
+            </div>
+        </div>
+      
+    </ng-form>
+</div>
+<div class="modal-footer">
+    <div ng-if="cancel == 1">
+      
+        <button type="button" class="btn btn-default" ng-click="select('close')" action="select">Close</button>
+    </div>
+    
+</div>
+

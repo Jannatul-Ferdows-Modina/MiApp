@@ -1,0 +1,590 @@
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 10:50:50.8408 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Validate access token
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 10:50:50.8408 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Validate access token OK No
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 10:52:27.2445 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Validate access token
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 10:52:27.2445 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Validate access token OK
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 10:52:40.4129 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Dasboard id 138
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 10:52:44.6034 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : GetSiteLocations data 13
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 10:52:44.6346 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Dasboard id data0
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 10:52:58.4489 AM
+ENTRY TYPE  : Error
+SOURCE      : EntityFramework
+MESSAGE     : The method 'First' can only be used as a final query operation. Consider using the method 'FirstOrDefault' in this instance instead.
+STACK TRACE :    at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.FirstTranslator.TranslateUnary(ExpressionConverter parent, DbExpression operand, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input, DbExpressionBinding& binding)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SelectTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at AppMGL.Manager.Areas.DataManagement.Controllers.SIPLUserController.Lookup(ListParams listParams) in F:\New folder\MGL-Logistics\AppMGL.Manager\Areas\Setup\Controllers\SIPLUserController.cs:line 36
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 10:52:58.6825 AM
+ENTRY TYPE  : Error
+SOURCE      : EntityFramework
+MESSAGE     : The argument 'sql' cannot be null, empty or contain only white space.
+STACK TRACE :    at System.Data.Entity.Utilities.Check.NotEmpty(String value, String parameterName)
+   at System.Data.Entity.Database.ExecuteSqlCommand(TransactionalBehavior transactionalBehavior, String sql, Object[] parameters)
+   at System.Data.Entity.Database.ExecuteSqlCommand(String sql, Object[] parameters)
+   at AppMGL.DAL.Models.AppMGL.ExecuteCommand(String sqlCommand, Object[] parameters) in F:\New folder\MGL-Logistics\AppMGL.DAL\AppMGL.cs:line 455
+   at AppMGL.DAL.Repository`1.ExecuteCommand(String sqlCommand, Object[] parameters) in F:\New folder\MGL-Logistics\AppMGL.DAL\Repository.cs:line 112
+   at AppMGL.Manager.Infrastructure.BaseController`3.InsertErrorLog(Exception ex) in F:\New folder\MGL-Logistics\AppMGL.Manager\Infrastructure\BaseController.cs:line 270
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 10:53:56.6590 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Dasboard id 138
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 10:53:56.7268 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : GetSiteLocations data 13
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 10:53:59.5156 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Dasboard id data0
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 10:54:47.4575 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Dasboard id 138
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 10:54:47.5362 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : GetSiteLocations data 13
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 10:54:50.3082 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Dasboard id data0
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 10:55:30.5497 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Dasboard id 138
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 10:55:30.6358 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : GetSiteLocations data 13
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 10:55:32.9888 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Dasboard id data0
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 10:56:00.6883 AM
+ENTRY TYPE  : Error
+SOURCE      : EntityFramework
+MESSAGE     : The method 'First' can only be used as a final query operation. Consider using the method 'FirstOrDefault' in this instance instead.
+STACK TRACE :    at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.FirstTranslator.TranslateUnary(ExpressionConverter parent, DbExpression operand, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input, DbExpressionBinding& binding)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SelectTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at AppMGL.Manager.Areas.DataManagement.Controllers.SIPLUserController.Lookup(ListParams listParams) in F:\New folder\MGL-Logistics\AppMGL.Manager\Areas\Setup\Controllers\SIPLUserController.cs:line 36
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 10:56:00.7879 AM
+ENTRY TYPE  : Error
+SOURCE      : EntityFramework
+MESSAGE     : The argument 'sql' cannot be null, empty or contain only white space.
+STACK TRACE :    at System.Data.Entity.Utilities.Check.NotEmpty(String value, String parameterName)
+   at System.Data.Entity.Database.ExecuteSqlCommand(TransactionalBehavior transactionalBehavior, String sql, Object[] parameters)
+   at System.Data.Entity.Database.ExecuteSqlCommand(String sql, Object[] parameters)
+   at AppMGL.DAL.Models.AppMGL.ExecuteCommand(String sqlCommand, Object[] parameters) in F:\New folder\MGL-Logistics\AppMGL.DAL\AppMGL.cs:line 455
+   at AppMGL.DAL.Repository`1.ExecuteCommand(String sqlCommand, Object[] parameters) in F:\New folder\MGL-Logistics\AppMGL.DAL\Repository.cs:line 112
+   at AppMGL.Manager.Infrastructure.BaseController`3.InsertErrorLog(Exception ex) in F:\New folder\MGL-Logistics\AppMGL.Manager\Infrastructure\BaseController.cs:line 270
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:01:30.7689 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Validate access token
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:01:30.8158 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Validate access token OK
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:01:30.8627 AM
+ENTRY TYPE  : Error
+SOURCE      : EntityFramework
+MESSAGE     : The method 'First' can only be used as a final query operation. Consider using the method 'FirstOrDefault' in this instance instead.
+STACK TRACE :    at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.FirstTranslator.TranslateUnary(ExpressionConverter parent, DbExpression operand, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input, DbExpressionBinding& binding)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SelectTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at AppMGL.Manager.Areas.DataManagement.Controllers.SIPLUserController.Lookup(ListParams listParams) in F:\New folder\MGL-Logistics\AppMGL.Manager\Areas\Setup\Controllers\SIPLUserController.cs:line 36
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:01:30.9384 AM
+ENTRY TYPE  : Error
+SOURCE      : EntityFramework
+MESSAGE     : The argument 'sql' cannot be null, empty or contain only white space.
+STACK TRACE :    at System.Data.Entity.Utilities.Check.NotEmpty(String value, String parameterName)
+   at System.Data.Entity.Database.ExecuteSqlCommand(TransactionalBehavior transactionalBehavior, String sql, Object[] parameters)
+   at System.Data.Entity.Database.ExecuteSqlCommand(String sql, Object[] parameters)
+   at AppMGL.DAL.Models.AppMGL.ExecuteCommand(String sqlCommand, Object[] parameters) in F:\New folder\MGL-Logistics\AppMGL.DAL\AppMGL.cs:line 455
+   at AppMGL.DAL.Repository`1.ExecuteCommand(String sqlCommand, Object[] parameters) in F:\New folder\MGL-Logistics\AppMGL.DAL\Repository.cs:line 112
+   at AppMGL.Manager.Infrastructure.BaseController`3.InsertErrorLog(Exception ex) in F:\New folder\MGL-Logistics\AppMGL.Manager\Infrastructure\BaseController.cs:line 270
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:02:14.6147 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Dasboard id 138
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:02:14.9847 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : GetSiteLocations data 13
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:02:20.1259 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Dasboard id data0
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:03:31.5808 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Validate access token
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:03:31.5808 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Validate access token OK
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:03:48.2535 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : GetSiteLocations data 13
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:03:52.6669 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Dasboard id 0
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:03:53.1287 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Dasboard id data0
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:07:17.9257 AM
+ENTRY TYPE  : Error
+SOURCE      : EntityFramework
+MESSAGE     : The method 'First' can only be used as a final query operation. Consider using the method 'FirstOrDefault' in this instance instead.
+STACK TRACE :    at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.FirstTranslator.TranslateUnary(ExpressionConverter parent, DbExpression operand, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input, DbExpressionBinding& binding)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SelectTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at AppMGL.Manager.Areas.DataManagement.Controllers.SIPLUserController.Lookup(ListParams listParams) in F:\New folder\MGL-Logistics\AppMGL.Manager\Areas\Setup\Controllers\SIPLUserController.cs:line 36
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:07:18.0098 AM
+ENTRY TYPE  : Error
+SOURCE      : EntityFramework
+MESSAGE     : The argument 'sql' cannot be null, empty or contain only white space.
+STACK TRACE :    at System.Data.Entity.Utilities.Check.NotEmpty(String value, String parameterName)
+   at System.Data.Entity.Database.ExecuteSqlCommand(TransactionalBehavior transactionalBehavior, String sql, Object[] parameters)
+   at System.Data.Entity.Database.ExecuteSqlCommand(String sql, Object[] parameters)
+   at AppMGL.DAL.Models.AppMGL.ExecuteCommand(String sqlCommand, Object[] parameters) in F:\New folder\MGL-Logistics\AppMGL.DAL\AppMGL.cs:line 455
+   at AppMGL.DAL.Repository`1.ExecuteCommand(String sqlCommand, Object[] parameters) in F:\New folder\MGL-Logistics\AppMGL.DAL\Repository.cs:line 112
+   at AppMGL.Manager.Infrastructure.BaseController`3.InsertErrorLog(Exception ex) in F:\New folder\MGL-Logistics\AppMGL.Manager\Infrastructure\BaseController.cs:line 270
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:09:40.7692 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Validate access token
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:09:40.7692 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Validate access token OK
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:09:42.7206 AM
+ENTRY TYPE  : Error
+SOURCE      : EntityFramework
+MESSAGE     : The method 'First' can only be used as a final query operation. Consider using the method 'FirstOrDefault' in this instance instead.
+STACK TRACE :    at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.FirstTranslator.TranslateUnary(ExpressionConverter parent, DbExpression operand, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input, DbExpressionBinding& binding)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SelectTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at AppMGL.Manager.Areas.DataManagement.Controllers.SIPLUserController.Lookup(ListParams listParams) in F:\New folder\MGL-Logistics\AppMGL.Manager\Areas\Setup\Controllers\SIPLUserController.cs:line 36
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:09:42.8191 AM
+ENTRY TYPE  : Error
+SOURCE      : EntityFramework
+MESSAGE     : The argument 'sql' cannot be null, empty or contain only white space.
+STACK TRACE :    at System.Data.Entity.Utilities.Check.NotEmpty(String value, String parameterName)
+   at System.Data.Entity.Database.ExecuteSqlCommand(TransactionalBehavior transactionalBehavior, String sql, Object[] parameters)
+   at System.Data.Entity.Database.ExecuteSqlCommand(String sql, Object[] parameters)
+   at AppMGL.DAL.Models.AppMGL.ExecuteCommand(String sqlCommand, Object[] parameters) in F:\New folder\MGL-Logistics\AppMGL.DAL\AppMGL.cs:line 455
+   at AppMGL.DAL.Repository`1.ExecuteCommand(String sqlCommand, Object[] parameters) in F:\New folder\MGL-Logistics\AppMGL.DAL\Repository.cs:line 112
+   at AppMGL.Manager.Infrastructure.BaseController`3.InsertErrorLog(Exception ex) in F:\New folder\MGL-Logistics\AppMGL.Manager\Infrastructure\BaseController.cs:line 270
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:11:45.2845 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Validate access token
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:11:45.3158 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Validate access token OK
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:11:46.6022 AM
+ENTRY TYPE  : Error
+SOURCE      : EntityFramework
+MESSAGE     : The method 'First' can only be used as a final query operation. Consider using the method 'FirstOrDefault' in this instance instead.
+STACK TRACE :    at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.FirstTranslator.TranslateUnary(ExpressionConverter parent, DbExpression operand, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input, DbExpressionBinding& binding)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SelectTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at AppMGL.Manager.Areas.DataManagement.Controllers.SIPLUserController.Lookup(ListParams listParams) in F:\New folder\MGL-Logistics\AppMGL.Manager\Areas\Setup\Controllers\SIPLUserController.cs:line 36
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:11:46.7123 AM
+ENTRY TYPE  : Error
+SOURCE      : EntityFramework
+MESSAGE     : The argument 'sql' cannot be null, empty or contain only white space.
+STACK TRACE :    at System.Data.Entity.Utilities.Check.NotEmpty(String value, String parameterName)
+   at System.Data.Entity.Database.ExecuteSqlCommand(TransactionalBehavior transactionalBehavior, String sql, Object[] parameters)
+   at System.Data.Entity.Database.ExecuteSqlCommand(String sql, Object[] parameters)
+   at AppMGL.DAL.Models.AppMGL.ExecuteCommand(String sqlCommand, Object[] parameters) in F:\New folder\MGL-Logistics\AppMGL.DAL\AppMGL.cs:line 455
+   at AppMGL.DAL.Repository`1.ExecuteCommand(String sqlCommand, Object[] parameters) in F:\New folder\MGL-Logistics\AppMGL.DAL\Repository.cs:line 112
+   at AppMGL.Manager.Infrastructure.BaseController`3.InsertErrorLog(Exception ex) in F:\New folder\MGL-Logistics\AppMGL.Manager\Infrastructure\BaseController.cs:line 270
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:12:43.0463 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Validate access token
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:12:43.0921 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Validate access token OK
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:12:44.6235 AM
+ENTRY TYPE  : Error
+SOURCE      : EntityFramework
+MESSAGE     : The method 'First' can only be used as a final query operation. Consider using the method 'FirstOrDefault' in this instance instead.
+STACK TRACE :    at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.FirstTranslator.TranslateUnary(ExpressionConverter parent, DbExpression operand, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input, DbExpressionBinding& binding)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SelectTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at AppMGL.Manager.Areas.DataManagement.Controllers.SIPLUserController.Lookup(ListParams listParams) in F:\New folder\MGL-Logistics\AppMGL.Manager\Areas\Setup\Controllers\SIPLUserController.cs:line 36
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:12:44.8825 AM
+ENTRY TYPE  : Error
+SOURCE      : EntityFramework
+MESSAGE     : The argument 'sql' cannot be null, empty or contain only white space.
+STACK TRACE :    at System.Data.Entity.Utilities.Check.NotEmpty(String value, String parameterName)
+   at System.Data.Entity.Database.ExecuteSqlCommand(TransactionalBehavior transactionalBehavior, String sql, Object[] parameters)
+   at System.Data.Entity.Database.ExecuteSqlCommand(String sql, Object[] parameters)
+   at AppMGL.DAL.Models.AppMGL.ExecuteCommand(String sqlCommand, Object[] parameters) in F:\New folder\MGL-Logistics\AppMGL.DAL\AppMGL.cs:line 455
+   at AppMGL.DAL.Repository`1.ExecuteCommand(String sqlCommand, Object[] parameters) in F:\New folder\MGL-Logistics\AppMGL.DAL\Repository.cs:line 112
+   at AppMGL.Manager.Infrastructure.BaseController`3.InsertErrorLog(Exception ex) in F:\New folder\MGL-Logistics\AppMGL.Manager\Infrastructure\BaseController.cs:line 270
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:15:05.2992 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Validate access token
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:15:05.2992 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Validate access token OK
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:15:07.2227 AM
+ENTRY TYPE  : Error
+SOURCE      : EntityFramework
+MESSAGE     : The method 'First' can only be used as a final query operation. Consider using the method 'FirstOrDefault' in this instance instead.
+STACK TRACE :    at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.FirstTranslator.TranslateUnary(ExpressionConverter parent, DbExpression operand, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input, DbExpressionBinding& binding)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SelectTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at AppMGL.Manager.Areas.DataManagement.Controllers.SIPLUserController.Lookup(ListParams listParams) in F:\New folder\MGL-Logistics\AppMGL.Manager\Areas\Setup\Controllers\SIPLUserController.cs:line 36
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:15:07.4023 AM
+ENTRY TYPE  : Error
+SOURCE      : EntityFramework
+MESSAGE     : The argument 'sql' cannot be null, empty or contain only white space.
+STACK TRACE :    at System.Data.Entity.Utilities.Check.NotEmpty(String value, String parameterName)
+   at System.Data.Entity.Database.ExecuteSqlCommand(TransactionalBehavior transactionalBehavior, String sql, Object[] parameters)
+   at System.Data.Entity.Database.ExecuteSqlCommand(String sql, Object[] parameters)
+   at AppMGL.DAL.Models.AppMGL.ExecuteCommand(String sqlCommand, Object[] parameters) in F:\New folder\MGL-Logistics\AppMGL.DAL\AppMGL.cs:line 455
+   at AppMGL.DAL.Repository`1.ExecuteCommand(String sqlCommand, Object[] parameters) in F:\New folder\MGL-Logistics\AppMGL.DAL\Repository.cs:line 112
+   at AppMGL.Manager.Infrastructure.BaseController`3.InsertErrorLog(Exception ex) in F:\New folder\MGL-Logistics\AppMGL.Manager\Infrastructure\BaseController.cs:line 270
+

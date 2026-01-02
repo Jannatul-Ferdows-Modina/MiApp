@@ -1,0 +1,99 @@
+﻿<div class="view indent">
+    <div>
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                <h3 class="box-title"></h3>
+                <div class="box-tools pull-right">
+                    <div ng-hide="editMode">
+                        <button type="button" class="btn btn-sm btn-primary" ng-click="performAction($event, false)" action="edit"><i class="fa fa-edit"></i> Edit</button>
+                        <button type="button" class="btn btn-sm btn-info" ng-click="callChangePassword()" action="changePassword"><i class="fa fa-key"></i> Change Password</button>
+                    </div>
+                    <div ng-show="editMode">
+                        <button type="button" class="btn btn-sm btn-primary" ng-click="performAction($event, false)" action="save"><i class="fa fa-floppy-o"></i> Save</button>
+                        <button type="button" class="btn btn-sm btn-default" ng-click="performAction($event, false)" action="cancel">Cancel</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box-body">
+                <div>
+                    <ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+                        <p>&nbsp;</p>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Display Name</label>
+                            <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+                                <input type="text" class="form-control" name="fullName" ng-model="entity.fullName" ng-disabled="true" ng-required="requiredUpdate" />
+                            </div>
+                        </div>
+                        <hr class="line-default" />
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Title</label>
+                            <div class="col-sm-2" show-errors="{ skipFormGroupCheck: true }">
+                                <select class="form-control" name="ttlId" ng-model="entity.contact.ttlId" ng-options="t.ttlId as t.ttlName for t in lookups.titles" ng-disabled="disabledUpdate" ng-required="requiredUpdate"></select>
+                            </div>
+                            <label class="col-sm-offset-2 col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Department</label>
+                            <div class="col-sm-2" show-errors="{ skipFormGroupCheck: true }">
+                                <select class="form-control" name="dptId" ng-model="entity.contact.dptId" ng-options="t.dptId as t.dptName for t in lookups.departments" ng-disabled="disabledUpdate" ng-required="requiredUpdate"></select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">First Name</label>
+                            <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+                                <input type="text" class="form-control" name="cntFirstName" ng-model="entity.contact.cntFirstName" maxlength="100" ng-disabled="disabledUpdate" ng-required="requiredUpdate" ng-blur="updateFullName()" />
+                            </div>
+                            <label class="col-sm-2 control-label">Middle Name</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" name="cntMiddleName" ng-model="entity.contact.cntMiddleName" maxlength="100" ng-disabled="disabledUpdate" ng-blur="updateFullName()" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Last Name</label>
+                            <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+                                <input type="text" class="form-control" name="cntLastName" ng-model="entity.contact.cntLastName" maxlength="100" ng-disabled="disabledUpdate" ng-required="requiredUpdate" ng-blur="updateFullName()" />
+                            </div>
+                            <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Type</label>
+                            <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+                                <select class="form-control" name="cntType" ng-model="entity.contact.cntType" ng-options="t.cntTypeId as t.cntTypeName for t in lookups.contactTypes" ng-disabled="disabledUpdate" ng-required="requiredUpdate"></select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Email</label>
+                            <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+                                <input type="text" class="form-control" name="cntEmail" ng-model="entity.contact.cntEmail" maxlength="100" ng-disabled="disabledInsert" ng-required="requiredUpdate" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Reason</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" name="cntReason" ng-model="entity.contact.cntReason" maxlength="200" ng-disabled="disabledUpdate" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Status</label>
+                            <div class="col-sm-4 checkbox-control">
+                                <input type="checkbox" name="cntStatus" ng-model="entity.contact.cntStatus" ng-disabled="disabledInsert" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label ">Select Profile Photo:</label>
+                            <div class="col-sm-4">
+                                <input type="file" ngf-select ng-model="profilePhoto" name="file" ng-disabled="disabledUpdate" />
+                            </div>
+                        </div>
+                        <hr class="line-default" />
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Smtp Username</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" name="usrSmtpUsername" ng-model="entity.usrSmtpUsername" ng-disabled="disabledUpdate" />
+                            </div>
+                            <label class="col-sm-2 control-label">Smtp Password</label>
+                            <div class="col-sm-4">
+                                <input type="password" class="form-control" name="usrSmtpPassword" ng-model="entity.usrSmtpPassword" ng-disabled="disabledUpdate" />
+                            </div>
+                        </div>
+                    </ng-form>
+                </div>
+            </div>
+            <div class="box-footer"></div>
+        </div>
+    </div>
+</div>

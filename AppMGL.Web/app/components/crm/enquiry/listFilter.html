@@ -1,0 +1,51 @@
+﻿<div class="box-container form-horizontal detail-container">
+    <div class="form-group">
+        <label class="col-sm-1 control-label required">Action Start Date</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="startNextActionDate" ng-model="entity.startNextActionDate" input-date="true" show-time="false" ng-required="true" />
+        </div>
+        <label class="col-sm-1 control-label required">Action End Date</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="endNextActionDate" ng-model="entity.endNextActionDate" input-date="true" show-time="false" ng-required="true" />
+        </div>
+        <div class="col-sm-2">&nbsp;</div>
+            
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-1 control-label">Select</label>
+            <div class="col-sm-3">
+                <select class="form-control" name="searchOption" ng-model="selectOption" ng-options="item.optionValue as item.optionName for item in searchOptions"></select>
+            </div>
+            <label class="col-sm-1 control-label">&nbsp;</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" name="searchBox" ng-model="searchBox" maxlength="100" uib-typeahead="o.name for o in searchValues($viewValue,selectOption)" />
+            </div>
+
+            <div class="col-sm-2">
+
+                <input type="checkbox" id="chkisdraft" name="chkisdraft" ng-model="entity.isdraft" value="1" checked="true" ng-click="isdraft_cgange()" /> Old Enquiry
+
+            </div>
+            
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-12 ">
+
+                <div class="pull-right box-tools">
+<div class="col-sm-2">
+                <button class="btn btn-sm btn-primary" ng-click="performEnquirySearch($event,selectOption,searchBox, startNextActionDate, endNextActionDate)" action="search">Search</button>
+            </div>
+<div class="col-sm-1">
+&nbsp;
+</div>
+                               <div class="col-sm-2">
+                <button class="btn btn-sm btn-primary" ng-click="showAllNextActionDateList(selectOption,searchBox)" action="search">Show Next Acation Date</button>
+            </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>

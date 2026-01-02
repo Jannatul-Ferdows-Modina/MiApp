@@ -1,0 +1,27 @@
+﻿<div class="view indent">
+    <div class="box box-info" ng-show="viewList">
+        <div class="box-header with-border">
+            <h3 class="box-title"></h3>
+            <div class="box-tools pull-right">
+                <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+            </div>
+        </div>
+        <div class="box-body">
+            <div ng-include="page.urls.listFilter"></div>
+        </div>
+        <div class="box-footer">
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-sm btn-primary" ng-click="performBookingSearch($event,selectDateOption, fromDate, toDate, galBookingStatusID, departmentID, searchOption1, searchBox1,searchOption2, searchBox2,searchOption3, searchBox3,isCurrentYear,isExcludeCancellRollover)" action="showReport"><i class="fa fa-bar-chart"></i> Show</button>
+                <button type="button" class="btn btn-sm btn-primary" ng-click="exportRegisterReport($event,selectDateOption, fromDate, toDate, galBookingStatusID, departmentID, searchOption1, searchBox1,searchOption2, searchBox2,searchOption3, searchBox3,isCurrentYear,isExcludeCancellRollover)" action="exportReport"><i class="fa fa-download"></i> Export to Excel</button>
+            </div>
+        </div>
+    </div>
+    <div id="mainBoxWidget" class="box box-primary">
+        <div class="box-body">
+            <div id="divList" ng-show="viewList" ng-include="page.urls.list" onload="requestLoad()" when-ready="requestCompleted()" wait-for-interpolation="true"></div>
+            <div id="divContainer" ng-hide="viewList" ng-include="page.urls.container" onload="requestLoad()" when-ready="requestCompleted()" wait-for-interpolation="true"></div>
+     </div>
+        <div class="box-footer"></div>
+    </div>
+
+</div>

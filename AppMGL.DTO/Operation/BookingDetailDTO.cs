@@ -1,0 +1,282 @@
+﻿using System;
+using AppMGL.DTO.DataManagement;
+using System.Collections.Generic;
+using AppMGL.DTO.Document;
+
+namespace AppMGL.DTO.Operation
+{
+    public class BookingDetailDTO
+    {
+
+        //Booking properties
+        public int DocumentCommonID { get; set; }
+        public int? OldBookingID { get; set; }
+        public string BookingNo { get; set; }
+        public string FileNo { get; set; }        
+        public int? BookingCategory { get; set; }
+        public int? CustomerID { get; set; }
+        public int? ExporterID { get; set; }
+        public string ExporterName { get; set; }
+        public string ExporterAddress { get; set; }
+        public string ExportRef { get; set; }
+        public int? fkCompanyID { get; set; }        
+        public string ConsigneePONo { get; set; }
+        public string ShipperCustomerName { get; set; }
+        public DateTime? BookingDate { get; set; }
+        public int? BookingRequestID { get; set; }
+        public string BookingRequest { get; set; }
+        public string GALBookingType { get; set; }
+        public int? ContractBookingID { get; set; }
+        public int? ShipperID { get; set; }
+        public string ShippingLine { get; set; }
+        public string ReqdSailingRemarks { get; set; }
+        public string PickupCategory { get; set; }
+        public string PickupCategoryName { get; set; } //pickup remarks
+        public DateTime? PortcutoffDate { get; set; }
+        public DateTime? RampCutOff { get; set; }
+        public DateTime? ETA { get; set; }
+        public DateTime? ETS { get; set; }
+        public DateTime? CutOffDate { get; set; }
+        public DateTime? EarliestPickUpDate { get; set; }
+        public DateTime? ERD { get; set; }
+        public DateTime? AutoCutOff { get; set; }
+        public int? BookingReceivedBy { get; set; }
+        public DateTime? CommunicationRecdDate { get; set; }
+        public int? ModeID { get; set; }
+        public string ModeName { get; set; }
+        public string BookedBy { get; set; }
+        public string Remarks { get; set; }
+        public string BookingRemarks { get; set; }
+        public string Vessel { get; set; }
+        public string Voyage { get; set; }
+        public string InvoiceStatusID {get;set;}
+        public string InvoiceStatus { get; set; }
+        public int? ConsignedTo { get; set; }
+        public string ConsignedToName { get; set; }
+        public string ContactPerson { get; set; }
+        public bool? BookingStatus { get; set; }
+        public string CarrierBooking { get; set; }
+        public int? GALBookingStatusID { get; set; }
+        public string GALBookingStatus { get; set; }
+        public string ETSailing { get; set; }
+        public string CNTNO { get; set; }
+        public string VIN { get; set; }
+        public int? ETAFinalplaceid { get; set; }
+        public int? Finalplaceid { get; set; }
+        public string SpaceBookingRemarks { get; set; }
+        public DateTime? QuotationSentDate { get; set; }
+        public string TruckCompanyName { get; set; }        
+        public string Telno { get; set; }
+        public string FaxNo { get; set; }
+        public string LoadingLocation { get; set; }
+        public DateTime? PickupDate { get; set; }
+        public string PickupLocationId { get; set; }
+        public string ReturnLocationId { get; set; }
+        public string PickupLocationAddress { get; set; }
+        public string ReturnLocationAddress { get; set; }
+        public DateTime? custReqCutOffDate { get; set; }
+        public DateTime? custReqSailingDate { get; set; }
+        public DateTime? BookingReqtRecivedDate { get; set; }
+        public string contractNo { get; set; }
+        public int ContactID { get; set; }
+        public int? Trucking_ContactID { get; set; }
+        public int? Loading_ContactID { get; set; }
+        public int? CreatedBy { get; set; }
+        public int? UpdatedBy { get; set; }
+        public int? Dos_Id { get; set; }
+
+
+        //fill with enquiry data
+        public decimal? QuotationID { get; set; }
+        public string QuotationNo { get; set; }
+        public decimal? EnquiryID { get; set; }
+        public string EnquiryNo { get; set; }
+        public int? DepartmentID { get; set; }
+        public int? OriginCountryID { get; set; }
+        public string OriginCountry { get; set; }
+        public int? DestinationCountryID { get; set; }
+        public string DischargeCountry { get; set; }
+        public int? OriginID { get; set; }
+        public int? DischargeID { get; set; }
+        public string Origin { get; set; }
+        public string Discharge { get; set; }
+        public int? OrgnRailRampId { get; set; }
+        public int? DestnTerminalId { get; set; }
+        public string RailRamp { get; set; }
+        public string Terminal { get; set; }
+        public DateTime? ExpecteddateOfMove { get; set; }
+        public string CompanyName { get; set; }
+        public string CustomerAddress { get; set; }
+        public string OriginDoorName { get; set; }
+        public string OriginDoorAddress { get; set; }
+        public string OriginDoor { get; set; }
+        public int? OriginAddId { get; set; }
+        public int? DestinationAddId { get; set; }
+        public string DestinationDoorName { get; set; }
+        public string DestinationDoorAddress { get; set; }
+        public string DestinationDoor { get; set; }
+        public int? NoOfContainer { get; set; }
+        public string ModeOfService { get; set; }
+        public string TypeOfEnquiry { get; set; }
+        public bool? IsHaz { get; set; }
+        public double? Class { get; set; }
+        public string UNNo { get; set; }
+        public string PackingType { get; set; }
+        public string HazRemarks { get; set; }
+        public double? Hazweight { get; set; }
+        public double? HazVolume { get; set; }
+        public string HazDescription { get; set; }
+        public decimal SiteId { get; set; }
+        public string LastRemarks { get; set; }
+        public DateTime? LastRemarkDate { get; set; }
+        public string NextActionRemarks { get; set; }
+        public DateTime? NextActionDueDate { get; set; }
+        public int? OrignStateID { get; set; }
+        public string OriginState { get; set; }
+        public int? DestinationStateID { get; set; }
+        public string DischargeState { get; set; }
+        public int? OriginCityID { get; set; }
+        public string OriginCity { get; set; }
+        public int? DestinationCityID { get; set; }
+        public string DischargeCity { get; set; }
+        public string Commodity { get; set; }
+        public CommodityDTO[] CommodityDTOList { get; set; }
+        public EnquiryAIRServiceDTO[] EnquiryAIRServiceDTOList { get; set; }
+        public EnquiryBreakBulkServiceDTO[] EnquiryBreakBulkServiceDTOList { get; set; }
+        public EnquiryContainerServiceDTO[] EnquiryContainerServiceDTOList { get; set; }
+        //public EnquiryFCLServiceDTO[] EnquiryFCLServiceDTOList { get; set; }
+        public EnquiryLCLServiceDTO[] EnquiryLCLServiceDTOList { get; set; }
+        public EnquiryROROServiceDTO[] EnquiryROROServiceDTOList { get; set; }
+        public NextActionRemarksDTO[] NextActionRemarksDTOList { get; set; }
+        public CarrierChargesDTO[] CarrierChargesDTOList { get; set; }
+        public decimal NewQuotationID { get; set; }
+        public string DocRequired { get; set; }
+        public string IsSepatraCustomer { get; set; }
+    }
+    public class ConsolidateBookingDTO
+    {
+        public int BookedId { get; set; }
+        public int? DepartmentId { get; set; }
+        public string CompanyName { get; set; }
+        public int? CompanyId { get; set; }
+        public string CompanyAddress { get; set; }
+        public string FileNo { get; set; }
+        public DateTime? BookingReqtRecivedDate { get; set; }
+        public string ContractNo { get; set; }
+        public int ContactId { get; set; }
+        public string OriginPort { get; set; }
+        public string DestinationPort { get; set; }
+        public int? OriginPortId { get; set; }
+        public int? DestinationPortId { get; set; }
+        public DateTime? custReqCutOffDate { get; set; }
+        public DateTime? custReqSailingDate { get; set; }
+        public string PickupCategory { get; set; }
+        public string PickupCategoryName { get; set; }
+        public string GALBookingType { get; set; }
+        public string ModeOfService { get; set; }
+        public int? NoOfContainer { get; set; }
+        public string ExporterName { get; set; }
+        public string ExporterAddress { get; set; }
+        public DateTime? BookingDate { get; set; }
+        public DateTime? PortcutoffDate { get; set; }
+        public DateTime? RampCutOff { get; set; }
+        public DateTime? ETA { get; set; }
+        public DateTime? ETS { get; set; }
+        public DateTime? CutOffDate { get; set; }
+        public DateTime? EarliestPickUpDate { get; set; }
+        public DateTime? ERD { get; set; }
+        public string BookedBy { get; set; }
+        public string Remarks { get; set; }
+        public string BookingRemarks { get; set; }
+        public string BookingNo { get; set; }
+        public string Vessel { get; set; }
+        public string Voyage { get; set; }
+        public int? PickupLocationId { get; set; }
+        public string PickupLocation { get; set; }
+        public int? ReturnLocationId { get; set; }
+        public string ReturnLocation { get; set; }
+        public string PickupLocationAddress { get; set; }
+        public string ReturnLocationAddress { get; set; }
+        public int? OriginCountryID { get; set; }
+        public int? OrignStateID { get; set; }
+        public int? OriginCityID { get; set; }
+        public int? DestinationCountryID { get; set; }
+        public int? DestinationCityID { get; set; }
+        public int? DestinationStateID { get; set; }
+        public decimal SiteId { get; set; }
+        public int? UserId { get; set; }
+        public EnquiryAIRServiceDTO[] EnquiryAIRServiceDTOList { get; set; }
+        public EnquiryBreakBulkServiceDTO[] EnquiryBreakBulkServiceDTOList { get; set; }
+        public EnquiryContainerServiceDTO[] EnquiryContainerServiceDTOList { get; set; }
+        public EnquiryFCLServiceDTO[] EnquiryFCLServiceDTOList { get; set; }
+        public EnquiryLCLServiceDTO[] EnquiryLCLServiceDTOList { get; set; }
+        public EnquiryROROServiceDTO[] EnquiryROROServiceDTOList { get; set; }
+        public NextActionRemarksDTO[] NextActionRemarksDTOList { get; set; }
+        public CarrierChargesDTO[] CarrierChargesDTOList { get; set; }
+        public DispatchContainerDTO[] DispatchContainerList { get; set; }
+        public int? TotalCount { get; set; }
+        public string BLNumber { get; set; }
+        public int? IsStuffed { get; set; }
+        public CargoMaineFest[] QuotationDetail { get; set; }
+        public string containerNo { get; set; }
+    }
+    
+   public class ConsolidateDockReceiptDTO
+    {
+        
+        public int? DockReceiptId { get; set; }
+        public int? BookedId { get; set; }
+        public int? ExporterId { get; set; }
+        public string ExporterName { get; set; }
+        public string ExporterAddress { get; set; }
+        public string Free_Text { get; set; }
+        public string DockReceptNo { get; set; }
+        public string BLNumber { get; set; }
+        public string FileNo { get; set; }
+        //public string ExportRef { get; set; }
+        public int? ConsignedToId { get; set; }
+        public string ConsignedToName { get; set; }
+        public string ConsignedToAddress { get; set; }
+        //public int? ConsignedToType { get; set; }
+        //public string IsPrintAddress { get; set; }
+        public int? FwdAgentId { get; set; }
+        public string FwdAgentName { get; set; }
+        public string FwdAgentAddress { get; set; }
+        public string FTZNumber { get; set; }
+        public int? ConsigneeId { get; set; }
+        public string ConsigneeName { get; set; }
+        public string ConsigneeAddress { get; set; }
+        public string ExportInstruction { get; set; }
+        public string CarriageBy { get; set; }
+        public string PlaceOfReceipt { get; set; }
+        public string BuyingRate { get; set; }
+        public string SellingRate { get; set; }
+        public string Vessel { get; set; }
+        public int? LandingPortId { get; set; }
+        public string LandingPort { get; set; }
+        public string LoadingPert { get; set; }
+        public string Voyage { get; set; }
+        public int? ForeignPortId { get; set; }
+        public string ForeignPort { get; set; }
+        public int? Transshipment { get; set; }
+        public string Transshipmentdesc { get; set; }
+        public string MoveType { get; set; }
+        public string DeliveredBy { get; set; }
+        public DateTime? ReqStuffingDate { get; set; }
+        public int? CheckedBY { get; set; }
+        public string CheckedBydesc { get; set; }
+        public string Issued { get; set; }
+        public string Booking { get; set; }
+        public DateTime? CutOff { get; set; }
+        public DateTime? DepartureDate { get; set; }
+        public string EmptyPickup { get; set; }
+        public int? EmptyPickupId { get; set; }
+        public string pickupName { get; set; }
+        public string FullReturn { get; set; }
+        public string FullReturnName { get; set; }
+        public int? FullReturnId { get; set; }
+        public decimal SiteId { get; set; }
+        public string UserId { get; set; }
+        
+    }
+}

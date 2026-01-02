@@ -1,0 +1,684 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\MGLDeploy\MGLManager</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Accessibility.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>01/31/2018 13:19:44</publishTime>
+    </File>
+    <File Include="bin/AppMGL.DAL.dll">
+      <publishTime>05/10/2020 13:23:39</publishTime>
+    </File>
+    <File Include="bin/AppMGL.DTO.dll">
+      <publishTime>05/10/2020 13:23:36</publishTime>
+    </File>
+    <File Include="bin/AppMGL.Manager.dll">
+      <publishTime>05/10/2020 13:23:44</publishTime>
+    </File>
+    <File Include="bin/AppMGL.Manager.XmlSerializers.dll">
+      <publishTime>05/10/2020 13:23:52</publishTime>
+    </File>
+    <File Include="bin/AutoMapper.dll">
+      <publishTime>01/31/2018 13:19:44</publishTime>
+    </File>
+    <File Include="bin/CustomMarshalers.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/DevDefined.OAuth.dll">
+      <publishTime>01/21/2014 17:23:40</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>12/02/2019 22:50:48</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>12/02/2019 22:50:48</publishTime>
+    </File>
+    <File Include="bin/Intuit.Ipp.Core.dll">
+      <publishTime>01/18/2019 23:26:06</publishTime>
+    </File>
+    <File Include="bin/Intuit.Ipp.Data.dll">
+      <publishTime>01/18/2019 23:25:58</publishTime>
+    </File>
+    <File Include="bin/Intuit.Ipp.DataService.dll">
+      <publishTime>01/18/2019 23:25:48</publishTime>
+    </File>
+    <File Include="bin/Intuit.Ipp.Diagnostics.dll">
+      <publishTime>01/18/2019 23:25:56</publishTime>
+    </File>
+    <File Include="bin/Intuit.Ipp.EntitlementService.dll">
+      <publishTime>01/18/2019 23:26:48</publishTime>
+    </File>
+    <File Include="bin/Intuit.Ipp.Exception.dll">
+      <publishTime>01/18/2019 23:25:46</publishTime>
+    </File>
+    <File Include="bin/Intuit.Ipp.GlobalTaxService.dll">
+      <publishTime>01/18/2019 23:26:32</publishTime>
+    </File>
+    <File Include="bin/Intuit.Ipp.LinqExtender.dll">
+      <publishTime>01/18/2019 23:17:12</publishTime>
+    </File>
+    <File Include="bin/Intuit.Ipp.OAuth2PlatformClient.dll">
+      <publishTime>03/09/2020 16:28:28</publishTime>
+    </File>
+    <File Include="bin/Intuit.Ipp.PlatformService.dll">
+      <publishTime>01/18/2019 23:16:58</publishTime>
+    </File>
+    <File Include="bin/Intuit.Ipp.QueryFilter.dll">
+      <publishTime>01/18/2019 23:25:46</publishTime>
+    </File>
+    <File Include="bin/Intuit.Ipp.ReportService.dll">
+      <publishTime>01/18/2019 23:25:46</publishTime>
+    </File>
+    <File Include="bin/Intuit.Ipp.Retry.dll">
+      <publishTime>01/18/2019 23:26:06</publishTime>
+    </File>
+    <File Include="bin/Intuit.Ipp.Security.dll">
+      <publishTime>01/18/2019 23:26:16</publishTime>
+    </File>
+    <File Include="bin/Intuit.Ipp.Utility.dll">
+      <publishTime>01/18/2019 23:25:56</publishTime>
+    </File>
+    <File Include="bin/Intuit.Ipp.WebHooksService.dll">
+      <publishTime>01/18/2019 23:26:36</publishTime>
+    </File>
+    <File Include="bin/ISymWrapper.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Activities.Build.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>01/31/2018 13:19:50</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
+      <publishTime>01/31/2018 13:19:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
+      <publishTime>01/31/2018 13:19:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Build.Conversion.v4.0.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Build.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Build.Engine.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Build.Framework.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Build.Tasks.v4.0.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Build.Utilities.v4.0.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CSharp.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.JScript.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Cors.dll">
+      <publishTime>01/19/2019 07:20:50</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>01/19/2019 07:20:30</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>01/19/2019 07:20:50</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
+      <publishTime>01/19/2019 07:20:30</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>01/19/2019 07:21:10</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>01/19/2019 07:21:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.VisualBasic.Compatibility.Data.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.VisualBasic.Compatibility.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.VisualBasic.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.VisualC.dll">
+      <publishTime>06/04/2015 14:20:36</publishTime>
+    </File>
+    <File Include="bin/Microsoft.VisualC.STLCLR.dll">
+      <publishTime>06/04/2015 14:20:36</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>01/31/2018 13:19:58</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>02/04/2019 03:36:49</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>01/31/2018 22:50:00</publishTime>
+    </File>
+    <File Include="bin/PresentationBuildTasks.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/PresentationCore.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/PresentationFramework.Aero.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/PresentationFramework.Aero2.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/PresentationFramework.AeroLite.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/PresentationFramework.Classic.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/PresentationFramework.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/PresentationFramework.Luna.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/PresentationFramework.Royale.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/ReachFramework.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/StructureMap.dll">
+      <publishTime>01/31/2018 13:20:02</publishTime>
+    </File>
+    <File Include="bin/Syncfusion.Chart.WPF.dll">
+      <publishTime>01/31/2018 13:19:38</publishTime>
+    </File>
+    <File Include="bin/Syncfusion.Compression.Base.dll">
+      <publishTime>01/31/2018 13:19:36</publishTime>
+    </File>
+    <File Include="bin/Syncfusion.DocIO.Base.dll">
+      <publishTime>01/31/2018 13:19:40</publishTime>
+    </File>
+    <File Include="bin/Syncfusion.EJ.ReportViewer.dll">
+      <publishTime>01/31/2018 13:19:40</publishTime>
+    </File>
+    <File Include="bin/Syncfusion.Gauge.WPF.dll">
+      <publishTime>01/31/2018 13:19:36</publishTime>
+    </File>
+    <File Include="bin/Syncfusion.Linq.Base.dll">
+      <publishTime>01/31/2018 13:19:36</publishTime>
+    </File>
+    <File Include="bin/Syncfusion.Pdf.Base.dll">
+      <publishTime>01/31/2018 13:19:48</publishTime>
+    </File>
+    <File Include="bin/Syncfusion.SfMaps.WPF.dll">
+      <publishTime>01/31/2018 13:19:36</publishTime>
+    </File>
+    <File Include="bin/Syncfusion.Shared.Base.dll">
+      <publishTime>01/31/2018 13:19:40</publishTime>
+    </File>
+    <File Include="bin/Syncfusion.Shared.MVVM.WPF.dll">
+      <publishTime>01/31/2018 13:19:36</publishTime>
+    </File>
+    <File Include="bin/Syncfusion.Shared.WPF.dll">
+      <publishTime>01/31/2018 13:19:42</publishTime>
+    </File>
+    <File Include="bin/Syncfusion.XlsIO.Base.dll">
+      <publishTime>01/31/2018 13:19:42</publishTime>
+    </File>
+    <File Include="bin/sysglobl.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Activities.Core.Presentation.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Activities.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Activities.DurableInstancing.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Activities.Presentation.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.AddIn.Contract.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.AddIn.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Collections.Concurrent.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Collections.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.ComponentModel.Annotations.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.ComponentModel.Composition.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.ComponentModel.Composition.Registration.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.ComponentModel.DataAnnotations.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.ComponentModel.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.ComponentModel.EventBasedAsync.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Configuration.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Configuration.Install.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Data.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Data.Entity.Design.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Data.Entity.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Data.Linq.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Data.OracleClient.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Data.Services.Client.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Data.Services.Design.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Data.Services.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Data.SqlXml.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Deployment.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Design.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Device.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Diagnostics.Contracts.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Diagnostics.Debug.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Diagnostics.Tools.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Diagnostics.Tracing.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.DirectoryServices.AccountManagement.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.DirectoryServices.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.DirectoryServices.Protocols.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Drawing.Design.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Drawing.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Dynamic.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Dynamic.Runtime.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.EnterpriseServices.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Globalization.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.IO.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Linq.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Linq.Dynamic.dll">
+      <publishTime>01/31/2018 13:20:08</publishTime>
+    </File>
+    <File Include="bin/System.Linq.Expressions.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Linq.Parallel.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Linq.Queryable.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>11/28/2018 23:30:36</publishTime>
+    </File>
+    <File Include="bin/System.Net.NetworkInformation.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Net.Primitives.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Net.Requests.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Net.WebHeaderCollection.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.ObjectModel.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Reflection.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Reflection.Emit.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Reflection.Emit.ILGeneration.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Reflection.Emit.Lightweight.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Reflection.Extensions.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Reflection.Primitives.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Resources.ResourceManager.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Runtime.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Runtime.Extensions.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Runtime.Handles.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Runtime.InteropServices.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Runtime.InteropServices.WindowsRuntime.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Runtime.Numerics.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Runtime.Serialization.Json.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Runtime.Serialization.Primitives.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Runtime.Serialization.Xml.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Security.Principal.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.ServiceModel.Duplex.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.ServiceModel.Http.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.ServiceModel.NetTcp.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.ServiceModel.Primitives.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.ServiceModel.Security.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Text.Encoding.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Text.Encoding.Extensions.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Text.RegularExpressions.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Threading.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Threading.Tasks.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Threading.Tasks.Parallel.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Threading.Timer.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Web.Cors.dll">
+      <publishTime>11/28/2018 23:28:44</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>01/31/2018 13:19:54</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.Cors.dll">
+      <publishTime>11/28/2018 23:31:26</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>11/28/2018 23:31:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.Owin.dll">
+      <publishTime>01/31/2018 13:19:52</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>01/31/2018 13:19:52</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>11/28/2018 23:29:46</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>01/31/2018 13:19:50</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>01/31/2018 13:19:50</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>01/31/2018 13:19:54</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>01/31/2018 13:19:54</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>01/31/2018 13:19:54</publishTime>
+    </File>
+    <File Include="bin/System.Xml.ReaderWriter.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Xml.XDocument.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/System.Xml.XmlSerializer.dll">
+      <publishTime>06/20/2015 00:14:56</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>01/31/2018 13:20:10</publishTime>
+    </File>
+    <File Include="EmailTemplate/QuotationEmailTemplate.html">
+      <publishTime>06/03/2018 18:16:28</publishTime>
+    </File>
+    <File Include="EmailTemplate/ResetPassword.html">
+      <publishTime>01/31/2018 13:19:40</publishTime>
+    </File>
+    <File Include="EmailTemplate/UserConfirmation.html">
+      <publishTime>01/31/2018 13:19:40</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>01/31/2018 13:19:34</publishTime>
+    </File>
+    <File Include="index.html">
+      <publishTime>01/31/2018 13:19:34</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>12/03/2019 04:44:51</publishTime>
+    </File>
+    <File Include="Web References/ReportExecutionProvider/DocumentMapNode.datasource">
+      <publishTime>12/31/2018 08:16:46</publishTime>
+    </File>
+    <File Include="Web References/ReportExecutionProvider/ExecutionInfo.datasource">
+      <publishTime>12/31/2018 08:16:46</publishTime>
+    </File>
+    <File Include="Web References/ReportExecutionProvider/ExecutionInfo2.datasource">
+      <publishTime>12/31/2018 08:16:46</publishTime>
+    </File>
+    <File Include="Web References/ReportExecutionProvider/ExecutionInfo3.datasource">
+      <publishTime>12/31/2018 08:16:46</publishTime>
+    </File>
+    <File Include="Web References/ReportExecutionProvider/Extension.datasource">
+      <publishTime>12/31/2018 08:16:46</publishTime>
+    </File>
+    <File Include="Web References/ReportExecutionProvider/Reference.map">
+      <publishTime>01/31/2018 13:19:42</publishTime>
+    </File>
+    <File Include="Web References/ReportExecutionProvider/Warning.datasource">
+      <publishTime>12/31/2018 08:16:46</publishTime>
+    </File>
+    <File Include="Web References/ReportServiceProvider/ActiveState.datasource">
+      <publishTime>12/31/2018 08:16:52</publishTime>
+    </File>
+    <File Include="Web References/ReportServiceProvider/CacheRefreshPlan.datasource">
+      <publishTime>12/31/2018 08:16:52</publishTime>
+    </File>
+    <File Include="Web References/ReportServiceProvider/CacheRefreshPlanState.datasource">
+      <publishTime>12/31/2018 08:16:52</publishTime>
+    </File>
+    <File Include="Web References/ReportServiceProvider/CatalogItem.datasource">
+      <publishTime>12/31/2018 08:16:52</publishTime>
+    </File>
+    <File Include="Web References/ReportServiceProvider/DataRetrievalPlan.datasource">
+      <publishTime>12/31/2018 08:16:52</publishTime>
+    </File>
+    <File Include="Web References/ReportServiceProvider/DataSetDefinition.datasource">
+      <publishTime>12/31/2018 08:16:52</publishTime>
+    </File>
+    <File Include="Web References/ReportServiceProvider/DataSource.datasource">
+      <publishTime>12/31/2018 08:16:52</publishTime>
+    </File>
+    <File Include="Web References/ReportServiceProvider/DataSourceDefinition.datasource">
+      <publishTime>12/31/2018 08:16:52</publishTime>
+    </File>
+    <File Include="Web References/ReportServiceProvider/DataSourcePrompt.datasource">
+      <publishTime>12/31/2018 08:16:52</publishTime>
+    </File>
+    <File Include="Web References/ReportServiceProvider/Event.datasource">
+      <publishTime>12/31/2018 08:16:52</publishTime>
+    </File>
+    <File Include="Web References/ReportServiceProvider/ExpirationDefinition.datasource">
+      <publishTime>12/31/2018 08:16:52</publishTime>
+    </File>
+    <File Include="Web References/ReportServiceProvider/Extension.datasource">
+      <publishTime>12/31/2018 08:16:52</publishTime>
+    </File>
+    <File Include="Web References/ReportServiceProvider/ExtensionParameter.datasource">
+      <publishTime>12/31/2018 08:16:52</publishTime>
+    </File>
+    <File Include="Web References/ReportServiceProvider/ExtensionSettings.datasource">
+      <publishTime>12/31/2018 08:16:52</publishTime>
+    </File>
+    <File Include="Web References/ReportServiceProvider/ItemHistorySnapshot.datasource">
+      <publishTime>12/31/2018 08:16:52</publishTime>
+    </File>
+    <File Include="Web References/ReportServiceProvider/ItemParameter.datasource">
+      <publishTime>12/31/2018 08:16:52</publishTime>
+    </File>
+    <File Include="Web References/ReportServiceProvider/ItemReferenceData.datasource">
+      <publishTime>12/31/2018 08:16:52</publishTime>
+    </File>
+    <File Include="Web References/ReportServiceProvider/Job.datasource">
+      <publishTime>12/31/2018 08:16:52</publishTime>
+    </File>
+    <File Include="Web References/ReportServiceProvider/ModelCatalogItem.datasource">
+      <publishTime>12/31/2018 08:16:52</publishTime>
+    </File>
+    <File Include="Web References/ReportServiceProvider/ModelDrillthroughReport.datasource">
+      <publishTime>12/31/2018 08:16:52</publishTime>
+    </File>
+    <File Include="Web References/ReportServiceProvider/ModelItem.datasource">
+      <publishTime>12/31/2018 08:16:52</publishTime>
+    </File>
+    <File Include="Web References/ReportServiceProvider/ParameterValue.datasource">
+      <publishTime>12/31/2018 08:16:52</publishTime>
+    </File>
+    <File Include="Web References/ReportServiceProvider/ParameterValueOrFieldReference.datasource">
+      <publishTime>12/31/2018 08:16:52</publishTime>
+    </File>
+    <File Include="Web References/ReportServiceProvider/Policy.datasource">
+      <publishTime>12/31/2018 08:16:52</publishTime>
+    </File>
+    <File Include="Web References/ReportServiceProvider/Property.datasource">
+      <publishTime>12/31/2018 08:16:54</publishTime>
+    </File>
+    <File Include="Web References/ReportServiceProvider/Reference.map">
+      <publishTime>01/31/2018 13:19:42</publishTime>
+    </File>
+    <File Include="Web References/ReportServiceProvider/Role.datasource">
+      <publishTime>12/31/2018 08:16:52</publishTime>
+    </File>
+    <File Include="Web References/ReportServiceProvider/Schedule.datasource">
+      <publishTime>12/31/2018 08:16:52</publishTime>
+    </File>
+    <File Include="Web References/ReportServiceProvider/ScheduleDefinitionOrReference.datasource">
+      <publishTime>12/31/2018 08:16:52</publishTime>
+    </File>
+    <File Include="Web References/ReportServiceProvider/Subscription.datasource">
+      <publishTime>12/31/2018 08:16:52</publishTime>
+    </File>
+    <File Include="Web References/ReportServiceProvider/Task.datasource">
+      <publishTime>12/31/2018 08:16:52</publishTime>
+    </File>
+    <File Include="Web References/ReportServiceProvider/Warning.datasource">
+      <publishTime>12/31/2018 08:16:52</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>05/10/2020 13:23:55</publishTime>
+    </File>
+    <File Include="WebForm1.aspx">
+      <publishTime>12/06/2019 22:00:53</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

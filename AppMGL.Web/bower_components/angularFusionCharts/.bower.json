@@ -1,0 +1,14 @@
+{
+  "name": "angularFusionCharts",
+  "homepage": "https://github.com/sharathbangera6/angular-fusioncharts",
+  "_release": "v3.0",
+  "_resolution": {
+    "type": "tag",
+    "tag": "v3.0",
+    "commit": "60c67119fe88df2fa87b8429ca10bae0c3dbf3fc"
+  },
+  "_source": "https://github.com/sharathbangera6/angular-fusioncharts.git",
+  "_target": "v3.0",
+  "_originalSource": "angularFusionCharts",
+  "_direct": true
+}

@@ -1,0 +1,11 @@
+C:\MGL-Logistics\AppMGL.Web\bin\AppMGL.Web.dll.config
+C:\MGL-Logistics\AppMGL.Web\bin\AppMGL.Web.dll
+C:\MGL-Logistics\AppMGL.Web\bin\AppMGL.Web.pdb
+C:\MGL-Logistics\AppMGL.Web\obj\Release\AppMGL.Web.dll
+C:\MGL-Logistics\AppMGL.Web\obj\Release\AppMGL.Web.pdb
+C:\MGL-Logistics\AppMGL.Web\obj\Release\AppMGL.Web.csprojResolveAssemblyReference.cache
+C:\MGL-Prod\MGL-Logistics\AppMGL.Web\bin\AppMGL.Web.dll.config
+C:\MGL-Prod\MGL-Logistics\AppMGL.Web\bin\AppMGL.Web.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Web\bin\AppMGL.Web.pdb
+C:\MGL-Prod\MGL-Logistics\AppMGL.Web\obj\Release\AppMGL.Web.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.Web\obj\Release\AppMGL.Web.pdb

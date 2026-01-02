@@ -1,0 +1,18 @@
+=============================================================
+LOCAL DATE  : Thursday, July 24 2025, 08:07:00.6815 AM
+ENTRY TYPE  : Error
+SOURCE      : Username => bahuguna.vimal@gmail.com
+              IP Address => ::1
+              Url => http://localhost:50676/#!/home/dashboard
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0
+              Cause => Possibly unhandled rejection: {}
+MESSAGE     : TypeError: Cannot set properties of null (setting 'selectedSiteId')
+STACK TRACE : {anonymous}()@http://localhost:50676/app/controllers/loginController.js?v=2.0.2.17085:212:55
+              processQueue()@http://localhost:50676/bower_components/angular/angular.js:17051:36
+              null()@http://localhost:50676/bower_components/angular/angular.js:18233:14
+              $apply()@http://localhost:50676/bower_components/angular/angular.js:18531:12
+              callback()@http://localhost:50676/bower_components/angular/angular.js:27346:16
+              HTMLButtonElement.dispatch()@http://localhost:50676/bower_components/jquery/dist/jquery.min.js?v=2.0.2.17085:3:10316
+              q.handle()@http://localhost:50676/bower_components/jquery/dist/jquery.min.js?v=2.0.2.17085:3:8343
+

@@ -1,0 +1,83 @@
+﻿<ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+    <p>&nbsp;</p>
+
+    <div class="form-group">
+        <label class="col-sm-2 text-right control-label">System Ref No</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" name="fileNo" ng-model="entity.fileNo" ng-disabled="true" />
+        </div>       
+        <label class="col-sm-2 text-right control-label">Line B/L#</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" name="blNumber" ng-model="entity.blNumber"/>
+        </div>
+        <div class="col-sm-4">
+            &nbsp;
+        </div>
+    </div>
+    <hr class="line-primary" />
+    <div ng-show="dispatchContainerList.length > 0">
+        <table class="table table-striped table-bordered table-hover " template-pagination="none">
+            <thead>
+                <tr class="bg-thead">
+                    <th class="list-checkbox">select</th>
+                    <th class="text-left  hidden-xs">Container Name</th>
+                    <th class="text-left  hidden-xs">CNT NO.</th>
+                    <th class="text-left  hidden-xs">Owner</th>
+                    <th class="text-left  hidden-xs">SEAL NO.</th>
+                    <th class="text-left  hidden-xs">Remarks</th>
+                 
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="containerItem in dispatchContainerList">
+                    <td>
+                        <input type="checkbox" ng-model="containerItem.isSelected" />
+                    </td>
+                    <td class="hidden-xs">
+                        {{containerItem.name}}
+                    </td>
+
+                    <td><input type="text" class="form-control" name="ctNo" ng-model="containerItem.cntNo" /></td>
+                    <td>
+                        <!--<input type="text" class="form-control" name="sealNo" ng-model="containerItem.containerOwnerName" />-->
+                        <select ng-model="containerItem.containerOwnerName">
+                            <option value="LINE" ng-selected="LINE">LINE</option>
+                            <option value="SOC">SOC</option>
+                            <option value="LEASED">LEASED</option>
+                        </select>
+                    </td>
+                    <td><input type="text" class="form-control" name="sealNo" ng-model="containerItem.sealNo" /></td>
+
+                    <td><input type="text" class="form-control" name="dispatchRemarks" ng-model="containerItem.dispatchRemarks" /></td>
+                   
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Last Remarks</label>
+        <div class="col-sm-4">
+            <textarea rows="2" class="form-control" maxlength="250" name="lastRemarks" ng-model="entity.lastRemarks" ng-disabled="true" />
+        </div>
+        <label class="col-sm-2 control-label">Last Remark Date</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="lastRemarkDate" ng-model="entity.lastRemarkDate" ng-disabled="true" input-date="true" show-time="false" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Next Action Remarks</label>
+        <div class="col-sm-3">
+            <textarea rows="2" class="form-control" maxlength="250" name="nextActionRemarks" ng-model="entity.nextActionRemarks" />
+        </div>
+        <div class="col-sm-1">
+            <button name="btnAdd" type="button" class="btn btn-sm btn-primary" ng-click="showNextActionRemarksModel()" action="view" uib-tooltip="View Action Remarks" ng-disabled="disabledUpdate"><i class="fa fa-pencil"></i>Previous Remarks</button>
+        </div>
+        <label class="col-sm-2 control-label">Next Action Due Date</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="nextActionDueDate" ng-model="entity.nextActionDueDate" ng-disabled="disabledUpdate" input-date="true" show-time="false" />
+        </div>
+    </div>
+
+</ng-form>

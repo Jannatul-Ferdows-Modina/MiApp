@@ -1,0 +1,196 @@
+﻿<div class="view indent">
+    <div class="box box-info" ng-show="viewList">
+        <div class="box-header with-border">
+            <h3 class="box-title"></h3>
+            <div class="box-tools pull-right">
+                <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+            </div>
+        </div>
+        <div class="box-body">
+
+            <div class="box-container form-horizontal detail-container">
+                <div class="form-group">
+                    <div class="col-sm-2">
+                        &nbsp;
+                    </div>
+                    <div class="col-sm-2">
+                        <label>
+                            <input type="checkbox" name="isCurrentYear" ng-model="isCurrentYear" checked /> Current Year
+                        </label>
+                    </div>
+                    <div class="col-sm-4">
+                        <label>
+                            <input type="checkbox" name="isExcludeCancellRollover" ng-model="isExcludeCancellRollover" checked /> Excluding Cancelled and Rolled Over records
+                        </label>
+                    </div>
+                    <div class="col-sm-4">
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">DateWise Filters</label>
+                    <div class="col-sm-2">
+                        <select class="form-control" name="selectDateOption" ng-model="selectDateOption" ng-options="item.optionValue as item.optionName for item in seachDateFilters" ng-change="clearDates(selectDateOption)"></select>
+                    </div>
+                    <label class="col-sm-2 control-label">From Date</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="fromDate" ng-model="fromDate" input-date="true" show-time="false" />
+                    </div>
+                    <label class="col-sm-2 control-label">To Date</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="toDate" ng-model="toDate" input-date="true" show-time="false" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Department</label>
+                    <div class="col-sm-2">
+                        <select class="form-control" name="departmentID" ng-model=entity.departmentID ng-options="t.departmentID as t.department for t in lookups.siplDepartments"></select>
+                    </div>
+                    <label class="col-sm-2 control-label">Booking Status</label>
+                    <div class="col-sm-2">
+                        <select class="form-control" name="galBookingStatusID" ng-model="galBookingStatusID" ng-options="t.statusID as t.status for t in lookups.miamiBookingStatus"></select>
+                    </div>
+                    <div class="col-sm-8">
+                        &nbsp;
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Advance Search</h3>
+                    <div class="box-tools pull-right">
+                        <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+                    </div>
+                </div>
+                <div class="box-body">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Search 1</label>
+                        <div class="col-sm-2">
+                            <select class="form-control" name="searchOption1" ng-model="entity.selectOption1" ng-options="item.optionValue as item.optionName for item in searchOptions" ng-change="UpdateSearch2(entity.selectOption1)"></select>
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" name="searchBox1" ng-model="searchBox1" maxlength="50" />
+                        </div>
+                        <div class="col-sm-1">
+                            &nbsp;
+                        </div>
+                        <label class="col-sm-1 control-label">Search 2</label>
+                        <div class="col-sm-2">
+                            <select class="form-control" name="searchOption2" ng-model="entity.selectOption2" ng-options="item.optionValue as item.optionName for item in searchOptions2" ng-change="UpdateSearch3(entity.selectOption1,entity.selectOption2)" ng-disabled="isOption2disabled"></select>
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" name="searchBox2" ng-model="searchBox2" maxlength="100" />
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Search 3</label>
+                        <div class="col-sm-2">
+                            <select class="form-control" name="searchOption3" ng-model="entity.selectOption3" ng-options="item.optionValue as item.optionName for item in searchOptions3" ng-disabled="isOption3disabled"></select>
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" name="searchBox3" ng-model="searchBox3" maxlength="100" />
+                        </div>
+                        <div class="col-sm-6">
+                            &nbsp;
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="box-footer">
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-sm btn-primary" ng-click="performBookingSearch($event,selectDateOption, fromDate, toDate, galBookingStatusID, departmentID, searchOption1, searchBox1,searchOption2, searchBox2,searchOption3, searchBox3,isCurrentYear,isExcludeCancellRollover)" action="showReport"><i class="fa fa-bar-chart"></i> Show</button>
+                <button type="button" class="btn btn-sm btn-primary" ng-click="exportRegisterReport($event,selectDateOption, fromDate, toDate, galBookingStatusID, departmentID, searchOption1, searchBox1,searchOption2, searchBox2,searchOption3, searchBox3,isCurrentYear,isExcludeCancellRollover)" action="exportReport"><i class="fa fa-download"></i> Export to Excel</button>
+            </div>
+        </div>
+    </div>
+    <div id="mainBoxWidget" class="box box-primary">
+
+        <div class="box-body">
+            <div style="overflow:auto;">
+                <table ng-table="bookinglistTable" class="table table-striped table-bordered table-hover" template-pagination="customPager">
+                    <thead>
+                        <tr class="bg-thead">
+                            <th class="text-left hidden-xs" table-name="bookinglistTable">Export Register Report</th>
+                            <th class="text-left hidden-xs" table-name="bookinglistTable">Quotation Report</th>
+                            <th class="text-left hidden-xs" table-name="bookinglistTable">Expenses Report</th>
+                            <th class="text-left hidden-xs" table-name="bookinglistTable">View & Upload document</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="ets" table-name="bookinglistTable">ETS</th>                            
+                            <th class="text-left sortable hidden-xs" custom-sortable="fileNo" table-name="bookinglistTable">System Ref</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="eta" table-name="bookinglistTable">ETA</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="quotationNo" table-name="bookinglistTable">Quotation No</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="bookingNo" table-name="bookinglistTable">Booking No</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="companyName" table-name="bookinglistTable">Customer</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="vessel" table-name="bookinglistTable">VESSEL</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="voyage" table-name="bookinglistTable">VOYAGE</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="portOfOrigin" table-name="bookinglistTable">Port Of Loding</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="portOfDischarge" table-name="bookinglistTable">Destination</th>
+                            <th class="text-left sortable hidden-xs" custom-sortable="galBookingStatus" table-name="bookinglistTable">Current Operation Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="entity in items">
+                            <td class="hidden-xs">                                
+                                <button name="btnUpload" type="button" class="btn btn-sm btn-primary" ng-click="showViewDocumentModel(entity.documentCommonID)" action="add" entityid="{{entity.documentCommonID}}" uib-tooltip="Click here to view Export Registor Report"><i class="fa fa-upload"></i>Export Registor Report</button>
+                            </td>
+                            <td class="hidden-xs">
+                                <button name="btnUpload" type="button" class="btn btn-sm btn-primary" ng-click="viewQuotationCharges(entity.quotationID)" action="add" entityid="{{entity.quotationNo}}" uib-tooltip="Click here to View Quotation Report"><i class="fa fa-upload"></i>Quotation Report</button>
+                            </td>
+                            <td class="hidden-xs">
+                                <button name="btnRemarks" type="button" class="btn btn-sm btn-primary" ng-click="showExpensesReport(entity.documentCommonID)" action="add" entityid="{{entity.documentCommonID}}" uib-tooltip="Click here to View Expenses Report"><i class="fa fa-upload"></i>Expenses Report</button>
+                            </td>
+                            <td class="hidden-xs">
+                                <button name="btnUpload" type="button" class="btn btn-sm btn-primary" ng-click="callDocumentUploadModel(entity.documentCommonID)" action="add" entityid="{{entity.documentCommonID}}" uib-tooltip="Click here to View & Upload Doc"><i class="fa fa-upload"></i>View & Upload Doc</button>
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.ets | date:'MM/dd/yyyy'}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.fileNo}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.eta | date:'MM/dd/yyyy'}}
+                            </td>
+                            
+                            <td class="hidden-xs">
+                                {{entity.quotationNo}}
+                            </td>
+                           
+                            <td class="hidden-xs">
+                                {{entity.bookingNo}}
+                            </td>                           
+                            <td class="hidden-xs">
+                                {{entity.companyName}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.vessel}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.voyage}}
+                            </td>
+                           
+                            <td class="hidden-xs">
+                                {{entity.portOfOrigin}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.portOfDischarge}}
+                            </td>                           
+                            <td class="hidden-xs">
+                                {{entity.galBookingStatus}}
+                            </td>                           
+                        </tr>
+                        <tr ng-if="params.total() == 0">
+                            <td class="text-center text-italic" colspan="5">No Record(s) Found</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="box-footer"></div>
+    </div>
+
+</div>

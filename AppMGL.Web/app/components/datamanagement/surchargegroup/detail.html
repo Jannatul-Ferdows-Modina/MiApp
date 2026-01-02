@@ -1,0 +1,279 @@
+﻿<ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+    <p>&nbsp;</p>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Surcharge Group</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="Name" ng-model="entity.name" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Short Code</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="ShortCode" ng-model="entity.shortCode" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+        </div>
+    </div>
+     
+    <div class="form-group">
+        <label class="col-sm-2 control-label">IsActive</label>
+        <div class="col-sm-4 checkbox-control">
+            <input type="checkbox" name="IsActive" ng-model="entity.isActive" ng-disabled="disabledUpdate" />
+        </div>
+    </div>
+
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">Surcharge</h3>
+            <div class="box-tools pull-right">
+                <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+            </div>
+        </div>
+        <div class="box-body">
+            <table ng-table="table"  class="table table-condensed">
+                <tbody>
+
+
+                    <tr>
+
+                        <td>
+                            <input value="54" ng-true-value="54" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c54" ng-disabled="disabledUpdate" />AMS
+                        </td>
+                        <td>
+                            <input value="39" ng-true-value="39" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c39" ng-disabled="disabledUpdate" /> APS(ADEN GULF SURCHARGE)
+                        </td>
+                        <td>
+                            <input value="15" ng-true-value="15" ng-false-value="0"   type="checkbox" name="sgchk" ng-model="entity.c15" ng-disabled="disabledUpdate" />ARBITRARY
+                        </td>
+                        <td>
+
+                            <input value="3" ng-true-value="3" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c3" ng-disabled="disabledUpdate" />BAF(BUNKER ADJUSTMENT FACTOR)
+                        </td>
+                        <td>
+                            <input value="1" ng-true-value="1" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c1" ng-disabled="disabledUpdate" />BFS
+                        </td>
+                        <td>
+                            <input value="30" ng-true-value="30" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c30" ng-disabled="disabledUpdate" />BLL (DOCUMENTATION FEE)
+                        </td>
+                        <td>
+                            <input value="41" ng-true-value="41" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c41" ng-disabled="disabledUpdate" />BUC
+                        </td>
+
+
+                    </tr>
+
+                    <tr>
+
+
+                        <td>
+                            <input value="55" ng-true-value="55" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c55" ng-disabled="disabledUpdate" />CFC(CARGO FACILITY CHARGE)
+                        </td>
+                        <td>
+                            <input value="4" ng-true-value="4" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c4" ng-disabled="disabledUpdate" />CFS
+                        </td>
+                        <td>
+                            <input value="7" ng-true-value="7" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c7" ng-disabled="disabledUpdate" /> CSC
+                        </td>
+                        <td>
+
+                            <input value="45" ng-true-value="45" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c45" ng-disabled="disabledUpdate" />CSF
+                        </td>
+                        <td>
+                            <input value="38" ng-true-value="38" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c38" ng-disabled="disabledUpdate" />CSR(CORPORATE SOCIAL RESPONSIBILITY)
+                        </td>
+
+
+                        <td>
+
+
+                            <input value="13" ng-true-value="13" ng-false-value="0"   type="checkbox" name="sgchk" ng-model="entity.c13" ng-disabled="disabledUpdate" />DTHC
+                        </td>
+                        <td>
+                            <input value="31" ng-true-value="31" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c31" ng-disabled="disabledUpdate" />EAM(EURO ADVANCE MANIFEST(LUMPSUM))
+                        </td>
+                    </tr>
+
+                    <tr>
+
+
+
+                        <td>
+                            <input value="29" ng-true-value="29" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c29" ng-disabled="disabledUpdate" />EBS(EMERGENCY (CRITICAL)BUNKER SURCHARGE)
+                        </td>
+                        <td>
+                            <input value="61" ng-true-value="61" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c61" ng-disabled="disabledUpdate" />ECU
+                        </td>
+                        <td>
+                            <input value="34" ng-true-value="34" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c34" ng-disabled="disabledUpdate" />EFS(EMERGENCY FUEL SURCHARGE)
+                        </td>
+                        <td>
+                            <input value="57" ng-true-value="57" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c57" ng-disabled="disabledUpdate" />EHO(EXTRA HAULAGE ORIGIN)
+                        </td>
+                        <td>
+                            <input value="51" ng-true-value="51" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c51" ng-disabled="disabledUpdate" />EIS(WEST AFRICA EQUIPMENT IMBALANCE SURCHARGE)
+                        </td>
+                        <td>
+
+                            <input value="2" ng-true-value="2" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c2" ng-disabled="disabledUpdate" />EPS
+                        </td>
+                        <td>
+                            <input value="32" ng-true-value="32" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c32" ng-disabled="disabledUpdate" />ERS(EMERGENCY RISK SURCHARGE)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input value="60" ng-true-value="60" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c60" ng-disabled="disabledUpdate" />FAS
+                        </td>
+ 
+                        <td>
+                            <input value="43" ng-true-value="43" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c43" ng-disabled="disabledUpdate" />GAS
+                        </td>
+                        <td>
+                            <input value="46" ng-true-value="46" ng-false-value="0"   type="checkbox" name="sgchk" ng-model="entity.c46" ng-disabled="disabledUpdate" />GFS
+                        </td>
+                        <td>
+                            <input value="14" ng-true-value="14" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c14" ng-disabled="disabledUpdate" />GRI
+                        </td>
+                        <td>
+                            <input value="53" ng-true-value="53" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c53" ng-disabled="disabledUpdate" />HAD(ASHDOD ARBITARY CHARGES)
+                        </td>
+                        <td>
+                            <input value="16" ng-true-value="16" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c16" ng-disabled="disabledUpdate" />HAZ
+                        </td>
+                        <td>
+
+                            <input value="20" ng-true-value="20" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c20" ng-disabled="disabledUpdate" />IFS
+                        </td>
+                        
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input value="58" ng-true-value="58" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c58" ng-disabled="disabledUpdate" />INLAND FREIGHT
+                        </td>
+
+                        <td>
+                            <input value="19" ng-true-value="19" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c19" ng-disabled="disabledUpdate" />IPI
+                        </td>
+
+
+
+                        <td>
+                            <input value="50" ng-true-value="50" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c50" ng-disabled="disabledUpdate" />IPS
+                        </td>
+                        <td>
+                            <input value="28" ng-true-value="28" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c28" ng-disabled="disabledUpdate" />ISL(ISPS LOAD SURCHARGE)
+                        </td>
+                        <td>
+                            <input value="40" ng-true-value="40" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c40" ng-disabled="disabledUpdate" />LSS(LOW SULPHUR SURCHARGE)
+                        </td>
+                        <td>
+                            <input value="47" ng-true-value="47" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c47" ng-disabled="disabledUpdate" /> MUF
+                        </td>
+
+                        <td>
+                            <input value="36" ng-true-value="36" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c36" ng-disabled="disabledUpdate" />NFC(NEW YORK ONLY)
+                        </td>
+                        
+                    </tr>
+
+                    <tr>
+                        <td>
+
+                            <input value="25" ng-true-value="25" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c25" ng-disabled="disabledUpdate" />OCC
+                        </td>
+                        <td>
+                            <input value="12" ng-true-value="12" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c12" ng-disabled="disabledUpdate" />ODF(ORIGIN DOCUMENTATION FEES)
+                        </td>
+                        <td>
+                            <input value="52" ng-true-value="52" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c52" ng-disabled="disabledUpdate" />OLHF
+                        </td>
+                        <td>
+                            <input value="5" ng-true-value="5" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c5" ng-disabled="disabledUpdate" />ORC
+                        </td>
+
+                        <td>
+                            <input value="37" ng-true-value="37" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c37" ng-disabled="disabledUpdate" />OTS(ORIGIN TERMINAL SECURITY)
+                        </td>
+                        <td>
+                            <input value="44" ng-true-value="44" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c44" ng-disabled="disabledUpdate" />OVERWEIGHT ON OLF
+                        </td>
+                        <td>
+                            <input value="8" ng-true-value="8" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c8" ng-disabled="disabledUpdate" />PCS
+                        </td>
+                       
+                    </tr>
+
+                    <tr>
+                        <td>
+
+                            <input value="49" ng-true-value="49" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c49" ng-disabled="disabledUpdate" />PRC
+                        </td>
+                        <td>
+                            <input value="10" ng-true-value="10" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c10" ng-disabled="disabledUpdate" />PRS
+                        </td>
+
+
+
+                        <td>
+                            <input value="59" ng-true-value="59" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c59" ng-disabled="disabledUpdate" />PSS
+                        </td>
+
+
+                        <td>
+                            <input value="33" ng-true-value="33" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c33" ng-disabled="disabledUpdate" />RIH(RECOVERY OF HANDLING IMPORTS)
+                        </td>
+                        <td>
+                            <input value="9" ng-true-value="9" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c9" ng-disabled="disabledUpdate" />SCS
+                        </td>
+
+                        <td>
+                            <input value="42" ng-true-value="42" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c42" ng-disabled="disabledUpdate" />SEO
+                        </td>
+                        <td>
+                            <input value="17" ng-true-value="17" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c17" ng-disabled="disabledUpdate" />SES
+                        </td>
+                        
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input value="48" ng-true-value="48" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c48" ng-disabled="disabledUpdate" />SMD
+                        </td>
+
+                        <td>
+
+                            <input value="2" ng-true-value="2" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c2" ng-disabled="disabledUpdate" />SOC
+                        </td>
+ 
+                        
+                        <td>
+                            <input value="6" ng-true-value="6" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c6" ng-disabled="disabledUpdate" />TSF
+                        </td>
+                    
+
+                        <td>
+                            <input value="21" ng-true-value="21" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c21" ng-disabled="disabledUpdate" />VTS
+                        </td>
+                      
+                        <td>
+                            <input value="24" ng-true-value="24" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c24" ng-disabled="disabledUpdate" />WAREHOUSING CHARGES
+                        </td>
+   
+                        <td>
+                            <input value="11" ng-true-value="11" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c11" ng-disabled="disabledUpdate" />WHARFAGE
+                        </td>
+                      
+                        <td>
+                            <input value="27" ng-true-value="27" ng-false-value="0"  type="checkbox" name="sgchk" ng-model="entity.c27" ng-disabled="disabledUpdate" />WRP(WAR RISK PREMIUM)
+                        </td>
+                        
+                    </tr>
+
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</ng-form>

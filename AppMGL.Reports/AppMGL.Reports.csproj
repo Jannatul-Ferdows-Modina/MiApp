@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F7688157-7431-48A4-AF8A-9885DE536FB7}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AppMGL.Reports</RootNamespace>
+    <AssemblyName>AppMGL.Reports</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="ActivityDueReport.rdl" />
+    <None Include="ActivityDueReport.rdl.data" />
+    <None Include="App.config" />
+    <None Include="AppMGL.Report.rptproj" />
+    <None Include="BookingReport.rdl" />
+    <None Include="BookingReport.rdl.data" />
+    <None Include="BookingStatusReport.rdl" />
+    <None Include="BookingStatusReport.rdl.data" />
+    <None Include="CODocument.rdl" />
+    <None Include="CODocument.rdl.data" />
+    <None Include="Copy of MCSReport.rdl" />
+    <None Include="CustomerContactReport.rdl" />
+    <None Include="CustomerContactReport.rdl.data" />
+    <None Include="DocAttachmentReport.rdl" />
+    <None Include="DocAttachmentReport.rdl.data" />
+    <None Include="DocExportRegisterReport.rdl" />
+    <None Include="DocExportRegisterReport.rdl.data" />
+    <None Include="DockReceiptDocument.rdl" />
+    <None Include="DockReceiptDocument.rdl.data" />
+    <None Include="dsShipper.rsd" />
+    <None Include="EnquiryReport.rdl" />
+    <None Include="ExpensesReport.rdl" />
+    <None Include="ExpensesReport.rdl.data" />
+    <None Include="HBLDocument.rdl" />
+    <None Include="HBLDocument.rdl.data" />
+    <None Include="MBLDocument.rdl" />
+    <None Include="MBLDocument.rdl.data" />
+    <None Include="MCSReport.rdl" />
+    <None Include="MCSReport.rdl.data" />
+    <None Include="MGL.rds" />
+    <None Include="QuotationReport.rdl" />
+    <None Include="QuotationReport.rdl.data" />
+    <None Include="RegionWiseContainerReport.rdl" />
+    <None Include="RegionWiseContainerReport.rdl.data" />
+    <None Include="ShipperConfReport.rdl" />
+    <None Include="ShipperConfReport.rdl.data" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

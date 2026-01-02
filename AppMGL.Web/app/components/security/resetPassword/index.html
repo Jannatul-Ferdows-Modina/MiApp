@@ -1,0 +1,33 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title">Reset Password</h3>
+</div>
+<div class="modal-body form-horizontal detail-container" when-ready="filterModalLoaded()" wait-for-interpolation="true">
+    <ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+        <div class="form-group">
+            <label class="col-sm-4 control-label {{requiredUpdate ? 'required' : ''}}">Email</label>
+            <div class="col-sm-6" show-errors="{ skipFormGroupCheck: true }">
+                <input type="text" class="form-control" name="email" ng-model="entity.email" ng-required="true" ng-pattern="regexEmail" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-6">
+                <span class="text-red" ng-show="form.detail.email.$error.pattern">
+                    * Not valid email !!
+                </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-4 col-xs-6">
+                <no-captcha g-recaptcha-response="gRecaptchaResponse"
+                            theme="light"
+                            control="noCaptchaControl"
+                            site-key="6LeVJtUUAAAAAIDPhQ1ubhvKKsMjnzZO6WA0IOWR">
+                </no-captcha>
+            </div>
+        </div>
+    </ng-form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-sm btn-primary" ng-click="performAction($event)" action="resetPassword">Reset</button>
+    <button class="btn btn-sm btn-default" ng-click="performAction($event)" action="cancel">Cancel</button>
+</div>

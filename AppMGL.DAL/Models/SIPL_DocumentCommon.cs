@@ -1,0 +1,731 @@
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace AppMGL.DAL.Models
+{
+	public class SIPL_DocumentCommon
+	{
+		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+		[Key]
+		public int DocumentCommonID
+		{
+			get;
+			set;
+		}
+
+		public string FileNo
+		{
+			get;
+			set;
+		}
+
+		public int? CustomerID
+		{
+			get;
+			set;
+		}
+
+		public int? ExporterID
+		{
+			get;
+			set;
+		}
+
+		public string DocumentNumber
+		{
+			get;
+			set;
+		}
+
+		public string BLNumber
+		{
+			get;
+			set;
+		}
+
+		public string Model
+		{
+			get;
+			set;
+		}
+
+		public string FTZNumber
+		{
+			get;
+			set;
+		}
+
+		public string ExportRef
+		{
+			get;
+			set;
+		}
+
+		public int? ConsignedTo
+		{
+			get;
+			set;
+		}
+
+		public int? FwdAgent
+		{
+			get;
+			set;
+		}
+
+		public int? ConsigneeID
+		{
+			get;
+			set;
+		}
+
+		public string ExportingCarrier
+		{
+			get;
+			set;
+		}
+
+		public string ExportInstruction
+		{
+			get;
+			set;
+		}
+
+		public string CarriageBy
+		{
+			get;
+			set;
+		}
+
+		public string PlaceOfReceiptID
+		{
+			get;
+			set;
+		}
+
+		public int? LandingPortID
+		{
+			get;
+			set;
+		}
+
+		public string LoadingPert
+		{
+			get;
+			set;
+		}
+
+		public int? ForeignPortID
+		{
+			get;
+			set;
+		}
+
+		public string Transshipment
+		{
+			get;
+			set;
+		}
+
+		public string Voyage
+		{
+			get;
+			set;
+		}
+
+		public string MoveType
+		{
+			get;
+			set;
+		}
+
+		public bool? IsDeleted
+		{
+			get;
+			set;
+		}
+
+		public int? CreatedBy
+		{
+			get;
+			set;
+		}
+
+		public DateTime? CreatedOn
+		{
+			get;
+			set;
+		}
+
+		public DateTime? ModifiedOn
+		{
+			get;
+			set;
+		}
+
+		public int? IsExport
+		{
+			get;
+			set;
+		}
+
+		public int? IsAir
+		{
+			get;
+			set;
+		}
+
+		public string Originport
+		{
+			get;
+			set;
+		}
+
+		public string DestinationPort
+		{
+			get;
+			set;
+		}
+
+		public bool? BookingStatus
+		{
+			get;
+			set;
+		}
+
+		public DateTime? CutOffDate
+		{
+			get;
+			set;
+		}
+
+		public string CNTNO
+		{
+			get;
+			set;
+		}
+
+		public string VIN
+		{
+			get;
+			set;
+		}
+
+		public string GALBookingType
+		{
+			get;
+			set;
+		}
+
+		public string BookedBy
+		{
+			get;
+			set;
+		}
+
+		public int? BookingReceivedBy
+		{
+			get;
+			set;
+		}
+
+		public DateTime? BookingDate
+		{
+			get;
+			set;
+		}
+
+		public int? ShipperID
+		{
+			get;
+			set;
+		}
+
+		public string PickupCategory
+		{
+			get;
+			set;
+		}
+
+		public string PickupCategoryName
+		{
+			get;
+			set;
+		}
+
+		public string Vessel
+		{
+			get;
+			set;
+		}
+
+		public string ETSailing
+		{
+			get;
+			set;
+		}
+
+		public DateTime? ETA
+		{
+			get;
+			set;
+		}
+
+		public DateTime? ETS
+		{
+			get;
+			set;
+		}
+
+		public DateTime? ERD
+		{
+			get;
+			set;
+		}
+
+		public DateTime? ExpecteddateOfMove
+		{
+			get;
+			set;
+		}
+
+		public string CarrierBooking
+		{
+			get;
+			set;
+		}
+
+		public string Remarks
+		{
+			get;
+			set;
+		}
+
+		public string OriginCountry
+		{
+			get;
+			set;
+		}
+
+		public string DestinationCountry
+		{
+			get;
+			set;
+		}
+
+		public string DeliverdBy
+		{
+			get;
+			set;
+		}
+
+		public string CheckedBy
+		{
+			get;
+			set;
+		}
+
+		public DateTime? IssuedOn
+		{
+			get;
+			set;
+		}
+
+		public DateTime? ArrivalDate
+		{
+			get;
+			set;
+		}
+
+		public DateTime? DepartureDate
+		{
+			get;
+			set;
+		}
+
+		public string BillOfLadingNo
+		{
+			get;
+			set;
+		}
+
+		public string PlaceOfAcceptance
+		{
+			get;
+			set;
+		}
+
+		public decimal? QuotationChargesID
+		{
+			get;
+			set;
+		}
+
+		public string Description
+		{
+			get;
+			set;
+		}
+
+		public string Class
+		{
+			get;
+			set;
+		}
+
+		public string UNNo
+		{
+			get;
+			set;
+		}
+
+		public string PackingType
+		{
+			get;
+			set;
+		}
+
+		public string HazRemarks
+		{
+			get;
+			set;
+		}
+
+		public bool? IsHaz
+		{
+			get;
+			set;
+		}
+
+		public double? Hazweight
+		{
+			get;
+			set;
+		}
+
+		public double? HazVolume
+		{
+			get;
+			set;
+		}
+
+		public int? ETAFinalplaceid
+		{
+			get;
+			set;
+		}
+
+		public int? Finalplaceid
+		{
+			get;
+			set;
+		}
+
+		public bool? IsContractBooking
+		{
+			get;
+			set;
+		}
+
+		public int? BookingCategory
+		{
+			get;
+			set;
+		}
+
+		public string OriginDoor
+		{
+			get;
+			set;
+		}
+
+		public string DestinationDoor
+		{
+			get;
+			set;
+		}
+
+		public DateTime? PortcutoffDate
+		{
+			get;
+			set;
+		}
+
+		public DateTime? EarliestPickUpDate
+		{
+			get;
+			set;
+		}
+
+		public int? GALBookingStatusID
+		{
+			get;
+			set;
+		}
+
+		public int? BookingRequestID
+		{
+			get;
+			set;
+		}
+
+		public DateTime? CommunicationRecdDate
+		{
+			get;
+			set;
+		}
+
+		public int? ModeID
+		{
+			get;
+			set;
+		}
+
+		public string SpaceBookingRemarks
+		{
+			get;
+			set;
+		}
+
+		public string AttachFile
+		{
+			get;
+			set;
+		}
+
+		public string RevisedID
+		{
+			get;
+			set;
+		}
+
+		public int? ContractBookingID
+		{
+			get;
+			set;
+		}
+
+		public string AttachFile1
+		{
+			get;
+			set;
+		}
+
+		public string AttachFile2
+		{
+			get;
+			set;
+		}
+
+		public DateTime? ShipperConfirmDate
+		{
+			get;
+			set;
+		}
+
+		public int? ShipperConfirmMode
+		{
+			get;
+			set;
+		}
+
+		public string ShipperRepName
+		{
+			get;
+			set;
+		}
+
+		public string ShipperAttachFile
+		{
+			get;
+			set;
+		}
+
+		public string ToShipperEmail
+		{
+			get;
+			set;
+		}
+
+		public string OriginRailRamp
+		{
+			get;
+			set;
+		}
+
+		public DateTime? RampCutOff
+		{
+			get;
+			set;
+		}
+
+		public string DestinationTerminal
+		{
+			get;
+			set;
+		}
+
+		public DateTime? AutoCutOff
+		{
+			get;
+			set;
+		}
+
+		public string ReqdSailingRemarks
+		{
+			get;
+			set;
+		}
+
+		public string OriginDoorAddress
+		{
+			get;
+			set;
+		}
+
+		public int? OriginAddId
+		{
+			get;
+			set;
+		}
+
+		public string InvoiceStatusID
+		{
+			get;
+			set;
+		}
+
+		public int? DestinationAddId
+		{
+			get;
+			set;
+		}
+
+		public string HBL
+		{
+			get;
+			set;
+		}
+
+		public string MBL
+		{
+			get;
+			set;
+		}
+
+		public string DR
+		{
+			get;
+			set;
+		}
+
+		public string CD
+		{
+			get;
+			set;
+		}
+
+		public string Shipper
+		{
+			get;
+			set;
+		}
+
+		public string Others
+		{
+			get;
+			set;
+		}
+
+		public string Booking
+		{
+			get;
+			set;
+		}
+
+		public string PONO
+		{
+			get;
+			set;
+		}
+
+		public string ShipperCustomerName
+		{
+			get;
+			set;
+		}
+
+		public decimal SitId
+		{
+			get;
+			set;
+		}
+
+		public DateTime? BookingReqtRecivedDate
+		{
+			get;
+			set;
+		}
+
+		public DateTime? CustReqCutOffDate
+		{
+			get;
+			set;
+		}
+
+		public DateTime? CustReqSailingDate
+		{
+			get;
+			set;
+		}
+
+		public int? Trucking_ContactID
+		{
+			get;
+			set;
+		}
+
+		public int? Loading_ContactID
+		{
+			get;
+			set;
+		}
+
+		public DateTime? LoadingDate
+		{
+			get;
+			set;
+		}
+
+		public DateTime? ReqStuffingDate
+		{
+			get;
+			set;
+		}
+
+		public DateTime? ConfStuffedDate
+		{
+			get;
+			set;
+		}
+
+		public string BookingRemarks
+		{
+			get;
+			set;
+		}
+
+		public int? ModifiedBy
+		{
+			get;
+			set;
+		}
+
+		public int? Dos_ID
+		{
+			get;
+			set;
+		}
+	}
+}

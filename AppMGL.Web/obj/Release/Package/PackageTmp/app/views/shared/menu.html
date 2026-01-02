@@ -1,0 +1,8 @@
+﻿<a ng-href="{{menu.href}}" ng-click="setHeader(menu);">
+    <i class="{{menu.iconClass}}"></i>
+    <span>{{menu.text}}</span>
+    <i ng-if="menu.menus.length > 0" class="fa fa-angle-left pull-right"></i>
+</a>
+<ul ng-if="menu.menus.length > 0" class="treeview-menu">
+    <li class="treeview" ng-repeat="menu in menu.menus" show-action="40" mod-id="menu.roles" ng-include="'app/views/shared/menu.html'"></li>
+</ul>

@@ -1,0 +1,13 @@
+C:\MGL-Logistics\AppMGL.DTO\bin\Debug\AppMGL.DTO.dll
+C:\MGL-Logistics\AppMGL.DTO\bin\Debug\AppMGL.DTO.pdb
+C:\MGL-Logistics\AppMGL.DTO\obj\Debug\AppMGL.DTO.dll
+C:\MGL-Logistics\AppMGL.DTO\obj\Debug\AppMGL.DTO.pdb
+C:\MGL-Prod\MGL-Logistics\AppMGL.DTO\bin\Debug\AppMGL.DTO.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.DTO\bin\Debug\AppMGL.DTO.pdb
+C:\MGL-Prod\MGL-Logistics\AppMGL.DTO\obj\Debug\AppMGL.DTO.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.DTO\obj\Debug\AppMGL.DTO.pdb
+F:\New folder\MGL-Logistics\AppMGL.DTO\bin\Debug\AppMGL.DTO.dll
+F:\New folder\MGL-Logistics\AppMGL.DTO\bin\Debug\AppMGL.DTO.pdb
+F:\New folder\MGL-Logistics\AppMGL.DTO\obj\Debug\AppMGL.DTO.csprojResolveAssemblyReference.cache
+F:\New folder\MGL-Logistics\AppMGL.DTO\obj\Debug\AppMGL.DTO.dll
+F:\New folder\MGL-Logistics\AppMGL.DTO\obj\Debug\AppMGL.DTO.pdb

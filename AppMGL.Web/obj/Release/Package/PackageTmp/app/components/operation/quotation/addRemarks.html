@@ -1,0 +1,53 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title">Add Remarks</h3>
+</div>
+<div class="modal-body form-horizontal detail-container" when-ready="filterModalLoaded()" wait-for-interpolation="true">
+    <ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Origin</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" name="portOriginName" ng-model="portOriginName" ng-disabled="true" />
+            </div>
+            <label class="col-sm-2 control-label">Discharge</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" name="portDischargeName" ng-model="portDischargeName" ng-disabled="true" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Carrier</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" name="carrierName" ng-model="carrierName" ng-disabled="true" />
+            </div>
+        </div>        
+        <div>
+            <table class="table table-striped table-bordered table-hover " template-pagination="none">
+                <thead>
+                    <tr class="bg-thead">
+                        <th class="text-left">&nbsp;&nbsp;</th>
+                        <th class="text-left">Charges</th>
+                        <th class="text-left">Remarks</th>                        
+                    </tr>
+                </thead>
+                <tbody>                   
+                    <tr ng-repeat="entity in carrierRemarks">
+                        <td>
+                            <input type="checkbox" ng-model="entity.isSelected"/>
+                        </td>
+                        <td>
+                            <label class="control-label">{{entity.refName}}</label>
+                        </td>
+                        <td><input type="text" class="form-control" name="remarks" ng-model="entity.remarks" ng-disabled="!entity.isSelected"/></td>                        
+                    </tr>
+                <tbody>
+            </table>
+        </div>
+    </ng-form>
+</div>
+<div class="modal-footer">
+    <div class="pull-right">
+        <button type="button" class="btn btn-sm btn-primary" ng-click="addCarrierRemarks('update')" action="update">Add Remarks</button>
+        <button type="button" class="btn btn-default" ng-click="addCarrierRemarks('close')" action="select">Close</button>
+    </div>
+</div>
+
+

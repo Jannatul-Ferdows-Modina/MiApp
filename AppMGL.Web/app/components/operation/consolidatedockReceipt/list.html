@@ -1,0 +1,50 @@
+﻿<table ng-table="documentTable" class="table table-striped table-bordered table-hover" template-pagination="customPager">
+    <thead>
+        <tr class="bg-thead">
+            
+            <th class="text-left col-sm-1">System Ref# </th>
+            <th class="text-left col-sm-2">Exporter</th>
+            <th class="text-left col-sm-1">Dock Recept No</th>
+            <th class="text-left col-sm-1">Booking No</th>
+            <th class="text-left col-sm-1">Cut Off Date</th>
+            <th class="text-left col-sm-1">Req Stuffing Date</th>
+            <th class="text-left col-sm-3">Empty Pick Up</th>
+            <th class="text-left col-sm-3">Full Return Location</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="d in $data">
+            
+            <td class="hidden-xs">
+                <a ng-click="performSubAction($event, true)" action="edit"  entityid="{{d.bookedId}}" >{{d.fileNo}}</a>
+            </td>
+           
+            <td class="text-left">
+                {{d.exporterName}}
+            </td>
+            <td class="text-left">
+                {{d.dockReceptNo}}
+            </td>
+            <td class="text-left">
+                {{d.blNumber}}
+            </td>
+            <td class="text-left">
+                {{d.cutOff | date:'MM/dd/yyyy'}}
+            </td>
+            <td class="text-left">
+                {{d.reqStuffingDate | date:'MM/dd/yyyy'}}
+            </td>
+            <td class="text-left">
+                {{d.pickupName}}
+            </td>
+            <td class="text-left">
+                {{d.fullReturnName}}
+            </td>
+
+        </tr>
+        <tr ng-if="params.total() == 0">
+            <td class="text-center text-italic" colspan="5">No Record(s) Found</td>
+        </tr>
+    </tbody>
+</table>

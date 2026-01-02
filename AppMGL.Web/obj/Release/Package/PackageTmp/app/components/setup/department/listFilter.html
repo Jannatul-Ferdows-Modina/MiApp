@@ -1,0 +1,24 @@
+﻿<div class="box-container form-horizontal detail-container">
+    <div class="form-group">
+        <label class="col-sm-3 control-label text-left">Department Id</label>
+        <label class="col-sm-3 control-label text-left">Name</label>
+        <label class="col-sm-3 control-label text-left">&nbsp;</label>
+        <div class="col-sm-3">&nbsp;</div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="DptIdF" ng-model="DptIdF" uib-typeahead="o.dptId for o in callTypeahead($viewValue, 'department', 'dptId', null, 'decimal')" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="department" lookup-field="dptId" custom-clear="true" />
+        </div>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="DptNameF" ng-model="DptNameF" uib-typeahead="o.dptName for o in callTypeahead($viewValue, 'department', 'dptName', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="department" lookup-field="dptName" entity-key-field="dptId" custom-clear="true" />
+        </div>
+        <div class="col-sm-3">
+            &nbsp;
+        </div>
+        <div class="col-sm-3">
+            <div class="pull-right">
+                <button class="btn btn-sm btn-primary" ng-click="performAction($event)" action="search">Search</button>
+            </div>
+        </div>
+    </div>
+</div>

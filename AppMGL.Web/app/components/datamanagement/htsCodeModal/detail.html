@@ -1,0 +1,87 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title">HTS Code</h3>
+</div>
+<div class="modal-body form-horizontal detail-container" when-ready="filterModalLoaded()" wait-for-interpolation="true">
+    <ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+        
+        <div class="form-group">
+            <div>
+                <label style="padding-top:25px" class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Hts Code</label>
+
+                <div class="col-sm-1" style="padding-top:20px">
+                    <input type="text" width="15"
+                           class="form-control" id="htsfirst" name="htsfirst" ng-model="entity.htsfirst" maxlength="4" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+                </div>
+
+                <div class="col-sm-1">
+                    .<input type="text" width="10" class="form-control" id="htssecond" name="htssecond" ng-model="entity.htssecond" maxlength="2" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+                </div>
+                <div class="col-sm-1">
+                    .<input type="text" width="10" class="form-control" id="htsthird" name="htsthird" ng-model="entity.htsthird" maxlength="4" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+                </div>
+
+                <!--<div class="col-sm-1">
+                    .<input type="text" width="10" class="form-control" id="htsfourth" name="htsfourth" ng-model="entity.htsfourth" maxlength="2" ng-disabled="disabledUpdate" />
+                </div>-->
+
+            </div>
+
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Description</label>
+            <div class="col-sm-10" show-errors="{ skipFormGroupCheck: true }">
+                <textarea rows="2" class="form-control" name="description" ng-model="entity.description" ng-disabled="disabledUpdate" />
+                <input type="text" class="form-control" name="HTSNumber" ng-model="entity.htsNumber" maxlength="200" ng-disabled="disabledUpdate" style="display:none" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Unit 1 </label>
+            <div class="col-sm-4">
+                <select class="form-control" name="FirstUOM" ng-model="entity.firstUOM" ng-options="t.id as t.name for t in lookups.uomList" ng-disabled="disabledUpdate" ng-required="requiredUpdate">
+                    <option value="">--Select-- </option>
+                </select>
+            </div>
+            <label class="col-sm-2 control-label">Unit 2 </label>
+            <div class="col-sm-4">
+                <select class="form-control" name="SecondUOM" ng-model="entity.secondUOM" ng-options="t.id as t.name for t in lookups.uomList" ng-disabled="disabledUpdate" >
+                    <option value="">--Select-- </option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Indent </label>
+            <div class="col-sm-4">
+                <select class="form-control" name="indent" ng-model="entity.indent" ng-disabled="disabledUpdate" ng-required="requiredUpdate">
+                    <option value="">--Select-- </option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <label class="col-sm-2 control-label">is Vin </label>
+            <div class="col-sm-4">
+                <input type="checkbox" style="margin-top:10px;" name="isvin" ng-model="entity.isvin" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">IsActive</label>
+            <div class="col-sm-4 checkbox-control">
+                <input type="checkbox" name="isDel" ng-model="entity.isDel" ng-disabled="disabledUpdate" />
+            </div>
+        </div>
+
+    </ng-form>
+</div>
+<div class="modal-footer">
+    <!--<button class="btn btn-sm btn-primary" ng-click="SaveHtsCode($event, false)" action="save">Save</button>
+    <button class="btn btn-sm btn-default" ng-click="performAction($event, false)" action="cancel">Cancel</button>-->
+    <button class="btn btn-sm btn-primary" ng-click="performAction($event)" action="save">Save</button>
+    <button class="btn btn-sm btn-default" ng-click="performAction($event)" action="cancel">Cancel</button>
+</div>

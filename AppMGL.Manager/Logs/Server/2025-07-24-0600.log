@@ -1,0 +1,94 @@
+=============================================================
+LOCAL DATE  : Thursday, July 24 2025, 08:06:14.2857 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Validate access token
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Thursday, July 24 2025, 08:06:14.2887 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Validate access token OK No
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Thursday, July 24 2025, 08:06:38.0234 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Validate access token
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Thursday, July 24 2025, 08:06:38.0244 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Validate access token OK
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Thursday, July 24 2025, 08:06:41.3905 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Dasboard id 138
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Thursday, July 24 2025, 08:06:44.5146 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : GetSiteLocations data 13
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Thursday, July 24 2025, 08:06:48.1862 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Dasboard id data0
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Thursday, July 24 2025, 08:07:06.5790 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Dasboard id 138
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Thursday, July 24 2025, 08:07:06.6350 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : GetSiteLocations data 13
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Thursday, July 24 2025, 08:07:09.9711 AM
+ENTRY TYPE  : Warning
+SOURCE      : N/A
+MESSAGE     : Dasboard id data0
+STACK TRACE : N/A
+
+=============================================================
+LOCAL DATE  : Thursday, July 24 2025, 08:07:22.0481 AM
+ENTRY TYPE  : Error
+SOURCE      : System
+MESSAGE     : The remote name could not be resolved: 'win-272lfgc4n37'
+STACK TRACE :    at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at AppMGL.Manager.ReportExecutionProvider.ReportExecutionService.LoadReport(String Report, String HistoryID) in F:\New folder\MGL-Logistics\AppMGL.Manager\Web References\ReportExecutionProvider\Reference.cs:line 332
+   at AppMGL.Manager.Infrastructure.Report.ReportServerProxy.Render(String reportPath, List`1 reportParams, ReportFormat reportFormat) in F:\New folder\MGL-Logistics\AppMGL.Manager\Infrastructure\Report\ReportServerProxy.cs:line 23
+   at AppMGL.Manager.Areas.Home.Controllers.DashboardController.ExportReport(Dictionary`2 exportParams) in F:\New folder\MGL-Logistics\AppMGL.Manager\Areas\Home\Controllers\DashboardController.cs:line 137
+
+=============================================================
+LOCAL DATE  : Thursday, July 24 2025, 08:09:01.2484 AM
+ENTRY TYPE  : Error
+SOURCE      : System
+MESSAGE     : The remote name could not be resolved: 'win-272lfgc4n37'
+STACK TRACE :    at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at AppMGL.Manager.ReportExecutionProvider.ReportExecutionService.LoadReport(String Report, String HistoryID) in F:\New folder\MGL-Logistics\AppMGL.Manager\Web References\ReportExecutionProvider\Reference.cs:line 332
+   at AppMGL.Manager.Infrastructure.Report.ReportServerProxy.Render(String reportPath, List`1 reportParams, ReportFormat reportFormat) in F:\New folder\MGL-Logistics\AppMGL.Manager\Infrastructure\Report\ReportServerProxy.cs:line 23
+   at AppMGL.Manager.Areas.Home.Controllers.DashboardController.ExportReport(Dictionary`2 exportParams) in F:\New folder\MGL-Logistics\AppMGL.Manager\Areas\Home\Controllers\DashboardController.cs:line 137
+

@@ -1,0 +1,34 @@
+﻿<table ng-table="documentationlistTable" class="table table-striped table-bordered table-hover" template-pagination="customPager">
+    <thead>
+        <tr class="bg-thead"> 
+            <th class="list-actions" ng-hide="dos_Id == 7">Edit</th>
+            <th class="list-actions" ng-hide="dos_Id !=7">Send Email</th>
+            <th class="text-left sortable hidden-xs" custom-sortable="fileNo" table-name="documentationlistTable">System Ref</th>            
+            <th class="text-left sortable hidden-xs" custom-sortable="bookingNo" table-name="documentationlistTable">Booking No</th>            
+            <th class="text-left sortable hidden-xs" custom-sortable="companyName" table-name="documentationlistTable">Company Name</th> 
+            <th class="text-left sortable hidden-xs" custom-sortable="carrierName" table-name="documentationlistTable">Carrier Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="entity in items"> 
+            <td>
+                <button type="button" class="btn btn-xs btn-primary" ng-click="getDocumentationDetail($event, entity.doc_Id,entity.documentCommonID)" show-action="20" action="add" entityid="{{entity.doc_Id}}" uib-tooltip="Edit"><i class="fa fa-edit"></i></button>
+            </td>                       
+            <td class="hidden-xs">
+                {{entity.fileNo}}
+            </td>            
+            <td class="hidden-xs">
+                {{entity.bookingNo}}
+            </td>
+            <td class="hidden-xs">
+                {{entity.companyName}}
+            </td>
+            <td class="hidden-xs">
+                {{entity.shippingLine}}
+            </td>
+        </tr>
+        <tr ng-if="params.total() == 0">
+            <td class="text-center text-italic" colspan="5">No Record(s) Found</td>
+        </tr>
+    </tbody>
+</table>

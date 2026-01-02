@@ -1,0 +1,19 @@
+﻿<div class="box-container form-horizontal detail-container">
+    <div class="form-group">
+        <label class="col-sm-3 control-label text-left">Account Name</label>
+         
+        
+        <div class="col-sm-3">&nbsp;</div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="AcyNAMEF" ng-model="AcyNAMEF" uib-typeahead="o.acyNAME for o in callTypeahead($viewValue, 'lgacctcategory', 'acyNAME', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="lgacctcategory" lookup-field="acyNAME" entity-key-field="acyID" custom-clear="true" />
+        </div>
+         
+        <div class="pull-right">
+            <button class="btn btn-sm btn-primary" ng-click="performAction($event)" action="search">Search</button>
+        </div>
+        </div>
+        </div>
+   
+

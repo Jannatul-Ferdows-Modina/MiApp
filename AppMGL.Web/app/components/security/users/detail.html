@@ -1,0 +1,86 @@
+﻿<ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+    <uib-tabset justified="true">
+        <uib-tab heading="General">
+            <p>&nbsp;</p>
+            <div class="form-group">
+                <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Display Name</label>
+                <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+                    <input type="text" class="form-control" name="displayName" ng-model="entity.displayName" ng-disabled="true" ng-required="requiredUpdate" />
+                </div>
+                <label class="col-sm-2 control-label">Status</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="statusCaption" ng-model="entity.statusCaption" ng-disabled="true" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label {{requiredInsert ? 'required' : ''}}">User Name</label>
+                <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+                    <input type="text" class="form-control" name="userName" ng-model="entity.userName" maxlength="100" ng-disabled="disabledInsert" ng-required="requiredInsert" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label {{requiredInsert ? 'required' : ''}}">Password</label>
+                <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+                    <input type="password" class="form-control" name="password" ng-model="entity.password" maxlength="50" ng-disabled="disabledUpdate" ng-required="requiredInsert" />
+                </div>
+                <label class="col-sm-2 control-label {{requiredInsert ? 'required' : ''}}">Confirm Password</label>
+                <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+                    <input type="password" class="form-control" name="confirmPassword" ng-model="entity.confirmPassword" maxlength="50" ng-disabled="disabledUpdate" ng-required="requiredInsert" ui-validate="'$value===entity.password'" ui-validate-watch="'entity.password'" />
+                </div>
+            </div>
+            <hr class="line-default" />
+            <div class="form-group">
+                <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">User Type</label>
+                <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+                    <select class="form-control" name="userTypeId" ng-model="entity.userTypeId" ng-options="t.enumValueId as t.enumValueCaption for t in lookups.userTypes" ng-disabled="disabledUpdate" ng-required="requiredUpdate" ng-change="changeUserType(entity.userTypeId)"></select>
+                </div>
+                <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}" ng-show="entity.userTypeId==3001">Admin Type</label>
+                <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }" ng-show="entity.userTypeId==3001">
+                    <select class="form-control" name="adminTypeId" ng-model="entity.adminTypeId" ng-options="t.enumValueId as t.enumValueCaption for t in lookups.adminTypes" ng-disabled="disabledUpdate" ng-required="requiredUpdate"></select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Active From</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="activeFrom" ng-model="entity.activeFrom" ng-disabled="disabledUpdate" input-date="true" show-time="false" />
+                </div>
+                <label class="col-sm-2 control-label">Active To</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="activeTo" ng-model="entity.activeTo" ng-disabled="disabledUpdate" input-date="true" show-time="false" />
+                </div>
+            </div>
+            <hr class="line-info" />
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Avatar</label>
+                <div class="col-sm-4" ng-hide="entity.iconFileName">
+                    <button type="button" class="btn btn-sm btn-success" name="files" ng-model="files" ng-disabled="disabledUpdate" ngf-select="uploadFiles($files)" ngf-multiple="false" ngf-max-size="10MB" ngf-pattern="'.gif, .jpg, .jpeg, .png'" accept=".gif, .jpg, .jpeg, .png" ><i class="fa fa-camera"></i> Upload Image</button>
+                </div>
+                <div class="col-sm-4" ng-show="entity.iconFileName">
+                    <ul class="mailbox-attachments clearfix">
+                        <li>
+                            <span class="mailbox-attachment-icon has-img"><img src="{{userIcon}}"></span>
+                            <div class="mailbox-attachment-info">
+                                <a class="mailbox-attachment-name"><i class="fa fa-camera"></i> User Avatar</a>
+                                <a class="btn btn-xs btn-default pull-right" ng-disabled="disabledUpdate" ng-click="deleteFile($files)"><i class="fa fa-remove"></i></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </uib-tab>
+        <uib-tab heading="Contact">
+            <p>&nbsp;</p>
+            <div ng-include="'app/views/shared/contact.html'"></div>
+        </uib-tab>
+        <uib-tab heading="Subscription">
+            <div ng-include="'app/components/security/users/subscription.html'"></div>
+        </uib-tab>
+    </uib-tabset>
+    <div class="hide">
+        <input type="hidden" name="userId" ng-model="entity.userId" />
+        <input type="hidden" name="aspNetUserId" ng-model="entity.aspNetUserId" />
+        <input type="hidden" name="iconFileName" ng-model="entity.iconFileName" />
+        <input type="hidden" name="statusId" ng-model="entity.statusId" />
+        <input type="hidden" name="lastAccess" ng-model="entity.lastAccess" />
+    </div>
+</ng-form>

@@ -1,0 +1,42 @@
+﻿<div ng-show="authentication.isAuth">
+    <div class="form-group" data-ng-if="customMenu.menuObj[customMenu.selectedMenu].length">
+        <div class="row" data-ng-if="!customMenu.showChildMenu">
+            <div class="col-lg-3 col-xs-6" data-ng-repeat="item in customMenu.menuObj[customMenu.selectedMenu]">
+                <div class="small-box pointer" style="width : 251px; height : 295px;"  data-ng-if="!item.hasChild"
+                     ng-click="redirectTo(item.url, true, item.menuID, $index)" ng-class="{'bg-aqua' : $index%5==0, 'bg-green' : $index%5==1, 'bg-yellow' : $index%5==2, 'bg-red' : $index%5==3, 'bg-purple': $index%5==4}">
+                    <div class="icon" style="left:5px;">
+                        <i class="fa" ng-class="{'fa-pencil-square-o' : (customMenu.selectedMenu == 'contract' || customMenu.selectedMenu == 'document'), 'fa-files-o' : customMenu.selectedMenu == 'data management', 'fa-th' : customMenu.selectedMenu == 'administration', 'fa-pie-chart' : customMenu.selectedMenu == 'report'}"></i>
+                    </div>
+                    <div class="icon">
+                        {{item.header}}
+                    </div>
+                    <a class="small-box-footer commonMenu">
+                        {{item.menu}}
+                    </a>
+                    </div>
+                <div class="small-box pointer" style="width : 251px; height : 295px;" data-ng-if="item.hasChild"
+                     ng-click="mainMenuClick(item.menu.toLowerCase(), item.menuID, true)" ng-class="{'bg-aqua' : $index%5==0, 'bg-green' : $index%5==1, 'bg-yellow' : $index%5==2, 'bg-red' : $index%5==3, 'bg-purple': $index%5==4}">
+                    <div class="icon" style="left:5px;">
+                        <i class="fa" ng-class="{'fa-pencil-square-o' : (customMenu.selectedMenu == 'contract' || customMenu.selectedMenu == 'document'), 'fa-files-o' : customMenu.selectedMenu == 'data management', 'fa-th' : customMenu.selectedMenu == 'administration', 'fa-pie-chart' : customMenu.selectedMenu == 'report'}"></i>
+                    </div>
+                    <div class="icon">
+                        {{item.header}}
+                    </div>
+                    <a class="small-box-footer commonMenu">
+                        {{item.menu}}
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row" data-ng-if="customMenu.showChildMenu">
+            <div class="col-md-3 col-sm-6 col-xs-12" ng-click="redirectTo(item.url, true, item.menuID, customMenu.selectedMenu, $index)" data-ng-repeat="item in customMenu.menuObj[customMenu.selectedMenu] track by $index">
+                <div class="info-box pointer">
+                    <span class="info-box-icon" ng-class="{'bg-aqua' : $index%5==0, 'bg-green' : $index%5==1, 'bg-yellow' : $index%5==2, 'bg-red' : $index%5==3, 'bg-purple': $index%5==4}">{{item.header}}</span>
+                    <div class="info-box-content divCenter">
+                        <span class="info-box-number" style="font-weight : normal;">{{item.menu}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

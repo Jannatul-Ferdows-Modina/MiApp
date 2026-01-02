@@ -1,0 +1,25 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title">Select SiteId</h3>
+</div>
+<div class="modal-body form-horizontal detail-container" when-ready="filterModalLoaded()" wait-for-interpolation="true">
+    <ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+        <div class="form-group">
+            <label class="col-sm-4 control-label required"></label>
+            <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+                <!--<input type="text" class="form-control" name="deleteRemarks" ng-model="selectsiteid" ng-required="true" />-->
+                <!--<select class="form-control" name="siteid" ng-model="selectsiteid" ng-options="t.continentId as t.name for t in lookups.siplContinents" ng-disabled="disabledUpdate"></select>-->
+                <select class="form-control ng-pristine ng-valid ng-not-empty ng-touched" name="selectedsiteid" ng-model="selectedsiteid" ng-options="t.sitId as t.sitName for t in allsite" style=""></select>
+
+               
+            </div>
+        </div>
+    </ng-form>
+</div>
+<div class="modal-footer">
+    <div class="pull-right">
+        <button type="button" class="btn btn-sm btn-primary" ng-click="select('sitechange')" action="sitechange">Change</button>
+        <button type="button" class="btn btn-default" ng-click="select('close')" action="select">Close</button>
+    </div>
+</div>
+
+

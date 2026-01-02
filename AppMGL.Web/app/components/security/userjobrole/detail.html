@@ -1,0 +1,26 @@
+﻿<ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+    <p>&nbsp;</p>
+    <div class="form-group">
+        <div>
+            <label style="padding-top:25px" class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Job Role</label>
+
+            <div class="col-sm-4" style="padding-top:20px">
+                <input type="text" width="15" class="form-control" id="jobRole" name="jobRole" ng-model="entity.jobRole" ng-disabled="disabledUpdate" />
+            </div>
+            <label style="padding-top:25px" class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Job Desc</label>
+            <div class="col-sm-4">
+                
+                <textarea rows="2" class="form-control" name="jobRoleDesc" ng-model="entity.jobRoleDesc" ng-disabled="disabledUpdate" />
+            </div>
+           
+        </div>
+
+    </div>
+        
+        <div class="form-group">
+            <label class="col-sm-2 control-label">DeActive</label>
+            <div class="col-sm-4 checkbox-control">
+                <input type="checkbox" name="isDel" ng-model="entity.isDel" ng-disabled="disabledUpdate" />
+            </div>
+        </div>
+</ng-form>

@@ -1,0 +1,158 @@
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 10:55:55.7697 AM
+ENTRY TYPE  : Error
+SOURCE      : Username => bahuguna.vimal@gmail.com
+              IP Address => ::1
+              Url => http://localhost:50676/#!/home/dashboard
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => 
+MESSAGE     : Error: [ngRepeat:dupes] http://errors.angularjs.org/1.6.6/ngRepeat/dupes?p0=crumb%20in%20breadcrumbs&p1=string%3ACRM&p2=CRM
+STACK TRACE : minErr()@http://localhost:50676/bower_components/angular/angular.js:88:0
+              null()@http://localhost:50676/bower_components/angular/angular.js:31449:20
+              $watchCollectionAction()@http://localhost:50676/bower_components/angular/angular.js:18123:12
+              null()@http://localhost:50676/bower_components/angular/angular.js:18261:22
+              $apply()@http://localhost:50676/bower_components/angular/angular.js:18531:12
+              callback()@http://localhost:50676/bower_components/angular/angular.js:27346:16
+              HTMLAnchorElement.dispatch()@http://localhost:50676/bower_components/jquery/dist/jquery.min.js?v=2.0.2.17085:3:10316
+              q.handle()@http://localhost:50676/bower_components/jquery/dist/jquery.min.js?v=2.0.2.17085:3:8343
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 10:55:56.5716 AM
+ENTRY TYPE  : Error
+SOURCE      : Username => bahuguna.vimal@gmail.com
+              IP Address => ::1
+              Url => http://localhost:50676/#!/home/dashboard
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => 
+MESSAGE     : Error: [ngRepeat:dupes] http://errors.angularjs.org/1.6.6/ngRepeat/dupes?p0=crumb%20in%20breadcrumbs&p1=string%3ACRM&p2=CRM
+STACK TRACE : minErr()@http://localhost:50676/bower_components/angular/angular.js:88:0
+              null()@http://localhost:50676/bower_components/angular/angular.js:31449:20
+              $watchCollectionAction()@http://localhost:50676/bower_components/angular/angular.js:18123:12
+              null()@http://localhost:50676/bower_components/angular/angular.js:18261:22
+              $apply()@http://localhost:50676/bower_components/angular/angular.js:18531:12
+              callback()@http://localhost:50676/bower_components/angular/angular.js:27346:16
+              HTMLAnchorElement.dispatch()@http://localhost:50676/bower_components/jquery/dist/jquery.min.js?v=2.0.2.17085:3:10316
+              q.handle()@http://localhost:50676/bower_components/jquery/dist/jquery.min.js?v=2.0.2.17085:3:8343
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 10:55:57.6048 AM
+ENTRY TYPE  : Error
+SOURCE      : Username => bahuguna.vimal@gmail.com
+              IP Address => ::1
+              Url => http://localhost:50676/#!/home/dashboard
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => 
+MESSAGE     : Error: [ngRepeat:dupes] http://errors.angularjs.org/1.6.6/ngRepeat/dupes?p0=crumb%20in%20breadcrumbs&p1=string%3ACRM&p2=CRM
+STACK TRACE : minErr()@http://localhost:50676/bower_components/angular/angular.js:88:0
+              null()@http://localhost:50676/bower_components/angular/angular.js:31449:20
+              $watchCollectionAction()@http://localhost:50676/bower_components/angular/angular.js:18123:12
+              null()@http://localhost:50676/bower_components/angular/angular.js:18261:22
+              $apply()@http://localhost:50676/bower_components/angular/angular.js:18531:12
+              callback()@http://localhost:50676/bower_components/angular/angular.js:27346:16
+              HTMLAnchorElement.dispatch()@http://localhost:50676/bower_components/jquery/dist/jquery.min.js?v=2.0.2.17085:3:10316
+              q.handle()@http://localhost:50676/bower_components/jquery/dist/jquery.min.js?v=2.0.2.17085:3:8343
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:02:03.4858 AM
+ENTRY TYPE  : Error
+SOURCE      : Username => bahuguna.vimal@gmail.com
+              IP Address => ::1
+              Url => http://localhost:50676/#!/crm/leadgeneration
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => <a href="#" ng-click="addremars(group.data[0]);return false">
+MESSAGE     : Error: [$parse:syntax] http://errors.angularjs.org/1.6.6/$parse/syntax?p0=false&p1=is%20an%20unexpected%20token&p2=33&p3=addremars(group.data%5B0%5D)%3Breturn%20false&p4=false
+STACK TRACE : minErr()@http://localhost:50676/bower_components/angular/angular.js:88:0
+              throwError()@http://localhost:50676/bower_components/angular/angular.js:15258:10
+              ast()@http://localhost:50676/bower_components/angular/angular.js:15008:6
+              parse()@http://localhost:50676/bower_components/angular/angular.js:16350:14
+              $parse()@http://localhost:50676/bower_components/angular/angular.js:16496:31
+              compile()@http://localhost:50676/bower_components/angular/angular.js:27337:19
+              compile()@http://localhost:50676/bower_components/angular/angular.js:9737:21
+              null()@http://localhost:50676/bower_components/angular/angular.js:9097:14
+              compileNodes()@http://localhost:50676/bower_components/angular/angular.js:9109:14
+              compileNodes()@http://localhost:50676/bower_components/angular/angular.js:9109:14
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:07:32.0359 AM
+ENTRY TYPE  : Error
+SOURCE      : Username => bahuguna.vimal@gmail.com
+              IP Address => ::1
+              Url => http://localhost:50676/#!/crm/leadgeneration
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => <span href="#" ng-click="addremars(group.data[0]);return false">
+MESSAGE     : Error: [$parse:syntax] http://errors.angularjs.org/1.6.6/$parse/syntax?p0=false&p1=is%20an%20unexpected%20token&p2=33&p3=addremars(group.data%5B0%5D)%3Breturn%20false&p4=false
+STACK TRACE : minErr()@http://localhost:50676/bower_components/angular/angular.js:88:0
+              throwError()@http://localhost:50676/bower_components/angular/angular.js:15258:10
+              ast()@http://localhost:50676/bower_components/angular/angular.js:15008:6
+              parse()@http://localhost:50676/bower_components/angular/angular.js:16350:14
+              $parse()@http://localhost:50676/bower_components/angular/angular.js:16496:31
+              compile()@http://localhost:50676/bower_components/angular/angular.js:27337:19
+              compile()@http://localhost:50676/bower_components/angular/angular.js:9737:21
+              null()@http://localhost:50676/bower_components/angular/angular.js:9097:14
+              compileNodes()@http://localhost:50676/bower_components/angular/angular.js:9109:14
+              compileNodes()@http://localhost:50676/bower_components/angular/angular.js:9109:14
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:09:57.0195 AM
+ENTRY TYPE  : Error
+SOURCE      : Username => bahuguna.vimal@gmail.com
+              IP Address => ::1
+              Url => http://localhost:50676/#!/crm/leadgeneration
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => <a href="" ng-click="addremars(group.data[0]);return false">
+MESSAGE     : Error: [$parse:syntax] http://errors.angularjs.org/1.6.6/$parse/syntax?p0=false&p1=is%20an%20unexpected%20token&p2=33&p3=addremars(group.data%5B0%5D)%3Breturn%20false&p4=false
+STACK TRACE : minErr()@http://localhost:50676/bower_components/angular/angular.js:88:0
+              throwError()@http://localhost:50676/bower_components/angular/angular.js:15258:10
+              ast()@http://localhost:50676/bower_components/angular/angular.js:15008:6
+              parse()@http://localhost:50676/bower_components/angular/angular.js:16350:14
+              $parse()@http://localhost:50676/bower_components/angular/angular.js:16496:31
+              compile()@http://localhost:50676/bower_components/angular/angular.js:27337:19
+              compile()@http://localhost:50676/bower_components/angular/angular.js:9737:21
+              null()@http://localhost:50676/bower_components/angular/angular.js:9097:14
+              compileNodes()@http://localhost:50676/bower_components/angular/angular.js:9109:14
+              compileNodes()@http://localhost:50676/bower_components/angular/angular.js:9109:14
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:12:01.3181 AM
+ENTRY TYPE  : Error
+SOURCE      : Username => bahuguna.vimal@gmail.com
+              IP Address => ::1
+              Url => http://localhost:50676/#!/crm/leadgeneration
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => 
+MESSAGE     : Error: [ngRepeat:dupes] http://errors.angularjs.org/1.6.6/ngRepeat/dupes?p0=crumb%20in%20breadcrumbs&p1=string%3ACRM&p2=CRM
+STACK TRACE : minErr()@http://localhost:50676/bower_components/angular/angular.js:88:0
+              null()@http://localhost:50676/bower_components/angular/angular.js:31449:20
+              $watchCollectionAction()@http://localhost:50676/bower_components/angular/angular.js:18123:12
+              null()@http://localhost:50676/bower_components/angular/angular.js:18261:22
+              $apply()@http://localhost:50676/bower_components/angular/angular.js:18531:12
+              callback()@http://localhost:50676/bower_components/angular/angular.js:27346:16
+              HTMLAnchorElement.dispatch()@http://localhost:50676/bower_components/jquery/dist/jquery.min.js?v=2.0.2.17085:3:10316
+              q.handle()@http://localhost:50676/bower_components/jquery/dist/jquery.min.js?v=2.0.2.17085:3:8343
+
+=============================================================
+LOCAL DATE  : Sunday, August 17 2025, 11:13:06.2634 AM
+ENTRY TYPE  : Error
+SOURCE      : Username => bahuguna.vimal@gmail.com
+              IP Address => ::1
+              Url => http://localhost:50676/#!/crm/leadgeneration
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => 
+MESSAGE     : Error: [ngRepeat:dupes] http://errors.angularjs.org/1.6.6/ngRepeat/dupes?p0=crumb%20in%20breadcrumbs&p1=string%3ACRM&p2=CRM
+STACK TRACE : minErr()@http://localhost:50676/bower_components/angular/angular.js:88:0
+              null()@http://localhost:50676/bower_components/angular/angular.js:31449:20
+              $watchCollectionAction()@http://localhost:50676/bower_components/angular/angular.js:18123:12
+              null()@http://localhost:50676/bower_components/angular/angular.js:18261:22
+              $apply()@http://localhost:50676/bower_components/angular/angular.js:18531:12
+              callback()@http://localhost:50676/bower_components/angular/angular.js:27346:16
+              HTMLAnchorElement.dispatch()@http://localhost:50676/bower_components/jquery/dist/jquery.min.js?v=2.0.2.17085:3:10316
+              q.handle()@http://localhost:50676/bower_components/jquery/dist/jquery.min.js?v=2.0.2.17085:3:8343
+

@@ -1,0 +1,25 @@
+﻿<div class="box-container form-horizontal detail-container">
+    <div class="form-group">
+        <label class="col-sm-3 control-label text-left">Commodity</label>
+        <label class="col-sm-3 control-label text-left">Description</label>
+        <label class="col-sm-3 control-label text-left">Commodity Type</label>
+        
+        <div class="col-sm-3">&nbsp;</div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="NameF" ng-model="NameF" uib-typeahead="o.name for o in callTypeahead($viewValue, 'commodity', 'name', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="commodity" lookup-field="name" entity-key-field="commodityId" custom-clear="true" />
+        </div>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="DescriptionF" ng-model="DescriptionF" uib-typeahead="o.description for o in callTypeahead($viewValue, 'commodity', 'description', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="commodity" lookup-field="description" entity-key-field="commodityId" custom-clear="true" />
+        </div>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="CommodityTypeF" ng-model="CommodityTypeF" uib-typeahead="o.commodityType for o in callTypeahead($viewValue, 'commodityType', 'commodityType', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="commodityType" lookup-field="commodityType" entity-key-field="commodityTypeID" custom-clear="true" />
+        </div>
+        <div class="pull-right">
+            <button class="btn btn-sm btn-primary" ng-click="performAction($event)" action="search">Search</button>
+        </div>
+        </div>
+        </div>
+   
+

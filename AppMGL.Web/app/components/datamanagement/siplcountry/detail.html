@@ -1,0 +1,33 @@
+﻿<ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+    <p>&nbsp;</p>
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredInsert ? 'required' : ''}}">Country Id</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="continentId" ng-model="entity.countryId" disabled="disabled" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Country</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="name" ng-model="entity.name" ng-disabled="disabledUpdate" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Country Code</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="name" ng-model="entity.countryCode" ng-disabled="disabledUpdate" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Continent</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <select class="form-control" name="continentID" ng-model="entity.continentID" ng-options="t.continentId as t.name for t in lookups.continentnames" ng-disabled="disabledUpdate" ng-required="requiredUpdate"></select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">IsActive</label>
+        <div class="col-sm-4 checkbox-control">
+            <input type="checkbox" name="isActive" ng-model="entity.isActive" ng-disabled="disabledUpdate" />
+        </div>
+    </div>
+</ng-form>

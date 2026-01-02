@@ -1,0 +1,625 @@
+﻿<ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+ <div class="box box-info">
+  <div class="box-header with-border">
+     <h3 class="box-title Bold"></h3>
+     <div class="box-tools pull-right">
+                <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+            </div>
+   </div>
+  <div class="box-body">
+      <div class="form-group">
+          <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">System Refrence No</label>
+          <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+              <input type="text" class="form-control" name="shipmentNumber" ng-model="entity.shipmentNumber" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}"> USPPI Name</label>
+          <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+              <input type="text" autocomplete="off" class="form-control" name="usppiCompany" ng-model="entity.usppiCompany" uib-typeahead="o.name for o in searchValuesCompany($viewValue, 'companyName')" typeahead-on-select="selectTypeaheadsli($item, $model, 'SIPLContact5', $event)" lookup-module="SIPLContact5" lookup-field="companyName" entity-key-field="contactID" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+          </div>
+          <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">USPPI EIN</label>
+          <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+              <input type="text" autocomplete="off" class="form-control" name="usppiEIN" maxlength="11" ng-model="entity.usppiEIN" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+
+          </div>
+
+      </div>
+      <div class="form-group">
+          <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">First Name</label>
+          <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+              <input type="text" autocomplete="off" class="form-control" name="usppiFirstName" maxlength="13" ng-model="entity.usppiFirstName" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+          </div>
+          <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Last Name</label>
+          <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+              <input type="text" autocomplete="off" class="form-control" name="usppiLastName" maxlength="20" ng-model="entity.usppiLastName" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">State</label>
+          <div class="col-sm-4 " show-errors="{ skipFormGroupCheck: true }">
+              <input type="text" autocomplete="off" class="form-control" name="usppiState" ng-model="entity.usppiState" maxlength="100" uib-typeahead="o.itemName for o in searchValues($viewValue,'originState')" typeahead-on-select="selectTypeaheadsli($item, $model, $label, $event,'usppiState')" ng-required="requiredUpdate" />
+          </div>
+          <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">City </label>
+          <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+              <input type="text" autocomplete="off" class="form-control" name="usppiCity" ng-model="entity.usppiCity" maxlength="25" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+          </div>
+
+      </div>
+      <div class="form-group">
+
+          <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}"> Postal Code</label>
+          <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+              <input type="text" autocomplete="off" class="form-control" name="usppiPostalCode" maxlength="9" ng-model="entity.usppiPostalCode" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+
+          </div>
+          <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">USPPI Telephone No </label>
+          <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+              <input type="text" autocomplete="off" class="form-control" name="usppiPhoneNumber" ng-model="entity.usppiPhoneNumber" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="10" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="col-sm-2 control-label">USPPI Email </label>
+          <div class="col-sm-4 ">
+              <input type="email" autocomplete="off" class="form-control" name="usppiEmail" ng-pattern="regexEmail" ng-model="entity.usppiEmail" ng-disabled="disabledUpdate" />
+              <span class="text-red" ng-show="form.detail.usppiEmail.$error.pattern">
+                  * Not valid email !!
+              </span>
+          </div>
+          <label class="col-sm-2 control-label">USPPI Reference#</label>
+          <div class="col-sm-4">
+              <input type="text" autocomplete="off" class="form-control" name="usppiReference" maxlength="9" ng-model="entity.usppiReference" ng-disabled="disabledUpdate" />
+
+          </div>
+
+      </div>
+      <div class="form-group">
+          <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}"> USPPI Address</label>
+          <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+
+              <textarea rows="3" cols="5" class="form-control" name="usppiAddress" maxlength="32" ng-model="entity.usppiAddress" ng-required="requiredUpdate"></textarea>
+          </div>
+
+      </div>
+      <div class="form-group">
+          <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}"> Ultimate Consignee Name</label>
+          <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+              <input type="text" autocomplete="off" class="form-control" maxlength="30" name="ultimateCompany" ng-model="entity.ultimateCompany" uib-typeahead="o.name for o in searchValuesCompany($viewValue, 'companyName')" typeahead-on-select="selectTypeaheadsli($item, $model, 'SIPLContact5', $event)" lookup-module="SIPLContact5" lookup-field="companyName" entity-key-field="contactID" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+          </div>
+          <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">  Ultimate Consignee Type</label>
+          <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+
+              <select type="text" class="form-control" name="ultimateConsigneeType" ng-model="entity.ultimateConsigneeType" ng-disabled="disabledUpdate" ng-required="requiredUpdate">
+                  <option value="D">Direct Consumer</option>
+                  <option value="G">Government Entity</option>
+                  <option value="O">Other/Unknown</option>
+                  <option value="R">Reseller</option>
+              </select>
+          </div>
+      </div>
+      <div class="form-group">
+
+          <label class="col-sm-2 control-label">First Name</label>
+          <div class="col-sm-4 ">
+              <input type="text" autocomplete="off" class="form-control" name="ultimateFirstName" maxlength="13" ng-model="entity.ultimateFirstName" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+          </div>
+          <label class="col-sm-2 control-label">Last Name</label>
+          <div class="col-sm-4 ">
+              <input type="text" class="form-control" name="ultimateLastName" maxlength="20" ng-model="entity.ultimateLastName" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}"> Country</label>
+          <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+              <input type="text" autocomplete="off" class="form-control" name="ultimateCountry" ng-model="entity.ultimateCountry" maxlength="100" uib-typeahead="o.itemName for o in searchValues($viewValue,'countryDestination')" typeahead-on-select="selectTypeaheadsli($item, $model, $label, $event,'ultimateCountry')" ng-required="requiredUpdate" />
+          </div>
+          <label class="col-sm-2 control-label ">State</label>
+          <div class="col-sm-4 ">
+              <input type="text" autocomplete="off" class="form-control" name="ultimateState" ng-model="entity.ultimateState" maxlength="100" uib-typeahead="o.itemName for o in searchValues($viewValue,'originState')" typeahead-on-select="selectTypeaheadsli($item, $model, $label, $event,'ultimateState')" />
+          </div>
+
+      </div>
+      <div class="form-group">
+          <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">City </label>
+          <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+              <input type="text" autocomplete="off" class="form-control" name="ultimateCity" ng-model="entity.ultimateCity" maxlength="25" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+          </div>
+          <label class="col-sm-2 control-label"> Postal Code</label>
+          <div class="col-sm-4">
+              <input type="text" autocomplete="off" class="form-control" name="ultimatePostalCode" maxlength="9" ng-model="entity.ultimatePostalCode" ng-disabled="disabledUpdate" />
+
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="col-sm-2 control-label"> Phone Number</label>
+          <div class="col-sm-4 ">
+              <input type="text" autocomplete="off" class="form-control" name="ultimatePhoneNumber" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="13" ng-model="entity.ultimatePhoneNumber" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+          </div>
+          <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}"> Ultimate Consignee Address</label>
+          <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+              <textarea rows="3" cols="5" class="form-control" name="ultimateAddress" maxlength="32" ng-model="entity.ultimateAddress" ng-disabled="disabledUpdate" ng-required="requiredUpdate"></textarea>
+          </div>
+
+
+      </div>
+      <div class="form-group">
+          <label class="col-sm-2 control-label"> Intermediate Consignee Name</label>
+          <div class="col-sm-4 ">
+              <input type="text" autocomplete="off" class="form-control" name="interCompany" maxlength="30" ng-model="entity.interCompany" ng-disabled="disabledUpdate" />
+          </div>
+
+      </div>
+      <div class="form-group">
+          <label class="col-sm-2 control-label">First Name</label>
+          <div class="col-sm-4 ">
+              <input type="text" autocomplete="off" class="form-control" name="interFirstName" maxlength="13" ng-model="entity.interFirstName" ng-disabled="disabledUpdate" />
+          </div>
+          <label class="col-sm-2 control-label">Last Name</label>
+          <div class="col-sm-4 ">
+              <input type="text" autocomplete="off" class="form-control" name="interLastName" maxlength="20" ng-model="entity.interLastName" ng-disabled="disabledUpdate" />
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="col-sm-2 control-label"> Country</label>
+          <div class="col-sm-4 ">
+              <input type="text" autocomplete="off" class="form-control" name="interCountry" ng-model="entity.interCountry" maxlength="100" uib-typeahead="o.itemName for o in searchValues($viewValue,'countryDestination')" typeahead-on-select="selectTypeaheadsli($item, $model, $label, $event,'interCountry')" />
+          </div>
+          <label class="col-sm-2 control-label ">State</label>
+          <div class="col-sm-4">
+              <input type="text" autocomplete="off" class="form-control" name="interState" ng-model="entity.interState" maxlength="100" uib-typeahead="o.itemName for o in searchValues($viewValue,'originState')" typeahead-on-select="selectTypeaheadsli($item, $model, $label, $event,'interState')" />
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="col-sm-2 control-label">City </label>
+          <div class="col-sm-4">
+              <input type="text" autocomplete="off" class="form-control" name="interCity" ng-model="entity.interCity" maxlength="25" ng-disabled="disabledUpdate" />
+          </div>
+          <label class="col-sm-2 control-label"> Postal Code</label>
+          <div class="col-sm-4">
+              <input type="text" autocomplete="off" class="form-control" name="interPostalCode" maxlength="9" ng-model="entity.interPostalCode" ng-disabled="disabledUpdate" />
+
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="col-sm-2 control-label"> Intermediate Consignee Address</label>
+          <div class="col-sm-4">
+              <textarea rows="3" cols="5" class="form-control" name="interAddress" maxlength="32" ng-model="entity.interAddress"></textarea>
+          </div>
+          <label class="col-sm-2 control-label"> Phone Number</label>
+          <div class="col-sm-4 ">
+              <input type="text" autocomplete="off" class="form-control" name="interPhoneNumber" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="13" ng-model="entity.interPhoneNumber" ng-disabled="disabledUpdate" />
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="col-sm-2 control-label"> Forwarding Agent</label>
+          <div class="col-sm-4 ">
+              <input type="text" autocomplete="off" class="form-control" name="freightCompany" maxlength="30" ng-model="entity.freightCompany" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+          </div>
+
+      </div>
+      <div class="form-group">
+          <label class="col-sm-2 control-label">First Name</label>
+          <div class="col-sm-4 ">
+              <input type="text" autocomplete="off" class="form-control" name="freightFirstName" maxlength="13" ng-model="entity.freightFirstName" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+          </div>
+          <label class="col-sm-2 control-label">Last Name</label>
+          <div class="col-sm-4 ">
+              <input type="text" autocomplete="off" class="form-control" name="freightLastName" maxlength="20" ng-model="entity.freightLastName" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+          </div>
+
+      </div>
+      <div class="form-group">
+          <label class="col-sm-2 control-label">State</label>
+          <div class="col-sm-4 ">
+              <input type="text" autocomplete="off" class="form-control" name="freightState" ng-model="entity.freightState" maxlength="100" uib-typeahead="o.itemName for o in searchValues($viewValue,'originState')" typeahead-on-select="selectTypeaheadsli($item, $model, $label, $event,'freightState')" />
+          </div>
+          <label class="col-sm-2 control-label">City </label>
+          <div class="col-sm-4 ">
+              <input type="text" autocomplete="off" class="form-control" name="freightCity" ng-model="entity.freightCity" maxlength="25" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="col-sm-2 control-label"> Postal Code</label>
+          <div class="col-sm-4 ">
+              <input type="text" autocomplete="off" class="form-control" name="freightPostalCode" maxlength="9" ng-model="entity.freightPostalCode" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+          </div>
+          <label class="col-sm-2 control-label"> Phone Number</label>
+          <div class="col-sm-4 ">
+              <input type="text" autocomplete="off" class="form-control" name="freightPhoneNumber" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="10" ng-model="entity.freightPhoneNumber" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="col-sm-2 control-label"> Forwarding Agent Address</label>
+          <div class="col-sm-4 ">
+              <textarea rows="3" cols="5" class="form-control" name="freightAddress" ng-model="entity.freightAddress" maxlength="32" ng-disabled="disabledUpdate" ng-required="requiredUpdate"></textarea>
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}"> State of Origin</label>
+          <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+              <input type="text" autocomplete="off" class="form-control" name="originState" ng-model="entity.originState" maxlength="100" uib-typeahead="o.itemName for o in searchValues($viewValue,'originState')" typeahead-on-select="selectTypeaheadsli($item, $model, $label, $event,'originState')" ng-required="requiredUpdate" />
+          </div>
+          <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}"> Country of Ultimate Destination</label>
+          <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+              <input type="text" autocomplete="off" class="form-control" name="countryDestination" ng-model="entity.countryDestination" maxlength="100" uib-typeahead="o.itemName for o in searchValues($viewValue,'countryDestination')" typeahead-on-select="selectTypeaheadsli($item, $model, $label, $event,'countryDestination')" ng-required="requiredUpdate" />
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Port of Export </label>
+          <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+              <input type="text" autocomplete="off" class="form-control" name="portofExport" ng-model="entity.portofExport" maxlength="100" uib-typeahead="o.name for o in searchValues($viewValue,'portofExport')" typeahead-on-select="selectTypeaheadsli($item, $model, $label, $event,'portofExport')" ng-required="requiredUpdate" />
+          </div>
+          <label class="col-sm-2 control-label">Port of Unloading</label>
+          <div class="col-sm-4 ">
+              <input type="text" autocomplete="off" class="form-control" name="portofUnloading" ng-model="entity.portofUnloading" maxlength="100" uib-typeahead="o.name for o in searchValues($viewValue,'portofUnloading')" typeahead-on-select="selectTypeaheadsli($item, $model, $label, $event,'portofUnloading')" />
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Departure Date</label>
+          <div class="col-sm-4 " show-errors="{ skipFormGroupCheck: true }">
+              <input type="text" class="form-control" name="departureDate" ng-model="entity.departureDate" ng-disabled="disabledUpdate" ng-required="requiredUpdate" input-date="true" show-time="false" />
+          </div>
+          <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">In-Bond Code</label>
+          <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+              <select class="form-control" name="inbondType" ng-model="entity.inbondType" ng-disabled="disabledUpdate" ng-required="requiredUpdate">
+                  <option value="70">Merchandise NOT shipped inbond</option>
+                  <option value="36">Warehouse withdrawal for IE</option>
+                  <option value="37">Warehouse withdrawal for T&E</option>
+                  <option value="67">Foreign Trade Zone withdrawal for IE </option>
+                  <option value="68">Foreign Trade Zone withdrawal for T&E</option>
+                  <option value="CY">CY/CY</option>
+                  <option value="SDCY">SD/CY</option>
+                  <option value="SDCFS">SD/CFS</option>
+              </select>
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="col-sm-2 control-label">Entry Number</label>
+          <div class="col-sm-4">
+              <input type="text" autocomplete="off" class="form-control" name="importEntry" maxlength="15" ng-model="entity.importEntry" ng-disabled="disabledUpdate" />
+          </div>
+          <label class="col-sm-2 control-label">FTZ Identifier</label>
+          <div class="col-sm-4">
+              <input type="text" autocomplete="off" class="form-control" name="foreginTradeZone" maxlength="10" ng-model="entity.foreginTradeZone" ng-disabled="disabledUpdate" />
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}"> Related Party Indicator</label>
+          <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+              <input type="radio" name="relatedParty" ng-model="entity.relatedParty" ng-disabled="disabledUpdate" ng-required="requiredUpdate" value="Related" />Related
+              <input type="radio" name="relatedParty" ng-model="entity.relatedParty" ng-disabled="disabledUpdate" ng-required="requiredUpdate" value="Non-Related" />Non-Related
+          </div>
+          <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}"> Routed Export Transaction</label>
+          <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+              <input type="radio" name="isRoutedTransaction" ng-model="entity.isRoutedTransaction" ng-disabled="disabledUpdate" ng-required="requiredUpdate" value="Y" />Yes
+              <input type="radio" name="isRoutedTransaction" ng-model="entity.isRoutedTransaction" ng-disabled="disabledUpdate" ng-required="requiredUpdate" value="N" />No
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="col-sm-2 control-label ">TIB/Carnet?</label>
+          <div class="col-sm-4">
+              <input type="radio" name="isTIB" ng-model="entity.isTIB" ng-disabled="disabledUpdate" ng-required="requiredUpdate" value="Y" />Yes
+              <input type="radio" name="isTIB" ng-model="entity.isTIB" ng-disabled="disabledUpdate" ng-required="requiredUpdate" value="N" />No
+          </div>
+          <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Hazardous Material</label>
+          <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+
+              <input type="radio" name="isHazardousMaterial" ng-model="entity.isHazardousMaterial" ng-disabled="disabledUpdate" ng-required="requiredUpdate" value="Y" />Yes
+              <input type="radio" name="isHazardousMaterial" ng-model="entity.isHazardousMaterial" ng-disabled="disabledUpdate" ng-required="requiredUpdate" value="N" />No
+          </div>
+      </div>
+      <hr class="line-info" />
+
+      <div class="form-group" style="margin-right:0px!important;">
+          <label class="col-sm-2 control-label">Origin of Goods</label>
+          <div class="col-sm-2 ">
+              <select class="form-control" name="OriginofGoods" ng-model="entity.OriginofGoods">
+                  <option value="D - DOMESTIC">D - DOMESTIC</option>
+                  <option value="F - FOREIGN">F - FOREIGN</option>
+              </select>
+          </div>
+          <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}"> Export Information Code</label>
+          <div class="col-sm-2 ">
+              <select class="form-control" name="ExportCode" ng-model="entity.ExportCode" ng-options="t.code as t.name for t in lookups.exportInformationCodes" ng-disabled="disabledUpdate"></select>
+          </div>
+          <label class="col-sm-2 control-label"> HTS Number </label>
+          <div class="col-sm-2">
+              <input type="text" autocomplete="off" class="form-control" name="ScheduleB" ng-model="entity.ScheduleB" maxlength="100" uib-typeahead="o.name for o in searchValues($viewValue,'htsCode')" typeahead-on-select="selectTypeaheadsli($item, $model, $label, $event,'htsCode')" />
+              <input type="text" name="htsCodeId" ng-model="entity.htsCodeId" maxlength="100" style="display:none" />
+          </div>
+      </div>
+      <div class="form-group" style="margin-right:0px!important;">
+          <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">License Exemption Code</label>
+          <div class="col-sm-2">
+
+              <select class="form-control" name="LicenseTypeCode" ng-change="SelectedRow(entity.LicenseTypeCode)" ng-model="entity.LicenseTypeCode" ng-options="t.code as t.name for t in lookups.lienseExemptionCode"></select>
+          </div>
+          <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Quantity 1 </label>
+          <div class="col-sm-2 ">
+              <input type="text" autocomplete="off" class="form-control" name="firstQuantity" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="10" ng-model="entity.FirstQuantity" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+          </div>
+          <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">UOM 1</label>
+          <div class="col-sm-2 ">
+              <select class="form-control" name="FirstUOM" ng-model="entity.FirstUOM" ng-options="t.id as t.name for t in lookups.uomList" ng-disabled="disabledUpdate" ng-required="requiredUpdate">
+              </select>
+          </div>
+
+
+      </div>
+      <div class="form-group" style="margin-right:0px!important;">
+          <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Value of Goods</label>
+          <div class="col-sm-2 ">
+              <input type="text" autocomplete="off" class="form-control" name="ValueofGoods" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="10" ng-model="entity.ValueofGoods" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+          </div>
+          <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Quantity 2 </label>
+          <div class="col-sm-2 ">
+              <input type="text" autocomplete="off" class="form-control" name="SecondQuantity" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="10" ng-model="entity.SecondQuantity" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+          </div>
+          <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">UOM 2</label>
+          <div class="col-sm-2 ">
+              <select class="form-control" name="SecondUOM" ng-model="entity.SecondUOM" ng-options="t.id as t.name for t in lookups.uomList" ng-disabled="disabledUpdate" ng-required="requiredUpdate">
+              </select>
+          </div>
+
+
+      </div>
+      <div class="form-group" style="margin-right:0px!important;">
+          <label class="col-sm-2 control-label">Shipping Weight</label>
+          <div class="col-sm-2 ">
+              <input type="text" autocomplete="off" class="form-control" name="ShippingWeight" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="10" ng-model="entity.ShippingWeight" ng-required="requiredUpdate" />
+          </div>
+          <label class="col-sm-2 control-label">ECCN</label>
+          <div class="col-sm-2 ">
+              <input type="text" autocomplete="off" class="form-control" name="Eccn" ng-model="entity.Eccn" maxlength="5" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+          </div>
+          <label class="col-sm-2 control-label">Exp Lic#</label>
+          <div class="col-sm-2">
+
+              <input type="text" autocomplete="off" class="form-control" id="ExpLic" name="ExpLic" ng-model="entity.ExpLic" maxlength="14" />
+          </div>
+      </div>
+      <div class="form-group" style="margin-right:0px!important;">
+          <label class="col-sm-2 control-label">License Value</label>
+          <div class="col-sm-2 ">
+              <input type="text" autocomplete="off" class="form-control" id="LicValueAmount" name="LicValueAmount" onkeypress='return event.charCode >= 48 && event.charCode <= 57' ng-model="entity.LicValueAmount" maxlength="10" />
+          </div>
+
+          <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">DDTC ITAR Exemption Number</label>
+          <div class="col-sm-2">
+              <select class="form-control" name="dDTCITAR" ng-model="entity.dDTCITAR" ng-options="t.id as t.name for t in lookups.ddtcitar" ng-disabled="disabledInsert">
+              </select>
+          </div>
+          <label class="col-sm-2 control-label ">DDTC Registration Number</label>
+          <div class="col-sm-2">
+              <input type="text" autocomplete="off" class="form-control" name="dDTCReg" maxlength="6" ng-model="entity.dDTCReg" ng-disabled="disabledInsert" />
+          </div>
+
+      </div>
+      <div class="form-group" style="margin-right:0px!important;">
+          <label class="col-sm-2 control-label ">SME</label>
+          <div class="col-sm-2">
+              <input type="radio" name="dDTCSignificant" ng-model="entity.dDTCSignificant" ng-disabled="disabledUpdate" value="Y" />Yes
+              <input type="radio" name="dDTCSignificant" ng-model="entity.dDTCSignificant" ng-disabled="disabledUpdate" value="N" />No
+              <input type="radio" name="dDTCSignificant" ng-model="entity.dDTCSignificant" ng-disabled="disabledUpdate" value="" />None
+          </div>
+          <label class="col-sm-2 control-label">DDTC Eligible Party Certification Indicator</label>
+          <div class="col-sm-2">
+              <input type="radio" name="dDTCEligible" ng-model="entity.dDTCEligible" ng-disabled="disabledUpdate" value="Y" />Yes
+              <input type="radio" name="dDTCEligible" ng-model="entity.dDTCEligible" ng-disabled="disabledUpdate" value="N" />No
+              <input type="radio" name="dDTCEligible" ng-model="entity.dDTCEligible" ng-disabled="disabledUpdate" value="" />None
+          </div>
+          <label class="col-sm-2 control-label ">DDTC License Line Number</label>
+          <div class="col-sm-2" show-errors="{ skipFormGroupCheck: true }">
+              <input type="text" autocomplete="off" class="form-control" name="dDTCLicense" maxlength="3" ng-model="entity.dDTCLicense" ng-disabled="disabledInsert" />
+          </div>
+      </div>
+      <div class="form-group" style="margin-right:0px!important;">
+          <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">DDTC USML Category</label>
+          <div class="col-sm-2">
+              <select class="form-control" name="dDTCUSML" ng-model="entity.dDTCUSML" ng-options="t.id as t.name for t in lookups.ddtcusml" ng-disabled="disabledInsert">
+              </select>
+          </div>
+          <label class="col-sm-2 control-label ">DDTC Unit of Measure</label>
+          <div class="col-sm-2">
+
+              <select class="form-control" name="dDTCUnit" ng-model="entity.dDTCUnit" ng-disabled="disabledInsert">
+                  <option value="">-Select-</option>
+                  <option value="COP">COP-Copies</option>
+                  <option value="CSE">CSE-Cases</option>
+                  <option value="DOZ">DOZ-Dozen</option>
+                  <option value="DPR">DPR-Dozen Pairs</option>
+                  <option value="FRG">FRG-Forgings</option>
+                  <option value="FT">FT-Feet</option>
+                  <option value="GAL">GAL-Gallon</option>
+                  <option value="GCN">GCN-Gross Containers</option>
+                  <option value="GM">GM-Grams</option>
+                  <option value="GR">GR-Gross</option>
+                  <option value="GRL">GRL-Gross Line</option>
+                  <option value="GRS">GRS-Gross</option>
+                  <option value="IN">IN-Inches</option>
+                  <option value="ITM">ITM-Items</option>
+                  <option value="KG">KG-Kilograms</option>
+                  <option value="KGS">KGS-Kilograms</option>
+                  <option value="KT">KT-Kits</option>
+                  <option value="LBS">LBS-Pounds</option>
+                  <option value="LN">LN-Line</option>
+                  <option value="LNM">LNM-Meters</option>
+                  <option value="LOT">LOT-Lots</option>
+                  <option value="LTR">LTR-Liters</option>
+                  <option value="MAN">MAN-Man Years</option>
+                  <option value="MGZ">MGZ-Magazines</option>
+                  <option value="MTR">MTR-Meters</option>
+                  <option value="NUM">NUM-Number</option>
+                  <option value="OTH">OTH-Other</option>
+                  <option value="OZ">OZ-Ounces</option>
+                  <option value="PCS">PCS-Pieces</option>
+                  <option value="PKS">PKS-Packs/Packets</option>
+                  <option value="PLT">PLT-Pallets</option>
+                  <option value="PRS">PRS-Pairs</option>
+                  <option value="QTS">QTS-Quarts</option>
+                  <option value="RLS">RLS-Roll</option>
+                  <option value="RND">RND-Bullets/Rounds</option>
+                  <option value="SET">SET-Sets</option>
+                  <option value="SHT">SHT-Sheets</option>
+                  <option value="SQ">SQ-Squares</option>
+                  <option value="SST">SST-Ship Set</option>
+                  <option value="SYS">SYS-Systems</option>
+                  <option value="TBE">TBE-Tubes</option>
+                  <option value="TIN">TIN-Tins</option>
+                  <option value="TON">TON-Tons</option>
+                  <option value="UNT">UNT-Units</option>
+                  <option value="VST">VST-Visits</option>
+                  <option value="WFR">WFR-Wafers</option>
+                  <option value="YD">YD-Yards</option>
+              </select>
+          </div>
+          <label class="col-sm-2 control-label">DDTC Quantity</label>
+          <div class="col-sm-2" show-errors="{ skipFormGroupCheck: true }">
+              <input type="text" autocomplete="off" class="form-control" name="dDTCQuantity" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="7" ng-model="entity.dDTCQuantity" ng-disabled="disabledInsert" />
+          </div>
+      </div>
+      <div class="form-group" style="margin-right:0px!important;">
+          <label class="col-sm-2 control-label">Commodity Description</label>
+          <div class="col-sm-10 ">
+              <textarea autocomplete="off" rows="4" cols="5" class="form-control" maxlength="45" name="CommodityDescription" ng-model="entity.CommodityDescription"></textarea>
+          </div>
+      </div>
+      <div class="form-group">
+          <div class="col-sm-10 ">
+              <input type="button" class="btn btn-primary" ng-click="addCommodities(entity)" value="Add Comodity">
+          </div>
+      </div>
+      <div class="form-group">
+          <div class="col-sm-12">
+              <table class="table table-striped table-bordered table-hover">
+                  <thead>
+                      <tr class="bg-thead">
+                          <th class="text-left sortable" custom-sortable="FirstName" table-name="listTable">Sr.No</th>
+                          <th class="text-left sortable" table-name="listTable"></th>
+                          <th class="text-left sortable hidden-xs" custom-sortable="scheduleB" table-name="listTable">Sch B/ HTC Code</th>
+                          <th class="text-left sortable hidden-xs" custom-sortable="commodityDescription" table-name="listTable">Description</th>
+                          <th class="text-left sortable hidden-xs" custom-sortable="firstQuantity" table-name="listTable">Quantity</th>
+                          <th class="text-left sortable hidden-xs" custom-sortable="shippingWeight" table-name="listTable">Weight(KG)</th>
+                          <th class="text-left sortable hidden-xs" custom-sortable="valueofGoods" table-name="listTable">Value($)</th>
+                          <th class="text-left sortable hidden-xs" custom-sortable="originofGoods" table-name="listTable">Origin of Goods</th>
+                          <th class="text-left sortable hidden-xs" custom-sortable="licenseTypeCode" table-name="listTable">Lic.Type</th>
+                          <th class="text-left sortable hidden-xs" custom-sortable="eccn" table-name="listTable">ECCN</th>
+
+                          <th class="list-actions">Edit/Delete</th>
+
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr ng-repeat="entity in entity.commodityDetail">
+
+                          <td>
+
+                              {{$index+1}}
+                          </td>
+                          <td>
+                              <input type="checkbox" ng-model="entity.selected" />
+
+                          </td>
+                          <td class="hidden-xs">
+                              {{entity.scheduleB}}
+                          </td>
+                          <td class="hidden-xs">
+                              {{entity.commodityDescription}}
+                          </td>
+                          <td class="hidden-xs">
+                              {{entity.firstQuantity}}
+                          </td>
+                          <td class="hidden-xs">
+                              {{entity.shippingWeight}}
+                          </td>
+                          <td class="hidden-xs">
+                              {{entity.valueofGoods}}
+                          </td>
+                          <td class="hidden-xs">
+                              {{entity.originofGoods}}
+                          </td>
+                          <td class="hidden-xs">
+                              {{entity.licenseTypeCode}}
+                          </td>
+                          <td class="hidden-xs">
+                              {{entity.eccn}}
+                          </td>
+
+                          <td>
+                              <button type="button" class="btn btn-xs btn-primary" ng-click="selecteditCommodities($index)" action="edit" uib-tooltip="Edit"><i class="fa fa-edit"></i></button>
+                              <button type="button" class="btn btn-xs btn-danger" ng-click="delCommodities($index)" action="deleteBatch" uib-tooltip="Delete"><i class="fa fa-remove"></i></button>
+                          </td>
+
+                      </tr>
+
+                  </tbody>
+              </table>
+          </div>
+      </div>
+      <hr class="line-info" />
+      <div class="form-group">
+          <label class="col-sm-12 control-label" style="text-align:left">
+              Used Vehicles
+          </label>
+      </div>
+      <div class="form-group" >
+
+          <div class="col-sm-1">
+              <input type="button" class="btn btn-primary" ng-click="addVin(entity)" value="Add Vin">
+          </div>
+      </div>
+      <div class="form-group">
+          <div class="col-sm-12 ">
+
+              <table class="table table-striped table-bordered table-hover">
+                  <thead>
+                      <tr class="bg-thead">
+                          <th class="text-left sortable" custom-sortable="htsCodeId" table-name="listTable" width="100px">Hts Code</th>
+                          <th class="text-left sortable" custom-sortable="vIN" table-name="listTable" width="100px">VIN/PIN</th>
+                          <th class="text-left sortable hidden-xs" custom-sortable="vINNumber" table-name="listTable" width="300px">VIN/PIN Number</th>
+                          <th class="text-left sortable hidden-xs" custom-sortable="vehicleTitleNum" table-name="listTable" width="300px">Vehicle Title Number</th>
+                          <th class="text-left sortable hidden-xs" custom-sortable="vehicleTitleState" table-name="listTable" width="300px">Vehicle Title State</th>
+                          <th class="list-actions">Actions</th>
+
+                      </tr>
+                  </thead>
+                  <tbody>
+                     <tr ng-repeat="x in entity.vinDetail">
+                                <td class="hidden-xs">
+                                    {{x.htsCode}}
+                                </td>
+                                <td>
+
+                                    <select type="text" class="form-control" name="vin" ng-model="x.vin">
+                                        <option value="Select">Select</option>
+                                        <option value="VIN">VIN</option>
+                                        <option value="PIN">PIN</option>
+                                    </select>
+                                </td>
+                                <td class="hidden-xs">
+
+                                    <input type="text" autocomplete="off" class="form-control" name="vinNumber" maxlength="25" ng-disabled="disabledUpdate" ng-model="x.vinNumber" />
+                                </td>
+                                <td class="hidden-xs">
+
+                                    <input type="text" autocomplete="off" class="form-control" name="vehicleTitleNum" maxlength="15" ng-disabled="disabledUpdate" ng-model="x.vehicleTitleNum" />
+                                </td>
+                                <td class="hidden-xs">
+
+                                    <input type="text" autocomplete="off" class="form-control" name="vehicleTitleState" maxlength="2" ng-disabled="disabledUpdate" ng-model="x.vehicleTitleState" />
+                                </td>
+                                <td>
+
+                                    <button type="button" class="btn btn-xs btn-danger" ng-click="delvinDetail($index)" action="deleteBatch" uib-tooltip="Delete"><i class="fa fa-remove"></i></button>
+                                </td>
+                            </tr>
+                   </tbody>
+                    </table>
+                  </div>
+                  </div>
+              </div>
+           
+          </div>
+  
+</ng-form>

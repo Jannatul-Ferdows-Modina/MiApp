@@ -1,0 +1,8 @@
+[
+  {
+    "outputFileName": "bower_components/AdminLTE/dist/css/AdminLTE.min.css",
+    "inputFiles": [
+      "bower_components/AdminLTE/dist/css/AdminLTE.css"
+    ]
+  }
+]

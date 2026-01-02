@@ -1,0 +1,52 @@
+﻿<div class="box-container form-horizontal detail-container">
+    <div class="form-group">
+        <label class="col-sm-2 control-label text-right">Company Name</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="companyName" ng-model="companyName" uib-typeahead="o.companyName for o in callTypeahead($viewValue, 'SIPLcontact', 'companyName', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="SIPLContact" lookup-field="companyName" entity-key-field="contactID" custom-clear="true" />
+        </div>        
+        <label class="col-sm-2 control-label text-right">Customer Code</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="customerCode" ng-model="customerCode" uib-typeahead="o.customerCode for o in callTypeahead($viewValue, 'SIPLcontact', 'customerCode', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="SIPLContact" lookup-field="customerCode" entity-key-field="contactID" custom-clear="true" />
+        </div>   
+        <div class="col-sm-1">
+            &nbsp;
+        </div>     
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label text-right">Category</label>
+        <div class="col-sm-3">
+            <select multiple class="form-control" name="contactCategoryID" ng-model="contactCategoryId" ng-options="t.contactCategoryId as t.name for t in lookups.categories"></select>
+        </div>
+        <label class="col-sm-2 control-label text-right">SP Fee Category</label>
+        <div class="col-sm-4">
+            <select class="form-control" name="sfcID" ng-model="sfcID" ng-options="t.sfcID as t.sfcName for t in lookups.feeCategories"></select>
+        </div>
+        <div class="col-sm-1">
+            &nbsp;
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label text-right">Unit Name</label>
+        <div class="col-sm-3">
+            <select class="form-control" name="unitId" ng-model="unitId" ng-options="t.SitId as t.SitName for t in lookups.units"></select>
+        </div>        
+        <label class="col-sm-2 control-label text-right">Referred By Unit</label>
+        <div class="col-sm-4">
+            <select class="form-control" name="refUnitId" ng-model="refUnitId" ng-options="t.SitId as t.SitName for t in lookups.units" />
+        </div>    
+        <div class="col-sm-1">
+            &nbsp;
+        </div>    
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-10">
+            &nbsp;
+        </div>
+        <div class="col-sm-2">
+            <div class="pull-right">
+                <button class="btn btn-sm btn-primary" ng-click="performCustomerUnitSearch($event,companyName,customerCode,contactCategoryId,unitId,refUnitId,sfcID)" action="search">Search</button>
+            </div>
+        </div>
+    </div>
+</div>

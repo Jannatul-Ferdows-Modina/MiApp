@@ -1,0 +1,101 @@
+=============================================================
+LOCAL DATE  : Saturday, August 16 2025, 10:42:28.7453 AM
+ENTRY TYPE  : Error
+SOURCE      : Username => bahuguna.vimal@gmail.com
+              IP Address => ::1
+              Url => http://localhost:50676/#!/crm/accountmanagement
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => <th class="text-left sortable ng-isolate-scope" custom-sortable="UpdatedByName" table-name="enquirylistTable">
+MESSAGE     : TypeError: Cannot read properties of undefined (reading 'isSortBy')
+STACK TRACE : Object.link()@http://localhost:50676/app/directives/customSortable.js?v=2.0.2.17085:19:38
+              bind()@http://localhost:50676/bower_components/angular/angular.js:1385:14
+              cloneAndAnnotateFn()@http://localhost:50676/bower_components/angular/angular.js:10539:40
+              invokeLinkFn()@http://localhost:50676/bower_components/angular/angular.js:10545:8
+              invokeLinkFn()@http://localhost:50676/bower_components/angular/angular.js:9934:10
+              null()@http://localhost:50676/bower_components/angular/angular.js:9174:12
+              null()@http://localhost:50676/bower_components/angular/angular.js:9177:12
+              null()@http://localhost:50676/bower_components/angular/angular.js:9177:12
+              null()@http://localhost:50676/bower_components/angular/angular.js:9928:10
+              null()@http://localhost:50676/bower_components/angular/angular.js:9174:12
+
+=============================================================
+LOCAL DATE  : Saturday, August 16 2025, 10:42:29.0109 AM
+ENTRY TYPE  : Error
+SOURCE      : Username => bahuguna.vimal@gmail.com
+              IP Address => ::1
+              Url => http://localhost:50676/#!/crm/accountmanagement
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => <th class="text-left sortable ng-isolate-scope" custom-sortable="EnqModifiedOn" table-name="enquirylistTable">
+MESSAGE     : TypeError: Cannot read properties of undefined (reading 'isSortBy')
+STACK TRACE : Object.link()@http://localhost:50676/app/directives/customSortable.js?v=2.0.2.17085:19:38
+              bind()@http://localhost:50676/bower_components/angular/angular.js:1385:14
+              cloneAndAnnotateFn()@http://localhost:50676/bower_components/angular/angular.js:10539:40
+              invokeLinkFn()@http://localhost:50676/bower_components/angular/angular.js:10545:8
+              invokeLinkFn()@http://localhost:50676/bower_components/angular/angular.js:9934:10
+              null()@http://localhost:50676/bower_components/angular/angular.js:9174:12
+              null()@http://localhost:50676/bower_components/angular/angular.js:9177:12
+              null()@http://localhost:50676/bower_components/angular/angular.js:9177:12
+              null()@http://localhost:50676/bower_components/angular/angular.js:9928:10
+              null()@http://localhost:50676/bower_components/angular/angular.js:9174:12
+
+=============================================================
+LOCAL DATE  : Saturday, August 16 2025, 10:42:29.3546 AM
+ENTRY TYPE  : Error
+SOURCE      : Username => bahuguna.vimal@gmail.com
+              IP Address => ::1
+              Url => http://localhost:50676/#!/crm/accountmanagement
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => <th class="text-left sortable ng-isolate-scope" custom-sortable="CreatedByName" table-name="enquirylistTable">
+MESSAGE     : TypeError: Cannot read properties of undefined (reading 'isSortBy')
+STACK TRACE : Object.link()@http://localhost:50676/app/directives/customSortable.js?v=2.0.2.17085:19:38
+              bind()@http://localhost:50676/bower_components/angular/angular.js:1385:14
+              cloneAndAnnotateFn()@http://localhost:50676/bower_components/angular/angular.js:10539:40
+              invokeLinkFn()@http://localhost:50676/bower_components/angular/angular.js:10545:8
+              invokeLinkFn()@http://localhost:50676/bower_components/angular/angular.js:9934:10
+              null()@http://localhost:50676/bower_components/angular/angular.js:9174:12
+              null()@http://localhost:50676/bower_components/angular/angular.js:9177:12
+              null()@http://localhost:50676/bower_components/angular/angular.js:9177:12
+              null()@http://localhost:50676/bower_components/angular/angular.js:9928:10
+              null()@http://localhost:50676/bower_components/angular/angular.js:9174:12
+
+=============================================================
+LOCAL DATE  : Saturday, August 16 2025, 10:45:20.2908 AM
+ENTRY TYPE  : Error
+SOURCE      : Username => bahuguna.vimal@gmail.com
+              IP Address => ::1
+              Url => http://localhost:50676/#!/crm/accountmanagement
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => 
+MESSAGE     : TypeError: a.map is not a function
+STACK TRACE : writeValue()@http://localhost:50676/bower_components/angular/angular.js:30513:42
+              $render()@http://localhost:50676/bower_components/angular/angular.js:33327:8
+              $render()@http://localhost:50676/bower_components/angular/angular.js:29306:8
+              null()@http://localhost:50676/bower_components/angular/angular.js:18253:33
+              $apply()@http://localhost:50676/bower_components/angular/angular.js:18531:12
+              callback()@http://localhost:50676/bower_components/angular/angular.js:27346:16
+              HTMLButtonElement.dispatch()@http://localhost:50676/bower_components/jquery/dist/jquery.min.js?v=2.0.2.17085:3:10316
+              q.handle()@http://localhost:50676/bower_components/jquery/dist/jquery.min.js?v=2.0.2.17085:3:8343
+
+=============================================================
+LOCAL DATE  : Saturday, August 16 2025, 10:45:21.0833 AM
+ENTRY TYPE  : Error
+SOURCE      : Username => bahuguna.vimal@gmail.com
+              IP Address => ::1
+              Url => http://localhost:50676/#!/crm/accountmanagement
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => 
+MESSAGE     : TypeError: a.map is not a function
+STACK TRACE : writeValue()@http://localhost:50676/bower_components/angular/angular.js:30513:42
+              $render()@http://localhost:50676/bower_components/angular/angular.js:33327:8
+              selectMultipleWatch()@http://localhost:50676/bower_components/angular/angular.js:33300:12
+              null()@http://localhost:50676/bower_components/angular/angular.js:18253:33
+              $apply()@http://localhost:50676/bower_components/angular/angular.js:18531:12
+              $apply()@http://localhost:50676/bower_components/angular/angular.js:20448:24
+              completeOutstandingRequest()@http://localhost:50676/bower_components/angular/angular.js:6362:6
+              defer()@http://localhost:50676/bower_components/angular/angular.js:6642:6
+

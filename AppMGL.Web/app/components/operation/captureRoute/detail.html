@@ -1,0 +1,67 @@
+﻿<ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+    <p>&nbsp;</p>
+
+    <div class="form-group">
+        <label class="col-sm-2 text-right control-label required">Route Name</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="routeName" ng-model="entity.routeName"  ng-disabled="disabledUpdate" ng-required="requiredUpdate"/>
+        </div> 
+        <div class="col-sm-6">
+            &nbsp;
+        </div>
+    </div>
+    <div class="form-group">        
+        <label class="col-sm-2 control-label required">Origin</label>
+        <div class="col-sm-2">
+            <select class="form-control" name="originType" ng-model="entity.originType" ng-options="item.optionValue as item.optionName for item in routingTypes" ng-change="clearValues('origin')"></select>
+        </div>
+        <div class="col-sm-2">            
+            <input type="text" class="form-control" name="origin" ng-model="entity.origin" uib-typeahead="origin=o.name for o in searchValues($viewValue,'origin','')" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="origin" lookup-field="name" entity-key-field="cityId" custom-clear="true" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+        </div>
+        <div class="col-sm-6">
+            &nbsp;
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label required">Destination</label>
+        <div class="col-sm-2">
+            <select class="form-control" name="destinationType" ng-model="entity.destinationType" ng-options="item.optionValue as item.optionName for item in routingTypes" ng-change="clearValues('destination')"></select>
+        </div>
+        <div class="col-sm-2">            
+            <input type="text" class="form-control" name="destination" ng-model="entity.destination" uib-typeahead="destination=o.name for o in searchValues($viewValue,'destination','')" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="destination" lookup-field="name" entity-key-field="cityId" custom-clear="true" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+
+        </div>
+        <div class="col-sm-6">
+            &nbsp;
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Route / Via</label>
+        <div class="col-sm-2">
+            <select class="form-control" name="viaType1" ng-model="entity.viaType1" ng-options="item.optionValue as item.optionName for item in routingTypes" ng-change="clearValues('viaType1')"></select>
+        </div>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" name="via1Name" ng-model="entity.via1Name" uib-typeahead="via1Name=o.name for o in searchValues($viewValue,'viaType1','')" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="viaType1" lookup-field="name" entity-key-field="cityId" custom-clear="true" ng-disabled="disabledUpdate"  />
+            
+        </div>
+        <div class="col-sm-6">
+            &nbsp;
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-2">
+            &nbsp;
+        </div>
+        <div class="col-sm-2">
+            <select class="form-control" name="viaType2" ng-model="entity.viaType2" ng-options="item.optionValue as item.optionName for item in routingTypes" ng-change="clearValues('viaType2')"></select>
+        </div>
+        <div class="col-sm-2">            
+            <input type="text" class="form-control" name="via2Name" ng-model="entity.via2Name" uib-typeahead="via2Name=o.name for o in searchValues($viewValue,'viaType2','')" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="viaType2" lookup-field="name" entity-key-field="cityId" custom-clear="true" ng-disabled="disabledUpdate" />
+        </div>
+        <div class="col-sm-6">
+            &nbsp;
+        </div>
+    </div>
+   
+
+</ng-form>

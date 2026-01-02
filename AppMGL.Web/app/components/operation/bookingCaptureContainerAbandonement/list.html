@@ -1,0 +1,132 @@
+﻿
+
+<table ng-table="bookinglistTable" class="table table-striped table-bordered table-hover" template-pagination="customPager">
+    <thead>
+        <tr class="bg-thead">
+            <th class="text-left hidden-xs" table-name="bookinglistTable">Booking Date</th>
+            <!--<th class="text-left sortable hidden-xs" custom-sortable="fileNo" table-name="bookinglistTable">System Ref</th>-->
+            <th class="text-left sortable hidden-xs" custom-sortable="bookingNo" table-name="bookinglistTable">Booking No</th>
+            <th class="text-left sortable hidden-xs" custom-sortable="bookingNo" table-name="bookinglistTable">System Ref # </th>
+            <th class="text-left sortable hidden-xs" custom-sortable="companyName" table-name="bookinglistTable">Customer</th>
+            <th class="text-left hidden-xs" table-name="bookinglistTable">Origin</th>
+            <th class="text-left hidden-xs" table-name="bookinglistTable">Port Of Loading</th>
+            <th class="text-left hidden-xs" table-name="bookinglistTable">Destination</th>
+            <th class="text-left hidden-xs" table-name="bookinglistTable">Shipping Line</th>
+            <th class="text-left hidden-xs" table-name="bookinglistTable">Line BKG Type</th>
+            <th class="text-left hidden-xs" table-name="bookinglistTable">Container Status at Destination </th>
+            <th class="text-left hidden-xs" table-name="bookinglistTable">Date of Destuffed/Abandoned</th>
+            <th class="text-left hidden-xs" table-name="bookinglistTable">Container</th>
+            <th class="text-left hidden-xs" table-name="bookinglistTable">ETA</th>
+            <th class="list-actions">Edit Container</th>
+
+        </tr>
+    </thead>
+    <tbody>
+       
+        <tr class="ng-table-group" ng-repeat-start="group in $groups">
+            <td colspan="12">
+                <a href="" ng-click="group.$hideRows = !group.$hideRows">
+                    <span class="fa" ng-class="{ 'fa-chevron-right': group.$hideRows, 'fa-chevron-down': !group.$hideRows }"></span>
+                    {{group.data[0].fileNo}}
+                </a>
+            </td>
+        </tr>
+  
+        <tr ng-hide="group.$hideRows" ng-repeat="d in group.data">
+
+
+            <!--<tr ng-repeat="entity in items">-->
+            <td class="col-sm-1 text-left">
+                {{d.bookingDate | date:'MM/dd/yyyy'}}
+            </td>
+           
+            <td class="col-sm-1 text-left">
+                {{d.bookingNo}}
+            </td>
+            <td class="col-sm-1 text-left">
+                {{d.fileNo}}
+            </td>
+            <td class="col-sm-1 text-left">
+                {{d.companyName}}
+            </td>
+            <td class="col-sm-1 text-left">
+                {{d.originDoor}}
+            </td>
+            <td class="col-sm-1 text-left">
+                {{d.portOfLoading}}
+            </td>
+            <td class="col-sm-1 text-left">
+                {{d.destination}}
+            </td>
+            <td class="col-sm-1 text-left">
+                {{d.shipper}}
+            </td>
+            <td class="col-sm-1 text-left">
+                {{d.pickupCategory}}
+            </td>
+            <td class="col-sm-1 text-left">
+                {{d.destuffed}}
+            </td>
+            <td class="col-sm-1 text-left">
+                {{d.dateofDestuffed}}
+            </td>
+            <td class="col-sm-1 text-left">
+                {{d.name}}
+            </td>
+            <td class="col-sm-1 text-left">
+                {{d.eta | date:'MM/dd/yyyy'}}
+            </td>
+            <td>
+                <button type="button" class="btn btn-xs btn-primary" ng-click="showDocumentDetail($event, d.documentCommonID,d.fileNo,d.exportRef,d.blNumber)" show-action="20" action="add" entityid="{{d.documentCommonID}}" uib-tooltip="Edit"><i class="fa fa-edit"></i></button>
+            </td>
+        </tr>
+
+        <tr ng-repeat-end>
+            <td class="col-sm-1 text-right">
+                &nbsp;
+            </td>
+            <td class="col-sm-1 text-right">
+                &nbsp;
+            </td>
+            <td class="col-sm-1 text-right">
+                &nbsp;
+            </td>
+            <td class="col-sm-1 text-right">
+                &nbsp;
+            </td>
+            <td class="col-sm-1 text-right">
+                &nbsp;
+            </td>
+            <td class="col-sm-1 text-right">
+                &nbsp;
+            </td>
+            <td class="col-sm-1 text-right">
+                &nbsp;
+            </td>
+            <td class="col-sm-1 text-right">
+                &nbsp;
+            </td>
+            <td class="col-sm-1 text-right">
+                &nbsp;
+            </td>
+            <td class="col-sm-1 text-right">
+                &nbsp;
+            </td>
+            <td class="col-sm-1 text-right">
+                &nbsp;
+            </td>
+            <td class="col-sm-1 text-right">
+                &nbsp;
+            </td>
+            <td class="col-sm-1 text-right">
+                &nbsp;
+            </td>
+            <td class="col-sm-1 text-right">
+                &nbsp;
+            </td>
+        </tr>
+        <!--<tr ng-if="params.total() == 0">
+            <td class="text-center text-italic" colspan="5">No Record(s) Found</td>
+        </tr>-->
+    </tbody>
+</table>

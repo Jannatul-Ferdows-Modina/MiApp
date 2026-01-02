@@ -1,0 +1,19 @@
+﻿<div class="box-container form-horizontal detail-container">
+    <div class="form-group">
+        <label class="col-sm-3 control-label text-left">RailRamp</label>
+        
+        
+        <div class="col-sm-3">&nbsp;</div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="railRampF" ng-model="railRampF" uib-typeahead="o.railRamp for o in callTypeahead($viewValue, 'railramp', 'railRamp', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="railramp" lookup-field="railRamp" entity-key-field="railId" custom-clear="true" />
+        </div>
+        
+        <div class="pull-right">
+            <button class="btn btn-sm btn-primary" ng-click="performAction($event)" action="search">Search</button>
+            </div>
+        </div>
+        </div>
+   
+

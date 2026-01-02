@@ -1,0 +1,276 @@
+﻿<ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+    <p>&nbsp;</p>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Customer</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="companyName" maxlength="30" ng-model="entity.companyName" ng-disabled="true" />
+        </div>
+        <label class="col-sm-2 control-label">Miami Representative</label>
+        <div class="col-sm-4">            
+            <select class="form-control" name="galRepID" ng-model="entity.galRepID" ng-options="t.usrId as t.name for t in lookups.siplUsers" ng-disabled="disabledUpdate"></select>
+        </div>     
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Quotation No</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="quotationNo" ng-model="entity.quotationNo" ng-disabled="true" />
+        </div>
+        <label class="col-sm-2 control-label">Enquiry No</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="enquiryNo" ng-model="entity.enquiryNo" ng-disabled="true" />
+        </div>        
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Country of Origin</label>
+        <div class="col-sm-4">   
+            <input type="text" class="form-control" name="originCountry" ng-model="entity.originCountry" uib-typeahead="originCountry=o.name for o in callTypeahead($viewValue, 'SIPLCountry', 'name', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="originCountry" lookup-field="name" entity-key-field="countryId" custom-clear="true" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />         
+            
+        </div>
+
+        <label class="col-sm-2 control-label">Country of Discharge</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="dischargeCountry" ng-model="entity.dischargeCountry" uib-typeahead="dischargeCountry=o.name for o in callTypeahead($viewValue, 'SIPLCountry', 'name', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="dischargeCountry" lookup-field="name" entity-key-field="countryId" custom-clear="true" ng-disabled="disabledUpdate" />
+            
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Port of Origin</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" id="poo" name="origin" ng-model="entity.origin" uib-typeahead="origin=o.name + ' (' + o.countryName + ')' for o in callTypeahead($viewValue, 'LGVWPort', 'name', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="origin" lookup-field="name" entity-key-field="portId" custom-clear="true" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+            
+        </div>
+
+        <label class="col-sm-2 control-label">Port of Discharge</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="discharge" id="pod" ng-model="entity.discharge" uib-typeahead="discharge=o.name + ' (' + o.countryName + ')' for o in callTypeahead($viewValue, 'LGVWPort', 'name', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="discharge" lookup-field="name" entity-key-field="portId" custom-clear="true" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />                        
+        </div>
+
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Expected Date of Shippment Move</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="shipmentMoveDate" ng-model="entity.shipmentMoveDate" ng-disabled="disabledUpdate" input-date="true" show-time="false" />
+        </div>
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Quotation Valid Till</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="validTill" ng-model="entity.validTill" ng-disabled="disabledUpdate" input-date="true" show-time="false" />
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label class="col-sm-2">Pick Up(Miami Booking Type)</label>
+        <div class="col-sm-5">
+            <div class="form-group">
+                <div class="radio">
+                    &nbsp; <label>
+                        <input type="radio" name="optionsRadios" ng-model="entity.pickupType" value="0" ng-change="showPickupType(entity.pickupType)" ng-disabled="true">
+                        SD/Port
+                    </label>
+                    <label>
+                        <input type="radio" name="optionsRadios" ng-model="entity.pickupType" value="1" ng-change="showPickupType(entity.pickupType)" ng-disabled="true">
+                        Port/Port
+                    </label>
+                    <label>
+                        <input type="radio" name="optionsRadios" ng-model="entity.pickupType" value="2" ng-change="showPickupType(entity.pickupType)" ng-disabled="true">
+                        Door/Door
+                    </label>
+                    <label>
+                        <input type="radio" name="optionsRadios" ng-model="entity.pickupType" value="3" ng-change="showPickupType(entity.pickupType)" ng-disabled="true">
+                        CFS/CFS
+                    </label>
+                    <label>
+                        <input type="radio" name="optionsRadios" ng-model="entity.pickupType" value="4" ng-change="showPickupType(entity.pickupType)" ng-disabled="true">
+                        RAILRAMP/PORT
+                    </label>
+                    <label>
+                        <input type="radio" name="pickupCategory" ng-model="entity.pickupType" value="5" ng-change="showPickupType(entity.pickupType)" ng-disabled="true">
+                        SD/CFS
+                    </label>
+                </div>
+            </div>
+        </div>
+        <label class="col-sm-1">Is Consolidate</label>
+        <div class="col-sm-3">
+            <input type="checkbox" name="isActive" ng-model="entity.isConBooking" ng-disabled="disabledUpdate" />
+
+        </div>
+    </div>
+    <hr class="line-info" />
+    <div class="form-group">
+        <div class="col-sm-1">
+            &nbsp;
+        </div>
+        <div class="col-sm-7">
+            <label ng-hide="!isTruckExistsLBLVisible">
+                <input type="checkbox" name="isTruckingExists" ng-model="entity.isTruckingExists" ng-hide="!isTruckExistsVisible" ng-disabled="disabledUpdate" ng-change="" /> Please select Check Box to fill the given below trucking related information
+            </label>
+        </div>
+        <div class="col-sm-4">
+            &nbsp;
+        </div>
+    </div>
+    <div class="form-group">        
+        <label class="col-sm-2 control-label" ng-hide="!isTruckChargesLBLVisible">Trucking Charges :</label>
+        <div class="col-sm-10">
+            &nbsp;
+        </div>
+    </div>
+
+    <div class="form-group" ng-show="isTruckExistsVisible">
+        <div class="col-sm-1">
+            &nbsp;
+        </div>
+        <div class="col-sm-5">
+            <table style="background-color: white;">
+                <thead>
+                    <tr>
+                        <th class="text-left  hidden-xs">&nbsp;</th>
+                        <th class="text-left  hidden-xs text-nowrap">Container Type</th>
+                        <th class="text-left  hidden-xs">&nbsp;&nbsp;&nbsp;</th>
+                        <th class="text-left  hidden-xs">Buying Charges</th>
+                        <th class="text-left  hidden-xs">&nbsp;</th>
+                        <th class="text-left  hidden-xs">Selling Charges</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="truckingChargesItem in truckingChargesList">
+                        <td><span>&nbsp;</span></td>
+                        <td><label style="white-space:nowrap">{{truckingChargesItem.containerName}}</label></td>
+                        <td><span>&nbsp;&nbsp;</span></td>
+                        <td><input type="number" min="0" max="99999" step="0.001" maxlength="5" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/"  class="form-control" name="trkBuyingRate" ng-model="truckingChargesItem.trkBuyingRate" ng-disabled="!entity.isTruckingExists" placeholder="Buying Rate" /></td>
+                        <td><span>&nbsp;</span></td>
+                        <td><input type="number" min="0" max="99999" step="0.001" maxlength="5" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/"  class="form-control" name="trkSellingRate" ng-model="truckingChargesItem.trkSellingRate" ng-disabled="!entity.isTruckingExists" placeholder="Selling Rate" /></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <label class="col-sm-2 control-label" ng-hide="!isTruckRemarksLBLVisible">Trucking Charge Remarks</label>
+        <div class="col-sm-1">
+            &nbsp;
+        </div>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" name="truckingRemarks" ng-model="entity.truckingRemarks" ng-hide="!istruckingRemarksVisible" ng-disabled="!entity.isTruckingExists" />
+        </div>
+        <div class="col-sm-1">
+            &nbsp;
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-12">
+            &nbsp;
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Latest Remarks</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" maxlength="250" name="lastRemarks" ng-model="entity.lastRemarks" ng-disabled="true" />
+        </div>
+        <div class="col-sm-1">
+            &nbsp;
+        </div>
+        <label class="col-sm-2 control-label">Latest Remark Date</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" name="lastRemarkDate" ng-model="entity.lastRemarkDate" ng-disabled="true" input-date="true" show-time="false" />
+        </div>
+        <div class="col-sm-1">
+            &nbsp;
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Next Action Remarks</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" maxlength="250" name="nextActionRemarks" ng-model="entity.nextActionRemarks" />
+        </div>
+        <div class="col-sm-1">
+            <button name="btnAdd" type="button" class="btn btn-sm btn-primary" ng-click="showNextActionRemarksModel()" action="view" uib-tooltip="View Action Remarks" ng-disabled="disabledUpdate"><i class="fa fa-pencil"></i>Previous Remarks</button>
+        </div>
+        <div class="col-sm-1">
+            &nbsp;
+        </div>
+        <label class="col-sm-2 control-label">Next Action Due Date</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" name="nextActionDueDate" ng-model="entity.nextActionDueDate" ng-disabled="disabledUpdate" input-date="true" show-time="false" />
+        </div>
+        <div class="col-sm-1">
+            &nbsp;
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label" ng-hide="!iscurrencyLBLVisible">On Carriage charges currency</label>
+        <div class="col-sm-4">
+            <select class="form-control" name="carriageCurrency" ng-model="entity.carriageCurrency" ng-options="t.currencyID as t.currencyName for t in lookups.currencies" ng-hide="!iscurrencyVisible" ng-disabled="disabledUpdate"></select>
+        </div>
+        <div class="col-sm-6">
+            &nbsp;
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Carrier</label>
+        <div class="col-sm-3">
+            <select class="form-control" name="carrierID" ng-model="entity.selectedCarrier" ng-options="t as t.companyName for t in lookups.carriers" ng-change="getCarrierName(selectedCarrier)" ng-disabled="disabledUpdate"></select>
+        </div>
+        <div class="col-sm-1">
+            <button name="btnAdd" type="button" class="btn btn-sm btn-primary" ng-click="showCarrierModel('add')" action="add" entityid="0" uib-tooltip="Capture Rate" ng-disabled="disabledUpdate"><i class="fa fa-pencil"></i>Capture Rate</button>
+        </div>
+        <div class="col-sm-6">
+            &nbsp;
+        </div>       
+    </div>
+    <div ng-show="carrierList.length > 0">
+        <table class="table table-striped table-bordered table-hover " template-pagination="none">
+            <thead>
+                <tr class="bg-thead">
+                    <th class="text-left  hidden-xs">Carrier</th>
+                    <th class="text-left  hidden-xs">Start Date</th>
+                    <th class="text-left  hidden-xs">End Date</th>
+                    <th class="text-left  hidden-xs">Ocean Freight Remark</th>
+                    <th class="text-left  hidden-xs">Transit Time</th>
+                    <th class="text-left  hidden-xs">Frequency</th>
+                    <th class="list-actions">Add Remarks</th>
+                    <th class="list-actions">Edit</th>
+                    <th class="list-actions">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="carrierItem in carrierList">
+                    <td class="hidden-xs">
+                        {{carrierItem.carrierName}}
+                    </td>
+                    <td class="hidden-xs">
+                        {{carrierItem.startDate | date:'MM/dd/yyyy'}}
+                    </td>
+                    <td class="hidden-xs">
+                        {{carrierItem.endDate | date:'MM/dd/yyyy'}}
+                    </td>
+                    <td class="hidden-xs">
+                        {{carrierItem.remarks}}
+                    </td>
+                    <td class="hidden-xs">
+                        {{carrierItem.transitTime}}
+                    </td>
+                    <td class="hidden-xs">
+                        {{carrierItem.frequency}}
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-xs btn-primary" ng-click="showRemarksModel($index,carrierItem.quotationCarrierId,carrierItem.carrierID,carrierItem.carrierName)" action="add" uib-tooltip="Show Remarks" ng-disabled="disabledUpdate"><i class="fa fa-edit"></i></button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-xs btn-primary" ng-click="editCarrierRow($index,carrierItem.quotationCarrierId,carrierItem.carrierID,carrierItem.carrierName,carrierItem.transitTime,carrierItem.frequency,carrierItem.remarks)" action="edit" uib-tooltip="Edit" ng-disabled="disabledUpdate"><i class="fa fa-edit"></i></button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-xs btn-danger" ng-click="deleteCarrierRow($index)" uib-tooltip="Delete" ng-disabled="disabledUpdate"><i class="fa fa-remove"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label left">Email Message</label>
+        <div class="col-sm-10">
+            &nbsp;
+        </div>
+    </div>
+    <div class="form-control" ckeditor="ckOptions" name="emailMessage" ng-model="entity.emailRemarks" maxlength="8000"></div>
+
+</ng-form>

@@ -1,0 +1,67 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title"><span ng-show="isNew">Search Quotation</span></h3>
+
+</div>
+<div class="modal-body form-horizontal detail-container" wait-for-interpolation="true">
+    <ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+        <div class="form-group">
+
+            <div class="col-sm-1">
+                <label class="col-sm-2 control-label">Select</label>
+            </div>
+            <div class="col-sm-2">
+                <select class="form-control" name="searchOption" ng-model="selectOption" ng-options="item.optionValue as item.optionName for item in searchOptions"></select>
+            </div>
+            <label class="col-sm-2 control-label">Customer Name</label>
+            <div class="col-sm-2">
+                <input type="text" id="txtsearchBox" ng-model="searchBox" class="form-control" uib-typeahead="o.name for o in searchValues($viewValue,selectOption)" />
+            </div>
+            <div class="col-sm-4">
+                <button class="btn btn-sm btn-primary" ng-click="performQuotationSearch($event,selectOption,searchBox)">  Search</button>
+            </div>
+        </div>
+
+        <table ng-table="quotationlistTable" class="table table-striped table-bordered table-hover" template-pagination="customPager">
+            <thead class="header" id="myHeader">
+                <tr class="bg-thead">
+                    <th class="list-checkbox"></th>
+                    <th class="text-left sortable hidden-xs" table-name="quotationlistTable">Company Name</th>
+                    <th class="text-left sortable hidden-xs" table-name="quotationlistTable">Enquiry No</th>
+                    <th class="text-left sortable hidden-xs" table-name="quotationlistTable">Quotation No</th>
+                </tr>
+            </thead>
+            <tbody class="content">
+                <tr ng-repeat="entity in items">
+
+                    <td>
+                        <input type="checkbox" class="selquo" ng-model="entity.selected" ng-change="selquo()" />
+                    </td>
+                    <td class="hidden-xs">
+                        {{entity.companyName}}
+                    </td>
+                    <td>{{entity.enquiryNo}}</td>
+                    <td>
+                        {{entity.quotationNo}}
+                    </td>
+                </tr>
+                <tr ng-if="params.total() == 0">
+                    <td class="text-center text-italic" colspan="3">No Record(s) Found</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="form-group">
+            <div class="col-sm-2">
+                <label class="col-sm-12 control-label">Selected Quotation No</label>
+            </div>
+            <div class="col-sm-2">
+                <label class="col-sm-12 control-label" id="lblselquo" ng-model="finalQuotations">{{finalQuotations}} </label>
+                </div>
+            </div>            
+    </ng-form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-sm btn-default" ng-click="closeModel('close')" action="cancel">Close</button>
+</div>
+
+
+

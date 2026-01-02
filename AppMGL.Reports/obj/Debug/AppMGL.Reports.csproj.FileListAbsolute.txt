@@ -1,0 +1,2 @@
+F:\New folder\MGL-Logistics\AppMGL.Reports\obj\Debug\AppMGL.Reports.csprojResolveAssemblyReference.cache
+F:\New folder\MGL-Logistics\AppMGL.Reports\bin\Debug\AppMGL.Reports.exe.config

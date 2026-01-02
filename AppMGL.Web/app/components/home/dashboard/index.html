@@ -1,0 +1,583 @@
+﻿
+    <div class="row">
+      
+        <div class="box box-info collapsed-box">
+            <div class="box-header with-border">
+                <h3 class="box-title"></h3>
+                <div class="box-tools pull-right">
+                    <button class="btn btn-sm btn-info ng-isolate-scope" box-widget="collapse"><i class="fa fa-plus" ng-hide="false"></i><span>Show</span></button>
+                </div>
+            </div>
+            <div class="box-body" style="display: none;">
+                <button type="button" style="float:right;" class="btn btn-sm btn-primary" ng-click="exportReport();" action="exportReport"><i class="fa fa-download"></i> Export to Excel</button>
+                <div class="col-sm-2" style="float:right">
+
+                    <select style="height:40px;float:right" multiple class="form-control" id="frenchieIdreport" name="frenchieIdreport" ng-model="frenchieIdreport" ng-options="t.SitId as t.SitName for t in sitelist"></select>
+                    <!--ng-change="changeFrenchieId(frenchieId)" ng-disabled="iscorporat"-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="table">
+        <div>
+            <div class="row">
+
+                <div class="col-lg-3 col-sm-4 ">
+                    <div class="thumbnail">
+                        <!-- small box -->
+                        <div class="small-box bg-dash-booking boxmgl">
+                            <div class="inner">
+                                <ul class="list-inline">
+                                    <li>
+
+                                        <div style="float:left;width:203px"><b>Year to Date </b></div>
+                                        <div style="float:right">
+                                            <a href="#" uib-tooltip="Click for viewing Total Enquiry YTD" ng-click="$event.preventDefault();sendData('EYTD','lenquiry')" id="lnkEnqYTD">
+                                                <span class="badge">{{entity.leytd}}</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <!--<li class="left">
+                        <a href="#" uib-tooltip="Click for viewing Total Enquiry YTD" ng-click="$event.preventDefault();sendData('EYTD','enquiry')" id="lnkEnqYTD">
+                            <span class="badge">{{entity.leytd}}</span></a>
+
+                        </li>-->
+                                </ul>
+                                <ul class="list-inline">
+                                    <li>
+                                        <div style="float:left;width:203px">
+                                            <b>Month to Date</b>
+                                        </div>
+                                        <div style="float:right">
+                                            <a href="#" uib-tooltip="Click for viewing Total Enquiry MTD" ng-click="$event.preventDefault();sendData('EMTD','lenquiry')" id="lnkEnqMTD"><span class="badge">{{entity.lemtd}}</span></a>
+
+                                        </div>
+                                    </li>
+                                    <!--<li class="left"><a href="#" uib-tooltip="Click for viewing Total Enquiry MTD" ng-click="$event.preventDefault();sendData('EMTD','enquiry')" id="lnkEnqMTD"><span class="badge">{{entity.lemtd}}</span></a></li>-->
+                                </ul>
+                                <ul class="list-inline">
+                                    <li>
+                                        <div style="float:left;width:203px"><b>Pending Inquiry</b></div>
+                                        <div style="float:right">
+                                            <a href="#" uib-tooltip="Click for viewing Urgent pending for Enquiry - Urgent" id="lnkUrgentEnqPend" ng-click="$event.preventDefault();sendData('EUPQU','lenquiry')"><span class="badge">{{entity.leupqu}}</span></a>
+                                            <a href="#" uib-tooltip="Click for viewing Urgent pending for Enquiry - Urgent & Future" id="lnkEnqPend" ng-click="$event.preventDefault();sendData('EUPQF','lenquiry')"><span class="badge">{{entity.leupqf}}</span></a>
+
+                                        </div>
+                                    </li>
+
+                                </ul>
+                                <ul class="list-inline">
+                                    <li><b></b></li>
+                                    <li><a href="#"><span class="badge"></span></a></li>
+                                </ul>
+                                <ul class="list-inline">
+                                    <li><b></b></li>
+                                    <li><a href="#"><span class="badge"></span></a></li>
+                                </ul>
+                                <p><h4><b>Lead Generation</b></h4></p>
+                            </div>
+
+                            <a href="#!/crm/leadgeneration" class="small-box-footer" ng-click="$event.preventDefault();sendData('EUPQU','lenquiry')">More info <i class="fa fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-4 ">
+                    <div class="thumbnail">
+                        <!-- small box -->
+                        <div class="small-box bg-dash-inquiry boxmgl">
+                            <div class="inner">
+                                <ul class="list-inline">
+                                    <li>
+
+                                        <div style="float:left;width:203px"><b>Year to Date </b></div>
+                                        <div style="float:right">
+                                            <a href="#" uib-tooltip="Click for viewing Total Enquiry YTD" ng-click="$event.preventDefault();sendData('EYTD','enquiry')" id="lnkEnqYTD">
+                                                <span class="badge">{{entity.eytd}}</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <!--<li class="left">
+                                    <a href="#" uib-tooltip="Click for viewing Total Enquiry YTD" ng-click="$event.preventDefault();sendData('EYTD','enquiry')" id="lnkEnqYTD">
+                                        <span class="badge">{{entity.eytd}}</span></a>
+
+                                    </li>-->
+                                </ul>
+                                <ul class="list-inline">
+                                    <li>
+                                        <div style="float:left;width:203px">
+                                            <b>Month to Date</b>
+                                        </div>
+                                        <div style="float:right">
+                                            <a href="#" uib-tooltip="Click for viewing Total Enquiry MTD" ng-click="$event.preventDefault();sendData('EMTD','enquiry')" id="lnkEnqMTD"><span class="badge">{{entity.emtd}}</span></a>
+
+                                        </div>
+                                    </li>
+                                    <!--<li class="left"><a href="#" uib-tooltip="Click for viewing Total Enquiry MTD" ng-click="$event.preventDefault();sendData('EMTD','enquiry')" id="lnkEnqMTD"><span class="badge">{{entity.emtd}}</span></a></li>-->
+                                </ul>
+                                <ul class="list-inline">
+                                    <li>
+                                        <div style="float:left;width:203px"><b>Pending Inquiry</b></div>
+                                        <div style="float:right">
+                                            <a href="#" uib-tooltip="Click for viewing Urgent pending for Enquiry - Urgent" id="lnkUrgentEnqPend" ng-click="$event.preventDefault();sendData('EUPQU','enquiry')"><span class="badge">{{entity.eupqu}}</span></a>
+                                            <a href="#" uib-tooltip="Click for viewing Urgent pending for Enquiry - Urgent & Future" id="lnkEnqPend" ng-click="$event.preventDefault();sendData('EUPQF','enquiry')"><span class="badge">{{entity.eupqf}}</span></a>
+
+                                        </div>
+                                    </li>
+
+                                </ul>
+                                <ul class="list-inline">
+                                    <li><b></b></li>
+                                    <li><a href="#"><span class="badge"></span></a></li>
+                                </ul>
+                                <ul class="list-inline">
+                                    <li><b></b></li>
+                                    <li><a href="#"><span class="badge"></span></a></li>
+                                </ul>
+                                <p><h4><b>Inquiry</b></h4></p>
+                            </div>
+
+                            <a href="#!/operation/enquiry" class="small-box-footer" ng-click="$event.preventDefault();sendData('EUPQU','enquiry')">More info <i class="fa fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-4">
+                    <div class="thumbnail">
+                        <!-- small box -->
+                        <div class="small-box bg-dash-quotation boxmgl">
+                            <div class="inner">
+                                <ul class="list-inline">
+                                    <li>
+                                        <div style="float:left;width:203px;"><b>Year to Date </b></div>
+                                        <div style="float:right">
+                                            <a href="#" uib-tooltip="Click for viewing Total Quotation YTD" id="lnkQutYTD" ng-click="$event.preventDefault();sendData('QYTD','quotation')">
+                                                <span class="badge">{{entity.qytd}}</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="list-inline">
+                                    <li>
+                                        <div style="float:left;width:203px;"> <b>Month to Date</b></div>
+                                        <div style="float:right">
+                                            <a href="#" uib-tooltip="Click for viewing Total Quotation MTD" id="lnkQUtMTD" ng-click="$event.preventDefault();sendData('QMTD','quotation')"><span class="badge">{{entity.qmtd}}</span></a>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                                <ul class="list-inline">
+                                    <li>
+                                        <div style="float:left;width:203px"> <b>Pending for Creation</b></div>
+                                        <div style="float:right">
+                                            <a href="#" uib-tooltip="Click for viewing Quoation Pending for Approval - Urgent" id="lnkQutUrgAQ" ng-click="$event.preventDefault();sendData('QPAU','quotation')"><span class="badge">{{entity.qpau}}</span></a>
+                                            <a href="#" uib-tooltip="Click to view Quotaion Pending for Approval-Urgt & Future" id="lnkQutAQ" ng-click="$event.preventDefault();sendData('QPAF','quotation')"><span class="badge">{{entity.qpaf}}</span></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="list-inline">
+                                    <li>
+                                        <div style="float:left;width:203px"><b>Shipper's Approval Awaited</b></div>
+
+                                        <div style="float:right">
+                                            <a href="#" uib-tooltip="Click for viewing Quotation Pending for Shipper Approval - Urgent" id="lnkQutUrgShipper" ng-click="$event.preventDefault();sendData('QSAU','qutPendingApproval')"><span class="badge">{{entity.qsau}}</span></a>
+
+                                            <a href="#" uib-tooltip="Click to view Quotation Pending for Shipper Approval - Urgent & Future" id="lnkQutShipper" ng-click="$event.preventDefault();sendData('QSAF','qutPendingApproval')"><span class="badge">{{entity.qsaf}}</span></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="list-inline">
+                                    <li>
+                                        <div style="float:left;width:203px"><b>To be Sent for Booking</b></div>
+                                        <div style="float:right">
+                                            <a href="#" uib-tooltip="Click for viewing Quotation Send for Booking - Urgent" id="lnkQutUrgSent" ng-click="$event.preventDefault();sendData('QSBU','quotationBooking')"><span class="badge">{{entity.qsbu}}</span></a>
+                                            <a href="#" uib-tooltip="Click for viewing Quotation Send for Booking - Urgen & Future" id="lnkQutSent" ng-click="$event.preventDefault();sendData('QSBF','quotationBooking')"><span class="badge">{{entity.qsbf}}</span></a>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <p><h4><b>Quotation</b></h4></p>
+                            </div>
+
+                            <a href="#!/operation/quotation" class="small-box-footer" ng-click="$event.preventDefault();sendData('QSBU','quotationBooking')">More info <i class="fa fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-4">
+                    <div class="thumbnail">
+                        <!-- small box -->
+                        <div class="small-box bg-dash-booking boxmgl">
+                            <div class="inner">
+                                <ul class="list-inline">
+                                    <li>
+                                        <div style="float:left;width:203px"><b>Year to Date </b></div>
+                                        <div style="float:right;"><a href="#" uib-tooltip="Click for viewing Total Booking YTD" id="lnbkYTD" ng-click="$event.preventDefault();sendData('BYTD','spacebooking')"><span class="badge">{{entity.bytd}}</span></a></div>
+                                    </li>
+                                </ul>
+                                <ul class="list-inline">
+                                    <li>
+                                        <div style="float:left;width:203px"><b>Month to Date</b></div>
+                                        <div style="float:right;"><a href="#" uib-tooltip="Click for viewing Total Booking MTD" id="lnbkMTD" ng-click="$event.preventDefault();sendData('BMTD','spacebooking')"><span class="badge">{{entity.bmtd}}</span></a></div>
+                                    </li>
+                                </ul>
+                                <ul class="list-inline">
+                                    <li>
+                                        <div style="float:left;width:203px"><b>Booking To Do</b></div>
+                                        <div style="float:right;">
+                                            <a href="#" uib-tooltip="Click for viewing Booking To Do - Urgent" id="lnkBTDU" ng-click="$event.preventDefault();sendData('BTDU','bookingToDo')"><span class="badge">{{entity.btdu}}</span></a>
+                                            <a href="#" uib-tooltip="Click for viewing Booking To Do - Urgent & Future" id="lnkBTDF" ng-click="$event.preventDefault();sendData('BTDF','bookingToDo')"><span class="badge">{{entity.btdf}}</span></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="list-inline">
+                                    <li>
+                                        <div style="float:left;width:203px"><b>Wating Line Confirmation</b></div>
+                                        <div style="float:right;">
+                                            <a href="#" uib-tooltip="Click for viewing Waiting Line Confirmation - Urgent" id="lnkbkUrgBPSInqry" ng-click="$event.preventDefault();sendData('BWLCU','bkgWaitingLineConf')"><span class="badge">{{entity.bwlcu}}</span></a>
+                                            <a href="#" uib-tooltip="Click to view Waiting Line Confirm- Urgt & Future" id="lnkbkBPSInqry" ng-click="$event.preventDefault();sendData('BWLCF','bkgWaitingLineConf')"><span class="badge">{{entity.bwlcf}}</span></a>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <ul class="list-inline">
+                                    <li>
+                                        <div style="float:left;width:203px"><b>Booking Conf Ready To Send</b></div>
+                                        <div style="float:right;">
+                                            <a href="#" uib-tooltip="Click for viewing Booking Conf Ready To Send" id="lnkbcReadytosend" ng-click="$event.preventDefault();sendData('BCRTSC','bookingConfReadyToSend')"><span class="badge">{{entity.bcrtsc}}</span></a>
+                                            <a href="#" uib-tooltip="Click to view Waiting Line Confirm- Urgt & Future" id="lnkbfReadytosend" ng-click="$event.preventDefault();sendData('BCRTSF','bookingConfReadyToSend')"><span class="badge">{{entity.bcrtsf}}</span></a>
+                                        </div>
+                                    </li>
+                                </ul>
+
+
+
+                                <ul class="list-inline">
+                                    <li>
+                                        <div style="float:left;width:203px"><b>Awaited Shipper's Confirmation</b></div>
+                                        <div style="float:right;">
+                                            <a href="#" uib-tooltip="Click for viewing Awaited Shipper’s Confirmation - Urgent" id="lnkbkUrgBPCInq" ng-click="$event.preventDefault();sendData('BASCU','bkgShippersConf')"><span class="badge">{{entity.bascu}}</span></a>
+                                            <a href="#" uib-tooltip="Click for viewing Awaited Shipper’s Confirmation - Urgent & Future" id="lnkbkBPCInq" ng-click="$event.preventDefault();sendData('BASCF','bkgShippersConf')"><span class="badge">{{entity.bascf}}</span></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <p><h4><b>Booking</b></h4></p>
+                            </div>
+                            <a href="#!/operation/booking" class="small-box-footer" ng-click="$event.preventDefault();sendData('BTDU','bookingToDo')">More info <i class="fa fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+              
+
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 col-sm-4">
+                    <div class="thumbnail">
+                        <!-- small box -->
+                        <div class="small-box bg-dash-trucking boxmgl">
+                            <div class="inner">
+                                <ul class="list-inline">
+                                    <li>
+                                        <div style="float:left;width:203px"><b>Pending for Transport Finalize</b></div>
+                                        <div style="float:right;">
+                                            <a href="#" class="text-right" uib-tooltip="Click for viewing Pending Finalized Transportation - Urgent" id="lnkTruckPenTrans" ng-click="$event.preventDefault();sendData('TPFTU','finalizedTrans')"><span class="badge">{{entity.tpftu}}</span></a>
+                                            <a href="#" class="text-right" uib-tooltip="Click for viewing Pending Finalized Transportation - Urgent & Future" ng-click="$event.preventDefault();sendData('TPFTF','finalizedTrans')"><span class="badge">{{entity.tpftf}}</span></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="list-inline">
+                                    <li>
+                                        <div style="float:left;width:203px"><b>Pending for Dock Receipt</b></div>
+                                        <div style="float:right;">
+                                            <a href="#" class="text-right" uib-tooltip="Click for viewing Pending Dock Reciept - Urgent" id="lnkTruckPenDock" ng-click="$event.preventDefault();sendData('TPDRU','docRecipt')"><span class="badge">{{entity.tpdru}}</span></a>
+                                            <a href="#" class="text-right" uib-tooltip="Click for viewing Pending Dock Reciept - Urgent & Future" id="lnkTruckPenDock" ng-click="$event.preventDefault();sendData('TPDRF','docRecipt')"><span class="badge">{{entity.tpdrf}}</span></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="list-inline">
+                                    <li>
+                                        <div style="float:left;width:203px"><b>Pending for movement</b></div>
+                                        <div style="float:right;">
+                                            <a href="#" class="text-right" uib-tooltip="Click for viewing Pending For Movement - Urgent" id="lnkTruckPenMov" ng-click="$event.preventDefault();sendData('TPMDU','pendingMovement')"><span class="badge">{{entity.tpmdu}}</span></a>
+                                            <a href="#" class="text-right" uib-tooltip="Click for viewing Pending For Movement - Urgent & Future" id="lnkTruckPenMov" ng-click="$event.preventDefault();sendData('TPMDF','pendingMovement')"><span class="badge">{{entity.tpmdf}}</span></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="list-inline">
+                                    <li>
+                                        <div style="float:left;width:203px"><b>Capture Container & Seal #</b></div>
+                                        <div style="float:right;">
+                                            <a href="#" class="text-right" uib-tooltip="Click for viewing Capture Container and Seal No - Urgent" id="lnkTruckPenMov" ng-click="$event.preventDefault();sendData('TCCSU','captureContainer')"><span class="badge">{{entity.tccsu}}</span></a>
+                                            <a href="#" class="text-right" uib-tooltip="Click for viewing Capture Container and Seal No - Urgent & Future" id="lnkTruckPenMov" ng-click="$event.preventDefault();sendData('TCCSF','captureContainer')"><span class="badge">{{entity.tccsf}}</span></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="list-inline">
+                                    <li><b></b></li>
+                                    <li><a href="#"><span class="badge"></span></a></li>
+                                </ul>
+                                <p><h4><b>Trucking</b></h4></p>
+                            </div>
+                            <a href="#!/uc" class="small-box-footer" ng-click="$event.preventDefault();sendData('TPMDU','pendingMovement')">More info <i class="fa fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-4">
+                    <div class="thumbnail">
+                        <!-- small box -->
+                        <div class="small-box bg-dash-documentation boxmgl">
+                            <div class="inner">
+                                <ul class="list-inline">
+                                    <li>
+                                        <div style="float:left;width:203px"><b>PDOC </b></div>
+                                        <div style="float:right;"><a data-toggle="tooltip" title="Click for viewing Urgent Activity in Pending for Documentation" id="lnkUrgentPendDoc"><span class="badge">{{0}}</span></a></div>
+                                    </li>
+
+                                </ul>
+                                <ul class="list-inline">
+                                    <div style="float:left;width:203px"><b>Pending for AES Filing </b></div>
+                                    <div style="float:right;"><span class="badge">{{entity.aesp}}</span></div>
+                                    <!--<li><b>Pending for AES Filing</b></li>
+    <li><a href="#"><span class="badge">{{entity.aesp}}</span></a></li>-->
+                                </ul>
+                                <ul class="list-inline">
+                                    <li><b></b></li>
+                                    <li><a href="#"><span class="badge"></span></a></li>
+                                </ul>
+                                <ul class="list-inline">
+                                    <li><b></b></li>
+                                    <li><a href="#"><span class="badge"></span></a></li>
+                                </ul>
+                                <ul class="list-inline">
+                                    <li><b></b></li>
+                                    <li><a href="#"><span class="badge"></span></a></li>
+                                </ul>
+
+                                <p><h4><b>Documentation</b></h4></p>
+                            </div>
+                            <a class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-4">
+                    <div class="thumbnail">
+                        <!-- small box -->
+                        <div class="small-box bg-dash-activities boxmgl">
+                            <div class="inner">
+                                <ul class="list-inline">
+                                    <li>
+                                        <div style="float:left;width:203px"><b>Activities due</b></div>
+                                        <div style="float:right;"><span class="badge">{{entity.actDue}}</span></div>
+                                    </li>
+                                </ul>
+                                <ul class="list-inline">
+                                    <li>
+                                        <div style="float:left;width:203px">  <b>Total Activity</b></div>
+                                        <div style="float:right;"><span class="badge">{{entity.totAct}}</span></div>
+                                    </li>
+                                </ul>
+                                <ul class="list-inline">
+                                    <li><b></b></li>
+                                    <li><a href="#"><span class="badge"></span></a></li>
+                                </ul>
+                                <ul class="list-inline">
+                                    <li><b></b></li>
+                                    <li><a href="#"><span class="badge"></span></a></li>
+                                </ul>
+                                <ul class="list-inline">
+                                    <li><b></b></li>
+                                    <li><a href="#"><span class="badge"></span></a></li>
+                                </ul>
+
+                                <p><h4><b>Activities</b></h4></p>
+                            </div>
+                            <a class="small-box-footer">Unit Summary</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-4">
+                    <div class="thumbnail">
+                        <!-- small box -->
+                        <div class="small-box bg-dash-inquiry boxmgl">
+                            <div class="inner">
+                                <ul class="list-inline">
+                                    <li>
+                                        <div style="float:left;width:203px"><b>Not Ready For Invoicing</b></div>
+                                        <div style="float:right;"><span class="badge">{{entity.pendinginvoice}}</span></div>
+                                    </li>
+                                </ul>
+                                <ul class="list-inline">
+                                    <li>
+                                        <div style="float:left;width:203px">  <b>Ready For Invoice</b></div>
+                                        <div style="float:right;"><span class="badge">{{entity.readyforinvoice}}</span></div>
+                                    </li>
+                                </ul>
+
+                                <ul class="list-inline">
+                                    <li>
+                                        <div style="float:left;width:203px">  <b>Invoice Completed</b></div>
+                                        <div style="float:right;"><span class="badge">{{entity.invoicecompleted}}</span></div>
+                                    </li>
+                                </ul>
+
+                                <ul class="list-inline">
+                                    <li><b></b></li>
+                                    <li><a href="#"><span class="badge"></span></a></li>
+                                </ul>
+                                <ul class="list-inline">
+                                    <li><b></b></li>
+                                    <li><a href="#"><span class="badge"></span></a></li>
+                                </ul>
+
+                                <p><h4><b>Activities</b></h4></p>
+                            </div>
+                            <a class="small-box-footer" ng-click="$event.preventDefault();sendData('EYTD','invoice')">Invoice Summary</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title">Month Wise Anual Target vs Performance</h3>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1"></div>
+                <label class="col-sm-1 control-label">Target Year</label>
+                <div class="col-sm-2">
+                    <select class="form-control" id="targetYear" name="targetYear" ng-model="targetYear" ng-change="changeTargetYear(targetYear)">
+                        <option>2019</option>
+                        <option>2020</option>
+                        <option>2021</option>
+                        <option>2022</option>
+                        <option>2023</option>
+                        <option>2024</option>
+                        <option>2025</option>
+                        <option>2026</option>
+                        <option>2027</option>
+                    </select>
+                </div>
+                <label class="col-sm-1 control-label">Franchise</label>
+                <div class="col-sm-2">
+
+        <select multiple class="form-control" id="frenchieId" name="frenchieId" ng-model="frenchieId" ng-options="t.SitId as t.SitName for t in sitelist" ng-disabled="iscorporat"></select>
+        <!--ng-change="changeFrenchieId(frenchieId)" ng-disabled="iscorporat"-->
+    </div>
+    <div class="col-sm-2">
+        <button type="button" class="btn btn-success btn-sm createLineBtn" ng-click="ViewTargetTableData()">View</button>
+    </div>
+</div>
+<div class="row">
+
+                <div class="col-sm-10">
+                    <div class="box-body">
+                        <div style="overflow:auto;">
+                            <table ng-table="reportTable" class="table table-striped table-bordered table-hover" template-pagination="customPager">
+                                <thead>
+                                    <tr class="bg-thead">
+                                        <th class="list-actions">Month</th>
+                                        <th class="col-sm-1 text-left">Target in TEUs</th>
+                                        <th class="col-sm-1 text-left">RORO & LCL</th>
+                                        <th class="col-sm-1 text-left">Actual 20'</th>
+                                        <th class="col-sm-1 text-left">Actual 40'</th>
+                                        <th class="col-sm-1 text-left">Actual 45'</th>
+                                        <th class="col-sm-1 text-left">Actual TEUs</th>
+                                        <th class="col-sm-1 text-left">Difference</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="ng-table-group" ng-repeat-start="group in $groups">
+                                        <td colspan="8">
+                                            <a href="" ng-click="group.$hideRows = !group.$hideRows">
+                                                <span class="fa" ng-class="{ 'fa-chevron-right': group.$hideRows, 'fa-chevron-down': !group.$hideRows }"></span>
+                                                {{group.data[0].sitName}}
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr ng-hide="group.$hideRows" ng-repeat="d in group.data">
+
+                                        <td class="col-sm-1 text-left">
+                                            {{d.targetMonth }}
+
+                                        </td>
+                                        <td class="col-sm-1 text-left">
+                                            {{d.targetValue}}
+                                        </td>
+                                      
+                                        <td class="col-sm-1 text-left">
+                                            {{d.cbm}}
+                                        </td>
+                                        <td class="col-sm-1 text-left">
+                                            {{d.inch20}}
+                                        </td>
+                                        <td class="col-sm-1 text-left">
+                                            {{d.inch40}}
+                                        </td>
+                                        <td class="col-sm-1 text-left">
+                                            {{d.inch45}}
+                                        </td>
+                                        <td class="col-sm-1 text-left">
+                                            {{d.actualQty}}
+                                        </td>
+                                        <td class="col-sm-1 text-left">
+                                            {{d.differenceValue}}
+                                        </td>
+                                    </tr>
+                                    <tr ng-repeat-end>
+                                        <td class="col-sm-1 text-right">
+                                            &nbsp;
+                                        </td>
+                                        <td class="col-sm-1 text-right">
+                                            &nbsp;
+                                        </td>
+                                        <td class="col-sm-1 text-right">
+                                            &nbsp;
+                                        </td>
+                                        <td class="col-sm-1 text-right">
+                                            &nbsp;
+                                        </td>
+                                        <td class="col-sm-1 text-right">
+                                            &nbsp;
+                                        </td>
+                                        <td class="col-sm-1 text-right">
+                                            &nbsp;
+                                        </td>
+                                        <td class="col-sm-1 text-right">
+                                            &nbsp;
+                                        </td>
+                                        <td class="col-sm-1 text-right">
+                                            &nbsp;
+                                        </td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-md-8">
+
+            <div class="box-body">
+                <div class="chart">
+                    <canvas id="barChart" style="height:500px"></canvas>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-6 col-md-12">
+            <div class="panel-body">
+                <div id="map" style="width: 500px; height: 500px;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+

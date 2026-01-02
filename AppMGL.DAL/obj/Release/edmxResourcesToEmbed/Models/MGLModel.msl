@@ -1,0 +1,1464 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AppMGLDALModelsStoreContainer" CdmEntityContainer="AppMGL">
+    <EntitySetMapping Name="AspNetRefreshToken">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.AspNetRefreshToken">
+        <MappingFragment StoreEntitySet="AspNetRefreshToken">
+          <ScalarProperty Name="ProtectedTicket" ColumnName="ProtectedTicket" />
+          <ScalarProperty Name="ExpiresUtc" ColumnName="ExpiresUtc" />
+          <ScalarProperty Name="IssuedUtc" ColumnName="IssuedUtc" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetClient">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.AspNetClient">
+        <MappingFragment StoreEntitySet="AspNetClient">
+          <ScalarProperty Name="AllowedOrigin" ColumnName="AllowedOrigin" />
+          <ScalarProperty Name="RefreshTokenLifeTime" ColumnName="RefreshTokenLifeTime" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ApplicationType" ColumnName="ApplicationType" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Secret" ColumnName="Secret" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LG_ACTION">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.LG_ACTION">
+        <MappingFragment StoreEntitySet="LG_ACTION">
+          <ScalarProperty Name="ActUpdatedBy" ColumnName="ActUpdatedBy" />
+          <ScalarProperty Name="ActCreatedBy" ColumnName="ActCreatedBy" />
+          <ScalarProperty Name="ActUpdatedTs" ColumnName="ActUpdatedTs" />
+          <ScalarProperty Name="ActCreatedTs" ColumnName="ActCreatedTs" />
+          <ScalarProperty Name="ActCaption" ColumnName="ActCaption" />
+          <ScalarProperty Name="ActName" ColumnName="ActName" />
+          <ScalarProperty Name="ActId" ColumnName="ActId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LG_CONTACT">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.LG_CONTACT">
+        <MappingFragment StoreEntitySet="LG_CONTACT">
+          <ScalarProperty Name="CntImageName" ColumnName="CntImageName" />
+          <ScalarProperty Name="CntUpdatedBy" ColumnName="CntUpdatedBy" />
+          <ScalarProperty Name="CntCreatedBy" ColumnName="CntCreatedBy" />
+          <ScalarProperty Name="CwtId" ColumnName="CwtId" />
+          <ScalarProperty Name="CntUpdatedTs" ColumnName="CntUpdatedTs" />
+          <ScalarProperty Name="CntCreatedTs" ColumnName="CntCreatedTs" />
+          <ScalarProperty Name="CntReason" ColumnName="CntReason" />
+          <ScalarProperty Name="CntStatus" ColumnName="CntStatus" />
+          <ScalarProperty Name="CntEmail" ColumnName="CntEmail" />
+          <ScalarProperty Name="CntLastName" ColumnName="CntLastName" />
+          <ScalarProperty Name="CntMiddleName" ColumnName="CntMiddleName" />
+          <ScalarProperty Name="CntFirstName" ColumnName="CntFirstName" />
+          <ScalarProperty Name="CntType" ColumnName="CntType" />
+          <ScalarProperty Name="TtlId" ColumnName="TtlId" />
+          <ScalarProperty Name="DptId" ColumnName="DptId" />
+          <ScalarProperty Name="CntId" ColumnName="CntId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LG_COUNTRY">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.LG_COUNTRY">
+        <MappingFragment StoreEntitySet="LG_COUNTRY">
+          <ScalarProperty Name="CryUpdatedBy" ColumnName="CryUpdatedBy" />
+          <ScalarProperty Name="CryCreatedBy" ColumnName="CryCreatedBy" />
+          <ScalarProperty Name="CryPhoneCode" ColumnName="CryPhoneCode" />
+          <ScalarProperty Name="CryUpdatedTs" ColumnName="CryUpdatedTs" />
+          <ScalarProperty Name="CryCreatedTs" ColumnName="CryCreatedTs" />
+          <ScalarProperty Name="CryStatus" ColumnName="CryStatus" />
+          <ScalarProperty Name="CryAbbrev" ColumnName="CryAbbrev" />
+          <ScalarProperty Name="CryName" ColumnName="CryName" />
+          <ScalarProperty Name="CryId" ColumnName="CryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LG_DEPARTMENT">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.LG_DEPARTMENT">
+        <MappingFragment StoreEntitySet="LG_DEPARTMENT">
+          <ScalarProperty Name="DptUpdatedBy" ColumnName="DptUpdatedBy" />
+          <ScalarProperty Name="DptCreatedBy" ColumnName="DptCreatedBy" />
+          <ScalarProperty Name="DptUpdatedTs" ColumnName="DptUpdatedTs" />
+          <ScalarProperty Name="DptCreatedTs" ColumnName="DptCreatedTs" />
+          <ScalarProperty Name="DptStatus" ColumnName="DptStatus" />
+          <ScalarProperty Name="DptName" ColumnName="DptName" />
+          <ScalarProperty Name="DptId" ColumnName="DptId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LG_LOCATION">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.LG_LOCATION">
+        <MappingFragment StoreEntitySet="LG_LOCATION">
+          <ScalarProperty Name="LcnUpdatedBy" ColumnName="LcnUpdatedBy" />
+          <ScalarProperty Name="LcnCreatedBy" ColumnName="LcnCreatedBy" />
+          <ScalarProperty Name="LcnUpdatedTs" ColumnName="LcnUpdatedTs" />
+          <ScalarProperty Name="LcnCreatedTs" ColumnName="LcnCreatedTs" />
+          <ScalarProperty Name="LcnReason" ColumnName="LcnReason" />
+          <ScalarProperty Name="LcnStatus" ColumnName="LcnStatus" />
+          <ScalarProperty Name="LcnMobilePhone" ColumnName="LcnMobilePhone" />
+          <ScalarProperty Name="LcnFax" ColumnName="LcnFax" />
+          <ScalarProperty Name="LcnPhoneExt" ColumnName="LcnPhoneExt" />
+          <ScalarProperty Name="LcnPhone" ColumnName="LcnPhone" />
+          <ScalarProperty Name="LcnLongitude" ColumnName="LcnLongitude" />
+          <ScalarProperty Name="LcnLatitute" ColumnName="LcnLatitute" />
+          <ScalarProperty Name="CryId" ColumnName="CryId" />
+          <ScalarProperty Name="UstId" ColumnName="UstId" />
+          <ScalarProperty Name="LcnForiegnProvince" ColumnName="LcnForiegnProvince" />
+          <ScalarProperty Name="LcnPostalCode" ColumnName="LcnPostalCode" />
+          <ScalarProperty Name="LcnCity" ColumnName="LcnCity" />
+          <ScalarProperty Name="LcnAddress3" ColumnName="LcnAddress3" />
+          <ScalarProperty Name="LcnAddress2" ColumnName="LcnAddress2" />
+          <ScalarProperty Name="LcnAddress1" ColumnName="LcnAddress1" />
+          <ScalarProperty Name="LcnContactRole" ColumnName="LcnContactRole" />
+          <ScalarProperty Name="LcnInstitutionName" ColumnName="LcnInstitutionName" />
+          <ScalarProperty Name="CcyId" ColumnName="CcyId" />
+          <ScalarProperty Name="TmzId" ColumnName="TmzId" />
+          <ScalarProperty Name="CntId" ColumnName="CntId" />
+          <ScalarProperty Name="LcnId" ColumnName="LcnId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LG_MAM_ROL_MAP">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.LG_MAM_ROL_MAP">
+        <MappingFragment StoreEntitySet="LG_MAM_ROL_MAP">
+          <ScalarProperty Name="MrmUpdatedBy" ColumnName="MrmUpdatedBy" />
+          <ScalarProperty Name="MrmCreatedBy" ColumnName="MrmCreatedBy" />
+          <ScalarProperty Name="MrmUpdatedTs" ColumnName="MrmUpdatedTs" />
+          <ScalarProperty Name="MrmCreatedTs" ColumnName="MrmCreatedTs" />
+          <ScalarProperty Name="MamIsEnable" ColumnName="MamIsEnable" />
+          <ScalarProperty Name="ActId" ColumnName="ActId" />
+          <ScalarProperty Name="ModId" ColumnName="ModId" />
+          <ScalarProperty Name="RleId" ColumnName="RleId" />
+          <ScalarProperty Name="MrmId" ColumnName="MrmId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LG_MODULE">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.LG_MODULE">
+        <MappingFragment StoreEntitySet="LG_MODULE">
+          <ScalarProperty Name="ModUpdatedBy" ColumnName="ModUpdatedBy" />
+          <ScalarProperty Name="ModCreatedBy" ColumnName="ModCreatedBy" />
+          <ScalarProperty Name="ModUpdatedTs" ColumnName="ModUpdatedTs" />
+          <ScalarProperty Name="ModCreatedTs" ColumnName="ModCreatedTs" />
+          <ScalarProperty Name="ModCaption" ColumnName="ModCaption" />
+          <ScalarProperty Name="ModName" ColumnName="ModName" />
+          <ScalarProperty Name="MteId" ColumnName="MteId" />
+          <ScalarProperty Name="ModId" ColumnName="ModId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LG_MODULE_TYPE">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.LG_MODULE_TYPE">
+        <MappingFragment StoreEntitySet="LG_MODULE_TYPE">
+          <ScalarProperty Name="MteUpdatedBy" ColumnName="MteUpdatedBy" />
+          <ScalarProperty Name="MteCreatedBy" ColumnName="MteCreatedBy" />
+          <ScalarProperty Name="MteUpdatedTs" ColumnName="MteUpdatedTs" />
+          <ScalarProperty Name="MteCreatedTs" ColumnName="MteCreatedTs" />
+          <ScalarProperty Name="MteCaption" ColumnName="MteCaption" />
+          <ScalarProperty Name="MteName" ColumnName="MteName" />
+          <ScalarProperty Name="MteId" ColumnName="MteId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LG_ROLE">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.LG_ROLE">
+        <MappingFragment StoreEntitySet="LG_ROLE">
+          <ScalarProperty Name="RleUpdatedBy" ColumnName="RleUpdatedBy" />
+          <ScalarProperty Name="RleCreatedBy" ColumnName="RleCreatedBy" />
+          <ScalarProperty Name="rleType" ColumnName="rleType" />
+          <ScalarProperty Name="RleDisplay" ColumnName="RleDisplay" />
+          <ScalarProperty Name="RleUpdatedTs" ColumnName="RleUpdatedTs" />
+          <ScalarProperty Name="RleCreatedTs" ColumnName="RleCreatedTs" />
+          <ScalarProperty Name="RleStatus" ColumnName="RleStatus" />
+          <ScalarProperty Name="RleName" ColumnName="RleName" />
+          <ScalarProperty Name="RleId" ColumnName="RleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LG_SITE">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.LG_SITE">
+        <MappingFragment StoreEntitySet="LG_SITE">
+          <ScalarProperty Name="SitUpdatedBy" ColumnName="SitUpdatedBy" />
+          <ScalarProperty Name="SitCreatedBy" ColumnName="SitCreatedBy" />
+          <ScalarProperty Name="SitUpdatedTs" ColumnName="SitUpdatedTs" />
+          <ScalarProperty Name="SitCreatedTs" ColumnName="SitCreatedTs" />
+          <ScalarProperty Name="SitReason" ColumnName="SitReason" />
+          <ScalarProperty Name="SitStatus" ColumnName="SitStatus" />
+          <ScalarProperty Name="SitCode" ColumnName="SitCode" />
+          <ScalarProperty Name="SitName" ColumnName="SitName" />
+          <ScalarProperty Name="SitType" ColumnName="SitType" />
+          <ScalarProperty Name="LcnId" ColumnName="LcnId" />
+          <ScalarProperty Name="SitId" ColumnName="SitId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LG_SITE_CONTACT_ROLE">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.LG_SITE_CONTACT_ROLE">
+        <MappingFragment StoreEntitySet="LG_SITE_CONTACT_ROLE">
+          <ScalarProperty Name="ScrUpdatedBy" ColumnName="ScrUpdatedBy" />
+          <ScalarProperty Name="ScrCreatedBy" ColumnName="ScrCreatedBy" />
+          <ScalarProperty Name="ScrUpdatedTs" ColumnName="ScrUpdatedTs" />
+          <ScalarProperty Name="ScrCreatedTs" ColumnName="ScrCreatedTs" />
+          <ScalarProperty Name="RleId" ColumnName="RleId" />
+          <ScalarProperty Name="CntId" ColumnName="CntId" />
+          <ScalarProperty Name="SitId" ColumnName="SitId" />
+          <ScalarProperty Name="ScrId" ColumnName="ScrId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LG_TIMEZONE">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.LG_TIMEZONE">
+        <MappingFragment StoreEntitySet="LG_TIMEZONE">
+          <ScalarProperty Name="TmzUpdatedBy" ColumnName="TmzUpdatedBy" />
+          <ScalarProperty Name="TmzCreatedBy" ColumnName="TmzCreatedBy" />
+          <ScalarProperty Name="TmzUpdatedTs" ColumnName="TmzUpdatedTs" />
+          <ScalarProperty Name="TmzCreatedTs" ColumnName="TmzCreatedTs" />
+          <ScalarProperty Name="TmzStatus" ColumnName="TmzStatus" />
+          <ScalarProperty Name="TmzLocation" ColumnName="TmzLocation" />
+          <ScalarProperty Name="TmzAbbrev" ColumnName="TmzAbbrev" />
+          <ScalarProperty Name="TmzOffset" ColumnName="TmzOffset" />
+          <ScalarProperty Name="TmzName" ColumnName="TmzName" />
+          <ScalarProperty Name="TmzId" ColumnName="TmzId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LG_TITLE">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.LG_TITLE">
+        <MappingFragment StoreEntitySet="LG_TITLE">
+          <ScalarProperty Name="TtlUpdatedBy" ColumnName="TtlUpdatedBy" />
+          <ScalarProperty Name="TtlCreatedBy" ColumnName="TtlCreatedBy" />
+          <ScalarProperty Name="TtlUpdatedTs" ColumnName="TtlUpdatedTs" />
+          <ScalarProperty Name="TtlCreatedTs" ColumnName="TtlCreatedTs" />
+          <ScalarProperty Name="TtlStatus" ColumnName="TtlStatus" />
+          <ScalarProperty Name="TtlName" ColumnName="TtlName" />
+          <ScalarProperty Name="TtlId" ColumnName="TtlId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LG_USER">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.LG_USER">
+        <MappingFragment StoreEntitySet="LG_USER">
+          <ScalarProperty Name="UsrSmtpPassword" ColumnName="UsrSmtpPassword" />
+          <ScalarProperty Name="UsrSmtpUsername" ColumnName="UsrSmtpUsername" />
+          <ScalarProperty Name="UsrUpdatedBy" ColumnName="UsrUpdatedBy" />
+          <ScalarProperty Name="UsrCreatedBy" ColumnName="UsrCreatedBy" />
+          <ScalarProperty Name="UsrUpdatedTs" ColumnName="UsrUpdatedTs" />
+          <ScalarProperty Name="UsrCreatedTs" ColumnName="UsrCreatedTs" />
+          <ScalarProperty Name="UsrIsPowerUser" ColumnName="UsrIsPowerUser" />
+          <ScalarProperty Name="UsrLastLoginTs" ColumnName="UsrLastLoginTs" />
+          <ScalarProperty Name="UsrPwdNeverExpire" ColumnName="UsrPwdNeverExpire" />
+          <ScalarProperty Name="UsrLockedComments" ColumnName="UsrLockedComments" />
+          <ScalarProperty Name="UsrIsLocked" ColumnName="UsrIsLocked" />
+          <ScalarProperty Name="UsrFailedCount" ColumnName="UsrFailedCount" />
+          <ScalarProperty Name="UsrValidTo" ColumnName="UsrValidTo" />
+          <ScalarProperty Name="UsrValidFrom" ColumnName="UsrValidFrom" />
+          <ScalarProperty Name="UsrPwdCreatedTs" ColumnName="UsrPwdCreatedTs" />
+          <ScalarProperty Name="UsrTempPwd" ColumnName="UsrTempPwd" />
+          <ScalarProperty Name="UsrPwd" ColumnName="UsrPwd" />
+          <ScalarProperty Name="AspNetUserId" ColumnName="AspNetUserId" />
+          <ScalarProperty Name="CntId" ColumnName="CntId" />
+          <ScalarProperty Name="UsrId" ColumnName="UsrId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LG_USSTATE">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.LG_USSTATE">
+        <MappingFragment StoreEntitySet="LG_USSTATE">
+          <ScalarProperty Name="UstUpdatedBy" ColumnName="UstUpdatedBy" />
+          <ScalarProperty Name="UstCreatedBy" ColumnName="UstCreatedBy" />
+          <ScalarProperty Name="UstUpdatedTs" ColumnName="UstUpdatedTs" />
+          <ScalarProperty Name="UstCreatedTs" ColumnName="UstCreatedTs" />
+          <ScalarProperty Name="UstStatus" ColumnName="UstStatus" />
+          <ScalarProperty Name="UstAbbrev" ColumnName="UstAbbrev" />
+          <ScalarProperty Name="UstName" ColumnName="UstName" />
+          <ScalarProperty Name="UstId" ColumnName="UstId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DashboardData_Job">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.DashboardData_Job">
+        <MappingFragment StoreEntitySet="DashboardData_Job">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="ADT" ColumnName="ADT" />
+          <ScalarProperty Name="TA" ColumnName="TA" />
+          <ScalarProperty Name="UD1" ColumnName="UD1" />
+          <ScalarProperty Name="D1" ColumnName="D1" />
+          <ScalarProperty Name="T3" ColumnName="T3" />
+          <ScalarProperty Name="T2" ColumnName="T2" />
+          <ScalarProperty Name="T1" ColumnName="T1" />
+          <ScalarProperty Name="UB4" ColumnName="UB4" />
+          <ScalarProperty Name="UB3" ColumnName="UB3" />
+          <ScalarProperty Name="UB2" ColumnName="UB2" />
+          <ScalarProperty Name="UB1" ColumnName="UB1" />
+          <ScalarProperty Name="B7" ColumnName="B7" />
+          <ScalarProperty Name="B6" ColumnName="B6" />
+          <ScalarProperty Name="B5" ColumnName="B5" />
+          <ScalarProperty Name="B4" ColumnName="B4" />
+          <ScalarProperty Name="B3" ColumnName="B3" />
+          <ScalarProperty Name="B2" ColumnName="B2" />
+          <ScalarProperty Name="B1" ColumnName="B1" />
+          <ScalarProperty Name="UQ3" ColumnName="UQ3" />
+          <ScalarProperty Name="UQ2" ColumnName="UQ2" />
+          <ScalarProperty Name="UQ1" ColumnName="UQ1" />
+          <ScalarProperty Name="Q5" ColumnName="Q5" />
+          <ScalarProperty Name="Q4" ColumnName="Q4" />
+          <ScalarProperty Name="Q3" ColumnName="Q3" />
+          <ScalarProperty Name="Q2" ColumnName="Q2" />
+          <ScalarProperty Name="Q1" ColumnName="Q1" />
+          <ScalarProperty Name="UI1" ColumnName="UI1" />
+          <ScalarProperty Name="I3" ColumnName="I3" />
+          <ScalarProperty Name="I2" ColumnName="I2" />
+          <ScalarProperty Name="I1" ColumnName="I1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SIPL_Commodity">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.SIPL_Commodity">
+        <MappingFragment StoreEntitySet="SIPL_Commodity">
+          <ScalarProperty Name="CommodityTypeID" ColumnName="CommodityTypeID" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CommodityId" ColumnName="CommodityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SIPL_ContainerType">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.SIPL_ContainerType">
+        <MappingFragment StoreEntitySet="SIPL_ContainerType">
+          <ScalarProperty Name="CCID" ColumnName="CCID" />
+          <ScalarProperty Name="DoorwidthM" ColumnName="DoorwidthM" />
+          <ScalarProperty Name="Doorwidthinch" ColumnName="Doorwidthinch" />
+          <ScalarProperty Name="MaxiCargoKGS" ColumnName="MaxiCargoKGS" />
+          <ScalarProperty Name="MaxiCargoLbs" ColumnName="MaxiCargoLbs" />
+          <ScalarProperty Name="TareWeightKGS" ColumnName="TareWeightKGS" />
+          <ScalarProperty Name="TareWeightLbs" ColumnName="TareWeightLbs" />
+          <ScalarProperty Name="ContainerCapacityCM" ColumnName="ContainerCapacityCM" />
+          <ScalarProperty Name="ContainerCapacitycft" ColumnName="ContainerCapacitycft" />
+          <ScalarProperty Name="DoorHeightM" ColumnName="DoorHeightM" />
+          <ScalarProperty Name="DoorHeightinch" ColumnName="DoorHeightinch" />
+          <ScalarProperty Name="InsideHeightMeter" ColumnName="InsideHeightMeter" />
+          <ScalarProperty Name="InsideHeightInch" ColumnName="InsideHeightInch" />
+          <ScalarProperty Name="InsideWidthMeter" ColumnName="InsideWidthMeter" />
+          <ScalarProperty Name="InsideWidthInch" ColumnName="InsideWidthInch" />
+          <ScalarProperty Name="InsideLengthMeter" ColumnName="InsideLengthMeter" />
+          <ScalarProperty Name="InsideLengthInch" ColumnName="InsideLengthInch" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ContainerTypeId" ColumnName="ContainerTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SIPL_LoadType">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.SIPL_LoadType">
+        <MappingFragment StoreEntitySet="SIPL_LoadType">
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LoadTypeId" ColumnName="LoadTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SIPL_City">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.SIPL_City">
+        <MappingFragment StoreEntitySet="SIPL_City">
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="fkStateId" ColumnName="fkStateId" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SIPL_ContactBranch">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.SIPL_ContactBranch">
+        <MappingFragment StoreEntitySet="SIPL_ContactBranch">
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="TaxID" ColumnName="TaxID" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="CellNo" ColumnName="CellNo" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="TelNo" ColumnName="TelNo" />
+          <ScalarProperty Name="BranchName" ColumnName="BranchName" />
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="ContactBranchID" ColumnName="ContactBranchID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SIPL_Continent">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.SIPL_Continent">
+        <MappingFragment StoreEntitySet="SIPL_Continent">
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ContinentId" ColumnName="ContinentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SIPL_Country">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.SIPL_Country">
+        <MappingFragment StoreEntitySet="SIPL_Country">
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ContinentID" ColumnName="ContinentID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SIPL_State">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.SIPL_State">
+        <MappingFragment StoreEntitySet="SIPL_State">
+          <ScalarProperty Name="Abb" ColumnName="Abb" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="fkCountryId" ColumnName="fkCountryId" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SIPL_TradeService">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.SIPL_TradeService">
+        <MappingFragment StoreEntitySet="SIPL_TradeService">
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TradeServiceId" ColumnName="TradeServiceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="USP_GET_CUSTOMERCONTACT_DETAIL" FunctionName="AppMGL.DAL.Models.Store.USP_GET_CUSTOMERCONTACT_DETAIL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AppMGL.DAL.Models.USP_GET_CUSTOMERCONTACT_DETAIL_Result">
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="TelNo" ColumnName="TelNo" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="AccountDetail" ColumnName="AccountDetail" />
+          <ScalarProperty Name="WebSite" ColumnName="WebSite" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="MobNo" ColumnName="MobNo" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="TaxID" ColumnName="TaxID" />
+          <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+          <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+          <ScalarProperty Name="CompanyGradation" ColumnName="CompanyGradation" />
+          <ScalarProperty Name="RepresentativeID" ColumnName="RepresentativeID" />
+          <ScalarProperty Name="ContactCategoryID" ColumnName="ContactCategoryID" />
+          <ScalarProperty Name="Continent" ColumnName="Continent" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="GalRepresentative" ColumnName="GalRepresentative" />
+          <ScalarProperty Name="BranchName" ColumnName="BranchName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_GET_CUSTOMERCONTACT_LIST" FunctionName="AppMGL.DAL.Models.Store.USP_GET_CUSTOMERCONTACT_LIST">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AppMGL.DAL.Models.USP_GET_CUSTOMERCONTACT_LIST_Result">
+          <ScalarProperty Name="ROWNUM" ColumnName="ROWNUM" />
+          <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="TelNo" ColumnName="TelNo" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="WebSite" ColumnName="WebSite" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="MobNo" ColumnName="MobNo" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="TaxID" ColumnName="TaxID" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="fkCountryId" ColumnName="fkCountryId" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="ContinentId" ColumnName="ContinentId" />
+          <ScalarProperty Name="Continent" ColumnName="Continent" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AccountDetail" ColumnName="AccountDetail" />
+          <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+          <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+          <ScalarProperty Name="ContactCategoryID" ColumnName="ContactCategoryID" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="RepresentativeID" ColumnName="RepresentativeID" />
+          <ScalarProperty Name="GalRepresentative" ColumnName="GalRepresentative" />
+          <ScalarProperty Name="BranchName" ColumnName="BranchName" />
+          <ScalarProperty Name="CompanyGradation" ColumnName="CompanyGradation" />
+          <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_GET_CUSTOMERCONTACT_DATA" FunctionName="AppMGL.DAL.Models.Store.USP_GET_CUSTOMERCONTACT_DATA">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AppMGL.DAL.Models.USP_GET_CUSTOMERCONTACT_DATA_Result">
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="TelNo" ColumnName="TelNo" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="AccountDetail" ColumnName="AccountDetail" />
+          <ScalarProperty Name="WebSite" ColumnName="WebSite" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="MobNo" ColumnName="MobNo" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="TaxID" ColumnName="TaxID" />
+          <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+          <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+          <ScalarProperty Name="CompanyGradation" ColumnName="CompanyGradation" />
+          <ScalarProperty Name="RepresentativeID" ColumnName="RepresentativeID" />
+          <ScalarProperty Name="ContactCategoryID" ColumnName="ContactCategoryID" />
+          <ScalarProperty Name="Continent" ColumnName="Continent" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="GalRepresentative" ColumnName="GalRepresentative" />
+          <ScalarProperty Name="BranchName" ColumnName="BranchName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="SIPL_CommodityType">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.SIPL_CommodityType">
+        <MappingFragment StoreEntitySet="SIPL_CommodityType">
+          <ScalarProperty Name="CommodityType" ColumnName="CommodityType" />
+          <ScalarProperty Name="CommodityTypeID" ColumnName="CommodityTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LG_VW_CONTACTCATEGORY">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.LG_VW_CONTACTCATEGORY">
+        <MappingFragment StoreEntitySet="LG_VW_CONTACTCATEGORY">
+          <ScalarProperty Name="IsVendor" ColumnName="IsVendor" />
+          <ScalarProperty Name="Destination" ColumnName="Destination" />
+          <ScalarProperty Name="Origin" ColumnName="Origin" />
+          <ScalarProperty Name="Commodity" ColumnName="Commodity" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ContactCategoryId" ColumnName="ContactCategoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SIPL_Department">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.SIPL_Department">
+        <MappingFragment StoreEntitySet="SIPL_Department">
+          <ScalarProperty Name="DeptCode" ColumnName="DeptCode" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="EnquiryControlNo" ColumnName="EnquiryControlNo" />
+          <ScalarProperty Name="LastEnquiryNo" ColumnName="LastEnquiryNo" />
+          <ScalarProperty Name="Prefix" ColumnName="Prefix" />
+          <ScalarProperty Name="fkOperationTypeID" ColumnName="fkOperationTypeID" />
+          <ScalarProperty Name="fkTransportModeID" ColumnName="fkTransportModeID" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="LG_ContactCategory_IUD_Detail" FunctionName="AppMGL.DAL.Models.Store.LG_ContactCategory_IUD" />
+    <EntitySetMapping Name="SIPL_Contract">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.SIPL_Contract">
+        <MappingFragment StoreEntitySet="SIPL_Contract">
+          <ScalarProperty Name="SCTermNo" ColumnName="SCTermNo" />
+          <ScalarProperty Name="TradeLane" ColumnName="TradeLane" />
+          <ScalarProperty Name="Attachments" ColumnName="Attachments" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="fkDestinationID" ColumnName="fkDestinationID" />
+          <ScalarProperty Name="fkOriginID" ColumnName="fkOriginID" />
+          <ScalarProperty Name="ContractType" ColumnName="ContractType" />
+          <ScalarProperty Name="MQC" ColumnName="MQC" />
+          <ScalarProperty Name="MQCTYPE" ColumnName="MQCTYPE" />
+          <ScalarProperty Name="ContractDate" ColumnName="ContractDate" />
+          <ScalarProperty Name="CarrierID" ColumnName="CarrierID" />
+          <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="ContractNo" ColumnName="ContractNo" />
+          <ScalarProperty Name="ContractID" ColumnName="ContractID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SIPL_Contact">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.SIPL_Contact">
+        <MappingFragment StoreEntitySet="SIPL_Contact">
+          <ScalarProperty Name="BillToAddress" ColumnName="BillToAddress" />
+          <ScalarProperty Name="BillToCompanyName" ColumnName="BillToCompanyName" />
+          <ScalarProperty Name="BillTo" ColumnName="BillTo" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="ContinentId" ColumnName="ContinentId" />
+          <ScalarProperty Name="RepresentativeID" ColumnName="RepresentativeID" />
+          <ScalarProperty Name="ContactCategoryID" ColumnName="ContactCategoryID" />
+          <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+          <ScalarProperty Name="CompanyGradation" ColumnName="CompanyGradation" />
+          <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+          <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+          <ScalarProperty Name="AccountDetail" ColumnName="AccountDetail" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="TaxID" ColumnName="TaxID" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="WebSite" ColumnName="WebSite" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="MobNo" ColumnName="MobNo" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="TelNo" ColumnName="TelNo" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SIPL_CompanyGradation">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.SIPL_CompanyGradation">
+        <MappingFragment StoreEntitySet="SIPL_CompanyGradation">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="CompanyGradation" ColumnName="CompanyGradation" />
+          <ScalarProperty Name="GradationID" ColumnName="GradationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SIPL_Port">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.SIPL_Port">
+        <MappingFragment StoreEntitySet="SIPL_Port">
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="IsAirLine" ColumnName="IsAirLine" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PortId" ColumnName="PortId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SIPL_User">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.SIPL_User">
+        <MappingFragment StoreEntitySet="SIPL_User">
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="fkRoleID" ColumnName="fkRoleID" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="LoginID" ColumnName="LoginID" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LG_VW_Commodity">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.LG_VW_Commodity">
+        <MappingFragment StoreEntitySet="LG_VW_Commodity">
+          <ScalarProperty Name="CommodityType" ColumnName="CommodityType" />
+          <ScalarProperty Name="CommodityTypeID" ColumnName="CommodityTypeID" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CommodityId" ColumnName="CommodityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LG_VW_Port">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.LG_VW_Port">
+        <MappingFragment StoreEntitySet="LG_VW_Port">
+          <ScalarProperty Name="IsAirLine" ColumnName="IsAirLine" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="fkCountryId" ColumnName="fkCountryId" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PortId" ColumnName="PortId" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LG_VW_SIPLCity">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.LG_VW_SIPLCity">
+        <MappingFragment StoreEntitySet="LG_VW_SIPLCity">
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="fkStateId" ColumnName="fkStateId" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LG_VW_SIPLState">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.LG_VW_SIPLState">
+        <MappingFragment StoreEntitySet="LG_VW_SIPLState">
+          <ScalarProperty Name="Abb" ColumnName="Abb" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="fkCountryId" ColumnName="fkCountryId" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LGV_CONTACT_INFO">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.LGV_CONTACT_INFO">
+        <MappingFragment StoreEntitySet="LGV_CONTACT_INFO">
+          <ScalarProperty Name="BranchName" ColumnName="BranchName" />
+          <ScalarProperty Name="GalRepresentative" ColumnName="GalRepresentative" />
+          <ScalarProperty Name="RepresentativeID" ColumnName="RepresentativeID" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="ContactCategoryID" ColumnName="ContactCategoryID" />
+          <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+          <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+          <ScalarProperty Name="AccountDetail" ColumnName="AccountDetail" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="Continent" ColumnName="Continent" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="fkCountryId" ColumnName="fkCountryId" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="TaxID" ColumnName="TaxID" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="MobNo" ColumnName="MobNo" />
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="WebSite" ColumnName="WebSite" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="TelNo" ColumnName="TelNo" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SIPL_RailRamp">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.SIPL_RailRamp">
+        <MappingFragment StoreEntitySet="SIPL_RailRamp">
+          <ScalarProperty Name="railDate" ColumnName="railDate" />
+          <ScalarProperty Name="railRamp" ColumnName="railRamp" />
+          <ScalarProperty Name="railId" ColumnName="railId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sipl_Terminal">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.Sipl_Terminal">
+        <MappingFragment StoreEntitySet="Sipl_Terminal">
+          <ScalarProperty Name="terminalDate" ColumnName="terminalDate" />
+          <ScalarProperty Name="terminalName" ColumnName="terminalName" />
+          <ScalarProperty Name="terminalId" ColumnName="terminalId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SIPL_PortGroup">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.SIPL_PortGroup">
+        <MappingFragment StoreEntitySet="SIPL_PortGroup">
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ShortCode" ColumnName="ShortCode" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PortGroupId" ColumnName="PortGroupId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="FK_SIPL_Contact_SIPL_State" TypeName="AppMGL.DAL.Models.FK_SIPL_Contact_SIPL_State" StoreEntitySet="SIPL_Contact">
+      <EndProperty Name="SIPL_Contact">
+        <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+      </EndProperty>
+      <EndProperty Name="SIPL_State">
+        <ScalarProperty Name="StateId" ColumnName="StateID" />
+      </EndProperty>
+      <Condition ColumnName="StateID" IsNull="false" />
+    </AssociationSetMapping>
+    <EntitySetMapping Name="LG_VW_Alias">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.LG_VW_Alias">
+        <MappingFragment StoreEntitySet="LG_VW_Alias">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="AliasReferenceID" ColumnName="AliasReferenceID" />
+          <ScalarProperty Name="Alias" ColumnName="Alias" />
+          <ScalarProperty Name="AliasID" ColumnName="AliasID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LG_VW_SurchargeGroup">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.LG_VW_SurchargeGroup">
+        <MappingFragment StoreEntitySet="LG_VW_SurchargeGroup">
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ShortCode" ColumnName="ShortCode" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SurchargesGroupID" ColumnName="SurchargesGroupID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LG_CONTACT_WORK_TYPE">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.LG_CONTACT_WORK_TYPE">
+        <MappingFragment StoreEntitySet="LG_CONTACT_WORK_TYPE">
+          <ScalarProperty Name="CwtUpdatedBy" ColumnName="CwtUpdatedBy" />
+          <ScalarProperty Name="CwtUpdatedTs" ColumnName="CwtUpdatedTs" />
+          <ScalarProperty Name="CwtCreatedBy" ColumnName="CwtCreatedBy" />
+          <ScalarProperty Name="CwtCreatedTs" ColumnName="CwtCreatedTs" />
+          <ScalarProperty Name="CwtStatus" ColumnName="CwtStatus" />
+          <ScalarProperty Name="CwtName" ColumnName="CwtName" />
+          <ScalarProperty Name="CwtId" ColumnName="CwtId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="FK_CNT_CWT" TypeName="AppMGL.DAL.Models.FK_CNT_CWT" StoreEntitySet="LG_CONTACT">
+      <EndProperty Name="LG_CONTACT">
+        <ScalarProperty Name="CntId" ColumnName="CntId" />
+      </EndProperty>
+      <EndProperty Name="LG_CONTACT_WORK_TYPE">
+        <ScalarProperty Name="CwtId" ColumnName="CwtId" />
+      </EndProperty>
+      <Condition ColumnName="CwtId" IsNull="false" />
+    </AssociationSetMapping>
+    <EntitySetMapping Name="LG_LOGIN_HISTORY">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.LG_LOGIN_HISTORY">
+        <MappingFragment StoreEntitySet="LG_LOGIN_HISTORY">
+          <ScalarProperty Name="lhyCreatedTs" ColumnName="lhyCreatedTs" />
+          <ScalarProperty Name="lhyLoginComment" ColumnName="lhyLoginComment" />
+          <ScalarProperty Name="lhyLoginSuccess" ColumnName="lhyLoginSuccess" />
+          <ScalarProperty Name="LhyLoginName" ColumnName="LhyLoginName" />
+          <ScalarProperty Name="LhyId" ColumnName="LhyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="RPT_GET_ENQUIRY" FunctionName="AppMGL.DAL.Models.Store.RPT_GET_ENQUIRY">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AppMGL.DAL.Models.RPT_GET_ENQUIRY_Result">
+          <ScalarProperty Name="EnquiryID" ColumnName="EnquiryID" />
+          <ScalarProperty Name="EnquiryDate" ColumnName="EnquiryDate" />
+          <ScalarProperty Name="EnquiryNo" ColumnName="EnquiryNo" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+          <ScalarProperty Name="SystemRef" ColumnName="SystemRef" />
+          <ScalarProperty Name="MiamiRef" ColumnName="MiamiRef" />
+          <ScalarProperty Name="BookingNo" ColumnName="BookingNo" />
+          <ScalarProperty Name="QuotationNo" ColumnName="QuotationNo" />
+          <ScalarProperty Name="ExpectedDate" ColumnName="ExpectedDate" />
+          <ScalarProperty Name="SourceCountry" ColumnName="SourceCountry" />
+          <ScalarProperty Name="DestinationCountry" ColumnName="DestinationCountry" />
+          <ScalarProperty Name="PortOfOrigin" ColumnName="PortOfOrigin" />
+          <ScalarProperty Name="PortOfDestination" ColumnName="PortOfDestination" />
+          <ScalarProperty Name="PickupRemark" ColumnName="PickupRemark" />
+          <ScalarProperty Name="OriginCity" ColumnName="OriginCity" />
+          <ScalarProperty Name="OriginState" ColumnName="OriginState" />
+          <ScalarProperty Name="OriginRailRamp" ColumnName="OriginRailRamp" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="RPT_GET_QUOTATION" FunctionName="AppMGL.DAL.Models.Store.RPT_GET_QUOTATION">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AppMGL.DAL.Models.RPT_GET_QUOTATION_Result">
+          <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+          <ScalarProperty Name="SystemRef" ColumnName="SystemRef" />
+          <ScalarProperty Name="MiamiRef" ColumnName="MiamiRef" />
+          <ScalarProperty Name="BookingNo" ColumnName="BookingNo" />
+          <ScalarProperty Name="EnquiryNo" ColumnName="EnquiryNo" />
+          <ScalarProperty Name="QuotationNo" ColumnName="QuotationNo" />
+          <ScalarProperty Name="EnquiryDate" ColumnName="EnquiryDate" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="ExpectedDate" ColumnName="ExpectedDate" />
+          <ScalarProperty Name="SourceCountry" ColumnName="SourceCountry" />
+          <ScalarProperty Name="DestinationCountry" ColumnName="DestinationCountry" />
+          <ScalarProperty Name="PortOfOrigin" ColumnName="PortOfOrigin" />
+          <ScalarProperty Name="PortOfDestination" ColumnName="PortOfDestination" />
+          <ScalarProperty Name="PickupRemark" ColumnName="PickupRemark" />
+          <ScalarProperty Name="QuotationID" ColumnName="QuotationID" />
+          <ScalarProperty Name="QuotationSentDate" ColumnName="QuotationSentDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="RPT_GET_BOOKING" FunctionName="AppMGL.DAL.Models.Store.RPT_GET_BOOKING">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AppMGL.DAL.Models.RPT_GET_BOOKING_Result">
+          <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+          <ScalarProperty Name="BookingDate" ColumnName="BookingDate" />
+          <ScalarProperty Name="SystemRef" ColumnName="SystemRef" />
+          <ScalarProperty Name="MiamiRef" ColumnName="MiamiRef" />
+          <ScalarProperty Name="BookingNo" ColumnName="BookingNo" />
+          <ScalarProperty Name="EnquiryNo" ColumnName="EnquiryNo" />
+          <ScalarProperty Name="QuotationNo" ColumnName="QuotationNo" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+          <ScalarProperty Name="Vessel" ColumnName="Vessel" />
+          <ScalarProperty Name="Voyage" ColumnName="Voyage" />
+          <ScalarProperty Name="CutOff" ColumnName="CutOff" />
+          <ScalarProperty Name="ETS" ColumnName="ETS" />
+          <ScalarProperty Name="ETA" ColumnName="ETA" />
+          <ScalarProperty Name="ERD" ColumnName="ERD" />
+          <ScalarProperty Name="OriginDoor" ColumnName="OriginDoor" />
+          <ScalarProperty Name="PortOfLoading" ColumnName="PortOfLoading" />
+          <ScalarProperty Name="Destination" ColumnName="Destination" />
+          <ScalarProperty Name="FCRCutoffDate" ColumnName="FCRCutoffDate" />
+          <ScalarProperty Name="BillOfLadingNo" ColumnName="BillOfLadingNo" />
+          <ScalarProperty Name="VIN" ColumnName="VIN" />
+          <ScalarProperty Name="Commodity" ColumnName="Commodity" />
+          <ScalarProperty Name="CntType" ColumnName="CntType" />
+          <ScalarProperty Name="CntNo" ColumnName="CntNo" />
+          <ScalarProperty Name="SealNo" ColumnName="SealNo" />
+          <ScalarProperty Name="Shipper" ColumnName="Shipper" />
+          <ScalarProperty Name="PickupCategory" ColumnName="PickupCategory" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="RPT_GET_BOOKING_STATUS" FunctionName="AppMGL.DAL.Models.Store.RPT_GET_BOOKING_STATUS">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AppMGL.DAL.Models.RPT_GET_BOOKING_STATUS_Result">
+          <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+          <ScalarProperty Name="BookingDate" ColumnName="BookingDate" />
+          <ScalarProperty Name="SystemRef" ColumnName="SystemRef" />
+          <ScalarProperty Name="MiamiRef" ColumnName="MiamiRef" />
+          <ScalarProperty Name="BookingNo" ColumnName="BookingNo" />
+          <ScalarProperty Name="EnquiryNo" ColumnName="EnquiryNo" />
+          <ScalarProperty Name="QuotationNo" ColumnName="QuotationNo" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Vessel" ColumnName="Vessel" />
+          <ScalarProperty Name="Voyage" ColumnName="Voyage" />
+          <ScalarProperty Name="CutOff" ColumnName="CutOff" />
+          <ScalarProperty Name="ETS" ColumnName="ETS" />
+          <ScalarProperty Name="ETA" ColumnName="ETA" />
+          <ScalarProperty Name="ERD" ColumnName="ERD" />
+          <ScalarProperty Name="OriginDoor" ColumnName="OriginDoor" />
+          <ScalarProperty Name="PortOfLoading" ColumnName="PortOfLoading" />
+          <ScalarProperty Name="Destination" ColumnName="Destination" />
+          <ScalarProperty Name="FCRCutoffDate" ColumnName="FCRCutoffDate" />
+          <ScalarProperty Name="BillOfLadingNo" ColumnName="BillOfLadingNo" />
+          <ScalarProperty Name="VIN" ColumnName="VIN" />
+          <ScalarProperty Name="Commodity" ColumnName="Commodity" />
+          <ScalarProperty Name="CntType" ColumnName="CntType" />
+          <ScalarProperty Name="CntNo" ColumnName="CntNo" />
+          <ScalarProperty Name="SealNo" ColumnName="SealNo" />
+          <ScalarProperty Name="Shipper" ColumnName="Shipper" />
+          <ScalarProperty Name="BookingStatus" ColumnName="BookingStatus" />
+          <ScalarProperty Name="NewSysNo" ColumnName="NewSysNo" />
+          <ScalarProperty Name="BookingRequest" ColumnName="BookingRequest" />
+          <ScalarProperty Name="ModeOfCommunication" ColumnName="ModeOfCommunication" />
+          <ScalarProperty Name="PortCutOffDate" ColumnName="PortCutOffDate" />
+          <ScalarProperty Name="EarliestPickUpDate" ColumnName="EarliestPickUpDate" />
+          <ScalarProperty Name="PickupCategory" ColumnName="PickupCategory" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="SIPL_BookingStatus">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.SIPL_BookingStatus">
+        <MappingFragment StoreEntitySet="SIPL_BookingStatus">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GET_QUOTATION_CARRIER" FunctionName="AppMGL.DAL.Models.Store.GET_QUOTATION_CARRIER">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AppMGL.DAL.Models.GET_QUOTATION_CARRIER_Result">
+          <ScalarProperty Name="Days" ColumnName="Days" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Selected" ColumnName="Selected" />
+          <ScalarProperty Name="fkQuotationID" ColumnName="fkQuotationID" />
+          <ScalarProperty Name="fkCarrierID" ColumnName="fkCarrierID" />
+          <ScalarProperty Name="QuotationCarrierID" ColumnName="QuotationCarrierID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GET_QUOTATION_COMMODITY" FunctionName="AppMGL.DAL.Models.Store.GET_QUOTATION_COMMODITY" />
+    <FunctionImportMapping FunctionImportName="GET_QUOTATION_ENQUIRY" FunctionName="AppMGL.DAL.Models.Store.GET_QUOTATION_ENQUIRY">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AppMGL.DAL.Models.GET_QUOTATION_ENQUIRY_Result">
+          <ScalarProperty Name="EnquiryDate" ColumnName="EnquiryDate" />
+          <ScalarProperty Name="EnquiryID" ColumnName="EnquiryID" />
+          <ScalarProperty Name="OriginDoor" ColumnName="OriginDoor" />
+          <ScalarProperty Name="CustomerInqNo" ColumnName="CustomerInqNo" />
+          <ScalarProperty Name="DestinationDoor" ColumnName="DestinationDoor" />
+          <ScalarProperty Name="PickupType" ColumnName="PickupType" />
+          <ScalarProperty Name="TodayDate" ColumnName="TodayDate" />
+          <ScalarProperty Name="EnquiryNo" ColumnName="EnquiryNo" />
+          <ScalarProperty Name="SourceCountryId" ColumnName="SourceCountryId" />
+          <ScalarProperty Name="DestinationCountryId" ColumnName="DestinationCountryId" />
+          <ScalarProperty Name="EnquiryID1" ColumnName="EnquiryID1" />
+          <ScalarProperty Name="fkCompanyID" ColumnName="fkCompanyID" />
+          <ScalarProperty Name="ShipmentMoveDate" ColumnName="ShipmentMoveDate" />
+          <ScalarProperty Name="PickupType1" ColumnName="PickupType1" />
+          <ScalarProperty Name="PortOfOrigin" ColumnName="PortOfOrigin" />
+          <ScalarProperty Name="PortOfDischarge" ColumnName="PortOfDischarge" />
+          <ScalarProperty Name="NoOfContainer" ColumnName="NoOfContainer" />
+          <ScalarProperty Name="Discharge" ColumnName="Discharge" />
+          <ScalarProperty Name="Origin" ColumnName="Origin" />
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="TruckingCharges" ColumnName="TruckingCharges" />
+          <ScalarProperty Name="TruckingRemarks" ColumnName="TruckingRemarks" />
+          <ScalarProperty Name="SourceCountry" ColumnName="SourceCountry" />
+          <ScalarProperty Name="DestinationCountry" ColumnName="DestinationCountry" />
+          <ScalarProperty Name="EnqNo" ColumnName="EnqNo" />
+          <ScalarProperty Name="TypeOfEnquiry" ColumnName="TypeOfEnquiry" />
+          <ScalarProperty Name="QuotationId" ColumnName="QuotationId" />
+          <ScalarProperty Name="QuotationNo" ColumnName="QuotationNo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="SIPL_DocumentCommon">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.SIPL_DocumentCommon">
+        <MappingFragment StoreEntitySet="SIPL_DocumentCommon">
+          <ScalarProperty Name="Dos_ID" ColumnName="Dos_ID" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="BookingRemarks" ColumnName="BookingRemarks" />
+          <ScalarProperty Name="ConfStuffedDate" ColumnName="ConfStuffedDate" />
+          <ScalarProperty Name="ReqStuffingDate" ColumnName="ReqStuffingDate" />
+          <ScalarProperty Name="LoadingDate" ColumnName="LoadingDate" />
+          <ScalarProperty Name="Loading_ContactID" ColumnName="Loading_ContactID" />
+          <ScalarProperty Name="Trucking_ContactID" ColumnName="Trucking_ContactID" />
+          <ScalarProperty Name="CustReqSailingDate" ColumnName="CustReqSailingDate" />
+          <ScalarProperty Name="CustReqCutOffDate" ColumnName="CustReqCutOffDate" />
+          <ScalarProperty Name="BookingReqtRecivedDate" ColumnName="BookingReqtRecivedDate" />
+          <ScalarProperty Name="SitId" ColumnName="SitId" />
+          <ScalarProperty Name="ShipperCustomerName" ColumnName="ShipperCustomerName" />
+          <ScalarProperty Name="PONO" ColumnName="PONO" />
+          <ScalarProperty Name="Booking" ColumnName="Booking" />
+          <ScalarProperty Name="Others" ColumnName="Others" />
+          <ScalarProperty Name="Shipper" ColumnName="Shipper" />
+          <ScalarProperty Name="CD" ColumnName="CD" />
+          <ScalarProperty Name="DR" ColumnName="DR" />
+          <ScalarProperty Name="MBL" ColumnName="MBL" />
+          <ScalarProperty Name="HBL" ColumnName="HBL" />
+          <ScalarProperty Name="DestinationAddId" ColumnName="DestinationAddId" />
+          <ScalarProperty Name="InvoiceStatusID" ColumnName="InvoiceStatusID" />
+          <ScalarProperty Name="OriginAddId" ColumnName="OriginAddId" />
+          <ScalarProperty Name="OriginDoorAddress" ColumnName="OriginDoorAddress" />
+          <ScalarProperty Name="ReqdSailingRemarks" ColumnName="ReqdSailingRemarks" />
+          <ScalarProperty Name="AutoCutOff" ColumnName="AutoCutOff" />
+          <ScalarProperty Name="DestinationTerminal" ColumnName="DestinationTerminal" />
+          <ScalarProperty Name="RampCutOff" ColumnName="RampCutOff" />
+          <ScalarProperty Name="OriginRailRamp" ColumnName="OriginRailRamp" />
+          <ScalarProperty Name="ToShipperEmail" ColumnName="ToShipperEmail" />
+          <ScalarProperty Name="ShipperAttachFile" ColumnName="ShipperAttachFile" />
+          <ScalarProperty Name="ShipperRepName" ColumnName="ShipperRepName" />
+          <ScalarProperty Name="ShipperConfirmMode" ColumnName="ShipperConfirmMode" />
+          <ScalarProperty Name="ShipperConfirmDate" ColumnName="ShipperConfirmDate" />
+          <ScalarProperty Name="AttachFile2" ColumnName="AttachFile2" />
+          <ScalarProperty Name="AttachFile1" ColumnName="AttachFile1" />
+          <ScalarProperty Name="ContractBookingID" ColumnName="ContractBookingID" />
+          <ScalarProperty Name="RevisedID" ColumnName="RevisedID" />
+          <ScalarProperty Name="AttachFile" ColumnName="AttachFile" />
+          <ScalarProperty Name="SpaceBookingRemarks" ColumnName="SpaceBookingRemarks" />
+          <ScalarProperty Name="ModeID" ColumnName="ModeID" />
+          <ScalarProperty Name="CommunicationRecdDate" ColumnName="CommunicationRecdDate" />
+          <ScalarProperty Name="BookingRequestID" ColumnName="BookingRequestID" />
+          <ScalarProperty Name="GALBookingStatusID" ColumnName="GALBookingStatusID" />
+          <ScalarProperty Name="EarliestPickUpDate" ColumnName="EarliestPickUpDate" />
+          <ScalarProperty Name="PortcutoffDate" ColumnName="PortcutoffDate" />
+          <ScalarProperty Name="DestinationDoor" ColumnName="DestinationDoor" />
+          <ScalarProperty Name="OriginDoor" ColumnName="OriginDoor" />
+          <ScalarProperty Name="BookingCategory" ColumnName="BookingCategory" />
+          <ScalarProperty Name="IsContractBooking" ColumnName="IsContractBooking" />
+          <ScalarProperty Name="Finalplaceid" ColumnName="Finalplaceid" />
+          <ScalarProperty Name="ETAFinalplaceid" ColumnName="ETAFinalplaceid" />
+          <ScalarProperty Name="HazVolume" ColumnName="HazVolume" />
+          <ScalarProperty Name="Hazweight" ColumnName="Hazweight" />
+          <ScalarProperty Name="IsHaz" ColumnName="IsHaz" />
+          <ScalarProperty Name="HazRemarks" ColumnName="HazRemarks" />
+          <ScalarProperty Name="PackingType" ColumnName="PackingType" />
+          <ScalarProperty Name="UNNo" ColumnName="UNNo" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="QuotationChargesID" ColumnName="QuotationChargesID" />
+          <ScalarProperty Name="PlaceOfAcceptance" ColumnName="PlaceOfAcceptance" />
+          <ScalarProperty Name="BillOfLadingNo" ColumnName="BillOfLadingNo" />
+          <ScalarProperty Name="DepartureDate" ColumnName="DepartureDate" />
+          <ScalarProperty Name="ArrivalDate" ColumnName="ArrivalDate" />
+          <ScalarProperty Name="IssuedOn" ColumnName="IssuedOn" />
+          <ScalarProperty Name="CheckedBy" ColumnName="CheckedBy" />
+          <ScalarProperty Name="DeliverdBy" ColumnName="DeliverdBy" />
+          <ScalarProperty Name="DestinationCountry" ColumnName="DestinationCountry" />
+          <ScalarProperty Name="OriginCountry" ColumnName="OriginCountry" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="CarrierBooking" ColumnName="CarrierBooking" />
+          <ScalarProperty Name="ExpecteddateOfMove" ColumnName="ExpecteddateOfMove" />
+          <ScalarProperty Name="ERD" ColumnName="ERD" />
+          <ScalarProperty Name="ETS" ColumnName="ETS" />
+          <ScalarProperty Name="ETA" ColumnName="ETA" />
+          <ScalarProperty Name="ETSailing" ColumnName="ETSailing" />
+          <ScalarProperty Name="Vessel" ColumnName="Vessel" />
+          <ScalarProperty Name="PickupCategoryName" ColumnName="PickupCategoryName" />
+          <ScalarProperty Name="PickupCategory" ColumnName="PickupCategory" />
+          <ScalarProperty Name="ShipperID" ColumnName="ShipperID" />
+          <ScalarProperty Name="BookingDate" ColumnName="BookingDate" />
+          <ScalarProperty Name="BookingReceivedBy" ColumnName="BookingReceivedBy" />
+          <ScalarProperty Name="BookedBy" ColumnName="BookedBy" />
+          <ScalarProperty Name="GALBookingType" ColumnName="GALBookingType" />
+          <ScalarProperty Name="VIN" ColumnName="VIN" />
+          <ScalarProperty Name="CNTNO" ColumnName="CNTNO" />
+          <ScalarProperty Name="CutOffDate" ColumnName="CutOffDate" />
+          <ScalarProperty Name="BookingStatus" ColumnName="BookingStatus" />
+          <ScalarProperty Name="DestinationPort" ColumnName="DestinationPort" />
+          <ScalarProperty Name="Originport" ColumnName="Originport" />
+          <ScalarProperty Name="IsAir" ColumnName="IsAir" />
+          <ScalarProperty Name="IsExport" ColumnName="IsExport" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="MoveType" ColumnName="MoveType" />
+          <ScalarProperty Name="Voyage" ColumnName="Voyage" />
+          <ScalarProperty Name="Transshipment" ColumnName="Transshipment" />
+          <ScalarProperty Name="ForeignPortID" ColumnName="ForeignPortID" />
+          <ScalarProperty Name="LoadingPert" ColumnName="LoadingPert" />
+          <ScalarProperty Name="LandingPortID" ColumnName="LandingPortID" />
+          <ScalarProperty Name="PlaceOfReceiptID" ColumnName="PlaceOfReceiptID" />
+          <ScalarProperty Name="CarriageBy" ColumnName="CarriageBy" />
+          <ScalarProperty Name="ExportInstruction" ColumnName="ExportInstruction" />
+          <ScalarProperty Name="ExportingCarrier" ColumnName="ExportingCarrier" />
+          <ScalarProperty Name="ConsigneeID" ColumnName="ConsigneeID" />
+          <ScalarProperty Name="FwdAgent" ColumnName="FwdAgent" />
+          <ScalarProperty Name="ConsignedTo" ColumnName="ConsignedTo" />
+          <ScalarProperty Name="ExportRef" ColumnName="ExportRef" />
+          <ScalarProperty Name="FTZNumber" ColumnName="FTZNumber" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="BLNumber" ColumnName="BLNumber" />
+          <ScalarProperty Name="DocumentNumber" ColumnName="DocumentNumber" />
+          <ScalarProperty Name="ExporterID" ColumnName="ExporterID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="FileNo" ColumnName="FileNo" />
+          <ScalarProperty Name="DocumentCommonID" ColumnName="DocumentCommonID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LG_ACCT_CATEGORY">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.LG_ACCT_CATEGORY">
+        <MappingFragment StoreEntitySet="LG_ACCT_CATEGORY">
+          <ScalarProperty Name="Acy_UpdatedBy" ColumnName="Acy_UpdatedBy" />
+          <ScalarProperty Name="Acy_CreatedBy" ColumnName="Acy_CreatedBy" />
+          <ScalarProperty Name="Acy_UpdatedTs" ColumnName="Acy_UpdatedTs" />
+          <ScalarProperty Name="AcyCreatedTs" ColumnName="AcyCreatedTs" />
+          <ScalarProperty Name="AcyNAME" ColumnName="AcyNAME" />
+          <ScalarProperty Name="AcyID" ColumnName="AcyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LG_SP_FEE_CATEGORY">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.LG_SP_FEE_CATEGORY">
+        <MappingFragment StoreEntitySet="LG_SP_FEE_CATEGORY">
+          <ScalarProperty Name="SfcPercentage" ColumnName="SfcPercentage" />
+          <ScalarProperty Name="Sfc_UpdatedBy" ColumnName="Sfc_UpdatedBy" />
+          <ScalarProperty Name="Sfc_CreatedBy" ColumnName="Sfc_CreatedBy" />
+          <ScalarProperty Name="Sfc_UpdatedTs" ColumnName="Sfc_UpdatedTs" />
+          <ScalarProperty Name="SfcCreatedTs" ColumnName="SfcCreatedTs" />
+          <ScalarProperty Name="SfcCode" ColumnName="SfcCode" />
+          <ScalarProperty Name="SfcName" ColumnName="SfcName" />
+          <ScalarProperty Name="SfcID" ColumnName="SfcID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LG_VW_SITE_CONTACT">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.LG_VW_SITE_CONTACT">
+        <MappingFragment StoreEntitySet="LG_VW_SITE_CONTACT">
+          <ScalarProperty Name="SitId" ColumnName="SitId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CntId" ColumnName="CntId" />
+          <ScalarProperty Name="UsrId" ColumnName="UsrId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LG_SHIPMENT_DOCS">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.LG_SHIPMENT_DOCS">
+        <MappingFragment StoreEntitySet="LG_SHIPMENT_DOCS">
+          <ScalarProperty Name="IsSysGenerated" ColumnName="IsSysGenerated" />
+          <ScalarProperty Name="SdUpdatedBy" ColumnName="SdUpdatedBy" />
+          <ScalarProperty Name="SdUpdatedTs" ColumnName="SdUpdatedTs" />
+          <ScalarProperty Name="SdCreatedBy" ColumnName="SdCreatedBy" />
+          <ScalarProperty Name="SdCreatedTs" ColumnName="SdCreatedTs" />
+          <ScalarProperty Name="sdDocType" ColumnName="sdDocType" />
+          <ScalarProperty Name="SdDocName" ColumnName="SdDocName" />
+          <ScalarProperty Name="DocumentCommonID" ColumnName="DocumentCommonID" />
+          <ScalarProperty Name="SdId" ColumnName="SdId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LG_VW_Contract">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.LG_VW_Contract">
+        <MappingFragment StoreEntitySet="LG_VW_Contract">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ContractTypeVal" ColumnName="ContractTypeVal" />
+          <ScalarProperty Name="mqcvalue" ColumnName="mqcvalue" />
+          <ScalarProperty Name="fkDestinationID" ColumnName="fkDestinationID" />
+          <ScalarProperty Name="fkOriginID" ColumnName="fkOriginID" />
+          <ScalarProperty Name="MQCTYPE" ColumnName="MQCTYPE" />
+          <ScalarProperty Name="CarrierID" ColumnName="CarrierID" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="diff" ColumnName="diff" />
+          <ScalarProperty Name="curdate" ColumnName="curdate" />
+          <ScalarProperty Name="ContractType" ColumnName="ContractType" />
+          <ScalarProperty Name="MQC" ColumnName="MQC" />
+          <ScalarProperty Name="ContractDate" ColumnName="ContractDate" />
+          <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="Carrier" ColumnName="Carrier" />
+          <ScalarProperty Name="ContractNo" ColumnName="ContractNo" />
+          <ScalarProperty Name="ContractID" ColumnName="ContractID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LG_VW_SIPL_CONTACT">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.LG_VW_SIPL_CONTACT">
+        <MappingFragment StoreEntitySet="LG_VW_SIPL_CONTACT">
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="BillToAddress" ColumnName="BillToAddress" />
+          <ScalarProperty Name="BillToCompanyName" ColumnName="BillToCompanyName" />
+          <ScalarProperty Name="BillTo" ColumnName="BillTo" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="ContinentId" ColumnName="ContinentId" />
+          <ScalarProperty Name="RepresentativeID" ColumnName="RepresentativeID" />
+          <ScalarProperty Name="ContactCategoryID" ColumnName="ContactCategoryID" />
+          <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+          <ScalarProperty Name="CompanyGradation" ColumnName="CompanyGradation" />
+          <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+          <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+          <ScalarProperty Name="AccountDetail" ColumnName="AccountDetail" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="TaxID" ColumnName="TaxID" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="WebSite" ColumnName="WebSite" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="MobNo" ColumnName="MobNo" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="TelNo" ColumnName="TelNo" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_scheduler_TempContractRateDetail">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.tbl_scheduler_TempContractRateDetail">
+        <MappingFragment StoreEntitySet="tbl_scheduler_TempContractRateDetail">
+          <ScalarProperty Name="C45F1" ColumnName="C45F" />
+          <ScalarProperty Name="LastUpdatedOn" ColumnName="LastUpdatedOn" />
+          <ScalarProperty Name="ContractRemark" ColumnName="ContractRemark" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Sur45F" ColumnName="Sur45F" />
+          <ScalarProperty Name="SurHC40" ColumnName="SurHC40" />
+          <ScalarProperty Name="SurST40" ColumnName="SurST40" />
+          <ScalarProperty Name="SurST20" ColumnName="SurST20" />
+          <ScalarProperty Name="HighCube40" ColumnName="HighCube40" />
+          <ScalarProperty Name="Standard40" ColumnName="Standard40" />
+          <ScalarProperty Name="Standard20" ColumnName="Standard20" />
+          <ScalarProperty Name="RouteId" ColumnName="RouteId" />
+          <ScalarProperty Name="Carrier" ColumnName="Carrier" />
+          <ScalarProperty Name="ContractID" ColumnName="ContractID" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="ContractNo" ColumnName="ContractNo" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="Via2Name" ColumnName="Via2Name" />
+          <ScalarProperty Name="Via1Name" ColumnName="Via1Name" />
+          <ScalarProperty Name="ViaType2" ColumnName="ViaType2" />
+          <ScalarProperty Name="ViaType1" ColumnName="ViaType1" />
+          <ScalarProperty Name="Destination" ColumnName="Destination" />
+          <ScalarProperty Name="Origin" ColumnName="Origin" />
+          <ScalarProperty Name="DestinationType" ColumnName="DestinationType" />
+          <ScalarProperty Name="OriginType" ColumnName="OriginType" />
+          <ScalarProperty Name="Route" ColumnName="Route" />
+          <ScalarProperty Name="Commodity" ColumnName="Commodity" />
+          <ScalarProperty Name="CCID" ColumnName="CCID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LG_VW_DisplayRate">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.LG_VW_DisplayRate">
+        <MappingFragment StoreEntitySet="LG_VW_DisplayRate">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="LastUpdatedOn" ColumnName="LastUpdatedOn" />
+          <ScalarProperty Name="ContractRemark" ColumnName="ContractRemark" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Sur45F" ColumnName="Sur45F" />
+          <ScalarProperty Name="SurHC40" ColumnName="SurHC40" />
+          <ScalarProperty Name="SurST40" ColumnName="SurST40" />
+          <ScalarProperty Name="SurST20" ColumnName="SurST20" />
+          <ScalarProperty Name="C45F" ColumnName="C45F" />
+          <ScalarProperty Name="HighCube40" ColumnName="HighCube40" />
+          <ScalarProperty Name="Standard40" ColumnName="Standard40" />
+          <ScalarProperty Name="Standard20" ColumnName="Standard20" />
+          <ScalarProperty Name="RouteId" ColumnName="RouteId" />
+          <ScalarProperty Name="Carrier" ColumnName="Carrier" />
+          <ScalarProperty Name="ContractID" ColumnName="ContractID" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="ContractNo" ColumnName="ContractNo" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="Via2Name" ColumnName="Via2Name" />
+          <ScalarProperty Name="Via1Name" ColumnName="Via1Name" />
+          <ScalarProperty Name="ViaType2" ColumnName="ViaType2" />
+          <ScalarProperty Name="ViaType1" ColumnName="ViaType1" />
+          <ScalarProperty Name="Destination" ColumnName="Destination" />
+          <ScalarProperty Name="Origin" ColumnName="Origin" />
+          <ScalarProperty Name="DestinationType" ColumnName="DestinationType" />
+          <ScalarProperty Name="OriginType" ColumnName="OriginType" />
+          <ScalarProperty Name="Route" ColumnName="Route" />
+          <ScalarProperty Name="Commodity" ColumnName="Commodity" />
+          <ScalarProperty Name="CCID" ColumnName="CCID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SIPL_ContractRate">
+      <EntityTypeMapping TypeName="AppMGL.DAL.Models.SIPL_ContractRate">
+        <MappingFragment StoreEntitySet="SIPL_ContractRate">
+          <ScalarProperty Name="RouteId" ColumnName="RouteId" />
+          <ScalarProperty Name="CommodityId" ColumnName="CommodityId" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="Ref" ColumnName="Ref" />
+          <ScalarProperty Name="RefID" ColumnName="RefID" />
+          <ScalarProperty Name="ContractRateID" ColumnName="ContractRateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="FK_SIPL_ContractRate_SIPL_Contract1" TypeName="AppMGL.DAL.Models.FK_SIPL_ContractRate_SIPL_Contract1" StoreEntitySet="SIPL_ContractRate">
+      <EndProperty Name="SIPL_ContractRate">
+        <ScalarProperty Name="ContractRateID" ColumnName="ContractRateID" />
+      </EndProperty>
+      <EndProperty Name="SIPL_Contract">
+        <ScalarProperty Name="ContractID" ColumnName="fkContractID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

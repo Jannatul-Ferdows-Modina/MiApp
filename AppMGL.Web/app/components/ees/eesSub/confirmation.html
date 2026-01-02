@@ -1,0 +1,21 @@
+﻿<div class="modal-header">
+    <h4 class="modal-title"> Save Ess File</h4>
+</div>
+<div class="modal-body form-horizontal detail-container" when-ready="filterModalLoaded()" wait-for-interpolation="true">
+    <ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+        <div class="form-group">
+            <label class="col-sm-8 control-label pull-left">Whether you want to save as Draft ? </label>            
+        </div>
+        <div class="col-sm-4">
+            &nbsp;
+        </div>   
+    </ng-form>
+</div>
+<div class="modal-footer">
+    <div class="pull-right">
+        <button type="button" class="btn btn-sm btn-primary" ng-click="select('yes')" action="select">Yes</button>
+        <button type="button" class="btn btn-sm btn-primary" ng-click="select('no')" action="select">No</button>
+        <button type="button" class="btn btn-default" ng-click="select('close')" action="select">Close</button>
+    </div>
+</div>
+

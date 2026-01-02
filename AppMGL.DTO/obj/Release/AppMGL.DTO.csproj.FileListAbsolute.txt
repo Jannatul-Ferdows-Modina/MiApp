@@ -1,0 +1,14 @@
+C:\MGL-Logistics\AppMGL.DTO\bin\Release\AppMGL.DTO.dll
+C:\MGL-Logistics\AppMGL.DTO\bin\Release\AppMGL.DTO.pdb
+C:\MGL-Logistics\AppMGL.DTO\obj\Release\AppMGL.DTO.dll
+C:\MGL-Logistics\AppMGL.DTO\obj\Release\AppMGL.DTO.pdb
+C:\MGL-Logistics\AppMGL.DTO\obj\Release\AppMGL.DTO.csprojResolveAssemblyReference.cache
+C:\MGL-Prod\MGL-Logistics\AppMGL.DTO\bin\Release\AppMGL.DTO.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.DTO\bin\Release\AppMGL.DTO.pdb
+C:\MGL-Prod\MGL-Logistics\AppMGL.DTO\obj\Release\AppMGL.DTO.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.DTO\obj\Release\AppMGL.DTO.pdb
+F:\New folder\MGL-Logistics\AppMGL.DTO\bin\Release\AppMGL.DTO.dll
+F:\New folder\MGL-Logistics\AppMGL.DTO\bin\Release\AppMGL.DTO.pdb
+F:\New folder\MGL-Logistics\AppMGL.DTO\obj\Release\AppMGL.DTO.csprojResolveAssemblyReference.cache
+F:\New folder\MGL-Logistics\AppMGL.DTO\obj\Release\AppMGL.DTO.dll
+F:\New folder\MGL-Logistics\AppMGL.DTO\obj\Release\AppMGL.DTO.pdb

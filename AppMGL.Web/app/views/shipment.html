@@ -1,0 +1,31 @@
+﻿<div ng-show="authentication.isAuth">
+    <div class="form-group" data-ng-if="!customMenu.menuObj.shipment[customMenu.selectedMenu].length">
+        <div class="row">
+            <div class="col-xs-3 bg-btn-hover pointer" ng-click="redirectTo('inquiry')">
+                <img src="Images/Slides/inquiry.png" />
+            </div>
+            <div class="col-xs-3 bg-btn-hover pointer" ng-click="mainMenuClick('quotation', 4, true)">
+                <img src="Images/Slides/quotation.png" />
+            </div>
+            <div class="col-xs-3 bg-btn-hover pointer" ng-click="mainMenuClick('booking', 4, true)">
+                <img src="Images/Slides/booking.png" />
+            </div>
+            <div class="col-xs-3 bg-btn-hover pointer" ng-click="mainMenuClick('documentation', 4, true)">
+                <img src="Images/Slides/documentation.jpg" />
+            </div>
+            <div class="col-xs-3 bg-btn-hover pointer" ng-click="mainMenuClick('trucking', 4, true)" style="margin-top:70px;">
+                <img src="Images/Slides/trucking.jpg" />
+            </div>
+        </div>
+    </div>
+    <div class="form-group row" data-ng-if="customMenu.menuObj.shipment[customMenu.selectedMenu].length">
+        <div class="col-md-3 col-sm-6 col-xs-12" ng-click="redirectTo(item, true)" data-ng-repeat="item in customMenu.menuObj.shipment[customMenu.selectedMenu] track by $index">
+            <div class="info-box pointer">
+                <span class="info-box-icon" ng-class="customMenu.bgColors[$index]">{{item.header}}</span>
+                <div class="info-box-content divCenter">
+                    <span class="info-box-number" style="font-weight : normal;">{{item.menu}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

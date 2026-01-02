@@ -1,0 +1,85 @@
+﻿<!--<div style="overflow:auto; width:1247px;"> -->
+
+<div class="row">
+    <div class="col-md-8">
+
+        <table ng-table="listTable" class="table table-striped table-bordered table-hover" template-pagination="customPager">
+            <thead>
+                <tr class="bg-thead">
+
+                    <th class="list-checkbox"><input type="checkbox" ng-click="selectAll()" ng-checked="getSelectedAll()" /></th>
+                    <th class="text-left sortable" custom-sortable="Name" table-name="listTable">ContainerType</th>
+                    <th class="text-left sortable" custom-sortable="Name" table-name="listTable">Description</th>
+                    
+                    <th class="text-left" table-name="listTable">IsActive</th>
+                    <th class="list-actions">Edit</th>
+                    <th class="list-actions">Delete</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="entity in $data" ng-click=selectentity(entity,entity.containerTypeId)>
+                    <td>
+                        <input type="checkbox" ng-model="entity.selected" />
+                    </td>
+                    <td>
+                        <a ng-click="showDetail('viewDetail', entity.containerTypeId)">{{entity.name}}</a>
+                    </td>
+                    <td>
+                        {{entity.description}}
+                    </td>
+                   
+
+                    <td>
+                        <input type="checkbox" ng-model="entity.isActive" disabled="disabled">
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-xs btn-primary" ng-click="performAction($event, true)" show-action="20" action="edit" entityid="{{entity.containerTypeId}}" uib-tooltip="Edit"><i class="fa fa-edit"></i></button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-xs btn-danger" ng-click="entity.selected = true; performAction($event, false)" show-action="30" action="deleteBatch" entityid="{{entity.containerTypeId}}" uib-tooltip="Delete"><i class="fa fa-remove"></i></button>
+                    </td>
+                </tr>
+                <tr ng-if="params.total() == 0">
+                    <td class="text-center text-italic" colspan="5">No Record(s) Found</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    
+        <div class="col-md-4">
+              <table ng-table="listTable" class="table table-condensed table-striped table-bordered table-hover " template-pagination="none">
+                <thead>
+                    
+                    <tr class="bg-thead">
+                        
+
+                        <th class="text-left" table-name="listTable">Unit Name</th>
+                        <th class="text-left" table-name="listTable">Unit Value</th>
+                    </tr>
+
+
+
+                    <tr><td>Inside Length Inch </td><td>{{selectedentity.insideLengthInch}}</td></tr>
+                    <tr><td>Inside Length Meter </td><td>{{selectedentity.insideLengthMeter}}</td></tr>
+                    <tr><td>Inside Width Inch</td><td>{{selectedentity.insideWidthInch}}</td></tr>
+                    <tr><td>Inside Width Meter</td><td>{{selectedentity.insideWidthMeter}}</td></tr>
+                    <tr><td>Inside Height Inch</td><td>{{selectedentity.insideHeightInch}}</td></tr>
+                    <tr><td>Inside Height Meter</td><td>{{selectedentity.insideHeightMeter}}</td></tr>
+                    <tr><td>Door Height Inch</td><td>{{selectedentity.doorHeightInch}}</td></tr>
+                    <tr><td>Door Height in Meter</td><td>{{selectedentity.doorHeightM}}</td></tr>
+                    <tr><td>Container Capacitycft</td><td>{{selectedentity.containerCapacitycft}}</td></tr>
+                    <tr><td>Container Capacitycm</td><td>{{selectedentity.containerCapacityCM}}</td></tr>
+                    <tr><td>Tare Weight Lbs</td><td>{{selectedentity.tareWeightLbs}}</td></tr>
+                    <tr><td>Tare Weight KGS</td><td>{{selectedentity.tareWeightKGS}}</td></tr>
+                    <tr><td>Maxi Cargo Lbs</td><td>{{selectedentity.maxiCargoLbs}}</td></tr>
+                    <tr><td>Maxi Cargo KGS</td><td>{{selectedentity.maxiCargoKGS}}</td></tr>
+                    <tr><td>Door Width Inch</td><td>{{selectedentity.doorwidthinch}}</td></tr>
+                    <tr><td>Door Width Meter</td><td>{{selectedentity.doorwidthM}}</td></tr>
+            </table>
+        </div>
+    </div>
+
+    
+    

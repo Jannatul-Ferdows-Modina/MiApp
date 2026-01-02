@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="364458cbbe554163901543e6a21fe98c" Name="Diagram1" ZoomLevel="36">
+        <EntityTypeShape EntityType="MIAMIModel.AirCargoSubDetail" Width="1.5" PointX="3" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.AspNetClient" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.AspNetRefreshToken" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.AspNetRole" Width="1.5" PointX="10.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.AspNetUserClaim" Width="1.5" PointX="15.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.AspNetUserLogin" Width="1.5" PointX="15.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.AspNetUser" Width="1.5" PointX="13" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.DashboardData_Job" Width="1.5" PointX="7.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.Department" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.DocumentPermission" Width="1.5" PointX="2.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.ExistDocPermission" Width="1.5" PointX="0.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_ACTION" Width="1.5" PointX="5.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_ACTION_AUD" Width="1.5" PointX="9.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_CONTACT" Width="1.5" PointX="1.5" PointY="31.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_CONTACT_AUD" Width="1.5" PointX="11.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_CONTACT_SITE_MAP" Width="1.5" PointX="8.25" PointY="56.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_CONTACT_SITE_MAP_AUD" Width="1.5" PointX="16.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_CONTACT_WORK_TYPE" Width="1.5" PointX="1.5" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_CONTACT_WORK_TYPE_AUD" Width="1.5" PointX="19.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_Container_Category" Width="1.5" PointX="21.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_COUNTRY" Width="1.5" PointX="1.5" PointY="44.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_COUNTRY_AUD" Width="1.5" PointX="21.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_DEPARTMENT" Width="1.5" PointX="1.5" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_DEPARTMENT_AUD" Width="1.5" PointX="22.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_DOCUMENTATION" Width="1.5" PointX="22.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_DOCUMENTATION_STATUS" Width="1.5" PointX="0.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_LOCATION" Width="1.5" PointX="3.75" PointY="36.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_LOCATION_AUD" Width="1.5" PointX="24.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_LOGIN_HISTORY" Width="1.5" PointX="23.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_MAM_ROL_MAP" Width="1.5" PointX="8" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_MAM_ROL_MAP_AUD" Width="1.5" PointX="24.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_Mode_Of_Service" Width="1.5" PointX="24.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_MODULE" Width="1.5" PointX="5.75" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_MODULE_AUD" Width="1.5" PointX="10.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_MODULE_TYPE" Width="1.5" PointX="3.5" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_MODULE_TYPE_AUD" Width="1.5" PointX="27.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_ROLE" Width="1.5" PointX="5.75" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_ROLE_AUD" Width="1.5" PointX="16.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_SITE" Width="1.5" PointX="6" PointY="37.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_SITE_AUD" Width="1.5" PointX="29.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_SITE_CONTACT_ROLE" Width="1.5" PointX="8.25" PointY="25.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_SITE_CONTACT_ROLE_AUD" Width="1.5" PointX="29.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_TIMEZONE" Width="1.5" PointX="1.5" PointY="48" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_TIMEZONE_AUD" Width="1.5" PointX="5.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_TITLE" Width="1.5" PointX="1.5" PointY="41" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_TITLE_AUD" Width="1.5" PointX="7.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_USER" Width="1.5" PointX="3.75" PointY="29.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_USER_AUD" Width="1.5" PointX="29.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_USSTATE" Width="1.5" PointX="1.5" PointY="52" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_USSTATE_AUD" Width="1.5" PointX="29.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.Role" Width="1.5" PointX="23.25" PointY="55.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.RolewisePermission" Width="1.5" PointX="25.5" PointY="41.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_AirCargo" Width="1.5" PointX="0.75" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ArivalNotice" Width="1.5" PointX="19.75" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ArivalOD" Width="1.5" PointX="22" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ArrivalNoticeFreight" Width="1.5" PointX="24.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ArrivalNoticeFreightOD" Width="1.5" PointX="24.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_AWB" Width="1.5" PointX="14.75" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_AWBOtherDetail" Width="1.5" PointX="17" PointY="24.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_BasicRateDueDate" Width="1.5" PointX="3.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_BillofLading" Width="1.5" PointX="17.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_BillofLadingOD" Width="1.5" PointX="20" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_BookingStatus" Width="1.5" PointX="24.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_BookingStatusOld" Width="1.5" PointX="29.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_CategoryTable" Width="1.5" PointX="8" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_CertificationOfOrigin" Width="1.5" PointX="29.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_CertificationOfOriginOD" Width="1.5" PointX="18.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_Charges" Width="1.5" PointX="5.25" PointY="97.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ChargesCategory" Width="1.5" PointX="3" PointY="98.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ChargesCategoryMapping" Width="1.5" PointX="7.5" PointY="99.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_City" Width="1.5" PointX="0.75" PointY="61.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_Class" Width="1.5" PointX="20.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_Commodity" Width="1.5" PointX="6" PointY="50.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_CommodityGroup" Width="1.5" PointX="8.25" PointY="86.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_CommodityReference" Width="1.5" PointX="31.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_CommodityType" Width="1.5" PointX="3.75" PointY="51.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_Company" Width="1.5" PointX="3" PointY="69.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_CompanyGradation" Width="1.5" PointX="31.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ContactBranch" Width="1.5" PointX="5.25" PointY="55.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ContactCategory" Width="1.5" PointX="6" PointY="93" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ContactCategorySubCategory" Width="1.5" PointX="7.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ContactCommodities" Width="1.5" PointX="31.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ContactDetail" Width="1.5" PointX="9.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ContactOriginCountries" Width="1.5" PointX="11.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ContactPerson" Width="1.5" PointX="2.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ContactPersonCategoty" Width="1.5" PointX="8.25" PointY="67.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ContactSubCategory" Width="1.5" PointX="31.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ContactSubCategoryTransaction" Width="1.5" PointX="31.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ContainerSize" Width="1.5" PointX="17.25" PointY="46.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ContainerType" Width="1.5" PointX="15" PointY="45" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_Continent" Width="1.5" PointX="6.75" PointY="45.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_Contract" Width="1.5" PointX="17.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ContractApplicableCharges" Width="1.5" PointX="7.5" PointY="71" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ContractCarrier" Width="1.5" PointX="5.25" PointY="67" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ContractCommodity" Width="1.5" PointX="31.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ContractCommodityGroup" Width="1.5" PointX="10.5" PointY="71.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ContractContainer" Width="1.5" PointX="7.5" PointY="76.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ContractNonApplicable" Width="1.5" PointX="10.5" PointY="74" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ContractOriginDestination" Width="1.5" PointX="11.25" PointY="44.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ContractPort" Width="1.5" PointX="11.25" PointY="40.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ContractPortGroup" Width="1.5" PointX="13.5" PointY="71.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ContractRate" Width="1.5" PointX="20" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ContractSheet" Width="1.5" PointX="31.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ContractShipline" Width="1.5" PointX="5.25" PointY="69.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ContractSpecification" Width="1.5" PointX="13.5" PointY="68" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ContractSurcharge" Width="1.5" PointX="10.5" PointY="66.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ContractTradeService" Width="1.5" PointX="10.5" PointY="77.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_Country" Width="1.5" PointX="9" PointY="45.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_Currency" Width="1.5" PointX="32.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_CurrencySymbol" Width="1.5" PointX="26.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_CurrencyTable" Width="1.5" PointX="33.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_DataAccessPermission" Width="1.5" PointX="24.5" PointY="44.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_DeliveryOrder" Width="1.5" PointX="13.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_Department" Width="1.5" PointX="9" PointY="81.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_DispatchTable" Width="1.5" PointX="33.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_Document" Width="1.5" PointX="33.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPl_Document_CategoryDocument" Width="1.5" PointX="8" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_DocumentCategory" Width="1.5" PointX="5.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_DocumentCommon" Width="1.5" PointX="27.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_DocumentCommonOD" Width="1.5" PointX="30" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_DocumentFile" Width="1.5" PointX="33.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_Enquiry" Width="1.5" PointX="11.25" PointY="53.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_EnquiryCommodity" Width="1.5" PointX="16.5" PointY="54.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_EnquiryContainerType" Width="1.5" PointX="19.5" PointY="42.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_EnquiryIncompleteDraft" Width="1.5" PointX="8.25" PointY="102.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_EnquiryServiceRequired" Width="1.5" PointX="19.5" PointY="57.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_EnquiryServiceRequiredFCL" Width="1.5" PointX="19.5" PointY="53.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_EnquiryServiceRequiredRORO" Width="1.5" PointX="13.5" PointY="74.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_EnquiryType" Width="1.5" PointX="15.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ExpenseDetail" Width="1.5" PointX="33.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ExpenseHead" Width="1.5" PointX="20.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_FollowUpDateEntry" Width="1.5" PointX="16.5" PointY="57.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.Sipl_FormMenuGeneration" Width="1.5" PointX="20.25" PointY="26.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.Sipl_FormMenuGenerationold" Width="1.5" PointX="33.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_FormOperationPermission" Width="1.5" PointX="22.5" PointY="26.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_FormPermission" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_GenerateEmail" Width="1.5" PointX="21.75" PointY="59.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_HeadingNote" Width="1.5" PointX="11.25" PointY="80.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPl_HeadingNoteDetail" Width="1.5" PointX="13.5" PointY="89.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_HouseBLDetail" Width="1.5" PointX="10.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_InvoiceStatus" Width="1.5" PointX="33.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_InvoiceStatusOld" Width="1.5" PointX="33.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_LoadType" Width="1.5" PointX="17.25" PointY="41.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.sipl_MailMode" Width="1.5" PointX="31.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_MarketingContact" Width="1.5" PointX="5.25" PointY="89" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_MarketingMail" Width="1.5" PointX="14.25" PointY="61" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_MarketingMailMatter" Width="1.5" PointX="33.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_Mode" Width="1.5" PointX="15" PointY="79.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ModeOfTransport" Width="1.5" PointX="6.75" PointY="80.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_NextActionDue" Width="1.5" PointX="34.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_OceanCargo" Width="1.5" PointX="12.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_OceanOD" Width="1.5" PointX="15" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_PayableCharges" Width="1.5" PointX="22.5" PointY="47.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_Pickup" Width="1.5" PointX="35.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_PickupLoading" Width="1.5" PointX="35.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPl_PickupType" Width="1.5" PointX="5.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPl_PickupType_old_" Width="1.5" PointX="17.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPl_PickupTypeOld" Width="1.5" PointX="8.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPl_PickupTypeTest" Width="1.5" PointX="10.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_Port" Width="1.5" PointX="9" PointY="39" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_PortGroup" Width="1.5" PointX="11.25" PointY="85.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPl_PortGroupPort" Width="1.5" PointX="13.5" PointY="86.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_PrevContractRate" Width="1.5" PointX="26.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_PrevContractSurcharges" Width="1.5" PointX="35.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_Quotation" Width="1.5" PointX="19.5" PointY="62.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_QuotationCarrier" Width="1.5" PointX="21.75" PointY="63.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_QuotationCharges" Width="1.5" PointX="21.75" PointY="69.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_QuotationCommodity" Width="1.5" PointX="24.75" PointY="69.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_QuotationContainerRate" Width="1.5" PointX="24" PointY="62.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_QuotationPayableCharges" Width="1.5" PointX="27.75" PointY="67" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_QuotationPayableRemarks" Width="1.5" PointX="24.75" PointY="59.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_QuotationRate" Width="1.5" PointX="24" PointY="66.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_QuotationRemarks" Width="1.5" PointX="27.75" PointY="59" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_QuotationSurcharesRate" Width="1.5" PointX="26.25" PointY="62.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_RailRamp" Width="1.5" PointX="35.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.sipl_RateCapture" Width="1.5" PointX="36.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ReferencesLink" Width="1.5" PointX="31.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_Role" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_RoleAssignment" Width="1.5" PointX="25.5" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_Routing" Width="1.5" PointX="12.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.sipl_SellingRate" Width="1.5" PointX="33.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ServiceRefAll" Width="1.5" PointX="21.75" PointY="36.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ServiceRefernce" Width="1.5" PointX="19.5" PointY="39" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ShipLineTSSurCharges" Width="1.5" PointX="16.25" PointY="67.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ShippingLine" Width="1.5" PointX="6" PointY="61" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ShippingLineRate" Width="1.5" PointX="17.25" PointY="61" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ShippingLineText" Width="1.5" PointX="35.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_SLChargesConfigurator" Width="1.5" PointX="16.25" PointY="73.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_SLCommodityConfigurator" Width="1.5" PointX="8.25" PointY="53.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_SLNoteConfigurator" Width="1.5" PointX="19.25" PointY="71.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_SLTSConfigurator" Width="1.5" PointX="14.25" PointY="57.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_StandardChargesRate" Width="1.5" PointX="9" PointY="61.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_State" Width="1.5" PointX="0.75" PointY="55.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_SurchargeGroup" Width="1.5" PointX="37.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.sipl_SurchargesDueDate" Width="1.5" PointX="37.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_SurchargesGroupSurcharges" Width="1.5" PointX="37.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_TableField" Width="1.5" PointX="8" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_TableName" Width="1.5" PointX="15.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_TariffApplicability" Width="1.5" PointX="37.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.Sipl_Terminal" Width="1.5" PointX="37.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_TradeCountry" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_TradeService" Width="1.5" PointX="12" PointY="47.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_TradMaster" Width="1.5" PointX="37.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_TransferType" Width="1.5" PointX="37.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_TSChargesConfigurator" Width="1.5" PointX="14.25" PointY="53.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_TypeOfOperation" Width="1.5" PointX="6.75" PointY="83.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_UnitOfMeasurement" Width="1.5" PointX="37.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_User" Width="1.5" PointX="20.25" PointY="45.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_UserLogin" Width="1.5" PointX="22.5" PointY="51.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_Via" Width="1.5" PointX="15" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.sysdiagram" Width="1.5" PointX="37.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.UserwiseRolePermission" Width="1.5" PointX="25.5" PointY="47.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.city" Width="1.5" PointX="38.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.country" Width="1.5" PointX="39.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.GenrateAllMenuItem" Width="1.5" PointX="39.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_ACCOUNTREF" Width="1.5" PointX="39.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_ACCT_CATEGORY" Width="1.5" PointX="39.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_CONTACT_ACCT_CAT_MAP" Width="1.5" PointX="39.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_CONTRACT_RATE" Width="1.5" PointX="39.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_CONTRACT_RATE_CHARGES" Width="1.5" PointX="39.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_DASHBOARD_DATA" Width="1.5" PointX="39.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_EMAIL" Width="1.5" PointX="35.75" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_QB_ENV_CONFIG" Width="1.5" PointX="27.75" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_QUICKBOOK_ACCESSDETAILS" Width="1.5" PointX="40.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_QUICKBOOK_INVOICE_RECEIPT_MAPPING" Width="1.5" PointX="29.75" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_QuickBook_MAPP" Width="1.5" PointX="31.75" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_QUICKBOOK_MAPPING" Width="1.5" PointX="41.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_QUICKBOOK_MappMessage" Width="1.5" PointX="41.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_REFRESH_TOCKENS" Width="1.5" PointX="41.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_SHIPMENT_DOCS" Width="1.5" PointX="41.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_SP_FEE_CATEGORY" Width="1.5" PointX="41.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_SYSTEM_CONFIG" Width="1.5" PointX="41.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_TAXCODE" Width="1.5" PointX="41.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_TRUCKING_CHARGES" Width="1.5" PointX="41.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.Sheet1_" Width="1.5" PointX="41.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_BookingStatus_bkp" Width="1.5" PointX="41.75" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_CertificationOfOriginODTemp" Width="1.5" PointX="33.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.sipl_city_bkp" Width="1.5" PointX="35.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.sipl_continent_bkp" Width="1.5" PointX="43.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.Sipl_ContractBooking" Width="1.5" PointX="23.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.Sipl_ContractBookingOld" Width="1.5" PointX="5.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.sipl_country_bkp" Width="1.5" PointX="43.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_FreightCharges" Width="1.5" PointX="42.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_HoBLSubDetail" Width="1.5" PointX="13" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.sipl_port_bkp" Width="1.5" PointX="43.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_ServiceRefFCL" Width="1.5" PointX="21.75" PointY="42.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.sipl_state_bkp" Width="1.5" PointX="43.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.state" Width="1.5" PointX="43.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.tbl_scheduler_TempContractRateDetail" Width="1.5" PointX="43.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.tbl_Scheduler_udfGetGalStatus" Width="1.5" PointX="43.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.tblAlia" Width="1.5" PointX="43.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.TempSIPL_NextActionDue" Width="1.5" PointX="43.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MIAMIModel.test_cus_vendor" Width="1.5" PointX="37.75" PointY="43.75" IsExpanded="true" />
+        <AssociationConnector Association="MIAMIModel.FK_AirCargoSubDetail_SIPL_AirCargo" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_MRM_ACT" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_CNT_CWT" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_CNT_DPT" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_CNT_TTL" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_LCN_CNT" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SCR_CNT" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_USR_CNT" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_CSM_SIT" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_CSM_SITREF" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_LCN_CRY" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_LCN_TMZ" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_LCN_UST" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIT_CNT" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_MRM_MOD" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_MRM_RLE" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_MOD_MTE" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SCR_RLE" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_EID_SIT" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_ENQ_SIT" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SCR_SIT" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_RolewisePermission_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_Table_1_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_RolewisePermission_Sipl_FormMenuGeneration" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ArivalOD_SIPL_ArivalNotice" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_AWBOtherDetail_SIPL_AWB" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_BillofLadingOD_SIPL_BillofLading" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_CategoryTable_SIPL_DocumentCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_Charges_SIPL_ChargesCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ChargesCategoryMapping_SIPL_Charges" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ContractApplicableCharges_SIPL_Charges" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ContractNonApplicable_SIPL_Charges" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ShipLineTSSurCharges_SIPL_Charges" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_SLChargesConfigrator_SIPL_Charges" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_StandardChargesRate_SIPL_Charges" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_TSChargesConfigrator_SIPL_Charges" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ChargesCategoryMapping_SIPL_ChargesCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_Enquiry_SIPL_City" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_Enquiry_SIPL_City1" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ShippingLine_SIPL_City" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ShippingLineRate_SIPL_City" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ShippingLineRate_SIPL_City1" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_StandardChargesRate_SIPL_City" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_StandardChargesRate_SIPL_City1" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_Commodity_SIPL_CommodityType" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_EnquiryCommodity_SIPL_Commodity" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_QuotationCommodity_SIPL_Commodity" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_SLCommodityConfigrator_SIPL_Commodity" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ContractCommodityGroup_SIPL_CommodityGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_Company_SIPL_City" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ContactPersonCategoty_SIPL_ContactCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ContainerSize_SIPL_ContainerType" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_EnquiryContainerType_SIPL_Enquiry" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_EnquiryServiceRequiredFCL_SIPL_ContainerType" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ShippingLineRate_SIPL_ContainerSize" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_EnquiryContainerType_SIPL_ContainerType" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_QuotationPayableCharges_SIPL_ContainerType" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_Country_SIPL_Continent" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ContractRate_SIPL_Contract1" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ContractApplicableCharges_SIPL_ContractShipline" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ContractSurcharge_SIPL_ContractCarrier" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ContractCommodityGroup_SIPL_ContractShipline" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ContractContainer_SIPL_ContractShipline" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ContractNonApplicable_SIPL_ContractShipline" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_ContractOriginDestination_SIPL_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ContractPort_SIPL_Contract" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ContractPort_SIPL_Port" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ContractPort_SIPL_Port1" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ContractPortGroup_SIPL_ContractShipline" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ContractPortGroup_SIPL_PortGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_ContractTradeService_SIPL_ContractShipline" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ContractSpecification_SIPL_ContractShipline" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ContractSpecification_SIPL_HeadingNote" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ContractSurcharge_SIPL_TradeService" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ContractTradeService_SIPL_TradeService" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_DataAccessPermission_SIPL_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_Enquiry_SIPL_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_Enquiry_SIPL_Country1" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_DataAccessPermission_SIPL_User" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_Department_SIPL_ModeOfTransport" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_Department_SIPL_TypeOfOperation" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_Enquiry_SIPL_Department" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPl_Document_CategoryDocument_SIPL_DocumentCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_TableField_SIPL_DocumentCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_DocumentCommonOD_SIPL_DocumentCommon" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_EnquireServiceRequired_SIPL_Enquiry" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_Enquiry_SIPL_Port" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_Enquiry_SIPL_Port1" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_Enquiry_SIPL_State" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_Enquiry_SIPL_State1" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_EnquiryCommodity_SIPL_Enquiry" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_EnquiryServiceRequiredFCL_SIPL_Enquiry" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_EnquiryServiceRequiredRORO_SIPL_Enquiry" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_Quotation_SIPL_Enquiry" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_EnquireServiceRequired_SIPL_LoadType" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_EnquiryServiceRequiredFCL_SIPL_LoadType" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_EnquiryServiceRequiredRORO_SIPL_EnquiryServiceRequiredRORO1" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK__SIPL_Foll__fkMai__577DE488" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK__SIPL_Foll__fkMai__76C185B7" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_FormOperationPermission_Sipl_FormMenuGeneration" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_FormOperationPermission_SIPL_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_FormOperationPermission_SIPL_User" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_FormPermission_SIPL_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_GenerateEmail_SIPL_Quotation" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPl_HeadingNoteDetail_SIPL_HeadingNote" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_SLNoteConfigrator_SIPL_HeadingNote" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_HoBLSubDetail_SIPL_HouseBLDetail" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ServiceRefernce_SIPL_LoadType" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK__SIPL_Mark__fkUse__013F142A" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK__SIPL_Mark__fkUse__61FB72FB" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ShippingLineRate_SIPL_Mode" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ShippingLineRate_SIPL_Mode1" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_StandardChargesRate_SIPL_Mode" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_StandardChargesRate_SIPL_Mode1" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_OceanOD_SIPL_OceanCargo" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_PayableCharges_SIPL_User" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_QuotationPayableCharges_SIPL_PayableCharges" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_QuotationPayableRemarks_SIPL_PayableCharges" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_Quotation_SIPL_Port" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_Quotation_SIPL_Port1" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPl_PortGroupPort_SIPL_PortGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_QuotationCarrier_SIPL_Quotation" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_QuotationCharges_SIPL_Quotation" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_QuotationCommodity_SIPL_Quotation" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_QuotationPayableCharges_SIPL_Quotation" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_QuotationPayableRemarks_SIPL_Quotation" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_QuotationRemarks_SIPL_Quotation" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_QuotationContainerRate_SIPL_QuotationCarrier" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_QuotationRate_SIPL_QuotationCarrier" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_QuotationSurcharesRate_SIPL_QuotationContainerRate" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_QuotationSurcharesRate_SIPL_TradeService" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_RoleAssignment_SIPL_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_RoleAssignment_SIPL_User" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_Via_SIPL_Routing" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ServiceRefAll_SIPL_ServiceRefernce" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ServiceRefFCL_SIPL_ServiceRefernce" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ShipLineTSSurCharges_SIPL_ShippingLine" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ShipLineTSSurCharges_SIPL_TradeService" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ShippingLine_SIPL_State" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ShippingLineRate_SIPL_ShippingLine" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_TSChargesConfigrator_SIPL_ShippingLine" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_SLChargesConfigurator_SIPL_TradeService" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_SLNoteConfigurator_SIPL_TradeService" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_SLTSConfigrator_SIPL_TradeService" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_TradeCountry_SIPL_TradeCountry" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_TSChargesConfigrator_SIPL_TradeService" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_UserLogin_SIPL_User" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.FK_User_userid" ManuallyRouted="false" />
+        <AssociationConnector Association="MIAMIModel.AspNetUserRoles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_VW_Alias" Width="1.5" PointX="40.375" PointY="43.75" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_VW_Commodity" Width="1.5" PointX="42.375" PointY="43.75" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_VW_Contract" Width="1.5" PointX="44.375" PointY="41.75" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_VW_DisplayRate" Width="1.5" PointX="28.375" PointY="45.75" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_VW_ENQUIRY_ALL" Width="1.5" PointX="30.375" PointY="45.75" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_VW_Port" Width="1.5" PointX="46.375" PointY="0.75" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_VW_ROUTING" Width="1.5" PointX="46.375" PointY="5.75" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_VW_SIPLCity" Width="1.5" PointX="46.375" PointY="19.75" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_VW_SIPLState" Width="1.5" PointX="46.375" PointY="24.75" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_VW_SITE_CONTACT" Width="1.5" PointX="46.375" PointY="29.75" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_VW_SurchargeGroup" Width="1.5" PointX="46.375" PointY="32.75" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_VW_TradeMaster" Width="1.5" PointX="32.375" PointY="46.75" />
+        <EntityTypeShape EntityType="MIAMIModel.LGV_CONTACT_INFO" Width="1.5" PointX="34.375" PointY="46.75" />
+        <EntityTypeShape EntityType="MIAMIModel.vw_Address" Width="1.5" PointX="36.375" PointY="46.75" />
+        <EntityTypeShape EntityType="MIAMIModel.Vw_Alias" Width="1.5" PointX="38.375" PointY="47.75" />
+        <EntityTypeShape EntityType="MIAMIModel.vw_ContactMapping" Width="1.5" PointX="40.375" PointY="47.75" />
+        <EntityTypeShape EntityType="MIAMIModel.VW_Container" Width="1.5" PointX="42.375" PointY="47.75" />
+        <EntityTypeShape EntityType="MIAMIModel.VW_SIPL_Contact" Width="1.5" PointX="44.375" PointY="47.75" />
+        <EntityTypeShape EntityType="MIAMIModel.VW_SIPL_ServiceReference" Width="1.5" PointX="46.375" PointY="47.75" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_VW_CONTACTCATEGORY" Width="1.5" PointX="48.375" PointY="0.75" />
+        <EntityTypeShape EntityType="MIAMIModel.SIPL_Contact" Width="1.5" PointX="3" PointY="74" />
+        <EntityTypeShape EntityType="MIAMIModel.LG_VW_SIPL_CONTACT" Width="1.5" PointX="48.375" PointY="4.75" />
+        <AssociationConnector Association="MIAMIModel.FK_CONTACT_SIT" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_Contact_SIPL_City" />
+        <AssociationConnector Association="MIAMIModel.FK__SIPL_Mark__fkCom__004AEFF1" />
+        <AssociationConnector Association="MIAMIModel.FK__SIPL_Mark__fkCom__61074EC2" />
+        <AssociationConnector Association="MIAMIModel.FK__SIPL_Marke__C_Id__5F1F0650" />
+        <AssociationConnector Association="MIAMIModel.FK__SIPL_Marke__C_Id__60132A89" />
+        <AssociationConnector Association="MIAMIModel.FK__SIPL_Marke__C_Id__7E62A77F" />
+        <AssociationConnector Association="MIAMIModel.FK__SIPL_Marke__C_Id__7F56CBB8" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_Contact_SIPL_State" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ContactBranch_SIPL_Contact" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ContactPersonCategoty_SIPL_Contact" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ContractCarrier_SIPL_Contact" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_ContractShipline_SIPL_Contact" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_Enquiry_SIPL_Contact" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_QuotationRemarks_SIPL_QuotationRemarks" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_SLCommodityConfigurator_SIPL_Contact" />
+        <AssociationConnector Association="MIAMIModel.FK_SIPL_SLTSConfigurator_SIPL_Contact" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

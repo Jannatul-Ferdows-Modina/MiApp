@@ -1,0 +1,58 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title"> Email </h3>
+</div>
+<div class="modal-body form-horizontal detail-container" when-ready="filterModalLoaded()" wait-for-interpolation="true">
+    <ng-form class="form-horizontal detail-container" name="form.emaildetail" novalidate="novalidate">
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title"></h3>
+                <div class="box-tools pull-right">
+                    <!--<button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>-->
+                   
+                        <button type="button" class="btn btn-default" ng-click="select('close')" action="select">Close</button>
+                   
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="form-group">
+                    <label class="col-sm-1 text-left control-label">Email To</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="fileNo" ng-model="emaildetail[0].emailTo" ng-disabled="true" />
+                    </div>
+                    </div>
+                <div class="form-group">
+                    <label class="col-sm-1 text-left control-label">Email BCC</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="bookingNo" ng-model="emaildetail[0].emailBcc" ng-disabled="true" />
+                    </div>
+                   </div>
+                <div class="form-group">
+                    <label class="col-sm-1 text-left control-label">Email CC</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="companyName" ng-model="emaildetail[0].emailcc" ng-disabled="true" />
+                    </div>
+                   </div>
+                <div class="form-group">
+                    <label class="col-sm-1 text-left control-label">Subject</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="companyName" ng-model="emaildetail[0].emailSubject" ng-disabled="true" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-1 control-label">Email Body</label>
+                   
+                    <div class="col-sm-15" ng-bind-html="emaildetail[0].emailBody | trustHtml">
+
+                    </div>
+                </div>
+               
+            </div>
+        </div>       
+    </ng-form>
+</div>
+<div class="modal-footer">
+    <div class="pull-right">
+        <button type="button" class="btn btn-default" ng-click="select('close')" action="select">Close</button>
+    </div>
+</div>
+

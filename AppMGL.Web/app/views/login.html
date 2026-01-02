@@ -1,0 +1,54 @@
+﻿
+<div>
+    <div class="container">
+        <div class="row">
+            <!--<div class="col-lg-6 logo-pic">
+                    <img  src="{{config.mainLogo}}" />
+                </div>-->
+               <div class="login-box  login-align">
+                
+                    <div class="login-logo">
+                        <a style="color:white;" ng-bind-html="config.companyName"></a>
+                    </div>
+                    <div class="login-box-body">
+                        <p class="login-box-msg">{{config.portalName}}</p>
+                        <form>
+                            <div class="form-group has-feedback">
+                                <input type="text" class="form-control" ng-model="loginData.userName" maxlength="50" ng-required="true" placeholder="Username"  uib-typeahead="data for data in cookieData | filter:$viewValue | limitTo:3">
+                                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                            </div>
+                            <div>
+                                <div class="icheck">
+                                    <label>
+                                        <input type="checkbox" ng-model="loginData.useRefreshTokens"> Remember Me
+                                    </label>
+                                </div>
+                            </div>
+                        <div class="form-group has-feedback">
+                            <input type="password" class="form-control" ng-model="loginData.password" maxlength="50" ng-required="true" placeholder="Password">
+                            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-8">
+                                <a ng-click="callResetPassword()">Unlock Account / Reset Password</a>
+                            </div>
+                            <div class="col-xs-4">
+                                <button type="submit" class="btn btn-primary btn-block btn-flat" ng-click="login()">Sign In</button>
+                            </div>
+                        </div>
+                    </form>
+                        <br>
+                    </div>
+                    <div>
+                        <p>
+                            <br />
+                            <a class="text-aqua"ng-bind-html="config.copyRights"></a>
+                        </p>
+                        <p style="height: 400px">&nbsp;</p>
+                    </div>
+                </div>
+            
+        </div>
+
+    </div>
+</div>

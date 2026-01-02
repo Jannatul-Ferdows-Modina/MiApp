@@ -1,0 +1,69 @@
+﻿<div>
+    <table ng-table="displayRatelistTable" class="table table-striped table-bordered table-hover " template-pagination="customPager">
+        <thead class="header" id="myHeader">
+            <tr class="bg-thead">
+                <th class="list-checkbox"><input type="checkbox" ng-click="selectAll()" ng-checked="getSelectedAll()" /></th>
+                <th class="text-left sortable" custom-sortable="Status" table-name="displayRatelistTable">Status</th>
+                <th class="text-left sortable" custom-sortable="Carrier" table-name="displayRatelistTable">Carrier</th>
+                <th class="text-left sortable" custom-sortable="ContractNo" table-name="displayRatelistTable">ContractNo</th>
+                <th class="text-left sortable" custom-sortable="StartDate" table-name="displayRatelistTable">StartDate</th>
+                <th class="text-left sortable" custom-sortable="EndDate" table-name="displayRatelistTable">EndDate</th>
+                <th class="text-left sortable" custom-sortable="Origin" table-name="displayRatelistTable">Origin</th>
+                <th class="text-left sortable" custom-sortable="Destination" table-name="displayRatelistTable">Destination</th>
+                <th class="text-left sortable" custom-sortable="Route" table-name="displayRatelistTable">Route</th>
+                <th class="text-left sortable" custom-sortable="ContractRemark" table-name="displayRatelistTable">Contract Remark</th>
+                <th class="list-actions">Commodity</th>
+            </tr>
+        </thead>
+        <tbody class="content">
+
+            <tr ng-repeat="entity in items">
+                <td>
+                    <input type="checkbox" ng-model="entity.selected" />
+                </td>
+                <td>
+                    <button type="button" ng-class="{'btn btn-info': entity.status == '1','btn btn-danger': entity.status == '2','btn btn-success': entity.status == '3','btn btn-warning':entity.status == '4','btn btn-default':entity.status == '5'}" data-toggle="tooltip">  </button>
+                </td>
+                <td>
+                    {{entity.carrier}}
+                </td>
+                <td>
+                    {{entity.contractNo}}
+
+                </td>
+                <td>
+                    {{entity.startDate}}
+
+                </td>
+                <td>
+                    {{entity.endDate}}
+
+                </td>
+                <td>
+                    {{entity.origin}}
+
+                </td>
+                <td>
+                    {{entity.destination}}
+
+                </td>
+
+                <td>
+                    {{entity.route}}
+                </td>
+                <td>
+                    {{entity.contractRemark}}
+                </td>
+                <td>
+                    <button name="btnUpload" type="button" class="btn btn-sm btn-primary" ng-click="callContractRateModal(entity)" action="contractRateModal" entityid="{{entity.cCID}}" uib-tooltip="Click here to View Commodity"><i class="fa fa-file-text"></i> View Available Commodity</button>
+                </td>
+            </tr>
+            <tr ng-if="params.total() == 0">
+                <td class="text-center text-italic" colspan="5">No Record(s) Found</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>

@@ -1,0 +1,63 @@
+﻿<ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+    <p>&nbsp;</p>
+
+    <div class="form-group">
+        <label class="col-sm-2 text-right control-label">System Ref No</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="fileNo" ng-model="entity.fileNo" ng-disabled="true" />
+        </div>
+        <label class="col-sm-2 control-label">Telephone Number</label>
+        <div class="col-sm-1">
+            <input type="text" class="form-control" placeholder="Country" name="telNo1" ng-model="entity.telNo1" maxlength="15" ng-disabled="true" />
+        </div>
+        <div class="col-sm-1">
+            <input type="text" class="form-control" placeholder="Area" name="telNo2" ng-model="entity.telNo2" maxlength="15" ng-disabled="true" />
+        </div>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" name="telNo3" ng-model="entity.telNo3" maxlength="15" ng-disabled="true" />
+        </div>   
+    </div>    
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Trucking Company Name</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="truckCompanyName" maxlength="30" ng-model="entity.truckCompanyName" uib-typeahead="o.companyName for o in callTypeahead($viewValue, 'SIPLContact', 'companyName', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="truckCompanyName" lookup-field="truckCompanyName" entity-key-field="contactID" custom-clear="true" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+        </div>
+        <label class="col-sm-2 control-label ">Fax</label>
+        <div class="col-sm-1">
+            <input type="text" class="form-control" placeholder="Country" name="fax1" ng-model="entity.fax1" maxlength="15" ng-disabled="true" />
+        </div>
+        <div class="col-sm-1">
+            <input type="text" class="form-control" placeholder="Area" name="fax2" ng-model="entity.fax2" maxlength="15" ng-disabled="true" />
+        </div>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" name="fax3" ng-model="entity.fax3" maxlength="15" ng-disabled="true" />
+        </div>
+    </div>   
+   
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Loading Address</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="loadingLocation" maxlength="100" ng-model="entity.loadingLocation" uib-typeahead="exporterName = o.companyName for o in callTypeahead($viewValue, 'LGVWSIPLContact', 'companyName', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="loadingLocation" lookup-field="loadingLocation" entity-key-field="contactID" custom-clear="true" ng-disabled="disabledUpdate" />                    
+            
+        </div>
+        <label class="col-sm-2 control-label">Loading Date</label>
+        <div class="col-sm-4">            
+            <input type="text" class="form-control" name="loadingDate" ng-model="entity.loadingDate" input-date="true" show-time="false" />
+        </div>
+    </div>
+ 
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Next Action Remarks</label>
+        <div class="col-sm-3">
+            <textarea rows="2" class="form-control" maxlength="250" name="nextActionRemarks" ng-model="entity.nextActionRemarks" />
+        </div>
+        <div class="col-sm-1">
+            <button name="btnAdd" type="button" class="btn btn-sm btn-primary" ng-click="showNextActionRemarksModel()" action="view" uib-tooltip="View Action Remarks" ng-disabled="disabledUpdate"><i class="fa fa-pencil"></i>Previous Remarks</button>
+        </div>
+        <label class="col-sm-2 control-label">Next Action Due Date</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="nextActionDueDate" ng-model="entity.nextActionDueDate" ng-disabled="disabledUpdate" input-date="true" show-time="false" />
+        </div>
+    </div>
+
+</ng-form>

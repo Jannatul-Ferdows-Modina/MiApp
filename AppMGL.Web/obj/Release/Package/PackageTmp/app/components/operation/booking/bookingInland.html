@@ -1,0 +1,181 @@
+﻿<ng-form class="form-horizontal detail-container" name="form.inland" novalidate="novalidate">
+    <p>&nbsp;</p>
+
+    <div class="form-group">
+
+        <label class="col-sm-2 text-right control-label">Booking Type </label>
+        <div class="col-sm-4">
+            <div class="radio">
+                <label><input type="radio" name="optionsRadios" ng-model="entity.bookingCategory" value="0"> Back to Back</label>
+                <label><input type="radio" name="optionsRadios" ng-model="entity.bookingCategory" value="1"> Anticipated </label>
+            </div>
+        </div>
+        <label class="col-sm-2 text-right control-label">System Ref</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" name="fileNo" ng-model="entity.fileNo" ng-disabled="true" />
+        </div>
+        <div class="col-sm-2">
+            <span>&nbsp;</span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 text-right control-label">Enquiry No</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" name="InquiryNo" ng-model="entity.enquiryNo" ng-disabled="true" />
+        </div>
+        <div class="col-sm-2">
+            <span>&nbsp;</span>
+        </div>
+        <label class="col-sm-2 text-right control-label">Quotation No</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" name="quotationNo" ng-model="entity.quotationNo" ng-disabled="true" />
+        </div>
+        <div class="col-sm-2">
+            <span>&nbsp;</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Last Remarks</label>
+        <div class="col-sm-4">
+            <textarea rows="2" class="form-control" maxlength="250" name="lastRemarks" ng-model="entity.lastRemarks" ng-disabled="true"></textarea>
+        </div>
+        <label class="col-sm-2 control-label">Last Remark Date</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" name="lastRemarkDate" ng-model="entity.lastRemarkDate" ng-disabled="true" input-date="true" show-time="false" />
+        </div>
+        <div class="col-sm-2">
+            <span>&nbsp;</span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Next Action Remarks</label>
+        <div class="col-sm-3">
+            <textarea rows="2" class="form-control" maxlength="250" name="nextActionRemarks" ng-model="entity.nextActionRemarks"></textarea>
+        </div>
+        <div class="col-sm-1">
+            <button name="btnAdd" type="button" class="btn btn-sm btn-primary" ng-click="showNextActionRemarksModel()" action="view" uib-tooltip="View Action Remarks" ng-disabled="disabledUpdate"><i class="fa fa-pencil"></i>Previous Remarks</button>
+        </div>
+        <label class="col-sm-2 control-label">Next Action Due Date</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" name="nextActionDueDate" ng-model="entity.nextActionDueDate" ng-disabled="disabledUpdate" input-date="true" show-time="false" />
+        </div>
+        <div class="col-sm-2">
+            <span>&nbsp;</span>
+        </div>
+    </div>
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title Bold">Trucking Company</h3>
+            <div class="box-tools pull-right">
+                <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="form-group">
+                <label class="col-sm-2 text-right control-label">Trucking Company</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" name="truckCompanyName" maxlength="50" ng-model="entity.truckCompanyName" uib-typeahead="truckCompanyName = o.companyName for o in callTypeahead($viewValue, 'SIPLContact', 'companyName', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="truckCompanyName" lookup-field="truckCompanyName" entity-key-field="contactID" custom-clear="true" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />                    
+                </div>
+                <div class="col-sm-8">
+                    <span>&nbsp;</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 text-right control-label">Tel No </label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="telno" ng-model="entity.telno" maxlength="20" ng-disabled="disabledUpdate" />
+                </div>
+                <label class="col-sm-2 text-right control-label">Fax No </label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="faxNo" ng-model="entity.faxNo" maxlength="20" ng-disabled="disabledUpdate" />
+                </div>               
+            </div>
+        </div>
+    </div>
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title Bold">Cargo Pick Up Location</h3>
+            <div class="box-tools pull-right">
+                <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="form-group">
+                <label class="col-sm-2 text-right control-label">Loading Location</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="loadingLocation" ng-model="entity.loadingLocation" maxlength="100" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-6">
+                    <span>&nbsp;</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title Bold">Pickup Request</h3>
+            <div class="box-tools pull-right">
+                <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="form-group">
+                <label class="col-sm-2 text-right control-label">Picked up </label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="pickupDate" ng-model="entity.pickupDate" input-date="true" show-time="false" />
+                </div>
+                <div class="col-sm-6">
+                    <span>&nbsp;</span>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title Bold">Empty Container Pickup Location</h3>
+            <div class="box-tools pull-right">
+                <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="form-group">
+                <label class="col-sm-2 text-right control-label">Pickup Location</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="pickupLocation" ng-model="entity.pickupLocation" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-6">
+                    <span>&nbsp;</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title Bold">Full Container Return</h3>
+            <div class="box-tools pull-right">
+                <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="form-group">
+                <label class="col-sm-2 text-right control-label">Full Return Location</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="returnLocation" ng-model="entity.returnLocation" ng-disabled="disabledUpdate" />
+                </div>
+                <div class="col-sm-6">
+                    <span>&nbsp;</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</ng-form>
+
+
+
+
+

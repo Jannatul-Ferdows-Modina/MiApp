@@ -1,0 +1,116 @@
+﻿<style>
+
+    .tooltipbreakup {
+        position: absolute;
+        margin: 5px;
+        width: 200px;       
+        border: 1px solid white;
+        border-radius: 5px;
+        background-color: black;
+        color: white;
+        display: none;
+        height:auto;
+    }
+</style>
+
+<table ng-table="rateCapturelistTable" class="table table-striped table-bordered table-hover" template-pagination="customPager">
+    <thead>
+        <tr class="bg-thead">
+            <th class="list-checkbox"><input type="checkbox" ng-click="selectAll()" ng-checked="getSelectedAll()" /></th>
+            <th class="text-left sortable hidden-xs" custom-sortable="carrierName" table-name="rateCapturelistTable">Carrier Name</th>
+            <th class="text-left sortable hidden-xs" custom-sortable="contractNo" table-name="rateCapturelistTable">Contract No</th>
+            <th class="text-left sortable hidden-xs" custom-sortable="effectiveDate" table-name="rateCapturelistTable">Effective Date</th>
+            <th class="text-left sortable hidden-xs" custom-sortable="expiryDate" table-name="rateCapturelistTable">Expirty Date</th>
+            <th class="text-left sortable hidden-xs" custom-sortable="origin" table-name="rateCapturelistTable">Port of Loading</th>
+            <th class="text-left sortable hidden-xs" custom-sortable="routeby" table-name="rateCapturelistTable">Via/Trans-Ship1</th>
+            <th class="text-left sortable hidden-xs" custom-sortable="routeby2" table-name="rateCapturelistTable">Via/Trans-Ship2</th>
+            <th class="text-left sortable hidden-xs" custom-sortable="discharge" table-name="rateCapturelistTable">Port of Destination</th>
+            <th class="text-left sortable hidden-xs" custom-sortable="originMode" table-name="rateCapturelistTable">Mode of Service</th>
+            <th class="text-left sortable hidden-xs" custom-sortable="commodity" table-name="rateCapturelistTable">Commodity</th>
+            <th class="text-left sortable hidden-xs" custom-sortable="Container20Rate" table-name="rateCapturelistTable">Container20</th>
+            <th class="text-left sortable hidden-xs" custom-sortable="Container40Rate" table-name="rateCapturelistTable">Container40</th>
+            <th class="text-left sortable hidden-xs" custom-sortable="Container45Rate" table-name="rateCapturelistTable">Container45</th>
+		
+			<th class="list-actions">View Doc</th>
+            <th class="list-actions">Edit</th>
+            <th class="list-actions">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="entity in items" id="trcontractrate"  ng-class="{'btn-info-row': entity.status == '1','btn-danger-row': entity.status == '2','btn-success-row': entity.status == '3','btn-warning-row':entity.status == '4'}">
+            <td>
+                <input type="checkbox" ng-model="entity.selected" />
+            </td>
+            <td>
+                <a ng-click="getRateCaptureDetails('viewDetail', entity.contractRateID)">{{entity.carrierName}}</a>
+            </td>
+            <td class="hidden-xs">
+                {{entity.contractNo}}
+            </td>
+            <td class="hidden-xs">
+                {{entity.effectiveDate | date:'MM/dd/yyyy'}}
+            </td>
+            <td class="hidden-xs">
+                {{entity.expiryDate | date:'MM/dd/yyyy'}}
+            </td>
+            <td class="hidden-xs">
+                {{entity.origin}}
+            </td>
+            <td class="hidden-xs">
+                {{entity.routeBy}}
+            </td>
+            <td class="hidden-xs">
+                {{entity.routeBy2}}
+            </td>
+
+            <td class="hidden-xs">
+                {{entity.discharge}}
+            </td>
+            <td class="hidden-xs">
+                {{entity.originMode}}
+            </td>
+            <td class="hidden-xs">
+                {{entity.commodity}}
+            </td>
+            <td class="hidden-xs">
+                <!--<a data-html="true" class="tooltip ficon-help-icon" twipsy-content-set="true" uib-tooltip="<b>Hello &#013;&#010; Stackoverflow"> hello</a>-->
+                <a ng-mouseover="showTooltip(entity.contractRateID,'20');" ng-mouseleave="hideTooltip(entity.contractRateID,'20');"> {{entity.container20Rate}}</a>
+                <div class="tooltipbreakup" id="tooltipElement20_{{entity.contractRateID}}">
+                    <span ng-bind-html="entity.container20RateBreakUp"></span>
+
+                </div>
+            </td>
+            <td class="hidden-xs">
+                <a ng-mouseover="showTooltip(entity.contractRateID,'40');" ng-mouseleave="hideTooltip(entity.contractRateID,'40');">  {{entity.container40Rate}} </a>
+                <div class="tooltipbreakup" id="tooltipElement40_{{entity.contractRateID}}">
+                    <span ng-bind-html="entity.container40RateBreakUp"></span>
+
+                </div>
+            </td>
+            <td class="hidden-xs">
+                <a ng-mouseover="showTooltip(entity.contractRateID,'45');" ng-mouseleave="hideTooltip(entity.contractRateID,'45');">
+                    {{entity.container45Rate}}
+                </a>
+                <div class="tooltipbreakup" id="tooltipElement45_{{entity.contractRateID}}">
+                    <span ng-bind-html="entity.container45RateBreakUp"></span>
+
+                </div>
+            </td>
+
+            <td>
+                <button name="btnUpload" type="button" class="btn btn-sm btn-primary" ng-click="callContractRateModalRate(entity.contractID)" action="contractRateModal" entityid="{{entity.contractID}}" uib-tooltip="View Upload Document"><i class="fa fa-upload"></i>View Doc</button>
+            </td>
+
+            <td>
+                <button type="button" class="btn btn-xs btn-primary" ng-click="getRateCaptureDetails('edit', entity.contractRateID)" action="edit" entityid="{{entity.contractRateID}}" uib-tooltip="Edit"><i class="fa fa-edit"></i></button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-xs btn-danger" ng-click="entity.selected = true; performCaputreRouteAction($event, false)" show-action="30" action="deleteBatch" entityid="{{entity.contractRateID}}" uib-tooltip="Delete"><i class="fa fa-remove"></i></button>
+            </td>
+
+        </tr>
+        <tr ng-if="params.total() == 0">
+            <td class="text-center text-italic" colspan="5">No Record(s) Found</td>
+        </tr>
+    </tbody>
+</table>

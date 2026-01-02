@@ -1,0 +1,32 @@
+﻿<div class="box-container form-horizontal detail-container">
+    <div class="form-group">
+        <label class="col-sm-3 control-label text-left">First Name</label>
+        <label class="col-sm-3 control-label text-left">Last Name</label>
+        <label class="col-sm-3 control-label text-left">Department Name</label>
+        <div class="col-sm-3">&nbsp;</div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="CntFirstNameF" ng-model="CntFirstNameF" uib-typeahead="o.cntFirstName for o in callTypeahead($viewValue, 'contact', 'cntFirstName', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="contact" lookup-field="cntFirstName" entity-key-field="cntId" custom-clear="true" />
+        </div>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="CntLastNameF" ng-model="CntLastNameF" uib-typeahead="o.cntLastName for o in callTypeahead($viewValue, 'contact', 'cntLastName', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="contact" lookup-field="cntLastName" entity-key-field="cntId" custom-clear="true" />
+        </div>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="DptNameF" ng-model="DptNameF" uib-typeahead="o.dptName for o in callTypeahead($viewValue, 'department', 'dptName', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="department" lookup-field="dptName" entity-key-field="dptId" custom-clear="true" />
+        </div>
+        <div class="col-sm-3">
+
+            <button class="btn btn-sm btn-primary" ng-click="performUserSearchNew($event,CntFirstNameF,CntLastNameF,DptNameF,cntTypeF)" action="search">Search</button>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-3 control-label text-left">Contact Type</label>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-3" show-errors="{ skipFormGroupCheck: true }">
+            <select class="form-control" name="cntTypeF" ng-model="cntTypeF" ng-options="t.cntTypeId as t.cntTypeName for t in lookups.contactTypesAll"></select>
+        </div>
+    </div>
+</div>

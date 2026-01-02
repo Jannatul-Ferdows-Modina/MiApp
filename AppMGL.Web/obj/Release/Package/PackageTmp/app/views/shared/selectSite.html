@@ -1,0 +1,22 @@
+﻿<div class="box box-widget">
+    <div class="box-header with-border" style="background-color: #39cccc">
+        <div class="user-block">
+            <img class="img-circle" src="Images/Icons/change_status_icon.png" ng-hide="true" />
+            <span class="username">Select Unit</span>
+            <span class="description"></span>
+        </div>
+    </div>
+    <div class="box-body box-form-horizontal">
+        <div class="form-group">
+            <label class="col-sm-4 control-label">Unit Name</label>
+            <div class="col-sm-8">
+                <select class="form-control" name="sitId" ng-model="sitId" ng-options="t.SitId as t.SitName for t in userSite"></select>
+            </div>
+        </div>
+    </div>
+    <div class="box-footer">
+        <div class="pull-right">
+            <button type="button" class="btn btn-info" ng-click="select()" action="select">Ok</button>
+        </div>
+    </div>
+</div>

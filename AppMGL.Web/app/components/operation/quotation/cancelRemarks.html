@@ -1,0 +1,24 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title"> Create Quotation - Cancel</h3>
+</div>
+<div class="modal-body form-horizontal detail-container" when-ready="filterModalLoaded()" wait-for-interpolation="true">
+    <ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+        <div class="form-group">
+            <label class="col-sm-2 control-label required">Reason</label>
+            <div class="col-sm-4">
+                <select class="form-control" name="deleteReason" ng-model="deleteReason" ng-options="item.optionValue as item.optionName for item in deleteReasons"></select>
+            </div>        
+            <label class="col-sm-2 control-label required">Remarks</label>
+            <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+                <input type="text" class="form-control" name="deleteRemarks" ng-model="deleteRemarks" ng-required="true" />
+            </div>
+        </div>
+    </ng-form>
+</div>
+<div class="modal-footer">
+    <div class="pull-right">        
+        <button type="button" class="btn btn-sm btn-primary" ng-click="select('delete')" action="select">OK</button>
+        <button type="button" class="btn btn-default" ng-click="select('close')" action="select">Cancel</button>
+    </div>
+</div>
+

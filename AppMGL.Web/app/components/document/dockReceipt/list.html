@@ -1,0 +1,33 @@
+﻿<table ng-table="documentTable" class="table table-striped table-bordered table-hover" template-pagination="customPager">
+    <thead>
+        <tr class="bg-thead">
+            <th class="text-left col-sm-2">&nbsp;</th>
+            <th class="text-left col-sm-2">System Ref# </th>
+            <!--<th class="text-left col-sm-2">Export Ref. No.</th>-->
+            <th class="text-left col-sm-2">Document No.</th>
+            <th class="text-left col-sm-4">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="d in $data">
+            <td class="text-left">
+                <button type="button" class="btn btn-xs btn-primary" ng-click="performSubAction($event, null)" action="selectDocument" entityid="{{d.fileNo }}" doccommid="{{d.documentCommonID}}">Select</button>
+            </td>
+            <td class="text-left">
+                {{d.fileNo}}
+                <!--</td>
+                <td class="text-left">
+                    {{d.exportRef}}
+                </td>-->
+            <td class="text-left">
+                {{d.documentNumber}}
+            </td>
+            <td class="text-left">
+                {{d.status}}
+            </td>
+        </tr>
+        <tr ng-if="params.total() == 0">
+            <td class="text-center text-italic" colspan="5">No Record(s) Found</td>
+        </tr>
+    </tbody>
+</table>

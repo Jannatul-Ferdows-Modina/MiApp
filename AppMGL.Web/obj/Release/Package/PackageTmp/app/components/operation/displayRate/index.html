@@ -1,0 +1,142 @@
+﻿<div class="view indent">
+    <!--<div ng-include="'app/views/shared/main.html'"></div>-->
+
+    <div class="box box-info" ng-show="viewList">
+        <div class="box-header with-border">
+            <h3 class="box-title"></h3>
+            <div class="box-tools pull-right">
+                <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="box-container form-horizontal detail-container">
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label text-left">Select</label>
+                    <div class="col-sm-1">&nbsp;</div>
+                    <label class="col-sm-2 control-label text-left"> </label>
+                    <div class="col-sm-1">&nbsp;</div>
+                    <label class="col-sm-2 control-label text-left">Contract Effective From</label>
+                    <label class="col-sm-2 control-label text-left">Contract Valid Till</label>
+                    <label class="col-sm-2 control-label text-left">Origin</label>
+                    <div class="col-sm-1">&nbsp;</div>
+                    <label class="col-sm-2 control-label text-left"> </label>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-2">
+                        <select class="form-control" name="searchOption" ng-model="selectOption" ng-options="item.optionValue as item.optionName for item in searchOptions"></select>
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="searchBox" ng-model="searchBox" maxlength="100" uib-typeahead="o.name for o in searchValues($viewValue,selectOption)" />
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="startDate" ng-model="startDate" input-date="true" show-time="false" />
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="endDate" ng-model="endDate" input-date="true" show-time="false" />
+                    </div>
+
+                    <div class="col-sm-2">
+                        <select class="form-control" name="selectOptionOrigin" ng-model="selectOptionOrigin" ng-options="item.optionValue as item.optionName for item in searchOptionsOrigin"></select>
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="searchBoxorigin" ng-model="searchBoxorigin" maxlength="100" uib-typeahead="o.name for o in searchValues($viewValue,selectOptionOrigin)" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label text-left">Discharge</label>
+                    <div class="col-sm-1">&nbsp;</div>
+                    <label class="col-sm-2 control-label text-left"> </label>
+                    <div class="col-sm-1">&nbsp;</div>
+                    <label class="col-sm-2 control-label text-left">Commodity</label>
+                    <div class="col-sm-1">&nbsp;</div>
+                    <label class="col-sm-2 control-label text-left"> </label>
+                    <div class="col-sm-1">&nbsp;</div>
+                    <label class="col-sm-2 control-label text-left">Route</label>
+                    <label class="col-sm-2 control-label text-left">Via1</label>
+                </div>
+
+                <div class="form-group">
+
+                    <div class="col-sm-2">
+                        <select class="form-control" name="searchOptionsDisch" ng-model="selectOptionDisch" ng-options="item.optionValue as item.optionName for item in searchOptionsDisch"></select>
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="searchBoxdisch" ng-model="searchBoxdisch" maxlength="100" uib-typeahead="o.name for o in searchValues($viewValue,selectOptionDisch)" />
+                    </div>
+                    <div class="col-sm-2">
+                        <select class="form-control" name="searchOptionsComm" ng-model="selectOptionComm" ng-options="item.optionValue as item.optionName for item in searchOptionsComm"></select>
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="searchBoxcomm" ng-model="searchBoxcomm" maxlength="100" uib-typeahead="o.name for o in searchValues($viewValue,selectOptionComm)" />
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="route" ng-model="route" maxlength="100" />
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="via1" ng-model="via1" maxlength="100" />
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label text-left">Via2</label>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="via2" ng-model="via2" maxlength="100" />
+                    </div>
+                    <div class="pull-right">
+                        <button class="btn btn-sm btn-primary" ng-click="performDisplayRateSearch($event,selectOption, searchBox, startDate, endDate, selectOptionOrigin, searchBoxorigin, selectOptionDisch, searchBoxdisch, selectOptionComm, searchBoxcomm, route, via1, via2)" action="search">Search</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-3">
+                        <ul>
+                            <li style="color:#269abc;font-weight:bold;">Valid for more than 30 days</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2">
+                        <ul>
+                            <li style="color:#d43f3a;font-weight:bold;">Validity has expired</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <ul>
+                            <li style="color:#4cae4c;font-weight:bold;">Validity will expire within next 15 days</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <ul>
+                            <li style="color:#d58512;font-weight:bold;">Validity will expire within 15-30 days</li>
+                        </ul>
+                    </div>
+                    <!--<div class="col-sm-4">
+                        <span>&nbsp;</span>
+                    </div>-->
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    <div id="mainBoxWidget" class="box box-primary">
+        <div class="box-header with-border">
+            <!--<h3 class="box-title"></h3>-->
+            <!--<div class="box-tools pull-right">
+                <div ng-include="'app/views/shared/actions.html'"></div>
+            </div>-->
+        </div>
+        <div class="box-body">
+            <div id="divList" ng-show="viewList" ng-include="page.urls.list" onload="requestLoad()" when-ready="requestCompleted()" wait-for-interpolation="true"></div>
+            <div id="divContainer" ng-hide="viewList" ng-include="page.urls.container" onload="requestLoad()" when-ready="requestCompleted()" wait-for-interpolation="true"></div>
+        </div>
+        <!--<div hl-sticky="" class="simple">
+            <span class="not-sticky">Scroll to make me sticky</span>
+            <span class="sticks">Look, I'm sticky!</span>
+        </div>-->
+        <div class="box-footer"></div>
+    </div>
+</div>

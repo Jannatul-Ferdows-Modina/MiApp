@@ -1,0 +1,100 @@
+﻿<div class="view indent">
+    <div>
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title"></h3>
+                <div class="box-tools pull-right">
+                    <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+                    <div class="form-group">
+                        <div class="col-sm-1">
+                            <span>&nbsp;</span>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="reportType" ng-model="reportType" value="0" checked>
+                                Enquiry
+                            </label>
+                            <label>
+                                <input type="radio" name="reportType" ng-model="reportType" value="1">
+                                Quotation
+                            </label>
+                            <label>
+                                <input type="radio" name="reportType" ng-model="reportType" value="2">
+                                Booking
+                            </label>
+                            <label>
+                                <input type="radio" name="reportType" ng-model="reportType" value="3">
+                                Trucking
+                            </label>
+                            <label>
+                                <input type="radio" name="reportType" ng-model="reportType" value="4">
+                                Moved for Documentation
+                            </label>
+                            
+                        </div>
+                    </div>   
+                    <div class="form-group">
+                        <div class="col-sm-1">
+                            <span>&nbsp;</span>
+                        </div>                    
+                        <label class="col-sm-2 control-label">Next Action Date From</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" name="fromDate" ng-model="fromDate" input-date="true" show-time="false" />
+                        </div>
+                        <div class="col-sm-1">
+                            <span>&nbsp;</span>
+                        </div>
+                        <label class="col-sm-2 control-label">Next Action Date To</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" name="toDate" ng-model="toDate" input-date="true" show-time="false" />
+                        </div>
+                        <div class="col-sm-2">
+                            <span>&nbsp;</span>
+                        </div> 
+                    </div>                    
+                   
+                </ng-form>
+            </div>
+            <div class="box-footer">
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-sm btn-primary" ng-click="performSearch($event,fromDate, toDate)" action="showReport"><i class="fa fa-bar-chart"></i> Show</button>
+                    <button type="button" class="btn btn-sm btn-primary" ng-click="exportActivityDueReport($event,fromDate, toDate)" action="exportReport"><i class="fa fa-download"></i> Export to Excel</button>
+                </div>
+            </div>
+        </div>
+        <div class="box box-primary">
+           
+                <table ng-table="reportTable" class="table table-striped table-bordered table-hover" template-pagination="customPager">
+                    <thead>
+                        <tr class="bg-thead">
+                            <th class="text-left">Next Action Date</th>
+                            <th class="text-left">Quotation NO</th>
+                            <th class="text-left">Customer</th>
+                            <th class="text-left">Remarks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="entity in items">
+                            <td class="hidden-xs">
+                                {{entity.nextActionDate | date:'MM/dd/yyyy'}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.refNo}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.customerName}}
+                            </td>
+                            <td class="hidden-xs">
+                                {{entity.remarks}}
+                            </td>
+                        </tr>
+                    <tbody>
+                </table>
+            
+        </div>
+    </div>
+</div>

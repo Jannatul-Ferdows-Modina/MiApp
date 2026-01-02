@@ -1,0 +1,29 @@
+﻿<ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+    <p>&nbsp;</p>
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredInsert ? 'required' : ''}}">Port Id</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="portId" ng-model="entity.portId" disabled="disabled" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Port</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="name" ng-model="entity.name" ng-disabled="disabledUpdate" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Country</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <select class="form-control" name="fkCountryId" ng-model="entity.fkCountryId" ng-options="t.countryId as t.name for t in lookups.countrynames" ng-disabled="disabledUpdate" ng-required="requiredUpdate"></select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">IsActive</label>
+        <div class="col-sm-4 checkbox-control">
+            <input type="checkbox" name="isActive" ng-model="entity.isActive" ng-disabled="disabledUpdate" />
+        </div>
+    </div>
+</ng-form>

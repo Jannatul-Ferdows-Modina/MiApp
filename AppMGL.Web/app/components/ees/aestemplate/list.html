@@ -1,0 +1,53 @@
+﻿<table ng-table="templatelistTable" class="table table-striped table-bordered table-hover" template-pagination="customPager">
+    <thead>
+        <tr class="bg-thead">
+            <th class="text-left sortable hidden-xs" table-name="templatelistTable">Sr No</th>
+            <th class="text-left sortable hidden-xs" custom-sortable="companyName" table-name="templatelistTable">Company Name</th>
+            <th class="text-left sortable hidden-xs" custom-sortable="firstName" table-name="templatelistTable">First Name</th>
+            <th class="text-left sortable hidden-xs" custom-sortable="lastName" table-name="templatelistTable">Last Name</th>
+            <th class="text-left sortable hidden-xs" custom-sortable="countryName" table-name="templatelistTable">Country Name</th>
+            <th class="text-left sortable hidden-xs" custom-sortable="stateName" table-name="templatelistTable">State Name</th>
+            <th class="text-left sortable hidden-xs" custom-sortable="addressLine1" table-name="templatelistTable">Address </th>
+            <th class="text-left sortable hidden-xs" custom-sortable="einno" table-name="templatelistTable">EIN No </th>
+            <th class="text-left sortable hidden-xs" custom-sortable="templateType" table-name="templatelistTable">Template  Type </th>
+            <th class="list-actions">Edit</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="entity in items">
+            <td class="hidden-xs">
+                {{$index+1 }}
+            </td>
+            <td class="hidden-xs">
+                {{entity.companyName}}
+            </td>
+            <td class="hidden-xs">
+                {{entity.firstName}}
+            </td>
+            <td class="hidden-xs">
+                {{entity.lastName}}
+            </td>
+            <td class="hidden-xs">
+                {{entity.countryName}}
+            </td>
+            <td class="hidden-xs">
+                {{entity.stateName}}
+            </td>
+            <td class="hidden-xs">
+                {{entity.addressLine1}}
+            </td>
+            <td class="hidden-xs">
+                {{entity.einNo}}
+            </td>
+            <td class="hidden-xs">
+                {{entity.templateType}}
+            </td>
+            <td>
+                <button type="button" class="btn btn-xs btn-primary" ng-click="getAesTemplateDetail($event, entity.templateId)" show-action="20" action="add" entityid="{{entity.doc_Id}}" uib-tooltip="Edit"><i class="fa fa-edit"></i></button>
+            </td>
+        </tr>
+        <tr ng-if="params.total() == 0">
+            <td class="text-center text-italic" colspan="5">No Record(s) Found</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,90 @@
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 10:41:00.5455 PM
+ENTRY TYPE  : Error
+SOURCE      : Username => 
+              IP Address => ::1
+              Url => http://localhost:50676/#!/login?returnUrl=%2Fhome%2Fdashboard&logout
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => Possibly unhandled rejection: {}
+MESSAGE     : TypeError: Cannot read properties of null (reading 'error')
+STACK TRACE : {anonymous}()@http://localhost:50676/app/controllers/loginController.js?v=2.0.2.17085:62:37
+              processQueue()@http://localhost:50676/bower_components/angular/angular.js:17051:36
+              null()@http://localhost:50676/bower_components/angular/angular.js:18233:14
+              $apply()@http://localhost:50676/bower_components/angular/angular.js:18531:12
+              resolveHttpPromise()@http://localhost:50676/bower_components/angular/angular.js:12547:35
+              completeRequest()@http://localhost:50676/bower_components/angular/angular.js:12785:6
+              requestError()@http://localhost:50676/bower_components/angular/angular.js:12713:8
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 10:41:23.6758 PM
+ENTRY TYPE  : Error
+SOURCE      : Username => 
+              IP Address => ::1
+              Url => http://localhost:50676/#!/login?returnUrl=%2Fhome%2Fdashboard&logout
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => Possibly unhandled rejection: {}
+MESSAGE     : TypeError: Cannot read properties of null (reading 'error')
+STACK TRACE : {anonymous}()@http://localhost:50676/app/controllers/loginController.js?v=2.0.2.17085:62:37
+              processQueue()@http://localhost:50676/bower_components/angular/angular.js:17051:36
+              null()@http://localhost:50676/bower_components/angular/angular.js:18233:14
+              $apply()@http://localhost:50676/bower_components/angular/angular.js:18531:12
+              resolveHttpPromise()@http://localhost:50676/bower_components/angular/angular.js:12547:35
+              completeRequest()@http://localhost:50676/bower_components/angular/angular.js:12785:6
+              requestError()@http://localhost:50676/bower_components/angular/angular.js:12713:8
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 10:41:44.9729 PM
+ENTRY TYPE  : Error
+SOURCE      : Username => 
+              IP Address => ::1
+              Url => http://localhost:50676/#!/login?returnUrl=%2Fhome%2Fdashboard&logout
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => Possibly unhandled rejection: {}
+MESSAGE     : TypeError: Cannot read properties of null (reading 'error')
+STACK TRACE : {anonymous}()@http://localhost:50676/app/controllers/loginController.js?v=2.0.2.17085:62:37
+              processQueue()@http://localhost:50676/bower_components/angular/angular.js:17051:36
+              null()@http://localhost:50676/bower_components/angular/angular.js:18233:14
+              $apply()@http://localhost:50676/bower_components/angular/angular.js:18531:12
+              resolveHttpPromise()@http://localhost:50676/bower_components/angular/angular.js:12547:35
+              completeRequest()@http://localhost:50676/bower_components/angular/angular.js:12785:6
+              requestError()@http://localhost:50676/bower_components/angular/angular.js:12713:8
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 10:42:21.2954 PM
+ENTRY TYPE  : Error
+SOURCE      : Username => 
+              IP Address => ::1
+              Url => http://localhost:50676/#!/login?returnUrl=%2Fhome%2Fdashboard&logout
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => Possibly unhandled rejection: {}
+MESSAGE     : TypeError: Cannot read properties of null (reading 'error')
+STACK TRACE : {anonymous}()@http://localhost:50676/app/controllers/loginController.js?v=2.0.2.17085:62:37
+              processQueue()@http://localhost:50676/bower_components/angular/angular.js:17051:36
+              null()@http://localhost:50676/bower_components/angular/angular.js:18233:14
+              $apply()@http://localhost:50676/bower_components/angular/angular.js:18531:12
+              resolveHttpPromise()@http://localhost:50676/bower_components/angular/angular.js:12547:35
+              completeRequest()@http://localhost:50676/bower_components/angular/angular.js:12785:6
+              requestError()@http://localhost:50676/bower_components/angular/angular.js:12713:8
+
+=============================================================
+LOCAL DATE  : Thursday, August 21 2025, 10:42:57.9690 PM
+ENTRY TYPE  : Error
+SOURCE      : Username => 
+              IP Address => ::1
+              Url => http://localhost:50676/#!/login?returnUrl=%2Fhome%2Fdashboard&logout
+              Browser => Chrome 18+
+              UserAgent => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0
+              Cause => Possibly unhandled rejection: {}
+MESSAGE     : TypeError: Cannot read properties of null (reading 'error')
+STACK TRACE : {anonymous}()@http://localhost:50676/app/controllers/loginController.js?v=2.0.2.17085:62:37
+              processQueue()@http://localhost:50676/bower_components/angular/angular.js:17051:36
+              null()@http://localhost:50676/bower_components/angular/angular.js:18233:14
+              $apply()@http://localhost:50676/bower_components/angular/angular.js:18531:12
+              resolveHttpPromise()@http://localhost:50676/bower_components/angular/angular.js:12547:35
+              completeRequest()@http://localhost:50676/bower_components/angular/angular.js:12785:6
+              requestError()@http://localhost:50676/bower_components/angular/angular.js:12713:8
+

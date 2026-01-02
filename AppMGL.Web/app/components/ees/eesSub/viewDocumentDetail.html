@@ -1,0 +1,306 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title"> View Document</h3>
+</div>
+<div class="modal-body form-horizontal detail-container" when-ready="filterModalLoaded()" wait-for-interpolation="true">
+    <ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title">Common</h3>
+                <div class="box-tools pull-right">
+                    <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label">System Ref No</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="fileNo" ng-model="entity.fileNo" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">Booking No</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="bookingNo" ng-model="entity.bookingNo" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 control-label">Customer</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="companyName" ng-model="entity.companyName" ng-disabled="false" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label">Enquiry No</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="InquiryNo" ng-model="entity.enquiryNo" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">Quotation No</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="quotationNo" ng-model="entity.quotationNo" ng-disabled="false" />
+                    </div>
+                    <div class="col-sm-4">
+                        &nbsp;
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title">Booking</h3>
+                <div class="box-tools pull-right">
+                    <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label">Shipping Line</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="shippingLine" ng-model="entity.shippingLine" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">Commodity</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="commodity" ng-model="entity.commodity" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">GAL Booking Type</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="galBookingType" ng-model="entity.galBookingType" ng-disabled="false" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label">Vessel Name</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="vessel" ng-model="entity.vessel" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">Voyage</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="voyage" ng-model="entity.voyage" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">Line BKG</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="pickupCategory" ng-model="entity.pickupCategory" ng-disabled="false" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title">Container</h3>
+                <div class="box-tools pull-right">
+                    <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label">Container Type</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="containerName" ng-model="entity.containerName" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">Container No</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="cntNo" ng-model="entity.cntNo" ng-disabled="false" />
+                    </div>
+                    <div class="col-sm-4">
+                        &nbsp;
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label">Seal No</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="sealNo" ng-model="entity.sealNo" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">Cargo Pickup Date</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="earliestPickUpDate" ng-model="entity.earliestPickUpDate" ng-disabled="true" input-date="true" show-time="false" />
+                    </div>
+                    <div class="col-sm-4">
+                        &nbsp;
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title">Port</h3>
+                <div class="box-tools pull-right">
+                    <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label">Origin</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="origin" ng-model="entity.origin" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">Rail Ramp</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="railRamp" ng-model="entity.railRamp" ng-disabled="false" />
+                    </div>
+                    <div class="col-sm-4">
+                        &nbsp;
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label">Port Of Loading</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="portOfOrigin" ng-model="entity.portOfOrigin" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">Destination</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="portOfDischarge" ng-model="entity.portOfDischarge" ng-disabled="false" />
+                    </div>
+                    <div class="col-sm-4">
+                        &nbsp;
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title">Status</h3>
+                <div class="box-tools pull-right">
+                    <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label">Booking Status</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="bookingStatus" ng-model="entity.bookingStatus" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">Documentation Status</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="documentationStatus" ng-model="entity.documentationStatus" ng-disabled="false" />
+                    </div>
+                    <div class="col-sm-4">
+                        &nbsp;
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Last Remarks</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" maxlength="250" name="lastRemarks" ng-model="entity.lastRemarks" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 control-label">Last Remark Date</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="lastRemarkDate" ng-model="entity.lastRemarkDate" ng-disabled="true" input-date="true" show-time="false" />
+                    </div>
+                    <label class="col-sm-2 control-label">Line B/L #</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="blNumber" ng-model="entity.blNumber" ng-disabled="false" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title">Dates</h3>
+                <div class="box-tools pull-right">
+                    <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label">Booking Date</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="bookingDate" ng-model="entity.bookingDate" ng-disabled="true" input-date="true" show-time="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">Earliest pick up date</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="earliestPickUpDate" ng-model="entity.earliestPickUpDate" ng-disabled="true" input-date="true" show-time="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">Earliest Return Date </label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="erd" ng-model="entity.erd" ng-disabled="true" input-date="true" show-time="false" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label">Ramp cut off date</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="rampCutOff" ng-model="entity.rampCutOff" ng-disabled="false" input-date="true" show-time="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">Auto Cut Off Date</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="autoCutOff" ng-model="entity.autoCutOff" ng-disabled="true" input-date="true" show-time="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">Doc Cut Off Date </label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="cutOffDate" ng-model="entity.cutOffDate" ng-disabled="true" input-date="true" show-time="false" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label">Cargo cut off date</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="portcutoffDate" ng-model="entity.portcutoffDate" ng-disabled="true" input-date="true" show-time="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">ETS</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="ets" ng-model="entity.ets" ng-disabled="true" input-date="true" show-time="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">ETA</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="eta" ng-model="entity.eta" ng-disabled="true" input-date="true" show-time="false" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title">Remaining Fields</h3>
+                <div class="box-tools pull-right">
+                    <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label"> Transporter</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="transporter" ng-model="entity.transporter" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label"> Account Rep</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="contactPerson" ng-model="entity.contactPerson" ng-disabled="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label"> Supplier</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="supplier" ng-model="entity.supplier" ng-disabled="false" />
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 text-right control-label">Dock Receipt Issue Date</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="cutOffDate" ng-model="entity.cutOffDate" ng-disabled="false" input-date="true" show-time="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">Empty Pickup </label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="emptyPickupLocation" ng-model="entity.emptyPickupLocation" ng-disabled="false" input-date="true" show-time="false" />
+                    </div>
+                    <label class="col-sm-2 text-right control-label">Drop Off Location</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="autoCutOff" ng-model="entity.autoCutOff" ng-disabled="true" input-date="true" show-time="false" />
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </ng-form>
+</div>
+<div class="modal-footer">
+    <div class="pull-right">
+
+        <button type="button" class="btn btn-default"  action="update">AES Submission</button>
+        <button type="button" class="btn btn-default" ng-click="select('close')" action="select">Close</button>
+
+    </div>
+</div>
+

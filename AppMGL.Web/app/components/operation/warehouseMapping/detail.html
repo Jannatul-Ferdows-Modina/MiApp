@@ -1,0 +1,121 @@
+﻿<ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+    <p>&nbsp;</p>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Warehouse Inward No.</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="warehouseinwardno" ng-model="entity.warehouseinwardno" readonly ng-disabled="disabledUpdate" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Shipper Name</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" autocomplete="off" ng-change="delayedSearch()" name="shipperName" ng-model="entity.shipperName" uib-typeahead="o.name for o in searchValuesCompany($viewValue, 'companyName')" typeahead-on-select="selectTypeaheadAES($item, $model, $label, $event,'SIPLContact5')" lookup-module="SIPLContact5" lookup-field="companyName" entity-key-field="contactID" ng-disabled="disabledUpdate"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">ChallanNo</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="challanNo" ng-model="entity.challanNo" ng-disabled="disabledUpdate" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Challan Date</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="challanDate" ng-model="entity.challanDate" input-date="true" show-time="false" ng-disabled="disabledUpdate" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Description</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <textarea class="form-control" name="Name" ng-model="entity.description" ng-disabled="disabledUpdate" />
+        </div>
+    </div>
+
+
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Warehouse Name</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="Name" ng-model="entity.wareHouseName" ng-disabled="disabledUpdate" uib-typeahead="o.storageLocation for o in searchValuesWarehose($viewValue,'warehouselocation')" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="warehouselocation" lookup-field="storageLocation" entity-key-field="locationId" custom-clear="true" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Block Number</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <!--<input type="text" class="form-control" name="Name" ng-model="entity.blockNumber" ng-disabled="disabledUpdate" />-->
+            <select style="width:100%" multiple="multiple" class="form-control" id="selblocknumber" name="blocknumber" ng-model="entity.blockId" ng-options="t.blockId as t.blocknumber for t in lookups.storageLocation" ng-disabled="disabledUpdate"></select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Quotation No</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="quatationNo" ng-model="entity.quatationNo" ng-disabled="disabledUpdate" uib-typeahead="o.quotationNo for o in searchValuesWarehose($viewValue,'quotationno')" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="quotationno" lookup-field="quotationno" entity-key-field="quotationID" custom-clear="true" />
+        </div>
+        <div class="col-sm-4">
+            <button class="btn btn-sm btn-primary" ng-click="searchQuotation($event)" action="search">Search</button>
+        </div>
+    </div>
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">Cargo Mainefest</h3>
+            <div class="box-tools pull-right">
+                <button class="btn btn-sm btn-info ng-isolate-scope" box-widget="collapse"><i class="fa fa-minus ng-hide" ng-hide="true"></i><span>Hide</span></button>
+            </div>
+        </div>
+        <div class="box-body" style="display: block;">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Consignee Name </label>
+                <div class="col-sm-4">
+                    <input type="text" autocomplete="off" ng-change="delayedSearch()" class="form-control" name="Name" ng-model="entity.consigneeName" uib-typeahead="o.name for o in searchValuesCompany($viewValue, 'companyName')" typeahead-on-select="selectTypeaheadAES($item, $model, $label, $event,'SIPLContact6')" lookup-module="SIPLContact6" lookup-field="companyName" entity-key-field="contactID"  ng-disabled="disabledUpdate"  />
+                </div>
+                <label class="col-sm-2 control-label">B/L No. / Containers </label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="Name" ng-model="entity.blNo" ng-disabled="disabledUpdate"  />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Marks & Number </label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="Name" ng-model="entity.marks" ng-disabled="disabledUpdate" />
+                </div>
+                <label class="col-sm-2 control-label">No of Packages & Goods of Description </label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="Name" ng-model="entity.packagesDescription" ng-disabled="disabledUpdate" entity-key-field="locationId" custom-clear="true" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Gross Weigt Kgs. </label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="Name" ng-model="entity.grossWt" ng-disabled="disabledUpdate" />
+                </div>
+                <label class="col-sm-2 control-label">CBM </label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="Name" ng-model="entity.cbm" ng-disabled="disabledUpdate" />
+                   
+
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">FOB Amount </label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="Name" ng-model="entity.fobAmount" ng-disabled="disabledUpdate" />
+                </div>
+                <label class="col-sm-2 control-label">Freight Status </label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="Name" ng-model="entity.freightStatus" ng-disabled="disabledUpdate" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">IsActive</label>
+        <div class="col-sm-4 checkbox-control">
+            <input type="checkbox" name="IsActive" ng-model="entity.isActive" ng-disabled="disabledUpdate" />
+        </div>
+    </div>
+</ng-form>

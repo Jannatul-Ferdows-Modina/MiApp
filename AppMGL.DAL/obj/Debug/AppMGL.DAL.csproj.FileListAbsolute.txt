@@ -1,0 +1,145 @@
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\AppMGL.DAL.dll.config
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\AppMGL.DAL.dll
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\AppMGL.DAL.pdb
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\EntityFramework.dll
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.Owin.dll
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.Owin.Security.dll
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\Newtonsoft.Json.dll
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\Owin.dll
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Linq.Dynamic.dll
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Net.Http.Formatting.dll
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.Helpers.dll
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.Http.dll
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.Http.WebHost.dll
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.Mvc.dll
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.Razor.dll
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.WebPages.dll
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.WebPages.Razor.dll
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\EntityFramework.xml
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.Owin.xml
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.Owin.Security.xml
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\Newtonsoft.Json.xml
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Net.Http.Formatting.xml
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.Helpers.xml
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.Http.xml
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.Http.WebHost.xml
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.Mvc.xml
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.Razor.xml
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.WebPages.xml
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.WebPages.Razor.xml
+C:\MGL-Logistics\AppMGL.DAL\obj\Debug\AppMGL.DAL.csprojResolveAssemblyReference.cache
+C:\MGL-Logistics\AppMGL.DAL\obj\Debug\AppMGL.DAL.dll
+C:\MGL-Logistics\AppMGL.DAL\obj\Debug\AppMGL.DAL.pdb
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\AppMGL.DAL.dll.config
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\AppMGL.DAL.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\AppMGL.DAL.pdb
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\EntityFramework.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.Owin.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.Owin.Security.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\Newtonsoft.Json.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\Owin.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Linq.Dynamic.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Net.Http.Formatting.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.Helpers.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.Http.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.Http.WebHost.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.Mvc.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.Razor.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.WebPages.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.WebPages.Razor.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\EntityFramework.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.Owin.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.Owin.Security.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\Newtonsoft.Json.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Net.Http.Formatting.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.Helpers.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.Http.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.Http.WebHost.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.Mvc.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.Razor.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.WebPages.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.WebPages.Razor.xml
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\obj\Debug\AppMGL.DAL.dll
+C:\MGL-Prod\MGL-Logistics\AppMGL.DAL\obj\Debug\AppMGL.DAL.pdb
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\AppMGL.DAL.dll.config
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\AppMGL.DAL.dll
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\AppMGL.DAL.pdb
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\EntityFramework.dll
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\EntityFramework.SqlServer.dll
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.Owin.Cors.dll
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.Owin.dll
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.Owin.Security.dll
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.Web.Infrastructure.dll
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\Newtonsoft.Json.dll
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\Owin.dll
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Linq.Dynamic.dll
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Net.Http.Formatting.dll
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.Cors.dll
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.Helpers.dll
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.Http.dll
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.Http.WebHost.dll
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.Mvc.dll
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.Razor.dll
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.WebPages.Deployment.dll
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.WebPages.dll
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.WebPages.Razor.dll
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\EntityFramework.xml
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\EntityFramework.SqlServer.xml
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\Newtonsoft.Json.xml
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Net.Http.Formatting.xml
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.Helpers.xml
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.Http.xml
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.Http.WebHost.xml
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.Mvc.xml
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.Razor.xml
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.WebPages.xml
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.WebPages.Deployment.xml
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\System.Web.WebPages.Razor.xml
+F:\New folder\MGL-Logistics\AppMGL.DAL\obj\Debug\AppMGL.DAL.csprojResolveAssemblyReference.cache
+F:\New folder\MGL-Logistics\AppMGL.DAL\obj\Debug\AppMGL.DAL.dll
+F:\New folder\MGL-Logistics\AppMGL.DAL\obj\Debug\AppMGL.DAL.pdb
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\AppMGL.DTO.dll
+F:\New folder\MGL-Logistics\AppMGL.DAL\bin\Debug\AppMGL.DTO.pdb

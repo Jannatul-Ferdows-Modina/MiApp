@@ -1,0 +1,44 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title">{{filterTitle}}</h3>
+</div>
+<div class="modal-body form-horizontal detail-container" when-ready="filterModalLoaded()" wait-for-interpolation="true">
+    <div class="form-group">
+        <label class="col-sm-3 control-label">Group Code</label>
+        <div class="col-sm-4">
+            <select name="GroupCodeOp" ng-model="GroupCodeOp" class="form-control">
+                <option value="contains">ContainingText</option>
+                <option value="startWith">StartingWith</option>
+            </select>
+        </div>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="GroupCodeF" ng-model="GroupCodeF" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-3 control-label">Group Name</label>
+        <div class="col-sm-4">
+            <select name="GroupNameOp" ng-model="GroupNameOp" class="form-control">
+                <option value="contains">ContainingText</option>
+                <option value="startWith">StartingWith</option>
+            </select>
+        </div>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="GroupNameF" ng-model="GroupNameF" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-3 control-label">Status</label>
+        <div class="col-sm-4">
+            <select name="StatusIdOp" ng-model="StatusIdOp" class="form-control">
+                <option value="containsIn">Containing</option>
+            </select>
+        </div>
+        <div class="col-sm-4">
+            <select class="form-control" name="StatusIdF" ng-model="StatusIdF" multi-select="true" option-data="lookups.statuses" option-value="statusId" option-text="statusCaption"></select>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-sm btn-primary" ng-click="performAction($event)" action="ok">OK</button>
+    <button class="btn btn-sm btn-warning" ng-click="performAction($event)" action="cancel">Cancel</button>
+</div>

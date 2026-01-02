@@ -1,0 +1,38 @@
+﻿<div class="modal-header">
+    <div class="pull-right">
+        <button type="button" class="btn btn-sm btn-info" ng-click="performAction($event, null)" action="filter"><i class="fa fa-search"></i> Filter</button>
+        <button type="button" class="btn btn-sm btn-info" ng-click="performAction($event, null)" action="refresh"><i class="fa fa-refresh"></i> Refresh</button>
+    </div>
+    <h3 class="modal-title">{{lookupTitle}}</h3>
+</div>
+<div class="modal-body form-horizontal">
+    <table ng-table="lookupTable" class="table table-striped table-bordered table-hover" template-pagination="customPager">
+        <thead>
+            <tr class="bg-thead">
+                <!--<th class="list-checkbox"><input type="checkbox" ng-click="selectAll()" ng-checked="getSelectedAll()" /></th>-->
+                <th class="text-left sortable" custom-sortable="DisplayName" table-name="lookupTable">User Name</th>
+                <th class="text-left sortable" custom-sortable="UserTypeCaption" table-name="lookupTable">User Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="entity in $data">
+                <!--<td>
+                    <input type="checkbox" ng-model="entity.selected" />
+                </td>-->
+                <td>
+                    <a ng-click="performAction($event, entity.userId)" action="select">{{entity.displayName}}</a>
+                </td>
+                <td>
+                    {{entity.userTypeCaption}}
+                </td>
+            </tr>
+            <tr ng-if="params.total() == 0">
+                <td class="text-center text-italic" colspan="2">No Record(s) Found</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-sm btn-primary" ng-click="performAction($event, null)" action="multiSelect" style="display: none">Select</button>
+    <button class="btn btn-sm btn-warning" ng-click="performAction($event, null)" action="close">Close</button>
+</div>

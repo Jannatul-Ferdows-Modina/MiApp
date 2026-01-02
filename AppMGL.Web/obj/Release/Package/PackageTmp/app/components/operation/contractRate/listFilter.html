@@ -1,0 +1,70 @@
+﻿<div class="box-container form-horizontal detail-container">
+    <div class="form-group">
+        <label class="col-sm-2 control-label text-left">Carrier</label>
+        <div class="col-sm-1">&nbsp;</div>
+        <label class="col-sm-2 control-label text-left">Contract No</label>
+        <div class="col-sm-1">&nbsp;</div>
+        <label class="col-sm-2 control-label text-left">Contract Valid From</label>
+        <div class="col-sm-1">&nbsp;</div>
+        <label class="col-sm-2 control-label text-left">Contract Valid To</label>
+
+
+    </div>
+    <div class="form-group">
+        <div class="col-sm-2">
+            <input type="text" class="form-control" name="CarrierF" ng-model="CarrierF" uib-typeahead="o.companyName for o in callTypeahead($viewValue, 'SIPLcontact', 'companyName', null,contactCategoryID,28)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="SIPLContact" lookup-field="companyName" entity-key-field="contactID" custom-clear="true" />
+        </div>
+        <div class="col-sm-1">&nbsp;</div>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" name="ContractNoF" ng-model="ContractNoF" uib-typeahead="o.contractNo for o in callTypeahead($viewValue, 'ContractRateVW', 'contractNo', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="ContractRateVW" lookup-field="contractNo" entity-key-field="contractID" custom-clear="true" />
+        </div>
+        <div class="col-sm-1">&nbsp;</div>
+        <div class="col-sm-2"  >
+            <input type="text" class="form-control" name="StartDateF" ng-model="StartDateF"  input-date="true" show-time="false" />
+        </div>        
+        <div class="col-sm-1">&nbsp;</div>
+        <div class="col-sm-2" >
+            <input type="text" class="form-control" name="EndDateF" ng-model="EndDateF"  input-date="true" show-time="false" />
+        </div>
+        <div class="pull-right">
+            <button class="btn btn-sm btn-primary" ng-click="performAction($event)" action="search">Search</button>
+        </div>
+        <div class="col-sm-1">&nbsp;</div>
+    </div>
+    
+    <div class="form-group">
+        <!--<div class="col-sm-8">
+            <ul class="list-inline">
+                <li style="color:#d43f3a">Validity has expired</li>
+                <li style="color:#4cae4c">Validity will expire within next 15 days</li>
+                <li style="color:#d58512">Validity will expire within 15-30 days</li>
+                <li style="color:#269abc">Valid on date</li>
+            </ul>
+        </div>-->
+        <div class="col-sm-2">
+            <ul>
+                <li style="color:#269abc;font-weight:bold;">Valid on date</li>
+            </ul>
+        </div>
+        <div class="col-sm-2">
+            <ul>
+                <li style="color:#d43f3a;font-weight:bold;">Validity has expired</li>                
+            </ul>
+        </div>
+        <div class="col-sm-4">
+            <ul>               
+                <li style="color:#4cae4c;font-weight:bold;">Validity will expire within next 15 days</li>                
+            </ul>
+        </div>
+        <div class="col-sm-4">
+            <ul>                
+                <li style="color:#d58512;font-weight:bold;">Validity will expire within 15-30 days</li>                
+            </ul>
+        </div>
+        <!--<div class="col-sm-4">
+            <span>&nbsp;</span>
+        </div>-->
+    </div>
+</div>
+
+

@@ -1,0 +1,147 @@
+﻿<ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+    <p>&nbsp;</p>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Container Type ID</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="ContactCategoryId" ng-model="entity.containerTypeId" disabled="disabled" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Container Type</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="Name" ng-model="entity.name" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Size</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="description" ng-model="entity.description" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">IsActive</label>
+        <div class="col-sm-4 checkbox-control">
+            <input type="checkbox" name="IsActive" ng-model="entity.isActive" ng-disabled="disabledUpdate" />
+        </div>
+    </div>
+
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">Unit</h3>
+            <div class="box-tools pull-right">
+                <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+            </div>
+        </div>
+        <div class="box-body">
+
+            <table ng-table="table" class="table table-condensed">
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            <label class="col-sm-8 control-label {{requiredUpdate ? 'required' : ''}}">Inside Length Inch</label>
+                            <input type="text" class="col-sm-4" ng-disabled="disabledUpdate" ng-required="requiredUpdate" name="Name" ng-model="entity.insideLengthInch" />
+                        </td>
+                        <td>
+                            
+                            <label class="col-sm-8 control-label {{requiredUpdate ? 'required' : ''}}">Inside Length Meter</label>
+                            <input type="text" class="col-sm-4" ng-disabled="disabledUpdate" ng-required="requiredUpdate" name="Name" ng-model="entity.insideLengthMeter" />
+                        </td>
+                        <td>
+                            
+                            <label class="col-sm-8 control-label {{requiredUpdate ? 'required' : ''}}">Inside Width Inch</label>
+                            <input type="text" class="col-sm-4"   ng-disabled="disabledUpdate" ng-required="requiredUpdate" name="Name" ng-model="entity.insideWidthInch" />
+
+                        </td>
+                        <td>
+                            
+                            <label class="col-sm-8 control-label {{requiredUpdate ? 'required' : ''}}">Inside Width Meter</label>
+                            <input type="text" class="col-sm-4" ng-disabled="disabledUpdate" ng-required="requiredUpdate" name="Name" ng-model="entity.insideWidthMeter" />
+                        </td>
+                       
+                        </tr>
+                    <tr>
+                        
+                        <td>
+                            
+                            <label class="col-sm-8 control-label {{requiredUpdate ? 'required' : ''}}">Inside Height Inch</label>
+                            <input type="text" class="col-sm-4" ng-disabled="disabledUpdate" ng-required="requiredUpdate" name="Name" ng-model="entity.insideHeightInch" />
+                        </td>
+                        <td>
+                            
+                            <label class="col-sm-8 control-label {{requiredUpdate ? 'required' : ''}}">Inside Height Meter</label>
+                            <input type="text" class="col-sm-4"   ng-disabled="disabledUpdate" ng-required="requiredUpdate" name="Name" ng-model="entity.insideHeightMeter" />
+                        </td>
+                        <td>
+                           
+                            <label class="col-sm-8 control-label {{requiredUpdate ? 'required' : ''}}"> Door Height Inch</label>
+                            <input type="text" class="col-sm-4" ng-disabled="disabledUpdate" ng-required="requiredUpdate" name="Name" ng-model="entity.doorHeightInch" />
+                        </td>
+                        <td>
+                            
+                            <label class="col-sm-8 control-label {{requiredUpdate ? 'required' : ''}}">Door Height Meter</label>
+                            <input type="text" class="col-sm-4" ng-disabled="disabledUpdate" ng-required="requiredUpdate" name="Name" ng-model="entity.doorHeightM" />
+                        </td>
+                       
+                    </tr>
+
+                    <tr>
+                       
+                        <td>
+                            
+                            <label class="col-sm-8 control-label {{requiredUpdate ? 'required' : ''}}">Container Capacitycft</label>
+                            <input type="text" class="col-sm-4" ng-disabled="disabledUpdate" ng-required="requiredUpdate" name="Name" ng-model="entity.containerCapacitycft" />
+                        </td>
+                        <td>
+                           
+                            <label class="col-sm-8 control-label {{requiredUpdate ? 'required' : ''}}">Container CapacityCM</label>
+                            <input type="text" class="col-sm-4"  ng-disabled="disabledUpdate" ng-required="requiredUpdate" name="Name" ng-model="entity.containerCapacityCM" />
+                        </td>
+                        <td>
+                            
+                            <label class="col-sm-8 control-label {{requiredUpdate ? 'required' : ''}}">Tare Weight Lbs</label>
+                            <input type="text" class="col-sm-4"  ng-disabled="disabledUpdate" ng-required="requiredUpdate" name="Name" ng-model="entity.tareWeightLbs" />
+                        </td>
+                        <td>
+                            
+                            <label class="col-sm-8 control-label {{requiredUpdate ? 'required' : ''}}">Tare Weight KGS</label>
+                            <input type="text" class="col-sm-4" ng-disabled="disabledUpdate" ng-required="requiredUpdate" name="Name" ng-model="entity.tareWeightKGS" />
+                        </td>
+                       
+                    </tr>
+
+                    <tr>
+                        
+                        <td>
+                            
+                            <label class="col-sm-8 control-label {{requiredUpdate ? 'required' : ''}}">Maxi Cargo Lbs</label>
+                            <input type="text" class="col-sm-4" ng-disabled="disabledUpdate" ng-required="requiredUpdate" name="Name" ng-model="entity.maxiCargoLbs" />
+                        </td>
+                        <td>
+                            
+                            <label class="col-sm-8 control-label {{requiredUpdate ? 'required' : ''}}">Maxi Cargo KGS</label>
+                            <input type="text" class="col-sm-4" ng-disabled="disabledUpdate" ng-required="requiredUpdate" name="Name" ng-model="entity.maxiCargoKGS" />
+                        </td>
+                        <td>
+                            <label class="col-sm-8 control-label {{requiredUpdate ? 'required' : ''}}">Door Width Inch</label>
+                            <input type="text" class="col-sm-4"  ng-disabled="disabledUpdate" ng-required="requiredUpdate" name="Name" ng-model="entity.doorwidthinch" /></td>
+                        <td>
+                            
+                            <label class="col-sm-8 control-label {{requiredUpdate ? 'required' : ''}}">Door Width Meter</label>
+                            <input type="text" class="col-sm-4"  ng-disabled="disabledUpdate" ng-required="requiredUpdate" name="Name" ng-model="entity.doorwidthM" />
+                        </td>
+                         
+                    </tr>
+
+</tbody>
+</table>
+          
+                 
+        </div>
+
+
+    </div>
+
+</ng-form>

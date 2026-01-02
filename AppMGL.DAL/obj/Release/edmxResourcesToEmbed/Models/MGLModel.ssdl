@@ -1,0 +1,2059 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AppMGL.DAL.Models.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AspNetClient">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Secret" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ApplicationType" Type="int" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="RefreshTokenLifeTime" Type="int" Nullable="false" />
+    <Property Name="AllowedOrigin" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="AspNetRefreshToken">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Subject" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ClientId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IssuedUtc" Type="datetime" Nullable="false" />
+    <Property Name="ExpiresUtc" Type="datetime" Nullable="false" />
+    <Property Name="ProtectedTicket" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DashboardData_Job">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="I1" Type="int" />
+    <Property Name="I2" Type="int" />
+    <Property Name="I3" Type="int" />
+    <Property Name="UI1" Type="int" />
+    <Property Name="Q1" Type="int" />
+    <Property Name="Q2" Type="int" />
+    <Property Name="Q3" Type="int" />
+    <Property Name="Q4" Type="int" />
+    <Property Name="Q5" Type="int" />
+    <Property Name="UQ1" Type="int" />
+    <Property Name="UQ2" Type="int" />
+    <Property Name="UQ3" Type="int" />
+    <Property Name="B1" Type="int" />
+    <Property Name="B2" Type="int" />
+    <Property Name="B3" Type="int" />
+    <Property Name="B4" Type="int" />
+    <Property Name="B5" Type="int" />
+    <Property Name="B6" Type="int" />
+    <Property Name="B7" Type="int" />
+    <Property Name="UB1" Type="int" />
+    <Property Name="UB2" Type="int" />
+    <Property Name="UB3" Type="int" />
+    <Property Name="UB4" Type="int" />
+    <Property Name="T1" Type="int" />
+    <Property Name="T2" Type="int" />
+    <Property Name="T3" Type="int" />
+    <Property Name="D1" Type="int" />
+    <Property Name="UD1" Type="int" />
+    <Property Name="TA" Type="int" />
+    <Property Name="ADT" Type="int" />
+    <Property Name="LastUpdated" Type="datetime" />
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SitId" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'MIAMI.dbo.LG_ACCT_CATEGORY' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="LG_ACCT_CATEGORY">
+    <Key>
+      <PropertyRef Name="AcyID" />
+    </Key>
+    <Property Name="AcyID" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AcyNAME" Type="varchar" MaxLength="100" />
+    <Property Name="AcyCreatedTs" Type="datetime" Nullable="false" />
+    <Property Name="Acy_UpdatedTs" Type="datetime" />
+    <Property Name="Acy_CreatedBy" Type="numeric" Precision="20" Scale="0" />
+    <Property Name="Acy_UpdatedBy" Type="numeric" Precision="20" Scale="0" />
+  </EntityType>
+  <EntityType Name="LG_ACTION">
+    <Key>
+      <PropertyRef Name="ActId" />
+    </Key>
+    <Property Name="ActId" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+    <Property Name="ActName" Type="varchar" MaxLength="100" />
+    <Property Name="ActCaption" Type="varchar" MaxLength="100" />
+    <Property Name="ActCreatedTs" Type="datetime" Nullable="false" />
+    <Property Name="ActUpdatedTs" Type="datetime" />
+    <Property Name="ActCreatedBy" Type="numeric" Precision="20" Scale="0" />
+    <Property Name="ActUpdatedBy" Type="numeric" Precision="20" Scale="0" />
+  </EntityType>
+  <EntityType Name="LG_CONTACT">
+    <Key>
+      <PropertyRef Name="CntId" />
+    </Key>
+    <Property Name="CntId" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DptId" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+    <Property Name="TtlId" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+    <Property Name="CntType" Type="numeric" Precision="1" Scale="0" Nullable="false" />
+    <Property Name="CntFirstName" Type="varchar" MaxLength="50" />
+    <Property Name="CntMiddleName" Type="varchar" MaxLength="50" />
+    <Property Name="CntLastName" Type="varchar" MaxLength="50" />
+    <Property Name="CntEmail" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CntStatus" Type="bit" />
+    <Property Name="CntReason" Type="varchar" MaxLength="500" />
+    <Property Name="CntCreatedTs" Type="datetime" Nullable="false" />
+    <Property Name="CntUpdatedTs" Type="datetime" />
+    <Property Name="CwtId" Type="numeric" Precision="20" Scale="0" />
+    <Property Name="CntCreatedBy" Type="numeric" Precision="20" Scale="0" />
+    <Property Name="CntUpdatedBy" Type="numeric" Precision="20" Scale="0" />
+    <Property Name="CntImageName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="LG_CONTACT_WORK_TYPE">
+    <Key>
+      <PropertyRef Name="CwtId" />
+    </Key>
+    <Property Name="CwtId" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CwtName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CwtStatus" Type="bit" Nullable="false" />
+    <Property Name="CwtCreatedTs" Type="datetime" Nullable="false" />
+    <Property Name="CwtCreatedBy" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+    <Property Name="CwtUpdatedTs" Type="datetime" />
+    <Property Name="CwtUpdatedBy" Type="numeric" Precision="20" Scale="0" />
+  </EntityType>
+  <EntityType Name="LG_COUNTRY">
+    <Key>
+      <PropertyRef Name="CryId" />
+    </Key>
+    <Property Name="CryId" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CryName" Type="varchar" MaxLength="200" />
+    <Property Name="CryAbbrev" Type="varchar" MaxLength="20" />
+    <Property Name="CryStatus" Type="bit" />
+    <Property Name="CryCreatedTs" Type="datetime" Nullable="false" />
+    <Property Name="CryUpdatedTs" Type="datetime" />
+    <Property Name="CryPhoneCode" Type="numeric" Precision="20" Scale="0" />
+    <Property Name="CryCreatedBy" Type="numeric" Precision="20" Scale="0" />
+    <Property Name="CryUpdatedBy" Type="numeric" Precision="20" Scale="0" />
+  </EntityType>
+  <EntityType Name="LG_DEPARTMENT">
+    <Key>
+      <PropertyRef Name="DptId" />
+    </Key>
+    <Property Name="DptId" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+    <Property Name="DptName" Type="varchar" MaxLength="200" />
+    <Property Name="DptStatus" Type="bit" />
+    <Property Name="DptCreatedTs" Type="datetime" Nullable="false" />
+    <Property Name="DptUpdatedTs" Type="datetime" />
+    <Property Name="DptCreatedBy" Type="numeric" Precision="20" Scale="0" />
+    <Property Name="DptUpdatedBy" Type="numeric" Precision="20" Scale="0" />
+  </EntityType>
+  <EntityType Name="LG_LOCATION">
+    <Key>
+      <PropertyRef Name="LcnId" />
+    </Key>
+    <Property Name="LcnId" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CntId" Type="numeric" Precision="20" Scale="0" />
+    <Property Name="TmzId" Type="numeric" Precision="20" Scale="0" />
+    <Property Name="CcyId" Type="numeric" Precision="3" Scale="0" />
+    <Property Name="LcnInstitutionName" Type="varchar" MaxLength="300" />
+    <Property Name="LcnContactRole" Type="varchar" MaxLength="200" />
+    <Property Name="LcnAddress1" Type="varchar" MaxLength="30" />
+    <Property Name="LcnAddress2" Type="varchar" MaxLength="30" />
+    <Property Name="LcnAddress3" Type="varchar" MaxLength="30" />
+    <Property Name="LcnCity" Type="varchar" MaxLength="50" />
+    <Property Name="LcnPostalCode" Type="varchar" MaxLength="20" />
+    <Property Name="LcnForiegnProvince" Type="varchar" MaxLength="100" />
+    <Property Name="UstId" Type="numeric" Precision="20" Scale="0" />
+    <Property Name="CryId" Type="numeric" Precision="20" Scale="0" />
+    <Property Name="LcnLatitute" Type="varchar" MaxLength="20" />
+    <Property Name="LcnLongitude" Type="varchar" MaxLength="20" />
+    <Property Name="LcnPhone" Type="varchar" MaxLength="15" />
+    <Property Name="LcnPhoneExt" Type="varchar" MaxLength="10" />
+    <Property Name="LcnFax" Type="varchar" MaxLength="15" />
+    <Property Name="LcnMobilePhone" Type="varchar" MaxLength="15" />
+    <Property Name="LcnStatus" Type="bit" />
+    <Property Name="LcnReason" Type="varchar" MaxLength="200" />
+    <Property Name="LcnCreatedTs" Type="datetime" Nullable="false" />
+    <Property Name="LcnUpdatedTs" Type="datetime" />
+    <Property Name="LcnCreatedBy" Type="numeric" Precision="20" Scale="0" />
+    <Property Name="LcnUpdatedBy" Type="numeric" Precision="20" Scale="0" />
+  </EntityType>
+  <EntityType Name="LG_LOGIN_HISTORY">
+    <Key>
+      <PropertyRef Name="LhyId" />
+    </Key>
+    <Property Name="LhyId" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UsrId" Type="numeric" Precision="20" Scale="0" />
+    <Property Name="LhyLoginName" Type="varchar" MaxLength="100" />
+    <Property Name="lhyLoginSuccess" Type="bit" />
+    <Property Name="lhyLoginComment" Type="varchar" MaxLength="1000" />
+    <Property Name="lhyCreatedTs" Type="datetime" />
+  </EntityType>
+  <EntityType Name="LG_MAM_ROL_MAP">
+    <Key>
+      <PropertyRef Name="MrmId" />
+    </Key>
+    <Property Name="MrmId" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RleId" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+    <Property Name="ModId" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+    <Property Name="ActId" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+    <Property Name="MamIsEnable" Type="bit" />
+    <Property Name="MrmCreatedTs" Type="datetime" Nullable="false" />
+    <Property Name="MrmUpdatedTs" Type="datetime" />
+    <Property Name="MrmCreatedBy" Type="numeric" Precision="20" Scale="0" />
+    <Property Name="MrmUpdatedBy" Type="numeric" Precision="20" Scale="0" />
+  </EntityType>
+  <EntityType Name="LG_MODULE">
+    <Key>
+      <PropertyRef Name="ModId" />
+    </Key>
+    <Property Name="ModId" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+    <Property Name="MteId" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+    <Property Name="ModName" Type="varchar" MaxLength="200" />
+    <Property Name="ModCaption" Type="varchar" MaxLength="200" />
+    <Property Name="ModCreatedTs" Type="datetime" Nullable="false" />
+    <Property Name="ModUpdatedTs" Type="datetime" />
+    <Property Name="ModCreatedBy" Type="numeric" Precision="20" Scale="0" />
+    <Property Name="ModUpdatedBy" Type="numeric" Precision="20" Scale="0" />
+  </EntityType>
+  <EntityType Name="LG_MODULE_TYPE">
+    <Key>
+      <PropertyRef Name="MteId" />
+    </Key>
+    <Property Name="MteId" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+    <Property Name="MteName" Type="varchar" MaxLength="200" />
+    <Property Name="MteCaption" Type="varchar" MaxLength="300" />
+    <Property Name="MteCreatedTs" Type="datetime" Nullable="false" />
+    <Property Name="MteUpdatedTs" Type="datetime" />
+    <Property Name="MteCreatedBy" Type="numeric" Precision="20" Scale="0" />
+    <Property Name="MteUpdatedBy" Type="numeric" Precision="20" Scale="0" />
+  </EntityType>
+  <EntityType Name="LG_ROLE">
+    <Key>
+      <PropertyRef Name="RleId" />
+    </Key>
+    <Property Name="RleId" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+    <Property Name="RleName" Type="varchar" MaxLength="300" />
+    <Property Name="RleStatus" Type="bit" />
+    <Property Name="RleCreatedTs" Type="datetime" Nullable="false" />
+    <Property Name="RleUpdatedTs" Type="datetime" />
+    <Property Name="RleDisplay" Type="bit" Nullable="false" />
+    <Property Name="rleType" Type="varchar" MaxLength="100" />
+    <Property Name="RleCreatedBy" Type="numeric" Precision="20" Scale="0" />
+    <Property Name="RleUpdatedBy" Type="numeric" Precision="20" Scale="0" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'MIAMI.dbo.LG_SHIPMENT_DOCS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="LG_SHIPMENT_DOCS">
+    <Key>
+      <PropertyRef Name="SdId" />
+    </Key>
+    <Property Name="SdId" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DocumentCommonID" Type="int" Nullable="false" />
+    <Property Name="SdDocName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="sdDocType" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SdCreatedTs" Type="datetime" Nullable="false" />
+    <Property Name="SdCreatedBy" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+    <Property Name="SdUpdatedTs" Type="datetime" />
+    <Property Name="SdUpdatedBy" Type="numeric" Precision="20" Scale="0" />
+    <Property Name="IsSysGenerated" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LG_SITE">
+    <Key>
+      <PropertyRef Name="SitId" />
+    </Key>
+    <Property Name="SitId" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LcnId" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+    <Property Name="SitType" Type="numeric" Precision="1" Scale="0" Nullable="false" />
+    <Property Name="SitName" Type="varchar" MaxLength="300" />
+    <Property Name="SitCode" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="SitStatus" Type="bit" />
+    <Property Name="SitReason" Type="varchar" MaxLength="500" />
+    <Property Name="SitCreatedTs" Type="datetime" Nullable="false" />
+    <Property Name="SitUpdatedTs" Type="datetime" />
+    <Property Name="SitCreatedBy" Type="numeric" Precision="20" Scale="0" />
+    <Property Name="SitUpdatedBy" Type="numeric" Precision="20" Scale="0" />
+  </EntityType>
+  <EntityType Name="LG_SITE_CONTACT_ROLE">
+    <Key>
+      <PropertyRef Name="ScrId" />
+    </Key>
+    <Property Name="ScrId" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SitId" Type="numeric" Precision="20" Scale="0" />
+    <Property Name="CntId" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+    <Property Name="RleId" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+    <Property Name="ScrCreatedTs" Type="datetime" Nullable="false" />
+    <Property Name="ScrUpdatedTs" Type="datetime" />
+    <Property Name="ScrCreatedBy" Type="numeric" Precision="20" Scale="0" />
+    <Property Name="ScrUpdatedBy" Type="numeric" Precision="20" Scale="0" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'MIAMI.dbo.LG_SP_FEE_CATEGORY' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="LG_SP_FEE_CATEGORY">
+    <Key>
+      <PropertyRef Name="SfcID" />
+    </Key>
+    <Property Name="SfcID" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SfcName" Type="varchar" MaxLength="100" />
+    <Property Name="SfcCode" Type="varchar" MaxLength="100" />
+    <Property Name="SfcCreatedTs" Type="datetime" Nullable="false" />
+    <Property Name="Sfc_UpdatedTs" Type="datetime" />
+    <Property Name="Sfc_CreatedBy" Type="numeric" Precision="20" Scale="0" />
+    <Property Name="Sfc_UpdatedBy" Type="numeric" Precision="20" Scale="0" />
+    <Property Name="SfcPercentage" Type="decimal" Precision="5" Scale="2" />
+  </EntityType>
+  <EntityType Name="LG_TIMEZONE">
+    <Key>
+      <PropertyRef Name="TmzId" />
+    </Key>
+    <Property Name="TmzId" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TmzName" Type="varchar" MaxLength="100" />
+    <Property Name="TmzOffset" Type="varchar" MaxLength="10" />
+    <Property Name="TmzAbbrev" Type="varchar" MaxLength="30" />
+    <Property Name="TmzLocation" Type="varchar" MaxLength="200" />
+    <Property Name="TmzStatus" Type="bit" />
+    <Property Name="TmzCreatedTs" Type="datetime" Nullable="false" />
+    <Property Name="TmzUpdatedTs" Type="datetime" />
+    <Property Name="TmzCreatedBy" Type="numeric" Precision="20" Scale="0" />
+    <Property Name="TmzUpdatedBy" Type="numeric" Precision="20" Scale="0" />
+  </EntityType>
+  <EntityType Name="LG_TITLE">
+    <Key>
+      <PropertyRef Name="TtlId" />
+    </Key>
+    <Property Name="TtlId" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TtlName" Type="varchar" MaxLength="50" />
+    <Property Name="TtlStatus" Type="bit" />
+    <Property Name="TtlCreatedTs" Type="datetime" Nullable="false" />
+    <Property Name="TtlUpdatedTs" Type="datetime" />
+    <Property Name="TtlCreatedBy" Type="numeric" Precision="20" Scale="0" />
+    <Property Name="TtlUpdatedBy" Type="numeric" Precision="20" Scale="0" />
+  </EntityType>
+  <EntityType Name="LG_USER">
+    <Key>
+      <PropertyRef Name="UsrId" />
+    </Key>
+    <Property Name="UsrId" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CntId" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+    <Property Name="AspNetUserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="UsrPwd" Type="varchar" MaxLength="50" />
+    <Property Name="UsrTempPwd" Type="varchar" MaxLength="50" />
+    <Property Name="UsrPwdCreatedTs" Type="datetime" Nullable="false" />
+    <Property Name="UsrValidFrom" Type="datetime" />
+    <Property Name="UsrValidTo" Type="datetime" />
+    <Property Name="UsrFailedCount" Type="numeric" Precision="5" Scale="0" />
+    <Property Name="UsrIsLocked" Type="numeric" Precision="5" Scale="0" />
+    <Property Name="UsrLockedComments" Type="text" />
+    <Property Name="UsrPwdNeverExpire" Type="numeric" Precision="5" Scale="0" />
+    <Property Name="UsrLastLoginTs" Type="datetime" />
+    <Property Name="UsrIsPowerUser" Type="bit" />
+    <Property Name="UsrCreatedTs" Type="datetime" Nullable="false" />
+    <Property Name="UsrUpdatedTs" Type="datetime" />
+    <Property Name="UsrCreatedBy" Type="numeric" Precision="20" Scale="0" />
+    <Property Name="UsrUpdatedBy" Type="numeric" Precision="20" Scale="0" />
+    <Property Name="UsrSmtpUsername" Type="varchar" MaxLength="100" />
+    <Property Name="UsrSmtpPassword" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="LG_USSTATE">
+    <Key>
+      <PropertyRef Name="UstId" />
+    </Key>
+    <Property Name="UstId" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UstName" Type="varchar" MaxLength="200" />
+    <Property Name="UstAbbrev" Type="varchar" MaxLength="10" />
+    <Property Name="UstStatus" Type="bit" />
+    <Property Name="UstCreatedTs" Type="datetime" Nullable="false" />
+    <Property Name="UstUpdatedTs" Type="datetime" />
+    <Property Name="UstCreatedBy" Type="numeric" Precision="20" Scale="0" />
+    <Property Name="UstUpdatedBy" Type="numeric" Precision="20" Scale="0" />
+  </EntityType>
+  <EntityType Name="SIPL_BookingStatus">
+    <Key>
+      <PropertyRef Name="StatusID" />
+    </Key>
+    <Property Name="StatusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="100" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="SIPL_City">
+    <Key>
+      <PropertyRef Name="CityId" />
+    </Key>
+    <Property Name="CityId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fkStateId" Type="int" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Flag" Type="bit" />
+  </EntityType>
+  <EntityType Name="SIPL_Commodity">
+    <Key>
+      <PropertyRef Name="CommodityId" />
+    </Key>
+    <Property Name="CommodityId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="255" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Flag" Type="bit" />
+    <Property Name="CommodityTypeID" Type="int" />
+  </EntityType>
+  <EntityType Name="SIPL_CommodityType">
+    <Key>
+      <PropertyRef Name="CommodityTypeID" />
+    </Key>
+    <Property Name="CommodityTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CommodityType" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SIPL_CompanyGradation">
+    <Key>
+      <PropertyRef Name="GradationID" />
+    </Key>
+    <Property Name="GradationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompanyGradation" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Remark" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="date" />
+    <Property Name="ModifiedOn" Type="date" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="SIPL_Contact">
+    <Key>
+      <PropertyRef Name="ContactID" />
+    </Key>
+    <Property Name="ContactID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompanyName" Type="varchar(max)" />
+    <Property Name="TelNo" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar(max)" />
+    <Property Name="MobNo" Type="varchar" MaxLength="50" />
+    <Property Name="Fax" Type="varchar" MaxLength="50" />
+    <Property Name="WebSite" Type="varchar" MaxLength="50" />
+    <Property Name="CityID" Type="int" />
+    <Property Name="ContactPerson" Type="varchar" MaxLength="100" />
+    <Property Name="TaxID" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="ZipCode" Type="varchar" MaxLength="15" />
+    <Property Name="Remarks" Type="varchar(max)" />
+    <Property Name="StateID" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Flag" Type="bit" />
+    <Property Name="AccountDetail" Type="nvarchar" MaxLength="50" />
+    <Property Name="AccountNo" Type="nvarchar" MaxLength="100" />
+    <Property Name="Attachment" Type="nvarchar(max)" />
+    <Property Name="CompanyGradation" Type="nvarchar(max)" />
+    <Property Name="CustomerCode" Type="nvarchar" MaxLength="2000" Nullable="false" />
+    <Property Name="ContactCategoryID" Type="nvarchar" MaxLength="100" />
+    <Property Name="RepresentativeID" Type="int" />
+    <Property Name="ContinentId" Type="int" />
+    <Property Name="CountryId" Type="int" />
+    <Property Name="BillTo" Type="int" />
+    <Property Name="BillToCompanyName" Type="varchar" MaxLength="100" />
+    <Property Name="BillToAddress" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="SIPL_ContactBranch">
+    <Key>
+      <PropertyRef Name="ContactBranchID" />
+    </Key>
+    <Property Name="ContactBranchID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContactID" Type="int" />
+    <Property Name="BranchName" Type="varchar" MaxLength="50" />
+    <Property Name="TelNo" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="500" />
+    <Property Name="CellNo" Type="varchar" MaxLength="50" />
+    <Property Name="Fax" Type="varchar" MaxLength="50" />
+    <Property Name="TaxID" Type="varchar" MaxLength="50" />
+    <Property Name="StateID" Type="int" Nullable="false" />
+    <Property Name="City" Type="int" />
+    <Property Name="ContactPerson" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="ZipCode" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="SIPL_ContactCategory">
+    <Key>
+      <PropertyRef Name="ContactCategoryId" />
+    </Key>
+    <Property Name="ContactCategoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Flag" Type="bit" />
+    <Property Name="IsVendor" Type="bit" />
+  </EntityType>
+  <EntityType Name="SIPL_ContainerType">
+    <Key>
+      <PropertyRef Name="ContainerTypeId" />
+    </Key>
+    <Property Name="ContainerTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="255" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Flag" Type="bit" />
+    <Property Name="InsideLengthInch" Type="float" />
+    <Property Name="InsideLengthMeter" Type="float" />
+    <Property Name="InsideWidthInch" Type="float" />
+    <Property Name="InsideWidthMeter" Type="float" />
+    <Property Name="InsideHeightInch" Type="float" />
+    <Property Name="InsideHeightMeter" Type="float" />
+    <Property Name="DoorHeightinch" Type="float" />
+    <Property Name="DoorHeightM" Type="float" />
+    <Property Name="ContainerCapacitycft" Type="float" />
+    <Property Name="ContainerCapacityCM" Type="float" />
+    <Property Name="TareWeightLbs" Type="float" />
+    <Property Name="TareWeightKGS" Type="float" />
+    <Property Name="MaxiCargoLbs" Type="float" />
+    <Property Name="MaxiCargoKGS" Type="float" />
+    <Property Name="Doorwidthinch" Type="float" />
+    <Property Name="DoorwidthM" Type="float" />
+    <Property Name="CCID" Type="numeric" Precision="20" Scale="0" />
+  </EntityType>
+  <EntityType Name="SIPL_Continent">
+    <Key>
+      <PropertyRef Name="ContinentId" />
+    </Key>
+    <Property Name="ContinentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="250" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Flag" Type="bit" />
+  </EntityType>
+  <EntityType Name="SIPL_Contract">
+    <Key>
+      <PropertyRef Name="ContractID" />
+    </Key>
+    <Property Name="ContractID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContractNo" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="StartDate" Type="datetime" Nullable="false" />
+    <Property Name="EndDate" Type="datetime" Nullable="false" />
+    <Property Name="IsValid" Type="int" Nullable="false" />
+    <Property Name="CarrierID" Type="int" Nullable="false" />
+    <Property Name="ContractDate" Type="datetime" Nullable="false" />
+    <Property Name="MQCTYPE" Type="int" Nullable="false" />
+    <Property Name="MQC" Type="float" Nullable="false" />
+    <Property Name="ContractType" Type="int" />
+    <Property Name="fkOriginID" Type="int" />
+    <Property Name="fkDestinationID" Type="int" />
+    <Property Name="Remark" Type="varchar" MaxLength="150" />
+    <Property Name="Attachments" Type="varchar(max)" />
+    <Property Name="TradeLane" Type="varchar" MaxLength="100" />
+    <Property Name="SCTermNo" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="SIPL_ContractRate">
+    <Key>
+      <PropertyRef Name="ContractRateID" />
+    </Key>
+    <Property Name="ContractRateID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fkContractID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="RefID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Ref" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Rate" Type="float" Nullable="false" />
+    <Property Name="StartDate" Type="datetime" Nullable="false" />
+    <Property Name="EndDate" Type="datetime" Nullable="false" />
+    <Property Name="CommodityId" Type="int" Nullable="false" />
+    <Property Name="RouteId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SIPL_Country">
+    <Key>
+      <PropertyRef Name="CountryId" />
+    </Key>
+    <Property Name="CountryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="ContinentID" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Flag" Type="bit" />
+  </EntityType>
+  <EntityType Name="SIPL_Department">
+    <Key>
+      <PropertyRef Name="DepartmentID" />
+    </Key>
+    <Property Name="DepartmentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Department" Type="varchar" MaxLength="100" />
+    <Property Name="fkTransportModeID" Type="int" />
+    <Property Name="fkOperationTypeID" Type="int" />
+    <Property Name="Prefix" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="LastEnquiryNo" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="EnquiryControlNo" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="DisplayOrder" Type="int" />
+    <Property Name="DeptCode" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SIPL_DocumentCommon">
+    <Key>
+      <PropertyRef Name="DocumentCommonID" />
+    </Key>
+    <Property Name="DocumentCommonID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FileNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CustomerID" Type="int" />
+    <Property Name="ExporterID" Type="int" />
+    <Property Name="DocumentNumber" Type="varchar" MaxLength="50" />
+    <Property Name="BLNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Model" Type="varchar" MaxLength="150" />
+    <Property Name="FTZNumber" Type="varchar" MaxLength="50" />
+    <Property Name="ExportRef" Type="varchar" MaxLength="50" />
+    <Property Name="ConsignedTo" Type="int" />
+    <Property Name="FwdAgent" Type="int" />
+    <Property Name="ConsigneeID" Type="int" />
+    <Property Name="ExportingCarrier" Type="varchar" MaxLength="50" />
+    <Property Name="ExportInstruction" Type="varchar(max)" />
+    <Property Name="CarriageBy" Type="varchar" MaxLength="50" />
+    <Property Name="PlaceOfReceiptID" Type="varchar" MaxLength="1000" />
+    <Property Name="LandingPortID" Type="int" />
+    <Property Name="LoadingPert" Type="varchar" MaxLength="50" />
+    <Property Name="ForeignPortID" Type="int" />
+    <Property Name="Transshipment" Type="varchar" MaxLength="50" />
+    <Property Name="Voyage" Type="varchar" MaxLength="50" />
+    <Property Name="MoveType" Type="varchar" MaxLength="50" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsExport" Type="int" />
+    <Property Name="IsAir" Type="int" />
+    <Property Name="Originport" Type="varchar" MaxLength="100" />
+    <Property Name="DestinationPort" Type="varchar" MaxLength="100" />
+    <Property Name="BookingStatus" Type="bit" />
+    <Property Name="CutOffDate" Type="datetime" />
+    <Property Name="CNTNO" Type="varchar" MaxLength="50" />
+    <Property Name="VIN" Type="varchar" MaxLength="50" />
+    <Property Name="GALBookingType" Type="varchar" MaxLength="50" />
+    <Property Name="BookedBy" Type="varchar" MaxLength="50" />
+    <Property Name="BookingReceivedBy" Type="int" />
+    <Property Name="BookingDate" Type="datetime" />
+    <Property Name="ShipperID" Type="int" />
+    <Property Name="PickupCategory" Type="varchar" MaxLength="50" />
+    <Property Name="PickupCategoryName" Type="varchar" MaxLength="50" />
+    <Property Name="Vessel" Type="varchar" MaxLength="50" />
+    <Property Name="ETSailing" Type="varchar" MaxLength="50" />
+    <Property Name="ETA" Type="datetime" />
+    <Property Name="ETS" Type="datetime" />
+    <Property Name="ERD" Type="datetime" />
+    <Property Name="ExpecteddateOfMove" Type="datetime" />
+    <Property Name="CarrierBooking" Type="varchar" MaxLength="50" />
+    <Property Name="Remarks" Type="varchar(max)" />
+    <Property Name="OriginCountry" Type="varchar" MaxLength="100" />
+    <Property Name="DestinationCountry" Type="varchar" MaxLength="100" />
+    <Property Name="DeliverdBy" Type="varchar" MaxLength="100" />
+    <Property Name="CheckedBy" Type="varchar" MaxLength="100" />
+    <Property Name="IssuedOn" Type="datetime" />
+    <Property Name="ArrivalDate" Type="datetime" />
+    <Property Name="DepartureDate" Type="datetime" />
+    <Property Name="BillOfLadingNo" Type="varchar" MaxLength="100" />
+    <Property Name="PlaceOfAcceptance" Type="varchar" MaxLength="100" />
+    <Property Name="QuotationChargesID" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="Class" Type="varchar" MaxLength="30" />
+    <Property Name="UNNo" Type="varchar" MaxLength="30" />
+    <Property Name="PackingType" Type="varchar" MaxLength="50" />
+    <Property Name="HazRemarks" Type="varchar" MaxLength="500" />
+    <Property Name="IsHaz" Type="bit" />
+    <Property Name="Hazweight" Type="float" />
+    <Property Name="HazVolume" Type="float" />
+    <Property Name="ETAFinalplaceid" Type="int" />
+    <Property Name="Finalplaceid" Type="int" />
+    <Property Name="IsContractBooking" Type="bit" />
+    <Property Name="BookingCategory" Type="int" />
+    <Property Name="OriginDoor" Type="varchar" MaxLength="3000" />
+    <Property Name="DestinationDoor" Type="varchar" MaxLength="3000" />
+    <Property Name="PortcutoffDate" Type="datetime" />
+    <Property Name="EarliestPickUpDate" Type="datetime" />
+    <Property Name="GALBookingStatusID" Type="int" />
+    <Property Name="BookingRequestID" Type="int" />
+    <Property Name="CommunicationRecdDate" Type="datetime" />
+    <Property Name="ModeID" Type="int" />
+    <Property Name="SpaceBookingRemarks" Type="varchar" MaxLength="5000" />
+    <Property Name="AttachFile" Type="varchar" MaxLength="2000" />
+    <Property Name="RevisedID" Type="varchar" MaxLength="50" />
+    <Property Name="ContractBookingID" Type="int" />
+    <Property Name="AttachFile1" Type="varchar(max)" />
+    <Property Name="AttachFile2" Type="varchar(max)" />
+    <Property Name="ShipperConfirmDate" Type="datetime" />
+    <Property Name="ShipperConfirmMode" Type="int" />
+    <Property Name="ShipperRepName" Type="varchar" MaxLength="50" />
+    <Property Name="ShipperAttachFile" Type="varchar(max)" />
+    <Property Name="ToShipperEmail" Type="varchar" MaxLength="100" />
+    <Property Name="OriginRailRamp" Type="nvarchar" MaxLength="100" />
+    <Property Name="RampCutOff" Type="datetime" />
+    <Property Name="DestinationTerminal" Type="varchar" MaxLength="500" />
+    <Property Name="AutoCutOff" Type="datetime" />
+    <Property Name="ReqdSailingRemarks" Type="varchar(max)" />
+    <Property Name="OriginDoorAddress" Type="varchar(max)" />
+    <Property Name="OriginAddId" Type="int" />
+    <Property Name="InvoiceStatusID" Type="varchar" MaxLength="20" />
+    <Property Name="DestinationAddId" Type="int" />
+    <Property Name="HBL" Type="varchar(max)" />
+    <Property Name="MBL" Type="varchar(max)" />
+    <Property Name="DR" Type="varchar(max)" />
+    <Property Name="CD" Type="varchar(max)" />
+    <Property Name="Shipper" Type="varchar(max)" />
+    <Property Name="Others" Type="varchar(max)" />
+    <Property Name="Booking" Type="varchar(max)" />
+    <Property Name="PONO" Type="varchar" MaxLength="50" />
+    <Property Name="ShipperCustomerName" Type="varchar" MaxLength="50" />
+    <Property Name="SitId" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+    <Property Name="BookingReqtRecivedDate" Type="datetime" />
+    <Property Name="CustReqCutOffDate" Type="datetime" />
+    <Property Name="CustReqSailingDate" Type="datetime" />
+    <Property Name="Trucking_ContactID" Type="int" />
+    <Property Name="Loading_ContactID" Type="int" />
+    <Property Name="LoadingDate" Type="datetime" />
+    <Property Name="ReqStuffingDate" Type="datetime" />
+    <Property Name="ConfStuffedDate" Type="datetime" />
+    <Property Name="BookingRemarks" Type="varchar" MaxLength="1000" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="Dos_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="SIPL_LoadType">
+    <Key>
+      <PropertyRef Name="LoadTypeId" />
+    </Key>
+    <Property Name="LoadTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="255" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Flag" Type="bit" />
+  </EntityType>
+  <EntityType Name="SIPL_Port">
+    <Key>
+      <PropertyRef Name="PortId" />
+    </Key>
+    <Property Name="PortId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="fkCountryId" Type="int" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Flag" Type="bit" />
+    <Property Name="IsAirLine" Type="bit" />
+    <Property Name="StateID" Type="int" />
+    <Property Name="CityID" Type="int" />
+  </EntityType>
+  <EntityType Name="SIPL_PortGroup">
+    <Key>
+      <PropertyRef Name="PortGroupId" />
+    </Key>
+    <Property Name="PortGroupId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="ShortCode" Type="varchar" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Flag" Type="bit" />
+  </EntityType>
+  <EntityType Name="SIPL_RailRamp">
+    <Key>
+      <PropertyRef Name="railId" />
+    </Key>
+    <Property Name="railId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="railRamp" Type="nvarchar" MaxLength="100" />
+    <Property Name="railDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SIPL_State">
+    <Key>
+      <PropertyRef Name="StateId" />
+    </Key>
+    <Property Name="StateId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="fkCountryId" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Flag" Type="bit" />
+    <Property Name="Abb" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Sipl_Terminal">
+    <Key>
+      <PropertyRef Name="terminalId" />
+    </Key>
+    <Property Name="terminalId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="terminalName" Type="varchar" MaxLength="500" />
+    <Property Name="terminalDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SIPL_TradeService">
+    <Key>
+      <PropertyRef Name="TradeServiceId" />
+    </Key>
+    <Property Name="TradeServiceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Flag" Type="bit" />
+  </EntityType>
+  <EntityType Name="SIPL_User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="LoginID" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="fkRoleID" Type="int" />
+    <Property Name="Address" Type="varchar" MaxLength="500" />
+    <Property Name="ZipCode" Type="varchar" MaxLength="20" />
+    <Property Name="ContactNo" Type="varchar" MaxLength="20" />
+    <Property Name="EmailID" Type="varchar" MaxLength="80" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Flag" Type="bit" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="DepartmentID" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'MIAMI.dbo.tbl_scheduler_TempContractRateDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tbl_scheduler_TempContractRateDetail">
+    <Key>
+      <PropertyRef Name="CCID" />
+    </Key>
+    <Property Name="CCID" Type="int" Nullable="false" />
+    <Property Name="Commodity" Type="varchar" MaxLength="50" />
+    <Property Name="Route" Type="varchar" MaxLength="50" />
+    <Property Name="OriginType" Type="varchar" MaxLength="50" />
+    <Property Name="DestinationType" Type="varchar" MaxLength="50" />
+    <Property Name="Origin" Type="varchar" MaxLength="100" />
+    <Property Name="Destination" Type="varchar" MaxLength="100" />
+    <Property Name="ViaType1" Type="varchar" MaxLength="50" />
+    <Property Name="ViaType2" Type="varchar" MaxLength="50" />
+    <Property Name="Via1Name" Type="varchar" MaxLength="150" />
+    <Property Name="Via2Name" Type="varchar" MaxLength="150" />
+    <Property Name="Rate" Type="float" />
+    <Property Name="ContractNo" Type="varchar" MaxLength="200" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="ContractID" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Carrier" Type="varchar" MaxLength="200" />
+    <Property Name="RouteId" Type="int" />
+    <Property Name="Standard20" Type="float" />
+    <Property Name="Standard40" Type="float" />
+    <Property Name="HighCube40" Type="float" />
+    <Property Name="C45F" Type="float" />
+    <Property Name="SurST20" Type="float" />
+    <Property Name="SurST40" Type="float" />
+    <Property Name="SurHC40" Type="float" />
+    <Property Name="Sur45F" Type="float" />
+    <Property Name="Remarks" Type="varchar(max)" />
+    <Property Name="ContractRemark" Type="varchar(max)" />
+    <Property Name="LastUpdatedOn" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'MIAMI.dbo.LG_VW_Alias' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="LG_VW_Alias">
+    <Key>
+      <PropertyRef Name="AliasID" />
+    </Key>
+    <Property Name="AliasID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Alias" Type="varchar" MaxLength="50" />
+    <Property Name="AliasReferenceID" Type="int" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="date" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="date" />
+    <Property Name="Name" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'MIAMI.dbo.LG_VW_Commodity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="LG_VW_Commodity">
+    <Key>
+      <PropertyRef Name="CommodityId" />
+    </Key>
+    <Property Name="CommodityId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="255" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CommodityTypeID" Type="int" />
+    <Property Name="CommodityType" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'MIAMI.dbo.LG_VW_CONTACTCATEGORY' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="LG_VW_CONTACTCATEGORY">
+    <Key>
+      <PropertyRef Name="ContactCategoryId" />
+    </Key>
+    <Property Name="ContactCategoryId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsVendor" Type="bit" />
+    <Property Name="Commodity" Type="int" />
+    <Property Name="Origin" Type="int" />
+    <Property Name="Destination" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'MIAMI.dbo.LG_VW_Contract' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="LG_VW_Contract">
+    <Key>
+      <PropertyRef Name="ContractID" />
+    </Key>
+    <Property Name="ContractID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="ContractNo" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Carrier" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="StartDate" Type="varchar" MaxLength="30" />
+    <Property Name="EndDate" Type="varchar" MaxLength="30" />
+    <Property Name="IsValid" Type="int" Nullable="false" />
+    <Property Name="ContractDate" Type="varchar" MaxLength="30" />
+    <Property Name="MQC" Type="varchar" MaxLength="34" />
+    <Property Name="ContractType" Type="varchar" MaxLength="7" Nullable="false" />
+    <Property Name="curdate" Type="varchar" MaxLength="30" />
+    <Property Name="diff" Type="int" />
+    <Property Name="Remark" Type="varchar" MaxLength="150" />
+    <Property Name="CarrierID" Type="int" Nullable="false" />
+    <Property Name="MQCTYPE" Type="int" Nullable="false" />
+    <Property Name="fkOriginID" Type="int" />
+    <Property Name="fkDestinationID" Type="int" />
+    <Property Name="mqcvalue" Type="float" Nullable="false" />
+    <Property Name="ContractTypeVal" Type="varchar" MaxLength="30" />
+    <Property Name="Status" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'MIAMI.dbo.LG_VW_DisplayRate' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="LG_VW_DisplayRate">
+    <Key>
+      <PropertyRef Name="CCID" />
+    </Key>
+    <Property Name="CCID" Type="int" Nullable="false" />
+    <Property Name="Commodity" Type="varchar" MaxLength="50" />
+    <Property Name="Route" Type="varchar" MaxLength="50" />
+    <Property Name="OriginType" Type="varchar" MaxLength="50" />
+    <Property Name="DestinationType" Type="varchar" MaxLength="50" />
+    <Property Name="Origin" Type="varchar" MaxLength="100" />
+    <Property Name="Destination" Type="varchar" MaxLength="100" />
+    <Property Name="ViaType1" Type="varchar" MaxLength="50" />
+    <Property Name="ViaType2" Type="varchar" MaxLength="50" />
+    <Property Name="Via1Name" Type="varchar" MaxLength="150" />
+    <Property Name="Via2Name" Type="varchar" MaxLength="150" />
+    <Property Name="Rate" Type="float" />
+    <Property Name="ContractNo" Type="varchar" MaxLength="200" />
+    <Property Name="StartDate" Type="varchar" MaxLength="30" />
+    <Property Name="EndDate" Type="varchar" MaxLength="30" />
+    <Property Name="ContractID" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Carrier" Type="varchar" MaxLength="200" />
+    <Property Name="RouteId" Type="int" />
+    <Property Name="Standard20" Type="float" />
+    <Property Name="Standard40" Type="float" />
+    <Property Name="HighCube40" Type="float" />
+    <Property Name="C45F" Type="float" />
+    <Property Name="SurST20" Type="float" />
+    <Property Name="SurST40" Type="float" />
+    <Property Name="SurHC40" Type="float" />
+    <Property Name="Sur45F" Type="float" />
+    <Property Name="Remarks" Type="varchar(max)" />
+    <Property Name="ContractRemark" Type="varchar(max)" />
+    <Property Name="LastUpdatedOn" Type="datetime" />
+    <Property Name="Status" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'MIAMI.dbo.LG_VW_Port' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="LG_VW_Port">
+    <Key>
+      <PropertyRef Name="PortId" />
+    </Key>
+    <Property Name="CountryId" Type="int" Nullable="false" />
+    <Property Name="CountryName" Type="varchar" MaxLength="50" />
+    <Property Name="PortId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="fkCountryId" Type="int" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Flag" Type="bit" />
+    <Property Name="IsAirLine" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'MIAMI.dbo.LG_VW_SIPL_CONTACT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="LG_VW_SIPL_CONTACT">
+    <Key>
+      <PropertyRef Name="ContactID" />
+    </Key>
+    <Property Name="ContactID" Type="int" Nullable="false" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="TelNo" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar(max)" />
+    <Property Name="MobNo" Type="varchar" MaxLength="50" />
+    <Property Name="Fax" Type="varchar" MaxLength="50" />
+    <Property Name="WebSite" Type="varchar" MaxLength="50" />
+    <Property Name="CityID" Type="int" />
+    <Property Name="ContactPerson" Type="varchar" MaxLength="100" />
+    <Property Name="TaxID" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="ZipCode" Type="varchar" MaxLength="15" />
+    <Property Name="Remarks" Type="varchar(max)" />
+    <Property Name="StateID" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Flag" Type="bit" />
+    <Property Name="AccountDetail" Type="nvarchar" MaxLength="50" />
+    <Property Name="AccountNo" Type="nvarchar" MaxLength="100" />
+    <Property Name="Attachment" Type="nvarchar(max)" />
+    <Property Name="CompanyGradation" Type="nvarchar(max)" />
+    <Property Name="CustomerCode" Type="nvarchar" MaxLength="2000" Nullable="false" />
+    <Property Name="ContactCategoryID" Type="nvarchar" MaxLength="100" />
+    <Property Name="RepresentativeID" Type="int" />
+    <Property Name="ContinentId" Type="int" />
+    <Property Name="CountryId" Type="int" />
+    <Property Name="BillTo" Type="int" />
+    <Property Name="BillToCompanyName" Type="varchar" MaxLength="100" />
+    <Property Name="BillToAddress" Type="varchar(max)" />
+    <Property Name="CityName" Type="varchar" MaxLength="50" />
+    <Property Name="StateName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'MIAMI.dbo.LG_VW_SIPLCity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="LG_VW_SIPLCity">
+    <Key>
+      <PropertyRef Name="CityId" />
+    </Key>
+    <Property Name="CityId" Type="int" Nullable="false" />
+    <Property Name="fkStateId" Type="int" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Flag" Type="bit" />
+    <Property Name="StateId" Type="int" Nullable="false" />
+    <Property Name="StateName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'MIAMI.dbo.LG_VW_SIPLState' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="LG_VW_SIPLState">
+    <Key>
+      <PropertyRef Name="StateId" />
+    </Key>
+    <Property Name="CountryId" Type="int" Nullable="false" />
+    <Property Name="CountryName" Type="varchar" MaxLength="50" />
+    <Property Name="StateId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="fkCountryId" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Flag" Type="bit" />
+    <Property Name="Abb" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'MIAMI.dbo.LG_VW_SITE_CONTACT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="LG_VW_SITE_CONTACT">
+    <Key>
+      <PropertyRef Name="UsrId" />
+    </Key>
+    <Property Name="UsrId" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+    <Property Name="CntId" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="101" />
+    <Property Name="SitId" Type="numeric" Precision="20" Scale="0" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'MIAMI.dbo.LG_VW_SurchargeGroup' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="LG_VW_SurchargeGroup">
+    <Key>
+      <PropertyRef Name="SurchargesGroupID" />
+    </Key>
+    <Property Name="SurchargesGroupID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ShortCode" Type="varchar" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Flag" Type="bit" />
+    <Property Name="C1" Type="int" />
+    <Property Name="C2" Type="int" />
+    <Property Name="C3" Type="int" />
+    <Property Name="C4" Type="int" />
+    <Property Name="C5" Type="int" />
+    <Property Name="C6" Type="int" />
+    <Property Name="C7" Type="int" />
+    <Property Name="C8" Type="int" />
+    <Property Name="C9" Type="int" />
+    <Property Name="C10" Type="int" />
+    <Property Name="C11" Type="int" />
+    <Property Name="C12" Type="int" />
+    <Property Name="C13" Type="int" />
+    <Property Name="C14" Type="int" />
+    <Property Name="C16" Type="int" />
+    <Property Name="C17" Type="int" />
+    <Property Name="C19" Type="int" />
+    <Property Name="C20" Type="int" />
+    <Property Name="C21" Type="int" />
+    <Property Name="C22" Type="int" />
+    <Property Name="C23" Type="int" />
+    <Property Name="C24" Type="int" />
+    <Property Name="C25" Type="int" />
+    <Property Name="C27" Type="int" />
+    <Property Name="C28" Type="int" />
+    <Property Name="C29" Type="int" />
+    <Property Name="C30" Type="int" />
+    <Property Name="C31" Type="int" />
+    <Property Name="C32" Type="int" />
+    <Property Name="C33" Type="int" />
+    <Property Name="C34" Type="int" />
+    <Property Name="C36" Type="int" />
+    <Property Name="C37" Type="int" />
+    <Property Name="C38" Type="int" />
+    <Property Name="C39" Type="int" />
+    <Property Name="C40" Type="int" />
+    <Property Name="C41" Type="int" />
+    <Property Name="C42" Type="int" />
+    <Property Name="C43" Type="int" />
+    <Property Name="C44" Type="int" />
+    <Property Name="C45" Type="int" />
+    <Property Name="C46" Type="int" />
+    <Property Name="C47" Type="int" />
+    <Property Name="C48" Type="int" />
+    <Property Name="C49" Type="int" />
+    <Property Name="C50" Type="int" />
+    <Property Name="C51" Type="int" />
+    <Property Name="C52" Type="int" />
+    <Property Name="C53" Type="int" />
+    <Property Name="C54" Type="int" />
+    <Property Name="C55" Type="int" />
+    <Property Name="C57" Type="int" />
+    <Property Name="C58" Type="int" />
+    <Property Name="C59" Type="int" />
+    <Property Name="C60" Type="int" />
+    <Property Name="C61" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'MIAMI.dbo.LGV_CONTACT_INFO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="LGV_CONTACT_INFO">
+    <Key>
+      <PropertyRef Name="ContactID" />
+    </Key>
+    <Property Name="CompanyName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="TelNo" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar(max)" />
+    <Property Name="ContactPerson" Type="varchar" MaxLength="100" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="WebSite" Type="varchar" MaxLength="50" />
+    <Property Name="ZipCode" Type="varchar" MaxLength="15" />
+    <Property Name="ContactID" Type="int" Nullable="false" />
+    <Property Name="MobNo" Type="varchar" MaxLength="50" />
+    <Property Name="Fax" Type="varchar" MaxLength="50" />
+    <Property Name="TaxID" Type="varchar" MaxLength="50" />
+    <Property Name="Remarks" Type="varchar(max)" />
+    <Property Name="fkCountryId" Type="int" />
+    <Property Name="StateID" Type="int" />
+    <Property Name="Continent" Type="varchar" MaxLength="50" />
+    <Property Name="CountryName" Type="varchar" MaxLength="50" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="AccountDetail" Type="nvarchar" MaxLength="50" />
+    <Property Name="AccountNo" Type="nvarchar" MaxLength="100" />
+    <Property Name="CustomerCode" Type="nvarchar" MaxLength="2000" Nullable="false" />
+    <Property Name="ContactCategoryID" Type="nvarchar" MaxLength="100" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="RepresentativeID" Type="int" />
+    <Property Name="GalRepresentative" Type="varchar" MaxLength="50" />
+    <Property Name="BranchName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_CNT_CWT">
+    <End Role="LG_CONTACT_WORK_TYPE" Type="Self.LG_CONTACT_WORK_TYPE" Multiplicity="0..1" />
+    <End Role="LG_CONTACT" Type="Self.LG_CONTACT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LG_CONTACT_WORK_TYPE">
+        <PropertyRef Name="CwtId" />
+      </Principal>
+      <Dependent Role="LG_CONTACT">
+        <PropertyRef Name="CwtId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CNT_DPT">
+    <End Role="LG_DEPARTMENT" Type="Self.LG_DEPARTMENT" Multiplicity="1" />
+    <End Role="LG_CONTACT" Type="Self.LG_CONTACT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LG_DEPARTMENT">
+        <PropertyRef Name="DptId" />
+      </Principal>
+      <Dependent Role="LG_CONTACT">
+        <PropertyRef Name="DptId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CNT_TTL">
+    <End Role="LG_TITLE" Type="Self.LG_TITLE" Multiplicity="1" />
+    <End Role="LG_CONTACT" Type="Self.LG_CONTACT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LG_TITLE">
+        <PropertyRef Name="TtlId" />
+      </Principal>
+      <Dependent Role="LG_CONTACT">
+        <PropertyRef Name="TtlId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LCN_CNT">
+    <End Role="LG_CONTACT" Type="Self.LG_CONTACT" Multiplicity="0..1" />
+    <End Role="LG_LOCATION" Type="Self.LG_LOCATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LG_CONTACT">
+        <PropertyRef Name="CntId" />
+      </Principal>
+      <Dependent Role="LG_LOCATION">
+        <PropertyRef Name="CntId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LCN_CRY">
+    <End Role="LG_COUNTRY" Type="Self.LG_COUNTRY" Multiplicity="0..1" />
+    <End Role="LG_LOCATION" Type="Self.LG_LOCATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LG_COUNTRY">
+        <PropertyRef Name="CryId" />
+      </Principal>
+      <Dependent Role="LG_LOCATION">
+        <PropertyRef Name="CryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LCN_TMZ">
+    <End Role="LG_TIMEZONE" Type="Self.LG_TIMEZONE" Multiplicity="0..1" />
+    <End Role="LG_LOCATION" Type="Self.LG_LOCATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LG_TIMEZONE">
+        <PropertyRef Name="TmzId" />
+      </Principal>
+      <Dependent Role="LG_LOCATION">
+        <PropertyRef Name="TmzId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LCN_UST">
+    <End Role="LG_USSTATE" Type="Self.LG_USSTATE" Multiplicity="0..1" />
+    <End Role="LG_LOCATION" Type="Self.LG_LOCATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LG_USSTATE">
+        <PropertyRef Name="UstId" />
+      </Principal>
+      <Dependent Role="LG_LOCATION">
+        <PropertyRef Name="UstId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MOD_MTE">
+    <End Role="LG_MODULE_TYPE" Type="Self.LG_MODULE_TYPE" Multiplicity="1" />
+    <End Role="LG_MODULE" Type="Self.LG_MODULE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LG_MODULE_TYPE">
+        <PropertyRef Name="MteId" />
+      </Principal>
+      <Dependent Role="LG_MODULE">
+        <PropertyRef Name="MteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MRM_ACT">
+    <End Role="LG_ACTION" Type="Self.LG_ACTION" Multiplicity="1" />
+    <End Role="LG_MAM_ROL_MAP" Type="Self.LG_MAM_ROL_MAP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LG_ACTION">
+        <PropertyRef Name="ActId" />
+      </Principal>
+      <Dependent Role="LG_MAM_ROL_MAP">
+        <PropertyRef Name="ActId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MRM_MOD">
+    <End Role="LG_MODULE" Type="Self.LG_MODULE" Multiplicity="1" />
+    <End Role="LG_MAM_ROL_MAP" Type="Self.LG_MAM_ROL_MAP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LG_MODULE">
+        <PropertyRef Name="ModId" />
+      </Principal>
+      <Dependent Role="LG_MAM_ROL_MAP">
+        <PropertyRef Name="ModId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MRM_RLE">
+    <End Role="LG_ROLE" Type="Self.LG_ROLE" Multiplicity="1" />
+    <End Role="LG_MAM_ROL_MAP" Type="Self.LG_MAM_ROL_MAP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LG_ROLE">
+        <PropertyRef Name="RleId" />
+      </Principal>
+      <Dependent Role="LG_MAM_ROL_MAP">
+        <PropertyRef Name="RleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SCR_CNT">
+    <End Role="LG_CONTACT" Type="Self.LG_CONTACT" Multiplicity="1" />
+    <End Role="LG_SITE_CONTACT_ROLE" Type="Self.LG_SITE_CONTACT_ROLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LG_CONTACT">
+        <PropertyRef Name="CntId" />
+      </Principal>
+      <Dependent Role="LG_SITE_CONTACT_ROLE">
+        <PropertyRef Name="CntId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SCR_RLE">
+    <End Role="LG_ROLE" Type="Self.LG_ROLE" Multiplicity="1" />
+    <End Role="LG_SITE_CONTACT_ROLE" Type="Self.LG_SITE_CONTACT_ROLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LG_ROLE">
+        <PropertyRef Name="RleId" />
+      </Principal>
+      <Dependent Role="LG_SITE_CONTACT_ROLE">
+        <PropertyRef Name="RleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SCR_SIT">
+    <End Role="LG_SITE" Type="Self.LG_SITE" Multiplicity="0..1" />
+    <End Role="LG_SITE_CONTACT_ROLE" Type="Self.LG_SITE_CONTACT_ROLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LG_SITE">
+        <PropertyRef Name="SitId" />
+      </Principal>
+      <Dependent Role="LG_SITE_CONTACT_ROLE">
+        <PropertyRef Name="SitId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SIPL_Commodity_SIPL_CommodityType">
+    <End Role="SIPL_CommodityType" Type="Self.SIPL_CommodityType" Multiplicity="0..1" />
+    <End Role="SIPL_Commodity" Type="Self.SIPL_Commodity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SIPL_CommodityType">
+        <PropertyRef Name="CommodityTypeID" />
+      </Principal>
+      <Dependent Role="SIPL_Commodity">
+        <PropertyRef Name="CommodityTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SIPL_Contact_SIPL_City">
+    <End Role="SIPL_City" Type="Self.SIPL_City" Multiplicity="0..1" />
+    <End Role="SIPL_Contact" Type="Self.SIPL_Contact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SIPL_City">
+        <PropertyRef Name="CityId" />
+      </Principal>
+      <Dependent Role="SIPL_Contact">
+        <PropertyRef Name="CityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SIPL_Contact_SIPL_State">
+    <End Role="SIPL_State" Type="Self.SIPL_State" Multiplicity="0..1" />
+    <End Role="SIPL_Contact" Type="Self.SIPL_Contact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SIPL_State">
+        <PropertyRef Name="StateId" />
+      </Principal>
+      <Dependent Role="SIPL_Contact">
+        <PropertyRef Name="StateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SIPL_ContactBranch_SIPL_Contact">
+    <End Role="SIPL_Contact" Type="Self.SIPL_Contact" Multiplicity="0..1" />
+    <End Role="SIPL_ContactBranch" Type="Self.SIPL_ContactBranch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SIPL_Contact">
+        <PropertyRef Name="ContactID" />
+      </Principal>
+      <Dependent Role="SIPL_ContactBranch">
+        <PropertyRef Name="ContactID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SIPL_ContractRate_SIPL_Contract1">
+    <End Role="SIPL_Contract" Type="Self.SIPL_Contract" Multiplicity="1" />
+    <End Role="SIPL_ContractRate" Type="Self.SIPL_ContractRate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SIPL_Contract">
+        <PropertyRef Name="ContractID" />
+      </Principal>
+      <Dependent Role="SIPL_ContractRate">
+        <PropertyRef Name="fkContractID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SIPL_Country_SIPL_Continent">
+    <End Role="SIPL_Continent" Type="Self.SIPL_Continent" Multiplicity="0..1" />
+    <End Role="SIPL_Country" Type="Self.SIPL_Country" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SIPL_Continent">
+        <PropertyRef Name="ContinentId" />
+      </Principal>
+      <Dependent Role="SIPL_Country">
+        <PropertyRef Name="ContinentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SIT_CNT">
+    <End Role="LG_LOCATION" Type="Self.LG_LOCATION" Multiplicity="1" />
+    <End Role="LG_SITE" Type="Self.LG_SITE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LG_LOCATION">
+        <PropertyRef Name="LcnId" />
+      </Principal>
+      <Dependent Role="LG_SITE">
+        <PropertyRef Name="LcnId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USR_CNT">
+    <End Role="LG_CONTACT" Type="Self.LG_CONTACT" Multiplicity="1" />
+    <End Role="LG_USER" Type="Self.LG_USER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LG_CONTACT">
+        <PropertyRef Name="CntId" />
+      </Principal>
+      <Dependent Role="LG_USER">
+        <PropertyRef Name="CntId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="GET_QUOTATION_CARRIER" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="QuotationId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GET_QUOTATION_COMMODITY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="QuotationId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GET_QUOTATION_ENQUIRY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="QuotationId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="LG_ContactCategory_IUD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ContactCategoryID" Type="int" Mode="InOut" />
+    <Parameter Name="Name" Type="varchar" Mode="In" />
+    <Parameter Name="CreatedBy" Type="int" Mode="In" />
+    <Parameter Name="ModifiedBy" Type="int" Mode="In" />
+    <Parameter Name="IsActive" Type="bit" Mode="In" />
+    <Parameter Name="IsVendor" Type="bit" Mode="In" />
+    <Parameter Name="ActionType" Type="varchar" Mode="In" />
+    <Parameter Name="CSIDCommodity" Type="int" Mode="In" />
+    <Parameter Name="CSIDOrigin" Type="int" Mode="In" />
+    <Parameter Name="CSIDDestination" Type="int" Mode="In" />
+  </Function>
+  <Function Name="RPT_GET_BOOKING" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DepartmentId" Type="int" Mode="In" />
+    <Parameter Name="EnquiryNo" Type="varchar" Mode="In" />
+    <Parameter Name="CompanyName" Type="varchar" Mode="In" />
+    <Parameter Name="QuotationNo" Type="varchar" Mode="In" />
+    <Parameter Name="SystemRefNo" Type="varchar" Mode="In" />
+    <Parameter Name="MiamiRefNo" Type="varchar" Mode="In" />
+    <Parameter Name="BookingNo" Type="varchar" Mode="In" />
+    <Parameter Name="SitId" Type="numeric" Mode="In" />
+  </Function>
+  <Function Name="RPT_GET_BOOKING_STATUS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="BookingStatusId" Type="int" Mode="In" />
+    <Parameter Name="EnquiryNo" Type="varchar" Mode="In" />
+    <Parameter Name="CompanyName" Type="varchar" Mode="In" />
+    <Parameter Name="QuotationNo" Type="varchar" Mode="In" />
+    <Parameter Name="SystemRefNo" Type="varchar" Mode="In" />
+    <Parameter Name="MiamiRefNo" Type="varchar" Mode="In" />
+    <Parameter Name="BookingNo" Type="varchar" Mode="In" />
+    <Parameter Name="SitId" Type="numeric" Mode="In" />
+  </Function>
+  <Function Name="RPT_GET_ENQUIRY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Year" Type="int" Mode="In" />
+    <Parameter Name="Type" Type="int" Mode="In" />
+    <Parameter Name="EnquiryDateFrom" Type="date" Mode="In" />
+    <Parameter Name="EnquiryDateTo" Type="date" Mode="In" />
+    <Parameter Name="EnquiryNo" Type="varchar" Mode="In" />
+    <Parameter Name="CompanyName" Type="varchar" Mode="In" />
+    <Parameter Name="QuotationNo" Type="varchar" Mode="In" />
+    <Parameter Name="SystemRefNo" Type="varchar" Mode="In" />
+    <Parameter Name="MiamiRefNo" Type="varchar" Mode="In" />
+    <Parameter Name="BookingNo" Type="varchar" Mode="In" />
+    <Parameter Name="SitId" Type="numeric" Mode="In" />
+  </Function>
+  <Function Name="RPT_GET_QUOTATION" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Type" Type="int" Mode="In" />
+    <Parameter Name="EnquiryDateFrom" Type="date" Mode="In" />
+    <Parameter Name="EnquiryDateTo" Type="date" Mode="In" />
+    <Parameter Name="EnquiryNo" Type="varchar" Mode="In" />
+    <Parameter Name="CompanyName" Type="varchar" Mode="In" />
+    <Parameter Name="QuotationNo" Type="varchar" Mode="In" />
+    <Parameter Name="SystemRefNo" Type="varchar" Mode="In" />
+    <Parameter Name="MiamiRefNo" Type="varchar" Mode="In" />
+    <Parameter Name="BookingNo" Type="varchar" Mode="In" />
+    <Parameter Name="SitId" Type="numeric" Mode="In" />
+  </Function>
+  <Function Name="USP_GET_CUSTOMERCONTACT_DATA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SEARCH" Type="varchar" Mode="In" />
+    <Parameter Name="COLNAME" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USP_GET_CUSTOMERCONTACT_DETAIL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CONTACTID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="USP_GET_CUSTOMERCONTACT_LIST" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PAGENO" Type="int" Mode="In" />
+    <Parameter Name="PAGESIZE" Type="int" Mode="In" />
+    <Parameter Name="CompanyName" Type="nvarchar" Mode="In" />
+    <Parameter Name="CustomerCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="MiamiRep" Type="nvarchar" Mode="In" />
+    <Parameter Name="Category" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="CompanyGradation" Type="nvarchar" Mode="In" />
+    <Parameter Name="OriginCountries" Type="nvarchar" Mode="In" />
+    <Parameter Name="Commodity" Type="nvarchar" Mode="In" />
+    <Parameter Name="Region" Type="nvarchar" Mode="In" />
+    <Parameter Name="Country" Type="nvarchar" Mode="In" />
+    <Parameter Name="State" Type="nvarchar" Mode="In" />
+    <Parameter Name="City" Type="nvarchar" Mode="In" />
+    <Parameter Name="IsVendor" Type="bit" Mode="In" />
+    <Parameter Name="SIT_ID" Type="nvarchar" Mode="In" />
+    <Parameter Name="SORTCOLUMN" Type="nvarchar" Mode="In" />
+    <Parameter Name="SORTORDER" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="AppMGLDALModelsStoreContainer">
+    <EntitySet Name="AspNetClient" EntityType="Self.AspNetClient" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetRefreshToken" EntityType="Self.AspNetRefreshToken" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DashboardData_Job" EntityType="Self.DashboardData_Job" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LG_ACTION" EntityType="Self.LG_ACTION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LG_CONTACT" EntityType="Self.LG_CONTACT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LG_CONTACT_WORK_TYPE" EntityType="Self.LG_CONTACT_WORK_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LG_COUNTRY" EntityType="Self.LG_COUNTRY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LG_DEPARTMENT" EntityType="Self.LG_DEPARTMENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LG_LOCATION" EntityType="Self.LG_LOCATION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LG_LOGIN_HISTORY" EntityType="Self.LG_LOGIN_HISTORY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LG_MAM_ROL_MAP" EntityType="Self.LG_MAM_ROL_MAP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LG_MODULE" EntityType="Self.LG_MODULE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LG_MODULE_TYPE" EntityType="Self.LG_MODULE_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LG_ROLE" EntityType="Self.LG_ROLE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LG_SITE" EntityType="Self.LG_SITE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LG_SITE_CONTACT_ROLE" EntityType="Self.LG_SITE_CONTACT_ROLE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LG_TIMEZONE" EntityType="Self.LG_TIMEZONE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LG_TITLE" EntityType="Self.LG_TITLE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LG_USER" EntityType="Self.LG_USER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LG_USSTATE" EntityType="Self.LG_USSTATE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SIPL_BookingStatus" EntityType="Self.SIPL_BookingStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SIPL_City" EntityType="Self.SIPL_City" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SIPL_Commodity" EntityType="Self.SIPL_Commodity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SIPL_CommodityType" EntityType="Self.SIPL_CommodityType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SIPL_CompanyGradation" EntityType="Self.SIPL_CompanyGradation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SIPL_Contact" EntityType="Self.SIPL_Contact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SIPL_ContactBranch" EntityType="Self.SIPL_ContactBranch" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SIPL_ContactCategory" EntityType="Self.SIPL_ContactCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SIPL_ContainerType" EntityType="Self.SIPL_ContainerType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SIPL_Continent" EntityType="Self.SIPL_Continent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SIPL_Contract" EntityType="Self.SIPL_Contract" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SIPL_ContractRate" EntityType="Self.SIPL_ContractRate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SIPL_Country" EntityType="Self.SIPL_Country" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SIPL_Department" EntityType="Self.SIPL_Department" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SIPL_DocumentCommon" EntityType="Self.SIPL_DocumentCommon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SIPL_LoadType" EntityType="Self.SIPL_LoadType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SIPL_Port" EntityType="Self.SIPL_Port" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SIPL_PortGroup" EntityType="Self.SIPL_PortGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SIPL_RailRamp" EntityType="Self.SIPL_RailRamp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SIPL_State" EntityType="Self.SIPL_State" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sipl_Terminal" EntityType="Self.Sipl_Terminal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SIPL_TradeService" EntityType="Self.SIPL_TradeService" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SIPL_User" EntityType="Self.SIPL_User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LG_ACCT_CATEGORY" EntityType="Self.LG_ACCT_CATEGORY" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [LG_ACCT_CATEGORY].[AcyID] AS [AcyID], 
+    [LG_ACCT_CATEGORY].[AcyNAME] AS [AcyNAME], 
+    [LG_ACCT_CATEGORY].[AcyCreatedTs] AS [AcyCreatedTs], 
+    [LG_ACCT_CATEGORY].[Acy_UpdatedTs] AS [Acy_UpdatedTs], 
+    [LG_ACCT_CATEGORY].[Acy_CreatedBy] AS [Acy_CreatedBy], 
+    [LG_ACCT_CATEGORY].[Acy_UpdatedBy] AS [Acy_UpdatedBy]
+    FROM [dbo].[LG_ACCT_CATEGORY] AS [LG_ACCT_CATEGORY]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LG_SHIPMENT_DOCS" EntityType="Self.LG_SHIPMENT_DOCS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [LG_SHIPMENT_DOCS].[SdId] AS [SdId], 
+    [LG_SHIPMENT_DOCS].[DocumentCommonID] AS [DocumentCommonID], 
+    [LG_SHIPMENT_DOCS].[SdDocName] AS [SdDocName], 
+    [LG_SHIPMENT_DOCS].[sdDocType] AS [sdDocType], 
+    [LG_SHIPMENT_DOCS].[SdCreatedTs] AS [SdCreatedTs], 
+    [LG_SHIPMENT_DOCS].[SdCreatedBy] AS [SdCreatedBy], 
+    [LG_SHIPMENT_DOCS].[SdUpdatedTs] AS [SdUpdatedTs], 
+    [LG_SHIPMENT_DOCS].[SdUpdatedBy] AS [SdUpdatedBy], 
+    [LG_SHIPMENT_DOCS].[IsSysGenerated] AS [IsSysGenerated]
+    FROM [dbo].[LG_SHIPMENT_DOCS] AS [LG_SHIPMENT_DOCS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LG_SP_FEE_CATEGORY" EntityType="Self.LG_SP_FEE_CATEGORY" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [LG_SP_FEE_CATEGORY].[SfcID] AS [SfcID], 
+    [LG_SP_FEE_CATEGORY].[SfcName] AS [SfcName], 
+    [LG_SP_FEE_CATEGORY].[SfcCode] AS [SfcCode], 
+    [LG_SP_FEE_CATEGORY].[SfcCreatedTs] AS [SfcCreatedTs], 
+    [LG_SP_FEE_CATEGORY].[Sfc_UpdatedTs] AS [Sfc_UpdatedTs], 
+    [LG_SP_FEE_CATEGORY].[Sfc_CreatedBy] AS [Sfc_CreatedBy], 
+    [LG_SP_FEE_CATEGORY].[Sfc_UpdatedBy] AS [Sfc_UpdatedBy], 
+    [LG_SP_FEE_CATEGORY].[SfcPercentage] AS [SfcPercentage]
+    FROM [dbo].[LG_SP_FEE_CATEGORY] AS [LG_SP_FEE_CATEGORY]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_scheduler_TempContractRateDetail" EntityType="Self.tbl_scheduler_TempContractRateDetail" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tbl_scheduler_TempContractRateDetail].[CCID] AS [CCID], 
+    [tbl_scheduler_TempContractRateDetail].[Commodity] AS [Commodity], 
+    [tbl_scheduler_TempContractRateDetail].[Route] AS [Route], 
+    [tbl_scheduler_TempContractRateDetail].[OriginType] AS [OriginType], 
+    [tbl_scheduler_TempContractRateDetail].[DestinationType] AS [DestinationType], 
+    [tbl_scheduler_TempContractRateDetail].[Origin] AS [Origin], 
+    [tbl_scheduler_TempContractRateDetail].[Destination] AS [Destination], 
+    [tbl_scheduler_TempContractRateDetail].[ViaType1] AS [ViaType1], 
+    [tbl_scheduler_TempContractRateDetail].[ViaType2] AS [ViaType2], 
+    [tbl_scheduler_TempContractRateDetail].[Via1Name] AS [Via1Name], 
+    [tbl_scheduler_TempContractRateDetail].[Via2Name] AS [Via2Name], 
+    [tbl_scheduler_TempContractRateDetail].[Rate] AS [Rate], 
+    [tbl_scheduler_TempContractRateDetail].[ContractNo] AS [ContractNo], 
+    [tbl_scheduler_TempContractRateDetail].[StartDate] AS [StartDate], 
+    [tbl_scheduler_TempContractRateDetail].[EndDate] AS [EndDate], 
+    [tbl_scheduler_TempContractRateDetail].[ContractID] AS [ContractID], 
+    [tbl_scheduler_TempContractRateDetail].[Carrier] AS [Carrier], 
+    [tbl_scheduler_TempContractRateDetail].[RouteId] AS [RouteId], 
+    [tbl_scheduler_TempContractRateDetail].[Standard20] AS [Standard20], 
+    [tbl_scheduler_TempContractRateDetail].[Standard40] AS [Standard40], 
+    [tbl_scheduler_TempContractRateDetail].[HighCube40] AS [HighCube40], 
+    [tbl_scheduler_TempContractRateDetail].[C45F] AS [C45F], 
+    [tbl_scheduler_TempContractRateDetail].[SurST20] AS [SurST20], 
+    [tbl_scheduler_TempContractRateDetail].[SurST40] AS [SurST40], 
+    [tbl_scheduler_TempContractRateDetail].[SurHC40] AS [SurHC40], 
+    [tbl_scheduler_TempContractRateDetail].[Sur45F] AS [Sur45F], 
+    [tbl_scheduler_TempContractRateDetail].[Remarks] AS [Remarks], 
+    [tbl_scheduler_TempContractRateDetail].[ContractRemark] AS [ContractRemark], 
+    [tbl_scheduler_TempContractRateDetail].[LastUpdatedOn] AS [LastUpdatedOn]
+    FROM [dbo].[tbl_scheduler_TempContractRateDetail] AS [tbl_scheduler_TempContractRateDetail]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LG_VW_Alias" EntityType="Self.LG_VW_Alias" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [LG_VW_Alias].[AliasID] AS [AliasID], 
+    [LG_VW_Alias].[Alias] AS [Alias], 
+    [LG_VW_Alias].[AliasReferenceID] AS [AliasReferenceID], 
+    [LG_VW_Alias].[Type] AS [Type], 
+    [LG_VW_Alias].[CreatedBy] AS [CreatedBy], 
+    [LG_VW_Alias].[CreatedOn] AS [CreatedOn], 
+    [LG_VW_Alias].[ModifiedBy] AS [ModifiedBy], 
+    [LG_VW_Alias].[ModifiedOn] AS [ModifiedOn], 
+    [LG_VW_Alias].[Name] AS [Name]
+    FROM [dbo].[LG_VW_Alias] AS [LG_VW_Alias]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LG_VW_Commodity" EntityType="Self.LG_VW_Commodity" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [LG_VW_Commodity].[CommodityId] AS [CommodityId], 
+    [LG_VW_Commodity].[Name] AS [Name], 
+    [LG_VW_Commodity].[Description] AS [Description], 
+    [LG_VW_Commodity].[IsActive] AS [IsActive], 
+    [LG_VW_Commodity].[CommodityTypeID] AS [CommodityTypeID], 
+    [LG_VW_Commodity].[CommodityType] AS [CommodityType]
+    FROM [dbo].[LG_VW_Commodity] AS [LG_VW_Commodity]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LG_VW_CONTACTCATEGORY" EntityType="Self.LG_VW_CONTACTCATEGORY" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [LG_VW_CONTACTCATEGORY].[ContactCategoryId] AS [ContactCategoryId], 
+    [LG_VW_CONTACTCATEGORY].[Name] AS [Name], 
+    [LG_VW_CONTACTCATEGORY].[IsActive] AS [IsActive], 
+    [LG_VW_CONTACTCATEGORY].[IsVendor] AS [IsVendor], 
+    [LG_VW_CONTACTCATEGORY].[Commodity] AS [Commodity], 
+    [LG_VW_CONTACTCATEGORY].[Origin] AS [Origin], 
+    [LG_VW_CONTACTCATEGORY].[Destination] AS [Destination]
+    FROM [dbo].[LG_VW_CONTACTCATEGORY] AS [LG_VW_CONTACTCATEGORY]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LG_VW_Contract" EntityType="Self.LG_VW_Contract" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [LG_VW_Contract].[ContractID] AS [ContractID], 
+    [LG_VW_Contract].[ContractNo] AS [ContractNo], 
+    [LG_VW_Contract].[Carrier] AS [Carrier], 
+    [LG_VW_Contract].[StartDate] AS [StartDate], 
+    [LG_VW_Contract].[EndDate] AS [EndDate], 
+    [LG_VW_Contract].[IsValid] AS [IsValid], 
+    [LG_VW_Contract].[ContractDate] AS [ContractDate], 
+    [LG_VW_Contract].[MQC] AS [MQC], 
+    [LG_VW_Contract].[ContractType] AS [ContractType], 
+    [LG_VW_Contract].[curdate] AS [curdate], 
+    [LG_VW_Contract].[diff] AS [diff], 
+    [LG_VW_Contract].[Remark] AS [Remark], 
+    [LG_VW_Contract].[CarrierID] AS [CarrierID], 
+    [LG_VW_Contract].[MQCTYPE] AS [MQCTYPE], 
+    [LG_VW_Contract].[fkOriginID] AS [fkOriginID], 
+    [LG_VW_Contract].[fkDestinationID] AS [fkDestinationID], 
+    [LG_VW_Contract].[mqcvalue] AS [mqcvalue], 
+    [LG_VW_Contract].[ContractTypeVal] AS [ContractTypeVal], 
+    [LG_VW_Contract].[Status] AS [Status]
+    FROM [dbo].[LG_VW_Contract] AS [LG_VW_Contract]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LG_VW_DisplayRate" EntityType="Self.LG_VW_DisplayRate" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [LG_VW_DisplayRate].[CCID] AS [CCID], 
+    [LG_VW_DisplayRate].[Commodity] AS [Commodity], 
+    [LG_VW_DisplayRate].[Route] AS [Route], 
+    [LG_VW_DisplayRate].[OriginType] AS [OriginType], 
+    [LG_VW_DisplayRate].[DestinationType] AS [DestinationType], 
+    [LG_VW_DisplayRate].[Origin] AS [Origin], 
+    [LG_VW_DisplayRate].[Destination] AS [Destination], 
+    [LG_VW_DisplayRate].[ViaType1] AS [ViaType1], 
+    [LG_VW_DisplayRate].[ViaType2] AS [ViaType2], 
+    [LG_VW_DisplayRate].[Via1Name] AS [Via1Name], 
+    [LG_VW_DisplayRate].[Via2Name] AS [Via2Name], 
+    [LG_VW_DisplayRate].[Rate] AS [Rate], 
+    [LG_VW_DisplayRate].[ContractNo] AS [ContractNo], 
+    [LG_VW_DisplayRate].[StartDate] AS [StartDate], 
+    [LG_VW_DisplayRate].[EndDate] AS [EndDate], 
+    [LG_VW_DisplayRate].[ContractID] AS [ContractID], 
+    [LG_VW_DisplayRate].[Carrier] AS [Carrier], 
+    [LG_VW_DisplayRate].[RouteId] AS [RouteId], 
+    [LG_VW_DisplayRate].[Standard20] AS [Standard20], 
+    [LG_VW_DisplayRate].[Standard40] AS [Standard40], 
+    [LG_VW_DisplayRate].[HighCube40] AS [HighCube40], 
+    [LG_VW_DisplayRate].[C45F] AS [C45F], 
+    [LG_VW_DisplayRate].[SurST20] AS [SurST20], 
+    [LG_VW_DisplayRate].[SurST40] AS [SurST40], 
+    [LG_VW_DisplayRate].[SurHC40] AS [SurHC40], 
+    [LG_VW_DisplayRate].[Sur45F] AS [Sur45F], 
+    [LG_VW_DisplayRate].[Remarks] AS [Remarks], 
+    [LG_VW_DisplayRate].[ContractRemark] AS [ContractRemark], 
+    [LG_VW_DisplayRate].[LastUpdatedOn] AS [LastUpdatedOn], 
+    [LG_VW_DisplayRate].[Status] AS [Status]
+    FROM [dbo].[LG_VW_DisplayRate] AS [LG_VW_DisplayRate]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LG_VW_Port" EntityType="Self.LG_VW_Port" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [LG_VW_Port].[CountryId] AS [CountryId], 
+    [LG_VW_Port].[CountryName] AS [CountryName], 
+    [LG_VW_Port].[PortId] AS [PortId], 
+    [LG_VW_Port].[Name] AS [Name], 
+    [LG_VW_Port].[IsActive] AS [IsActive], 
+    [LG_VW_Port].[fkCountryId] AS [fkCountryId], 
+    [LG_VW_Port].[CreatedBy] AS [CreatedBy], 
+    [LG_VW_Port].[CreatedOn] AS [CreatedOn], 
+    [LG_VW_Port].[ModifiedBy] AS [ModifiedBy], 
+    [LG_VW_Port].[ModifiedOn] AS [ModifiedOn], 
+    [LG_VW_Port].[IsDeleted] AS [IsDeleted], 
+    [LG_VW_Port].[Flag] AS [Flag], 
+    [LG_VW_Port].[IsAirLine] AS [IsAirLine]
+    FROM [dbo].[LG_VW_Port] AS [LG_VW_Port]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LG_VW_SIPL_CONTACT" EntityType="Self.LG_VW_SIPL_CONTACT" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [LG_VW_SIPL_CONTACT].[ContactID] AS [ContactID], 
+    [LG_VW_SIPL_CONTACT].[CompanyName] AS [CompanyName], 
+    [LG_VW_SIPL_CONTACT].[TelNo] AS [TelNo], 
+    [LG_VW_SIPL_CONTACT].[Address] AS [Address], 
+    [LG_VW_SIPL_CONTACT].[MobNo] AS [MobNo], 
+    [LG_VW_SIPL_CONTACT].[Fax] AS [Fax], 
+    [LG_VW_SIPL_CONTACT].[WebSite] AS [WebSite], 
+    [LG_VW_SIPL_CONTACT].[CityID] AS [CityID], 
+    [LG_VW_SIPL_CONTACT].[ContactPerson] AS [ContactPerson], 
+    [LG_VW_SIPL_CONTACT].[TaxID] AS [TaxID], 
+    [LG_VW_SIPL_CONTACT].[Email] AS [Email], 
+    [LG_VW_SIPL_CONTACT].[ZipCode] AS [ZipCode], 
+    [LG_VW_SIPL_CONTACT].[Remarks] AS [Remarks], 
+    [LG_VW_SIPL_CONTACT].[StateID] AS [StateID], 
+    [LG_VW_SIPL_CONTACT].[CreatedOn] AS [CreatedOn], 
+    [LG_VW_SIPL_CONTACT].[CreatedBy] AS [CreatedBy], 
+    [LG_VW_SIPL_CONTACT].[ModifiedBy] AS [ModifiedBy], 
+    [LG_VW_SIPL_CONTACT].[ModifiedOn] AS [ModifiedOn], 
+    [LG_VW_SIPL_CONTACT].[IsActive] AS [IsActive], 
+    [LG_VW_SIPL_CONTACT].[IsDeleted] AS [IsDeleted], 
+    [LG_VW_SIPL_CONTACT].[Flag] AS [Flag], 
+    [LG_VW_SIPL_CONTACT].[AccountDetail] AS [AccountDetail], 
+    [LG_VW_SIPL_CONTACT].[AccountNo] AS [AccountNo], 
+    [LG_VW_SIPL_CONTACT].[Attachment] AS [Attachment], 
+    [LG_VW_SIPL_CONTACT].[CompanyGradation] AS [CompanyGradation], 
+    [LG_VW_SIPL_CONTACT].[CustomerCode] AS [CustomerCode], 
+    [LG_VW_SIPL_CONTACT].[ContactCategoryID] AS [ContactCategoryID], 
+    [LG_VW_SIPL_CONTACT].[RepresentativeID] AS [RepresentativeID], 
+    [LG_VW_SIPL_CONTACT].[ContinentId] AS [ContinentId], 
+    [LG_VW_SIPL_CONTACT].[CountryId] AS [CountryId], 
+    [LG_VW_SIPL_CONTACT].[BillTo] AS [BillTo], 
+    [LG_VW_SIPL_CONTACT].[BillToCompanyName] AS [BillToCompanyName], 
+    [LG_VW_SIPL_CONTACT].[BillToAddress] AS [BillToAddress], 
+    [LG_VW_SIPL_CONTACT].[CityName] AS [CityName], 
+    [LG_VW_SIPL_CONTACT].[StateName] AS [StateName]
+    FROM [dbo].[LG_VW_SIPL_CONTACT] AS [LG_VW_SIPL_CONTACT]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LG_VW_SIPLCity" EntityType="Self.LG_VW_SIPLCity" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [LG_VW_SIPLCity].[CityId] AS [CityId], 
+    [LG_VW_SIPLCity].[fkStateId] AS [fkStateId], 
+    [LG_VW_SIPLCity].[Name] AS [Name], 
+    [LG_VW_SIPLCity].[IsActive] AS [IsActive], 
+    [LG_VW_SIPLCity].[CreatedBy] AS [CreatedBy], 
+    [LG_VW_SIPLCity].[CreatedOn] AS [CreatedOn], 
+    [LG_VW_SIPLCity].[ModifiedBy] AS [ModifiedBy], 
+    [LG_VW_SIPLCity].[ModifiedOn] AS [ModifiedOn], 
+    [LG_VW_SIPLCity].[IsDeleted] AS [IsDeleted], 
+    [LG_VW_SIPLCity].[Flag] AS [Flag], 
+    [LG_VW_SIPLCity].[StateId] AS [StateId], 
+    [LG_VW_SIPLCity].[StateName] AS [StateName]
+    FROM [dbo].[LG_VW_SIPLCity] AS [LG_VW_SIPLCity]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LG_VW_SIPLState" EntityType="Self.LG_VW_SIPLState" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [LG_VW_SIPLState].[CountryId] AS [CountryId], 
+    [LG_VW_SIPLState].[CountryName] AS [CountryName], 
+    [LG_VW_SIPLState].[StateId] AS [StateId], 
+    [LG_VW_SIPLState].[Name] AS [Name], 
+    [LG_VW_SIPLState].[IsActive] AS [IsActive], 
+    [LG_VW_SIPLState].[CreatedBy] AS [CreatedBy], 
+    [LG_VW_SIPLState].[CreatedOn] AS [CreatedOn], 
+    [LG_VW_SIPLState].[ModifiedBy] AS [ModifiedBy], 
+    [LG_VW_SIPLState].[fkCountryId] AS [fkCountryId], 
+    [LG_VW_SIPLState].[ModifiedOn] AS [ModifiedOn], 
+    [LG_VW_SIPLState].[IsDeleted] AS [IsDeleted], 
+    [LG_VW_SIPLState].[Flag] AS [Flag], 
+    [LG_VW_SIPLState].[Abb] AS [Abb]
+    FROM [dbo].[LG_VW_SIPLState] AS [LG_VW_SIPLState]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LG_VW_SITE_CONTACT" EntityType="Self.LG_VW_SITE_CONTACT" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [LG_VW_SITE_CONTACT].[UsrId] AS [UsrId], 
+    [LG_VW_SITE_CONTACT].[CntId] AS [CntId], 
+    [LG_VW_SITE_CONTACT].[Name] AS [Name], 
+    [LG_VW_SITE_CONTACT].[SitId] AS [SitId]
+    FROM [dbo].[LG_VW_SITE_CONTACT] AS [LG_VW_SITE_CONTACT]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LG_VW_SurchargeGroup" EntityType="Self.LG_VW_SurchargeGroup" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [LG_VW_SurchargeGroup].[SurchargesGroupID] AS [SurchargesGroupID], 
+    [LG_VW_SurchargeGroup].[Name] AS [Name], 
+    [LG_VW_SurchargeGroup].[ShortCode] AS [ShortCode], 
+    [LG_VW_SurchargeGroup].[IsActive] AS [IsActive], 
+    [LG_VW_SurchargeGroup].[CreatedBy] AS [CreatedBy], 
+    [LG_VW_SurchargeGroup].[CreatedOn] AS [CreatedOn], 
+    [LG_VW_SurchargeGroup].[ModifiedBy] AS [ModifiedBy], 
+    [LG_VW_SurchargeGroup].[ModifiedOn] AS [ModifiedOn], 
+    [LG_VW_SurchargeGroup].[IsDeleted] AS [IsDeleted], 
+    [LG_VW_SurchargeGroup].[Flag] AS [Flag], 
+    [LG_VW_SurchargeGroup].[C1] AS [C1], 
+    [LG_VW_SurchargeGroup].[C2] AS [C2], 
+    [LG_VW_SurchargeGroup].[C3] AS [C3], 
+    [LG_VW_SurchargeGroup].[C4] AS [C4], 
+    [LG_VW_SurchargeGroup].[C5] AS [C5], 
+    [LG_VW_SurchargeGroup].[C6] AS [C6], 
+    [LG_VW_SurchargeGroup].[C7] AS [C7], 
+    [LG_VW_SurchargeGroup].[C8] AS [C8], 
+    [LG_VW_SurchargeGroup].[C9] AS [C9], 
+    [LG_VW_SurchargeGroup].[C10] AS [C10], 
+    [LG_VW_SurchargeGroup].[C11] AS [C11], 
+    [LG_VW_SurchargeGroup].[C12] AS [C12], 
+    [LG_VW_SurchargeGroup].[C13] AS [C13], 
+    [LG_VW_SurchargeGroup].[C14] AS [C14], 
+    [LG_VW_SurchargeGroup].[C16] AS [C16], 
+    [LG_VW_SurchargeGroup].[C17] AS [C17], 
+    [LG_VW_SurchargeGroup].[C19] AS [C19], 
+    [LG_VW_SurchargeGroup].[C20] AS [C20], 
+    [LG_VW_SurchargeGroup].[C21] AS [C21], 
+    [LG_VW_SurchargeGroup].[C22] AS [C22], 
+    [LG_VW_SurchargeGroup].[C23] AS [C23], 
+    [LG_VW_SurchargeGroup].[C24] AS [C24], 
+    [LG_VW_SurchargeGroup].[C25] AS [C25], 
+    [LG_VW_SurchargeGroup].[C27] AS [C27], 
+    [LG_VW_SurchargeGroup].[C28] AS [C28], 
+    [LG_VW_SurchargeGroup].[C29] AS [C29], 
+    [LG_VW_SurchargeGroup].[C30] AS [C30], 
+    [LG_VW_SurchargeGroup].[C31] AS [C31], 
+    [LG_VW_SurchargeGroup].[C32] AS [C32], 
+    [LG_VW_SurchargeGroup].[C33] AS [C33], 
+    [LG_VW_SurchargeGroup].[C34] AS [C34], 
+    [LG_VW_SurchargeGroup].[C36] AS [C36], 
+    [LG_VW_SurchargeGroup].[C37] AS [C37], 
+    [LG_VW_SurchargeGroup].[C38] AS [C38], 
+    [LG_VW_SurchargeGroup].[C39] AS [C39], 
+    [LG_VW_SurchargeGroup].[C40] AS [C40], 
+    [LG_VW_SurchargeGroup].[C41] AS [C41], 
+    [LG_VW_SurchargeGroup].[C42] AS [C42], 
+    [LG_VW_SurchargeGroup].[C43] AS [C43], 
+    [LG_VW_SurchargeGroup].[C44] AS [C44], 
+    [LG_VW_SurchargeGroup].[C45] AS [C45], 
+    [LG_VW_SurchargeGroup].[C46] AS [C46], 
+    [LG_VW_SurchargeGroup].[C47] AS [C47], 
+    [LG_VW_SurchargeGroup].[C48] AS [C48], 
+    [LG_VW_SurchargeGroup].[C49] AS [C49], 
+    [LG_VW_SurchargeGroup].[C50] AS [C50], 
+    [LG_VW_SurchargeGroup].[C51] AS [C51], 
+    [LG_VW_SurchargeGroup].[C52] AS [C52], 
+    [LG_VW_SurchargeGroup].[C53] AS [C53], 
+    [LG_VW_SurchargeGroup].[C54] AS [C54], 
+    [LG_VW_SurchargeGroup].[C55] AS [C55], 
+    [LG_VW_SurchargeGroup].[C57] AS [C57], 
+    [LG_VW_SurchargeGroup].[C58] AS [C58], 
+    [LG_VW_SurchargeGroup].[C59] AS [C59], 
+    [LG_VW_SurchargeGroup].[C60] AS [C60], 
+    [LG_VW_SurchargeGroup].[C61] AS [C61]
+    FROM [dbo].[LG_VW_SurchargeGroup] AS [LG_VW_SurchargeGroup]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LGV_CONTACT_INFO" EntityType="Self.LGV_CONTACT_INFO" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [LGV_CONTACT_INFO].[CompanyName] AS [CompanyName], 
+    [LGV_CONTACT_INFO].[TelNo] AS [TelNo], 
+    [LGV_CONTACT_INFO].[Address] AS [Address], 
+    [LGV_CONTACT_INFO].[ContactPerson] AS [ContactPerson], 
+    [LGV_CONTACT_INFO].[Email] AS [Email], 
+    [LGV_CONTACT_INFO].[Name] AS [Name], 
+    [LGV_CONTACT_INFO].[WebSite] AS [WebSite], 
+    [LGV_CONTACT_INFO].[ZipCode] AS [ZipCode], 
+    [LGV_CONTACT_INFO].[ContactID] AS [ContactID], 
+    [LGV_CONTACT_INFO].[MobNo] AS [MobNo], 
+    [LGV_CONTACT_INFO].[Fax] AS [Fax], 
+    [LGV_CONTACT_INFO].[TaxID] AS [TaxID], 
+    [LGV_CONTACT_INFO].[Remarks] AS [Remarks], 
+    [LGV_CONTACT_INFO].[fkCountryId] AS [fkCountryId], 
+    [LGV_CONTACT_INFO].[StateID] AS [StateID], 
+    [LGV_CONTACT_INFO].[Continent] AS [Continent], 
+    [LGV_CONTACT_INFO].[CountryName] AS [CountryName], 
+    [LGV_CONTACT_INFO].[IsDeleted] AS [IsDeleted], 
+    [LGV_CONTACT_INFO].[AccountDetail] AS [AccountDetail], 
+    [LGV_CONTACT_INFO].[AccountNo] AS [AccountNo], 
+    [LGV_CONTACT_INFO].[CustomerCode] AS [CustomerCode], 
+    [LGV_CONTACT_INFO].[ContactCategoryID] AS [ContactCategoryID], 
+    [LGV_CONTACT_INFO].[City] AS [City], 
+    [LGV_CONTACT_INFO].[RepresentativeID] AS [RepresentativeID], 
+    [LGV_CONTACT_INFO].[GalRepresentative] AS [GalRepresentative], 
+    [LGV_CONTACT_INFO].[BranchName] AS [BranchName]
+    FROM [dbo].[LGV_CONTACT_INFO] AS [LGV_CONTACT_INFO]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_CNT_CWT" Association="Self.FK_CNT_CWT">
+      <End Role="LG_CONTACT_WORK_TYPE" EntitySet="LG_CONTACT_WORK_TYPE" />
+      <End Role="LG_CONTACT" EntitySet="LG_CONTACT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CNT_DPT" Association="Self.FK_CNT_DPT">
+      <End Role="LG_DEPARTMENT" EntitySet="LG_DEPARTMENT" />
+      <End Role="LG_CONTACT" EntitySet="LG_CONTACT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CNT_TTL" Association="Self.FK_CNT_TTL">
+      <End Role="LG_TITLE" EntitySet="LG_TITLE" />
+      <End Role="LG_CONTACT" EntitySet="LG_CONTACT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LCN_CNT" Association="Self.FK_LCN_CNT">
+      <End Role="LG_CONTACT" EntitySet="LG_CONTACT" />
+      <End Role="LG_LOCATION" EntitySet="LG_LOCATION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LCN_CRY" Association="Self.FK_LCN_CRY">
+      <End Role="LG_COUNTRY" EntitySet="LG_COUNTRY" />
+      <End Role="LG_LOCATION" EntitySet="LG_LOCATION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LCN_TMZ" Association="Self.FK_LCN_TMZ">
+      <End Role="LG_TIMEZONE" EntitySet="LG_TIMEZONE" />
+      <End Role="LG_LOCATION" EntitySet="LG_LOCATION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LCN_UST" Association="Self.FK_LCN_UST">
+      <End Role="LG_USSTATE" EntitySet="LG_USSTATE" />
+      <End Role="LG_LOCATION" EntitySet="LG_LOCATION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MOD_MTE" Association="Self.FK_MOD_MTE">
+      <End Role="LG_MODULE_TYPE" EntitySet="LG_MODULE_TYPE" />
+      <End Role="LG_MODULE" EntitySet="LG_MODULE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MRM_ACT" Association="Self.FK_MRM_ACT">
+      <End Role="LG_ACTION" EntitySet="LG_ACTION" />
+      <End Role="LG_MAM_ROL_MAP" EntitySet="LG_MAM_ROL_MAP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MRM_MOD" Association="Self.FK_MRM_MOD">
+      <End Role="LG_MODULE" EntitySet="LG_MODULE" />
+      <End Role="LG_MAM_ROL_MAP" EntitySet="LG_MAM_ROL_MAP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MRM_RLE" Association="Self.FK_MRM_RLE">
+      <End Role="LG_ROLE" EntitySet="LG_ROLE" />
+      <End Role="LG_MAM_ROL_MAP" EntitySet="LG_MAM_ROL_MAP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SCR_CNT" Association="Self.FK_SCR_CNT">
+      <End Role="LG_CONTACT" EntitySet="LG_CONTACT" />
+      <End Role="LG_SITE_CONTACT_ROLE" EntitySet="LG_SITE_CONTACT_ROLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SCR_RLE" Association="Self.FK_SCR_RLE">
+      <End Role="LG_ROLE" EntitySet="LG_ROLE" />
+      <End Role="LG_SITE_CONTACT_ROLE" EntitySet="LG_SITE_CONTACT_ROLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SCR_SIT" Association="Self.FK_SCR_SIT">
+      <End Role="LG_SITE" EntitySet="LG_SITE" />
+      <End Role="LG_SITE_CONTACT_ROLE" EntitySet="LG_SITE_CONTACT_ROLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SIPL_Commodity_SIPL_CommodityType" Association="Self.FK_SIPL_Commodity_SIPL_CommodityType">
+      <End Role="SIPL_CommodityType" EntitySet="SIPL_CommodityType" />
+      <End Role="SIPL_Commodity" EntitySet="SIPL_Commodity" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SIPL_Contact_SIPL_City" Association="Self.FK_SIPL_Contact_SIPL_City">
+      <End Role="SIPL_City" EntitySet="SIPL_City" />
+      <End Role="SIPL_Contact" EntitySet="SIPL_Contact" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SIPL_Contact_SIPL_State" Association="Self.FK_SIPL_Contact_SIPL_State">
+      <End Role="SIPL_State" EntitySet="SIPL_State" />
+      <End Role="SIPL_Contact" EntitySet="SIPL_Contact" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SIPL_ContactBranch_SIPL_Contact" Association="Self.FK_SIPL_ContactBranch_SIPL_Contact">
+      <End Role="SIPL_Contact" EntitySet="SIPL_Contact" />
+      <End Role="SIPL_ContactBranch" EntitySet="SIPL_ContactBranch" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SIPL_ContractRate_SIPL_Contract1" Association="Self.FK_SIPL_ContractRate_SIPL_Contract1">
+      <End Role="SIPL_Contract" EntitySet="SIPL_Contract" />
+      <End Role="SIPL_ContractRate" EntitySet="SIPL_ContractRate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SIPL_Country_SIPL_Continent" Association="Self.FK_SIPL_Country_SIPL_Continent">
+      <End Role="SIPL_Continent" EntitySet="SIPL_Continent" />
+      <End Role="SIPL_Country" EntitySet="SIPL_Country" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SIT_CNT" Association="Self.FK_SIT_CNT">
+      <End Role="LG_LOCATION" EntitySet="LG_LOCATION" />
+      <End Role="LG_SITE" EntitySet="LG_SITE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USR_CNT" Association="Self.FK_USR_CNT">
+      <End Role="LG_CONTACT" EntitySet="LG_CONTACT" />
+      <End Role="LG_USER" EntitySet="LG_USER" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

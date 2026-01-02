@@ -1,0 +1,21 @@
+﻿<div class="box-container form-horizontal detail-container">
+    <div class="form-group">
+        <label class="col-sm-3 control-label text-left">Continent</label>
+        <label class="col-sm-3 control-label text-left">Description</label>
+        
+        <div class="col-sm-3">&nbsp;</div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="NameF" ng-model="NameF" uib-typeahead="o.name for o in callTypeahead($viewValue, 'continent', 'name', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="continent" lookup-field="name" entity-key-field="continentId" custom-clear="true" />
+        </div>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="DescriptionF" ng-model="DescriptionF" uib-typeahead="o.description for o in callTypeahead($viewValue, 'continent', 'description', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="continent" lookup-field="description" entity-key-field="continentId" custom-clear="true" />
+        </div>
+        <div class="pull-right">
+            <button class="btn btn-sm btn-primary" ng-click="performAction($event)" action="search">Search</button>
+            </div>
+        </div>
+        </div>
+   
+

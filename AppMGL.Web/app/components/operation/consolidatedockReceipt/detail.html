@@ -1,0 +1,269 @@
+﻿<ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title Bold"></h3>
+            <div class="box-tools pull-right">
+                <button class="btn btn-sm btn-info" box-widget="collapse"><i class="fa fa-minus" ng-hide="true"></i><span>Hide</span></button>
+            </div>
+        </div>
+        <div class="box-body">
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Exporter/Cargo Pickup Location</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="exporterName" maxlength="30" ng-model="entity.exporterName" uib-typeahead="o.companyName for o in callTypeahead($viewValue, 'SIPLContact', 'companyName', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="SIPLContact" lookup-field="companyName" entity-key-field="contactID" custom-clear="true" />
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div class="col-sm-2">
+                    &nbsp;
+                </div>
+                <div class="col-sm-4">
+                    <textarea rows="3" class="form-control" name="exporterAddress" ng-model="entity.exporterAddress" />
+                </div>
+                <label class="col-sm-2 control-label">B/L or AWB No.</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="blNumber" ng-model="entity.blNumber" ng-disabled="disabledUpdate" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Free Text</label>
+                <div class="col-sm-4">
+                    <textarea rows="3" class="form-control" name="free_Text" ng-model="entity.free_Text" ng-disabled="disabledUpdate" />
+                </div>
+                <label class="col-sm-2 control-label">MGL Reference No.</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="fileNo" ng-model="entity.fileNo"  />
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Consigned To</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="consignedToName" maxlength="30" ng-model="entity.consignedToName" uib-typeahead="o.companyName for o in callTypeahead($viewValue, 'SIPLContact', 'companyName', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="SIPLContact2" lookup-field="companyName" entity-key-field="contactID" custom-clear="true" />
+                </div>
+                <label class="col-sm-2 control-label">Forwarding Agent</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="fwdAgentName" maxlength="30" ng-model="entity.fwdAgentName" uib-typeahead="o.companyName for o in callTypeahead($viewValue, 'SIPLContact', 'companyName', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="SIPLContact3" lookup-field="companyName" entity-key-field="contactID" custom-clear="true" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-2">
+                    &nbsp;
+                    <!--<select class="form-control" name="consignedToType" ng-model="entity.consignedToType" ng-options="t.fieldName as t.fieldValue for t in lookups.consignedToTypes" ng-disabled="disabledUpdate"></select>-->
+                </div>
+                <div class="col-sm-4">
+                    <textarea rows="3" class="form-control" name="consignedToAddress" ng-model="entity.consignedToAddress" />
+                </div>
+                <label class="col-sm-2 control-label">&nbsp;</label>
+                <div class="col-sm-4">
+                    <textarea rows="3" class="form-control" name="fwdAgentAddress" ng-model="entity.fwdAgentAddress" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">&nbsp;</label>
+                <div class="col-sm-4 checkbox-control">
+                    <input type="checkbox" name="isPrintAddress" ng-model="entity.isPrintAddress" ng-disabled="disabledUpdate" ng-change="updateIsPrintAddress(entity.isPrintAddress)" />&nbsp;<span class="text-bold">Print Address</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Notify Party Intermediate Consignee</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="consigneeName" maxlength="30" ng-model="entity.consigneeName" uib-typeahead="o.companyName for o in callTypeahead($viewValue, 'SIPLContact', 'companyName', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="SIPLContact1" lookup-field="companyName" entity-key-field="contactID" custom-clear="true" disabled />
+                </div>
+                <label class="col-sm-2 control-label">Point(state) of origin or FTZ No.</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="ftzNumber" ng-model="entity.ftzNumber" disabled  />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">&nbsp;</label>
+                <div class="col-sm-4">
+                    <textarea rows="3" class="form-control" name="consigneeAddress" ng-model="entity.consigneeAddress" disabled />
+                </div>
+                <label class="col-sm-2 control-label">Domestic Routing Export Instructions</label>
+                <div class="col-sm-4">
+                    <textarea rows="3" class="form-control" name="exportInstruction" ng-model="entity.exportInstruction" ng-disabled="disabledUpdate" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Pre Carriage By</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="carriageBy" ng-model="entity.carriageBy" />
+                </div>
+                <label class="col-sm-2 control-label">Place of Receipt</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="placeOfReceipt" ng-model="entity.placeOfReceipt" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Buying Rates</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="BuyingRate" ng-model="entity.buyingRate" />
+                </div>
+                <label class="col-sm-2 control-label">Selling Rate</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="SellingRate" ng-model="entity.sellingRate" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-1 control-label">Vessel</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" name="vessel" ng-model="entity.vessel"  />
+                </div>
+                <label class="col-sm-1 control-label">Port of Loading/Export</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" name="landingPort" ng-model="entity.landingPort" uib-typeahead="o.name for o in callTypeahead($viewValue, 'LGVWPort', 'name', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="origin" lookup-field="name" entity-key-field="portId" custom-clear="true"  />
+                </div>
+                <label class="col-sm-1 control-label">Loading Pier/Terminal</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" name="loadingPert" ng-model="entity.loadingPert"  />
+                </div>
+                <label class="col-sm-1 control-label">Voyage</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" name="voyage" ng-model="entity.voyage"  />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Foreign Port of Unloading (Vessel and Air only)</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" name="foreignPort" ng-model="entity.foreignPort" uib-typeahead="o.name for o in callTypeahead($viewValue, 'LGVWPort', 'name', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="discharge" lookup-field="name" entity-key-field="portId" custom-clear="true"  />
+                </div>
+                <label class="col-sm-1 control-label">For Transshipment To</label>
+                <div class="col-sm-2">
+
+                    <input type="text" class="form-control" name="transshipmentdesc" ng-model="entity.transshipmentdesc" uib-typeahead="origin=o.name + ' (' + o.countryName + ')' for o in callTypeahead($viewValue, 'LGVWPort', 'name', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="origin" lookup-field="name" entity-key-field="portId" custom-clear="true" ng-disabled="disabledUpdate" />
+                </div>
+                <label class="col-sm-1 control-label">Type of Move</label>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" name="moveType" ng-model="entity.moveType" disabled  />
+                </div>
+            </div>
+            <hr class="line-primary" />
+            <table ng-table="detailTable" class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr class="bg-thead">
+                        <th class="col-sm-3 text-left text-top" rowspan="2">
+                            Number
+                            <br /><span style="color:red">(Maximun 16 character lenght)</span>
+                        </th>
+                        <th class="col-sm-1 text-left text-top" rowspan="2">
+                            Package
+                            <br /><span style="color:red">(Maximun 16 character lenght)</span>
+                        </th>
+                        <th class="col-sm-5 text-left text-top" rowspan="2">
+                            Commodity
+                            <br /><span style="color:red">(Maximun 46 character lenght)</span>
+                        </th>
+                        <th class="col-sm-1 text-left">Weight</th>
+                        <th class="col-sm-1 text-left">Measurement</th>
+                        <th class="col-sm-1 text-right" rowspan="2">&nbsp;</th>
+                    </tr>
+                    <tr class="bg-thead">
+                        <th class="col-sm-1 text-left">
+                            <select class="form-control" name="weightType" ng-model="entity.weightType" ng-disabled="disabledUpdate" ng-change="updateWeight()">
+                                <option value="KILO" selected="selected">KILO</option>
+                                <option value="LBS">LBS</option>
+                            </select>
+                        </th>
+                        <th class="col-sm-1 text-left">
+                            <select class="form-control" name="measurementType" ng-model="entity.measurementType" ng-disabled="disabledUpdate" ng-change="updateMeasurement()">
+                                <option value="CBM" selected="selected">CBM</option>
+                                <option value="CFT">CFT</option>
+                            </select>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="d in $data">
+                        <td class="col-sm-3 text-left">
+                            <textarea rows="3" class="form-control" name="number" maxlength="16" ng-model="d.number" ng-disabled="disabledUpdate" />
+                        </td>
+                        <td class="col-sm-1 text-left">
+                            <input type="text" class="form-control" name="package" maxlength="16" ng-model="d.package" ng-disabled="disabledUpdate" />
+                        </td>
+                        <td class="col-sm-5 text-left">
+                            <textarea rows="3" class="form-control" name="commodity" maxlength="46" ng-model="d.commodity" ng-disabled="disabledUpdate" />
+                        </td>
+                        <td class="col-sm-1 text-left">
+                            <input type="text" class="form-control" name="package" ng-model="d.weight" ng-disabled="disabledUpdate" input-number="true" allow-decimal="true" />
+                        </td>
+                        <td class="col-sm-1 text-left">
+                            <input type="text" class="form-control" name="package" ng-model="d.measuremant" ng-disabled="disabledUpdate" input-number="true" allow-decimal="true" />
+                        </td>
+                        <td class="col-sm-1 text-right">
+                            <button type="button" class="btn btn-sm btn-primary" ng-show="$last" ng-disabled="disabledUpdate" ng-click="dynamicRow(true, d, $index)"><i class="fa fa-plus"></i></button>
+                            <button type="button" class="btn btn-sm btn-danger" ng-hide="entity.commodityDetail.length==1" ng-disabled="disabledUpdate" ng-click="dynamicRow(false, d, $index)"><i class="fa fa-minus"></i></button>
+                        </td>
+                    </tr>
+                    <tr ng-if="params.total() == 0">
+                        <td class="text-center text-italic" colspan="6">No Record(s) Found</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr class="line-primary" />
+            <div class="box-header with-border" style="margin-top: -20px; margin-bottom: 20px;">
+                <h3 class="box-title">Special Instructions</h3>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Requested Stuffing Date</label>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" name="arrivalDate" ng-model="entity.reqStuffingDate" input-date="true" show-time="false" />
+                </div>
+                <label class="col-sm-2 control-label">Booking/Line</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" name="booking" ng-model="entity.booking"  />
+                </div>
+                <label class="col-sm-1 control-label">Cut off</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" name="cutOff" ng-model="entity.cutOff" input-date="true" show-time="false"  />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Departure Date</label>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" name="departureDate" ng-model="entity.departureDate" input-date="true" show-time="false"  />
+                </div>
+
+                <label class="col-sm-2 control-label">Empty Pick Up</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" name="pickupName" maxlength="100" ng-model="entity.pickupName" uib-typeahead="exporterName = o.companyName for o in callTypeahead($viewValue, 'LGVWSIPLContact', 'companyName', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="pickupLocation" lookup-field="locationName" entity-key-field="contactID" custom-clear="true" />
+                    <textarea rows="3" class="form-control" name="emptyPickup" ng-model="entity.emptyPickup"  />
+
+
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Delivered By</label>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" name="deliveredBy" ng-model="entity.deliveredBy" />
+                </div>
+                <label class="col-sm-2 control-label">Checked By</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" name="checkedBydesc" maxlength="30" ng-model="entity.checkedBydesc" uib-typeahead="o.companyName for o in callTypeahead($viewValue, 'SIPLContact', 'companyName', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="SIPLContact" lookup-field="companyName" entity-key-field="contactID" custom-clear="true" />
+                    <!--<input type="text" class="form-control" name="checkedBy" ng-model="entity.checkedBy" disabled />-->
+                </div>
+
+
+            </div>
+            <div class="form-group">
+
+                <label class="col-sm-2 control-label">Issued</label>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" name="issued" ng-model="entity.issued" show-time="false" />
+                </div>
+                <label class="col-sm-2 control-label">Full Return Location</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" name="fullReturnName" maxlength="100" ng-model="entity.fullReturnName" uib-typeahead="exporterName = o.companyName for o in callTypeahead($viewValue, 'LGVWSIPLContact', 'companyName', null)" typeahead-on-select="selectTypeahead($item, $model, $label, $event)" ng-blur="validateTypeahead($event)" lookup-module="returnLocation" lookup-field="returnLlocationName" entity-key-field="contactID" custom-clear="true" />
+                    <textarea rows="3" class="form-control" name="fullReturn" ng-model="entity.fullReturn"  />
+                </div>
+            </div>
+
+            <div class="form-group">
+
+
+            </div>
+        </div>
+    </div>
+</ng-form>

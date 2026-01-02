@@ -1,0 +1,27 @@
+﻿<ng-form class="form-horizontal detail-container" name="form.detail" novalidate="novalidate">
+    <p>&nbsp;</p>
+    <div class="form-group">
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Transport Mode</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <input type="text" class="form-control" name="TransportMode" ng-model="entity.transportMode" maxlength="200" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+        </div>
+        <label class="col-sm-2 control-label {{requiredUpdate ? 'required' : ''}}">Transportation Code</label>
+        <div class="col-sm-4" show-errors="{ skipFormGroupCheck: true }">
+            <textarea rows="2" class="form-control" name="TransportationCode" ng-model="entity.transportationCode" ng-disabled="disabledUpdate" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Trans Code </label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="TransCode" ng-model="entity.transCode" maxlength="200" ng-disabled="disabledUpdate" ng-required="requiredUpdate" />
+        </div>
+        
+    </div>
+    
+    <div class="form-group">
+        <label class="col-sm-2 control-label">is Active</label>
+        <div class="col-sm-4 checkbox-control">
+            <input type="checkbox" name="isActive" ng-model="entity.isActive" ng-disabled="disabledUpdate" />
+        </div>
+    </div>
+</ng-form>

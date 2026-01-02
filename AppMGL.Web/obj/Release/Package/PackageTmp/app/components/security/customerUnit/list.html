@@ -1,0 +1,42 @@
+﻿<table ng-table="customerUnitListTable" class="table table-striped table-bordered table-hover" template-pagination="customPager">
+    <thead>
+        <tr class="bg-thead">
+            <th class="list-checkbox"><input type="checkbox" ng-click="selectAll()" ng-checked="getSelectedAll()" /></th>
+            <th class="text-left sortable" custom-sortable="CompanyName" table-name="customerUnitListTable">Company Name</th>
+            <th class="text-left sortable" custom-sortable="CustomerCode" table-name="customerUnitListTable">Customer Code</th>
+            <th class="text-left sortable" custom-sortable="ContactCategoryID" table-name="customerUnitListTable">Category</th>
+            <th class="text-left sortable" custom-sortable="SitName" table-name="customerUnitListTable">Sit Name</th>
+            <th class="text-left sortable" custom-sortable="ReferredBySitName" table-name="customerUnitListTable">Referred By SitName</th>
+            <th class="text-left sortable" custom-sortable="sfcName" table-name="customerUnitListTable">SP Fee Category</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="entity in items">
+            <td>
+                <input type="checkbox" ng-model="entity.selected" />
+            </td>
+            <td class="hidden-xs">
+                {{entity.companyName}}
+            </td>
+            <td class="hidden-xs">
+                {{entity.customerCode}}
+            </td>
+            <td class="hidden-xs">
+                {{entity.contactCategoryID}}
+            </td>
+            <td class="hidden-xs">
+                {{entity.sitName}}
+            </td>
+            <td class="hidden-xs">
+                {{entity.referredBySitName}}
+            </td>
+            <td class="hidden-xs">
+                {{entity.sfcName}}
+            </td>
+        </tr>
+        <tr ng-if="params.total() == 0">
+            <td class="text-center text-italic" colspan="4">No Record(s) Found</td>
+        </tr>
+    </tbody>
+</table>
